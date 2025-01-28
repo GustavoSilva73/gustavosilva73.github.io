@@ -32,8 +32,12 @@
                 After seeing some cringe naive (ontological) realists takes on and some literal misinterpretation of his works, I felt compelled to write about Weinstein's works on mathematical physics, in three parts. This first part will be all about canonical geometric quantization.
 
                 <H2>
-                    Prequantization
+                    Geometric Quantization
                 </H2>
+
+                <h3>
+                    Prequantization
+                </h3>
                 
 
                 <p>
@@ -42,26 +46,33 @@
 
                 <ol>
                     <li> 
-                        \(Q_{f_1 + f_2} = Q_{f_1} + Q_{f_2} \; \text{and} \; Q_{cf_1} = c Q_{f_1}, \; \text{given} \; c \in \mathbb{R}\);
+                        \(Q_{f_1 + f_2} = Q_{f_1} + Q_{f_2} \; \text{and} \; Q_{cf_1} = c Q_{f_1}, \; \text{given} \; c \in \mathbb{R} \; \text{a constant}\);
                     </li>
+
                     <li>
                         \( Q_1  = \text{id}_\mathcal{H} \);
                     </li>
+
                     <li>
                         \(Q_{\bar{f}} = (Q_f)^*\);
                     </li>
+
                     <li>
                         \( [Q_f, Q_g] = -i \hbar Q_{\{f,g\}} \);
                     </li>
+
                     <li>
                         \(f_1,...,f_n \; \text{complete} \Rightarrow Q_{f_1}...Q_{f_n} \; \text{complete}\).
                     </li>
                 </ol>
 
                 <p>
-                    However, it is not possible, at least not in this context; the best we can do is to define Q such that it satisfies the first four conditions. What his means is that in what follows, \(Q\) will never satisfy such condition, but the
+                    that will be used to construct the quantization operator \(\hat{Q}\). However, it is not possible, at least not in this context; the best we can do is to define \(Q\) such that it satisfies the first four conditions. What his means is that in what follows, \(Q\) will never satisfy such condition, but the
 
-                    attempt to do so will return some interesting results. That being said, given a sympletic manifold \((M, \omega)\), it's quantization starts by the step known as prequantization. To do so, we start by defining a complex line bundle over \(M\), as follows:
+                    attempt to do so will return some interesting results. That being said, given a sympletic manifold \((M, \omega)\), it's quantization starts by the step known as prequantization, where we define a map \(P: C^\infty(M) \rightarrow \mathcal{L}(\mathcal{H})\) satisfying the first four Dirac's quantization conditions and which 
+                    will be used to construct \(Q\).
+                    
+                    To construct such map, we start by defining a complex line bundle over \(M\), as follows:
                 </p>
 
                 <div class="definition" text='Complex Line Bundle'>
@@ -74,11 +85,11 @@
                 </div>
 
                 <p>
-                    Next, we define the condition on which a manifold can possess a prequantum line bundle, in other words, the condition for a manifold M to be quantizable. This conditions is called Weil integrality condition, given by:
+                    Next, we define the condition on which a manifold can possess a prequantum line bundle, in other words, the condition for a manifold \(M\) to be quantizable. This conditions is called Weil integrality condition, given by the following theorem:
                 </p>
 
                 <div class="theorem" text='Wein Integrability Condition'>
-                    Let \((M, \omega)\)$ be a symplectic manifold. Then there exists a prequantum line bundle if and only if for every closed 2-dimensional submanifold \(\Sigma\) of \(M\) we have
+                    Let \((M, \omega)\) be a symplectic manifold. Then there exists a prequantum line bundle if and only if for every closed 2-dimensional submanifold \(\Sigma\) of \(M\) we have
                     \begin{equation}
                       \int_\Sigma \omega \in 2\pi\hbar\mathbb{Z}
                     \end{equation}
@@ -86,10 +97,10 @@
                 </div>
 
                 <p>
-                    If that conditions holds for a manifold M, then it can be characterized as the Hilbert space \(\mathcal{H}^{\text{pre}} = L^2(L)\) and we can define the first ingredient on the recipe for construct \(Q\) — the prequantization map —, as:
+                    If that conditions holds for a manifold \(M\), then it can be characterized as the prequantum Hilbert space \(\mathcal{H}^{\text{pre}}_L = L^2(L)\) and we can define the first ingredient on the recipe for construct \(Q\) — the aforementioned prequantization map \(P\)—, as:
 
                     \[
-                    P_f \doteq  - i \hbar \nabla_{X_f} + f
+                    P(f) \equiv P_f \doteq  - i \hbar \nabla_{X_f} + f
                     \]
 
                     As it is, \(P_{f}\) satifies the first four Dirac's quantization conditions. In a attempt for it to satisfy the fifth one, we introduct two concepts: the polarization and the half-form. A polarization' goal is to select one half of the states in our Hilbert space, by selecting at
@@ -109,13 +120,51 @@
                 </ol>
 
                 <p>
-                    So, in the end, our polarization \(\mathcal{P}\)  is just a involutive lagrangian subbundle of TM. However, it is usual to extend \(\mathcal{P}\)  by adding complex directions to it, such that it is now a subbundle of \(T_p M \otimes \mathbb{C} = (TM)_\mathbb{C}\), instead of \(TM\).
+                    So, in the end, our polarization \(\mathcal{P}\)  is just a involutive lagrangian subbundle of \(TM\). However, it is usual to extend \(\mathcal{P}\)  by adding complex directions to it, such that it is now a subbundle of \(T_p M \otimes \mathbb{C} = (TM)_\mathbb{C}\), instead of \(TM\).
 
                     The half-form \(]delta_p\) is introducted to compensate for a problem with real polarizations, where the space of these polarizations, \(\Gamma(\mathcal{P})\), was often empty. So, using \(\delta_p\) we define a new line bundle \(L_p = L \otimes \delta_p\) such that the
 
-                    product of two sections is naturally a volume form on the quotient. A mathematical rigorously discussion about the half-forms (and their theoretical construction in this context) would be too extensive, so I will leave it as it is. Take all about it for granted.
+                    product of two sections is naturally a volume form on the quotient. To understand what a half-form is, consider a generic polarization \(P\) and its annihilator
+                </p>
 
-                    That said, the sections of these bundles are called P-wave functions if they satisfy:
+                \[
+                P^0 = \{\alpha \in (T^* M)_{\mathbb{C}}, \; \alpha|_P = 0 \}               
+                \]
+
+                <p>
+                    whose sections are 1-forms which vanish when evaluated on vector fields \(X \in \Gamma(M)\). The square root of the top exterior power of \(P^0\), denoted as the canonical bundle of \(P\) and given by
+                </p>
+
+                \[
+                K_P \doteq \bigwedge^n P^0,
+                \]
+
+                <p>    
+                   is what we define as as a half-form, i.e., a line bundle that satisfies \( \delta_P \otimes \delta_P = K_P\). It's important to mention that these bundles may or may not exist, may or may not be unique and so on, so it's choice plays an important part in geometric quantization.
+                   
+                   Our next step is to extend the connection \(\nabla\) on \(L\) to \(L \otimes \delta_P\) in the aim to obtain a new and more adequate polarization condition. To do so, we consider a section \(\mu \in \Gamma(K_P)\) and a vector field \(X \in \Gamma(TM)\). We want the Lie derivative \(L_X \mu\), commonly an \(n-\)form on \(M\), to 
+
+                   be a section of \(K_P\), i.e., to be such that \(\iota_{X_P} L_X \mu  = 0\). To derive the condition in which that happens, we just need to compute it's Lie derivative:
+
+                   
+                </p>
+
+                \[
+                \iota_{X_P} L_X \mu = L_X \iota_{X_P} \mu + \iota_{[X,X_P]} \mu = \iota_{[X,X_P]} \mu
+                \]
+
+                <p>
+                    So, as we know that \(\iota_{[X,X_P]} \mu = \Leftrightarrow [X, X_P] \in \Gamma(P)\), we have now the condition for \(L_X \mu\) to be a section of \(K_P\); we call vector fields that satisfies such property \(\textit{polarization-preserving}\), and 
+                    
+                    by restricting the Lie derivative vector fields tangent to \(P\), we can define the conection \(\nabla^{\delta_P}_X\) as
+                </p>
+
+                \[
+                L_X \mu = d \iota_X \mu + \iota_X d \mu = \iota_X d \mu \doteq \nabla_X^{\delta_P}
+                \]
+
+                <p>
+                    That said, the sections of the bundle \(L_p\) are called P-wave functions if they satisfy:
                 </p>
 
                 <div class="definition" text="P-Wave">
@@ -135,7 +184,7 @@
 
                     In general, given \(\nabla\) a flat connection on a vector bundle \(E\), we can define a complex form as \(\Omega^*(M,E) = \Gamma(\Lambda^*T^*M \otimes E)\) and it's differential as \(d^{\nabla} (\omega \otimes \sigma) = d\omega \otimes \sigma + \omega \wedge \nabla \sigma\)
 
-                    To extend these concepts to line bundles \(L_0\), with a connection given by \(\nabla_{L_p} = \nabla^L _+ \nabla^{\delta_p}\), we have to restrict differential forms to \(P\). This is equivalent to say that \(\omega_p \in \Omega_k (M , L_p)\) is \(P\)-closed if
+                    To extend these concepts to line bundles \(L_0\), with a connection given by \(\nabla_{L_p} = \nabla^L + \nabla^{\delta_p}\), we have to restrict differential forms to \(P\). This is equivalent to say that \(\omega_p \in \Omega_k (M , L_p)\) is \(P\)-closed if
                 </p>
                 
                 \[
