@@ -242,3 +242,70 @@ body .full-width {
 .heading-space {
     height: 25px;
 }
+
+img {
+  margin-top: 25px;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  padding: 2px;
+  width: 400px;
+  margin-left: 10px;
+  margin-right: auto;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+img:hover {
+  box-shadow: 0 0 2px 1px rgba(133, 123, 228, 0.5);
+}
+
+
+.blogdiv {
+  display: inline;
+}
+
+.about-me {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  gap: var(--gap);
+  counter-reset: grid-counter;
+}
+
+.about-me h3 {
+  font-size: 2rem;
+  position: relative;
+  padding-left: 3rem;
+  padding-bottom: 1rem;
+}
+
+.about-me h3::before {
+  counter-increment: grid-counter;
+  content: counter(grid-counter);
+  position: absolute;
+  font-size: 4rem;
+  font-style: italic;
+  top: -2rem;
+  left: -1rem;
+}
+
+.coluna1 {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  height: 100hv;
+}
+
+.coluna2 {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  height: 100hv;
+}
+
+.blogdiv img {
+  transition: all 500ms ease-in-out;
+}
+
+.blogdiv img:hover {
+  transform: translate(-1%, 1%) scale(1.1);
+}
