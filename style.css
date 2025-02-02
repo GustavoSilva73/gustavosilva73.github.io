@@ -359,6 +359,10 @@ h1 {
 			margin-right: 10px; 
 		} 
 
+    .foo {
+      padding: 0;
+    }
+
 
 		/*footer { 
 			background-color: #242424; 
