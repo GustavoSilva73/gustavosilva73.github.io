@@ -7,6 +7,15 @@ a {
     text-decoration: none;
 }
 
+.social-media li {
+  list-style-type: none;
+}
+
+.social-media {
+  text-decoration: none;
+  color: var(--white-color)
+}
+
 .theorem {
     display: block;
     font-style: italic;
