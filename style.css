@@ -318,3 +318,53 @@ img:hover {
 .blogdiv img:hover {
   transform: translate(-1%, 1%) scale(1.1);
 }
+h1 {
+  font-size: 3.5rem;
+}
+
+/* Blog */
+
+  main { 
+    flex: 2; 
+  } 
+
+  .blogaside ul li {
+    list-style-type: none;
+  }
+
+  .blogaside { 
+    flex: 1; 
+    background-color: #111;
+    padding: 10px; 
+  } 
+
+		.container { 
+			display: flex; 
+			justify-content: space-between; 
+			max-width: 95%; 
+			margin: 0 auto; 
+			padding: 20px; 
+		} 
+
+		.blogarticle p { 
+			text-align: justify; 
+		} 
+
+
+
+		.blogarticle { 
+			margin-bottom: 20px; 
+			padding: 10px 20px; 
+			border: 1px solid rgb(145, 145, 145); 
+			margin-right: 10px; 
+		} 
+
+
+		/*footer { 
+			background-color: #242424; 
+			color: #fff; 
+			text-align: center; 
+			position: fixed; 
+			bottom: 0; 
+			width: 100%; 
+		} */
