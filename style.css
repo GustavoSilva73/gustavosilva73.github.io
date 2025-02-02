@@ -324,31 +324,31 @@ h1 {
 
 /* Blog */
 
-  main { 
+main { 
     flex: 2; 
   } 
 
-  .blogaside ul li {
+.blogaside ul li {
     list-style-type: none;
   }
 
-  .blogaside { 
+.blogaside { 
     flex: 1; 
     background-color: #111;
     padding: 10px; 
   } 
 
-		.container { 
-			display: flex; 
-			justify-content: space-between; 
-			max-width: 95%; 
-			margin: 0 auto; 
-			padding: 20px; 
-		} 
+.container { 
+	display: flex; 
+	justify-content: space-between; 
+	max-width: 95%; 
+	margin: 0 auto; 
+	padding: 20px; 
+} 
 
-		.blogarticle p { 
-			text-align: justify; 
-		} 
+.blogarticle p { 
+	text-align: justify; 
+} 
 
 
 
@@ -382,3 +382,9 @@ h1 {
 			bottom: 0; 
 			width: 100%; 
 		} */
+.blogarticle { 
+	margin-bottom: 20px; 
+	padding: 10px 20px; 
+	border: 1px solid rgb(145, 145, 145); 
+	margin-right: 10px; 
+} 
