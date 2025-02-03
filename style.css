@@ -388,3 +388,7 @@ main {
 	border: 1px solid rgb(145, 145, 145); 
 	margin-right: 10px; 
 } 
+
+footer {
+  padding-top: 10rem;
+}
