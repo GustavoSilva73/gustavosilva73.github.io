@@ -131,7 +131,7 @@ a {
     font-family: "Libre Caslon Display", serif;
     font-weight: 400;
     font-style: bold;
-    font-size: 1.5rem;
+    font-size: 1.15rem;
     text-justify: inter-word;
     margin: 8rem 8rem 8rem 8rem;
   }
@@ -390,7 +390,7 @@ main {
 } 
 
 footer {
-  position: absolute;
+  position: block;
   bottom: 0;
   width: 100%;
   height: 50px;
