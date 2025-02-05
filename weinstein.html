@@ -60,8 +60,6 @@ In particular, in this first part, I will introduce some basic concepts on sympl
                 \(\phi_i \circ \phi_j^{-1}: \phi_i (U_i \cap U_j) \rightarrow \phi_j (\phi_i \cap \phi_j) \subset \mathbb{R}^n\)
                 and \(\phi_j \circ \phi_i^{-1}:\phi_j (U_i \cap U_j) \rightarrow \phi_i (U_i \cap U_j)\subset \mathbb{R}^n \), given  \( \phi_{i,j} (U_i \cap U_j)\) open subsets of \(\mathbb{R}^n\). We say that an atlas \(\mathcal{A}\)
                 is maximal for \(M\) if, for any other atlas \(\mathcal{A}'\), we have that if \(\mathcal{A} \cup \mathcal{A}'\) is an atlas for \(M\), then \(\mathcal{A}' \subseteq \mathcal{A}\). Finally, \(M\), together with 
-                it's maximal atlas, is what we define as a differentiable manifold. Next, we discuss three important topics concerning differential geometry, namely smooth functions, tensors and differential forms. First of all, a function \(f: M \rightarrow \mathbb{R} \) is said to be smooth if, for every \(x \in M\), there is a chart \((U_i, \phi_i)\) with \(x \in U_i\) such that
-                \(f_i \doteq f \circ \phi^{-1}_i: \phi_i (U_i) \rightarrow \mathbb{R}\) is a smooth function on the open set \(\phi_i (U_i)\) for every \(i\); secondly, a tensor of rank \((p, q)\) is an algebraic objetic defined as a multilinear map
             </p> 
             <br>
 
@@ -70,14 +68,11 @@ In particular, in this first part, I will introduce some basic concepts on sympl
             <br>
 
             <p>
-                given \(V\) a vector space \(-\) for intance, the soon to be defined \(T_pM\) and his big brother \(TM\) are vector spaces \(-\) and \(V^*\) it's dual; lastly, we define a differential form as special type of tensor, in the sense that a differential
-                \(p\)-form \(\omega\) is a completely antisymmetric \((0,p)\)-tensor. The space of these forms is often denoted by \(\Omega^p(M)\).
             </p>
 
             <br>
             <p>
                 Suppose that \(\text{dim}(M)=n\). The map \(\phi_i = (x^1, \dots, x^n)\) is smooth on \(M\) and define the local
-                chart \((x^1, \dots, x^n)\) on \(U_i\). Furthermore, anynyan who studied undegraduate level physics or linear algebra had, at some point, to change from one local chart to another (from, e.g., cylindrical to polar); to do so 
                 in the context of manifolds, we use the composite of two maps that compose two distinct charts, i.e.
                 \[
                 \phi_i \circ \phi_j^{-1} (x) = (y^1(x^1,\dots,x^n), \dots, y^n (x^1,\dots, x^n))
@@ -87,34 +82,18 @@ In particular, in this first part, I will introduce some basic concepts on sympl
             <br>
 
             <p>
-                Thereafter, consider \(p \in M\). Given two smooth curves \(\gamma_{i,j} : U_{i,j}\rightarrow \mathbb{R}^n\) such that \(\gamma_{i,j}(0) = p\). We then define a tangent vector to \(p\) an equivalent class where
-                \(\gamma_i \sim \gamma_j\) iff
-            </p>
-
-            <br>
-
-            \[
-            \frac{d}{dt}(\phi \circ \gamma_i) (t) \bigg|_{t = 0} = \frac{d}{dt}(\phi \circ \gamma_j) (t) \bigg|_{t = 0}
-           \]
-
-           <br>
-
-           <p>
-            in some chart \((U, \phi)\) on \(M\) in a neighborhood of \(p\). We define the set of all tangent vectors of \(p\) , namely \(T_p M \), the tangent space to \(M\) on \(p\). With that, we can  now define a tangent bundle of \(M\) as
+                Thereafter, consider \(p \in M\). A linear map \(\gamma: C^\infty(M) \rightarrow \mathbb{R}\) is called a derivation at \(p\) if it satisfies \(\gamma(fg) = f(p)\gamma g + g(p)\gamma f\), for all \(f,g \in C^\infty(M)\). The set of all smooth derivations at \(p\), denoted by \(T_p M \), is what we define as the tangent space to \(M\) on \(p\). With that, we can  now define a tangent bundle of \(M\) as
            </p>
 
            <br>
 
            \[
-           TM \doteq \bigcup_{p \in M} T_p M
            \]
 
 
            <br>
-
            <p>
 
-           </p>
 
             <div class="heading-space"></div>
 
