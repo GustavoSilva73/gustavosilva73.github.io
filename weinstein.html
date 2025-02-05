@@ -38,7 +38,9 @@
 
         <div class="heading-space"></div>
 
+        Recently, I came across certain comments on Weinstein's work concerning the symplectic formalism of classical physical systems that not only adopted a naive realist (ontological) interpretation of it but also presented a completely simplistic and erroneous understanding of the underlying physical and mathematical concepts.
 
+In light of this, my aim here is to clarify his work by presenting and discussing it in a concise yet rigorous manner. Accordingly, this series will be divided in three parts. The first will focus on canonical geometric quantization; the second will explore Weinstein's contributions to geometric quantization from a categorical perspective; and the third and final part will address the philosophical implications and interpretations of his work.
 
 In particular, in this first part, I will introduce some basic concepts on sympletic geometry and a brief review on classical mechanics, in the context of sympletic geometry, and on quantum mechanics, in the context of \({C}^*-\)Algebras. 
 
@@ -52,7 +54,9 @@ In particular, in this first part, I will introduce some basic concepts on sympl
         
             <p>
                 Let \(M\) be any topological space. We define a chart on \(M\) as the pair \((U, \phi)\), where \(U \subset M\) is open and \(\phi: U \rightarrow M\) is such that \(\phi(U) \subset \mathbb{R}^n\) is open. Given a 
+                collection \(\{U_i, \phi_i\}\) of those charts, we say that it is an atlas \(\mathcal{A}\) on \(M\)if they are a cover for \(M\), i.e., if
                 \[\bigcup_{i \in [1,n]} U_i = M\] 
+                and if all of it's charts are compatible with each other, i.e., if for any \(i\), \(j\) such that \(U_i \cap U_j \neq \emptyset\), we have that \(\phi_{i,j}: U_{i,j} \rightarrow \phi_{i,j}(U_{i,j}) \in C^\infty(M)\) and that
                 \(\phi_i \circ \phi_j^{-1}: \phi_i (U_i \cap U_j) \rightarrow \phi_j (\phi_i \cap \phi_j) \subset \mathbb{R}^n\)
                 and \(\phi_j \circ \phi_i^{-1}:\phi_j (U_i \cap U_j) \rightarrow \phi_i (U_i \cap U_j)\subset \mathbb{R}^n \), given  \( \phi_{i,j} (U_i \cap U_j)\) open subsets of \(\mathbb{R}^n\). We say that an atlas \(\mathcal{A}\)
                 is maximal for \(M\) if, for any other atlas \(\mathcal{A}'\), we have that if \(\mathcal{A} \cup \mathcal{A}'\) is an atlas for \(M\), then \(\mathcal{A}' \subseteq \mathcal{A}\). Finally, \(M\), together with 
@@ -61,14 +65,20 @@ In particular, in this first part, I will introduce some basic concepts on sympl
             </p> 
             <br>
 
+            \[T:  \underbrace{V^* \times \dots \times V^*}_{p \; \text{times}} \times \underbrace{V \times \dots \times V}_{q \; \text{times}} \rightarrow \mathbb{R}\]
 
             <br>
 
             <p>
+                given \(V\) a vector space \(-\) for intance, the soon to be defined \(T_pM\) and his big brother \(TM\) are vector spaces \(-\) and \(V^*\) it's dual; lastly, we define a differential form as special type of tensor, in the sense that a differential
+                \(p\)-form \(\omega\) is a completely antisymmetric \((0,p)\)-tensor. The space of these forms is often denoted by \(\Omega^p(M)\).
             </p>
 
             <br>
             <p>
+                Suppose that \(\text{dim}(M)=n\). The map \(\phi_i = (x^1, \dots, x^n)\) is smooth on \(M\) and define the local
+                chart \((x^1, \dots, x^n)\) on \(U_i\). Furthermore, anynyan who studied undegraduate level physics or linear algebra had, at some point, to change from one local chart to another (from, e.g., cylindrical to polar); to do so 
+                in the context of manifolds, we use the composite of two maps that compose two distinct charts, i.e.
                 \[
                 \phi_i \circ \phi_j^{-1} (x) = (y^1(x^1,\dots,x^n), \dots, y^n (x^1,\dots, x^n))
                 \]
@@ -77,6 +87,7 @@ In particular, in this first part, I will introduce some basic concepts on sympl
             <br>
 
             <p>
+                Thereafter, consider \(p \in M\). Given two smooth curves \(\gamma_{i,j} : U_{i,j}\rightarrow \mathbb{R}^n\) such that \(\gamma_{i,j}(0) = p\). We then define a tangent vector to \(p\) an equivalent class where
                 \(\gamma_i \sim \gamma_j\) iff
             </p>
 
@@ -89,6 +100,7 @@ In particular, in this first part, I will introduce some basic concepts on sympl
            <br>
 
            <p>
+            in some chart \((U, \phi)\) on \(M\) in a neighborhood of \(p\). We define the set of all tangent vectors of \(p\) , namely \(T_p M \), the tangent space to \(M\) on \(p\). With that, we can  now define a tangent bundle of \(M\) as
            </p>
 
            <br>
@@ -114,6 +126,8 @@ In particular, in this first part, I will introduce some basic concepts on sympl
         <div class="heading-space"></div>
            
            <p>
+            In today's physics, a classical physical system is modelled as a sympletic (or multisympletic) manifold \( (M, \omega)\) equipped with an smooth map \(H: M \rightarrow \mathbb{R}\) that encapsulates the dynamic of the
+            system
             
            </p> 
 
