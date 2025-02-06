@@ -59,11 +59,8 @@ In particular, in this first part, I will introduce some basic concepts on sympl
                 and if all of it's charts are compatible with each other, i.e., if for any \(i\), \(j\) such that \(U_i \cap U_j \neq \emptyset\), we have that \(\phi_{i,j}: U_{i,j} \rightarrow \phi_{i,j}(U_{i,j}) \in C^\infty(M)\) and that
                 \(\phi_i \circ \phi_j^{-1}: \phi_i (U_i \cap U_j) \rightarrow \phi_j (\phi_i \cap \phi_j) \subset \mathbb{R}^n\)
                 and \(\phi_j \circ \phi_i^{-1}:\phi_j (U_i \cap U_j) \rightarrow \phi_i (U_i \cap U_j)\subset \mathbb{R}^n \), given  \( \phi_{i,j} (U_i \cap U_j)\) open subsets of \(\mathbb{R}^n\). We say that an atlas \(\mathcal{A}\)
-                is maximal for \(M\) if, for any other atlas \(\mathcal{A}'\), we have that if \(\mathcal{A} \cup \mathcal{A}'\) is an atlas for \(M\), then \(\mathcal{A}' \subseteq \mathcal{A}\). Finally, \(M\), together with 
-                it's maximal atlas, is what we define as a differentiable manifold. Next, we discuss three important topics concerning differential geometry, namely smooth functions on manifolds, tensors and differential forms. First of all, a function \(f: M \rightarrow \mathbb{R} \) is said to be smooth if, for every \(p \in M\) and 
                 for every \(i \in [1,n]\), there is a chart \((U_i, \phi_i)\) with \(x \in U_i\) such that
                 \(f_i \doteq f \circ \phi^{-1}_i: \phi_i (U_i) \rightarrow \mathbb{R}\) is a smooth function on the open set \(\phi_i (U_i)\). Other than that, we
-                can represent a smooth function in local coordinates via the function \(\hat{f}: \phi(U) \rightarrow \mathbb{R}^n\), given by \(\hat{f}(p) = f \circ \phi^{-1} (p)\); secondly, a tensor of rank \((p, q)\) is an algebraic objetic defined as a multilinear map
             </p> 
             <br>
 
@@ -73,18 +70,8 @@ In particular, in this first part, I will introduce some basic concepts on sympl
 
             <p>
                 given \(V\) a vector space \(-\) for intance, the soon to be defined \(T_pM\) and his big brother \(TM\) are vector spaces \(-\) and \(V^*\) it's dual, i.e. the space of linear maps \(\beta: V \rightarrow \mathbb{R}\), which is himself a vector space; lastly, we define a differential form as an special type of tensor, in the sense that a differential
-                \(p\)-form \(\omega\) is a completely antisymmetric \((0,p)\)-tensor, i.e., a tensor that for any \(i\) and \(j\) satisfies \(\omega (x^1,\dots, x^i, \dots, x^j, \dots, x^n) = - \omega (x^1,\dots, x^j, \dots, x^i, \dots, x^n) \). The space of these forms is often denoted by \(\Omega^p(M)\).
             </p>
 
-            <br>
-            <p>
-                Suppose that \(\text{dim}(M)=n\). The map \(\phi_i = (x^1, \dots, x^n)\) is smooth on \(M\) and define the local
-                chart \((x^1, \dots, x^n)\) on \(U_i\). Furthermore, anynyan who has studied undegraduate level physics or linear algebra had, at some point, to change from one local chart to another (from, e.g., cylindrical to polar); to do so 
-                in the context of manifolds, we use the composite of two maps that compose two distinct charts, i.e.
-                \[
-                \phi_i \circ \phi_j^{-1} (x) = (y^1(x^1,\dots,x^n), \dots, y^n (x^1,\dots, x^n))
-                \]
-            </p>
 
             <br>
 
@@ -122,7 +109,6 @@ In particular, in this first part, I will introduce some basic concepts on sympl
             <br>
 
             <p>
-               nyan can conclude that \(dF_p (\gamma): C^\infty(N) \rightarrow \mathbb{R}\) is a derivation at \(F(p)\). In what follows, I will state two important propositions that will help us bring that abstract concept of tangent and cotangent spaces down to Earth:
             </p>
 
             <div class="heading-space"></div>
