@@ -59,17 +59,45 @@ In particular, in this first part, I will introduce some basic concepts on sympl
                 and if all of it's charts are compatible with each other, i.e., if for any \(i\), \(j\) such that \(U_i \cap U_j \neq \emptyset\), we have that \(\phi_{i,j}: U_{i,j} \rightarrow \phi_{i,j}(U_{i,j}) \in C^\infty(M)\) and that
                 \(\phi_i \circ \phi_j^{-1}: \phi_i (U_i \cap U_j) \rightarrow \phi_j (\phi_i \cap \phi_j) \subset \mathbb{R}^n\)
                 and \(\phi_j \circ \phi_i^{-1}:\phi_j (U_i \cap U_j) \rightarrow \phi_i (U_i \cap U_j)\subset \mathbb{R}^n \), given  \( \phi_{i,j} (U_i \cap U_j)\) open subsets of \(\mathbb{R}^n\). We say that an atlas \(\mathcal{A}\)
+                is maximal for \(M\) if, for any other atlas \(\mathcal{A}'\), we have that if \(\mathcal{A} \cup \mathcal{A}'\) is an atlas for \(M\), then \(\mathcal{A}' \subseteq \mathcal{A}\). Now, suppose that \(\text{dim}(M)=n\). The map \(\phi_i = (x^1, \dots, x^n)\) is smooth on \(M\) and define the local
+                chart \((x^1, \dots, x^n)\) on \(U_i\). Furthermore, anynyan who has studied undegraduate level physics or linear algebra had, at some point, to change from one local chart to another (from, e.g., cylindrical to polar); to do so 
+                in the context of manifolds, we use the composite of two maps that compose two distinct charts, i.e.
+                \[
+                \phi_i \circ \phi_j^{-1} (x) = (y^1(x^1,\dots,x^n), \dots, y^n (x^1,\dots, x^n))
+                \] Finally, \(M\), together with 
+                it's maximal atlas, is what we define as a smooth manifold. Next, we discuss four important topics concerning differential geometry, namely smooth functions on manifolds, smooth maps between manifolds, tensors and differential forms. First of all, a function \(f: M \rightarrow \mathbb{R} \) is said to be smooth if, for every \(p \in M\) and 
                 for every \(i \in [1,n]\), there is a chart \((U_i, \phi_i)\) with \(x \in U_i\) such that
                 \(f_i \doteq f \circ \phi^{-1}_i: \phi_i (U_i) \rightarrow \mathbb{R}\) is a smooth function on the open set \(\phi_i (U_i)\). Other than that, we
+                can represent a smooth function in local coordinates via the function \(\hat{f}: \phi(U) \rightarrow \mathbb{R}^n\), given by \(\hat{f}(p) = f \circ \phi^{-1} (p)\); secondly, we can generalize that  notion of smooth functions to smooth maps between manifolds. Let \(M\) and \(N\) be smooth manifolds. We say that the map \(F: M \rightarrow N\) is smooth if, for every \(p \in M\), there exist smooth charts \((U,\phi)\), containing \(p\) and \((V, \psi)\) containing \(F(p)\) such that \(F(U) \subseteq V\) and the composite map \(\psi \circ F \circ \phi^{-1}\) is smooth from \(\phi(U)\) to \(\psi(V)\). A primer example of a smooth maps between smooth manifolds are diffeomorphisms, that can be used to characterize sameness on a dimensional level of two smooth manifolds, via the following theorem:
+                
             </p> 
+
             <br>
 
+            <div class="theorem" name="Diffeomorphism Invariance of Dimension">
+                A nonempty smooth manifold of dimension \(m\) cannot be diffeomorphic to an \(n\)-dimensional smooth manifold unless \(m = n\).
+            </div>
+
+            <br>
+
+            <p> and on a boundary level via the theorem: </p>
+            
+            <br>
+
+            <div class="theorem" name="Diffeomorphism Invariance of Dimension">
+                Suppose \(M\) and \(N\) are smooth manifolds with boundary and \(F:M \rightarrow N\) is a Diffeomorphism. Then, \(F(\partial M) = \partial N\) and \(F\) restricts to a Diffeomorphismfrom \(\text{Int} M \) to \(\text{Int} N\).
+            </div>
+
+            <br>
+
+            <p> Being honest with you, we will not use any of these results in what follows, but I found it interesting to state them; thirdly, a tensor of rank \((p, q)\) is an algebraic objetic defined as a multilinear map</p>
             \[T:  \underbrace{V^* \times \dots \times V^*}_{p \; \text{times}} \times \underbrace{V \times \dots \times V}_{q \; \text{times}} \rightarrow \mathbb{R}\]
 
             <br>
 
             <p>
                 given \(V\) a vector space \(-\) for intance, the soon to be defined \(T_pM\) and his big brother \(TM\) are vector spaces \(-\) and \(V^*\) it's dual, i.e. the space of linear maps \(\beta: V \rightarrow \mathbb{R}\), which is himself a vector space; lastly, we define a differential form as an special type of tensor, in the sense that a differential
+                \(p\)-form \(\omega\) is a completely antisymmetric \((0,p)\)-tensor, i.e., a tensor that for any \(i\) and \(j\) satisfies \(\omega (x^1,\dots, x^i, \dots, x^j, \dots, x^p) = - \omega (x^1,\dots, x^j, \dots, x^i, \dots, x^p) \). The space of these forms is often denoted by \(\Omega^p(M)\).
             </p>
 
 
@@ -109,6 +137,9 @@ In particular, in this first part, I will introduce some basic concepts on sympl
             <br>
 
             <p>
+               nyan can conclude that \(dF_p (\gamma): C^\infty(N) \rightarrow \mathbb{R}\) is a derivation at \(F(p)\). The differential have the following properties:
+               
+               In what follows, I will state two important propositions that will help us bring that abstract concept of tangent and cotangent spaces down to Earth:
             </p>
 
             <div class="heading-space"></div>
