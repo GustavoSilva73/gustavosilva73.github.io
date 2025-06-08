@@ -1,69 +1,132 @@
-<!DOCTYPE html> 
-<html lang="pt-BR"> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Cogitations | Philosophy, Math & Physics</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="mission-control">
+            <div class="header-grid">
+                <div class="logo">
+                    <div class="logo-circle">
+                        <span class="logo-text">COSMIC</span>
+                        <span class="logo-text">COGITATIONS</span>
+                    </div>
+                </div>
+                <nav class="nav-panel">
+                    <ul>
+                        <li><a href="#" class="nav-button active" data-frequency="1.618"><i class="fas fa-atom"></i> Philosophy</a></li>
+                        <li><a href="#" class="nav-button" data-frequency="3.141"><i class="fas fa-square-root-alt"></i> Math</a></li>
+                        <li><a href="#" class="nav-button" data-frequency="2.718"><i class="fas fa-meteor"></i> Astronomy</a></li>
+                        <li><a href="#" class="nav-button" data-frequency="1.414"><i class="fas fa-rocket"></i> Physics</a></li>
+                    </ul>
+                </nav>
+                <div class="status-panel">
+                    <div class="status-light" id="connection-status"></div>
+                    <div class="status-readout">TRANSMISSION ACTIVE</div>
+                    <div class="datetime" id="datetime">LOADING...</div>
+                </div>
+            </div>
+        </header>
 
-<head> 
-	<meta charset="UTF-8"> 
-	<meta name="viewport" content= 
-		"width=device-width, initial-scale=1.0"> 
+        <main class="content-module">
+            <article class="post featured" data-category="physics">
+                <div class="post-header">
+                    <span class="post-category">PHYSICS</span>
+                    <h2>Quantum Entanglement and the Nature of Reality</h2>
+                    <div class="post-meta">
+                        <span class="post-date">2023-11-15</span>
+                        <span class="post-author">Dr. Elena Voss</span>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <p>Recent experiments at CERN have once again challenged our classical notions of locality and separability. The implications for ontological interpretations of quantum mechanics are profound...</p>
+                    <a href="#" class="read-more">CONTINUE READING <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="post-tags">
+                    <span class="tag">quantum mechanics</span>
+                    <span class="tag">ontology</span>
+                    <span class="tag">non-locality</span>
+                </div>
+            </article>
 
-        <head>
-            <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width">
-      
-            <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    
-            <link rel="stylesheet" href="style.css">
-            <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&display=swap" rel="stylesheet">
-        </head> 
- 
-	<title>Blogging Website Layout</title> 
-</head> 
+            <div class="post-grid">
+                <article class="post" data-category="math">
+                    <div class="post-header">
+                        <span class="post-category">MATH</span>
+                        <h3>Category Theory and Philosophy</h3>
+                    </div>
+                    <div class="post-content">
+                        <p>At first glance, Category Theory may appear to be an esoteric branch of mathematics, concerned with abstract structures and elusive diagrams. But at ...</p>
+                    </div>
+                </article>
 
-<body class="main-bg"> 
-	<header> 
-		<h1>A Quanta of Philosophy</h1> 
-		<p>Gustav's Internet Spot</p> 
-	</header> 
-    <aside class="menu">
-        <section class="main-content 
-        menu-content">
-         <h1> A Quanta of Philosophy </h1>
-         <nav>
-             <ul>
-                 <li><a href="blog.html">Blog</a></li>
-                 <li><a href="aboutme.html">About Me</a></li>
-                 <li><a href="index.html">Home</a></li>
-             </ul>
-         </nav>
-        </section>
-     </aside>
+                <article class="post" data-category="astronomy">
+                    <div class="post-header">
+                        <span class="post-category">ASTRONOMY</span>
+                        <h3>The Physics of Stars</h3>
+                    </div>
+                    <div class="post-content">
+                        <p>Stars are the grand architects of the universe—celestial furnaces that forge the very elements of life in their cores. From the nuclear reactions...</p>
+                    </div>
+                </article>
 
-	<div class="container"> 
-		<main> 
-			<article class="blogarticle">
-                <a href="weinstein.html">A philosophical analysis on Weinstein's works, Pt. 1</a> 
-				<p class="post-meta"> 
-					Published on January 25, 2025 by Gustav 
-				</p> 
-				<p> 
-					In the first part of this three parts series, we aim to introduce the main results concerning the canonical procedure of geometric quantization, to sediment the terrain for what's to come.
-				</p> 
-			</article> 
-		</main> 
+                <article class="post" data-category="philosophy">
+                    <div class="post-header">
+                        <span class="post-category">PHILOSOPHY</span>
+                        <h3>Kant's Epistemology and Scientific Realism</h3>
+                    </div>
+                    <div class="post-content">
+                        <p>Immanuel Kant’s Critique of Pure Reason (1781) revolutionized philosophy by interrogating the very conditions under which scientific knowledge becomes possible. His transcendental...</p>
+                    </div>
+                </article>
 
-		<aside class="blogaside"> 
-			<h2>Recent Posts</h2> 
-			<ul> 
-				<li><a href="weinstein.html">A philosophical analysis on Weinstein's works, Pt. 1</a></li> 
-			</ul> 
-		</aside> 
-	</div> 
-</body> 
+                <article class="post" data-category="physics">
+                    <div class="post-header">
+                        <span class="post-category">PHYSICS</span>
+                        <h3>The Arrow of Time: Entropy vs Quantum Gravity</h3>
+                    </div>
+                    <div class="post-content">
+                        <p>Emergent time hypotheses attempt to reconcile thermodynamic and quantum conceptions of temporal directionality...</p>
+                    </div>
+                </article>
+            </div>
+        </main>
 
-<footer> 
-    <p>© 2025 A Quanta of Philosophy. All rights reserved.</p> 
-</footer> 
+        <footer class="comm-link">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>MISSION PARAMETERS</h4>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Archives</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>TRANSMISSION FREQUENCIES</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fas fa-paper-plane"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>DATASTREAM ANALYSIS</h4>
+                    <p>This blog explores the intersection of abstract thought and empirical reality through the lenses of philosophy, mathematics, astronomy, and physics.</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2023 COSMIC COGITATIONS | ALL SYSTEMS NOMINAL</p>
+            </div>
+        </footer>
+    </div>
 
+    <script src="script.js"></script>
+</body>
 </html>
