@@ -1,0 +1,166 @@
+/* --- Estilos Gerais (Minimalista / LaTeX) --- */
+body {
+    /* Fonte Clássica e Limpa: Prioriza uma fonte Serif (como a do LaTeX) */
+    font-family: 'Times New Roman', 'Georgia', serif; 
+    line-height: 1.65; /* Aumento do espaçamento para melhor leitura */
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; /* Fundo branco puro (papel) */
+    color: #1e1e1e; /* Preto suave (tinta) */
+    font-size: 1.1rem; /* Fonte um pouco maior para conforto */
+}
+
+.container {
+    width: 90%;
+    max-width: 800px; /* Largura estreita para simular coluna de texto de artigo */
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+a {
+    color: #0077b6; /* Azul formal, mas não vibrante */
+    text-decoration: none;
+    border-bottom: 1px solid #c9c9c9; /* Sublinhado discreto */
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #005f91;
+    border-bottom: 1px solid #005f91;
+}
+
+/* --- Cabeçalho (Header) - Simples e Sem Distrações --- */
+header {
+    background: #ffffff;
+    padding: 2rem 0;
+    border-bottom: 1px solid #e0e0e0; /* Linha divisória fina */
+    margin-bottom: 30px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 400; /* Fonte mais leve, não muito pesada */
+    text-align: center;
+}
+
+header nav {
+    text-align: center;
+    margin-top: 15px;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav a {
+    color: #444;
+    font-size: 1rem;
+    text-transform: none; /* Sem letras maiúsculas forçadas */
+    border-bottom: none;
+}
+
+header nav a:hover {
+    color: #0077b6;
+}
+
+/* --- Conteúdo Principal e Layout (Main Content) --- */
+.main-content {
+    display: block; /* Remove o layout de duas colunas, focando apenas no conteúdo */
+    padding: 0;
+}
+
+main {
+    width: 100%; /* Ocupa a largura total do container */
+}
+
+.sidebar {
+    display: none; /* Remove a barra lateral para um minimalismo extremo */
+}
+
+/* --- Estilo dos Posts (Articles) - Foco Total no Texto --- */
+.post {
+    padding: 0;
+    margin-bottom: 40px;
+    border: none;
+    box-shadow: none;
+}
+
+.post h2 {
+    color: #1e1e1e;
+    margin-top: 0;
+    font-size: 2rem;
+    font-weight: 600;
+    border-bottom: none;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+
+.post-meta {
+    font-style: italic;
+    color: #777;
+    margin-bottom: 25px;
+    font-size: 0.9rem;
+    display: block;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 0;
+    background-color: transparent;
+    color: #0077b6 !important;
+    border: none;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9em;
+}
+
+.read-more:hover {
+    color: #005f91 !important;
+}
+
+/* --- Estilo Específico para MathJax (Destaque limpo) --- */
+.math-equation {
+    padding: 15px;
+    background-color: #f7f7f7; /* Fundo cinza muito claro */
+    border: 1px solid #eeeeee;
+    margin: 30px 0;
+    text-align: center;
+    overflow-x: auto;
+    font-size: 1.1em;
+}
+
+p:first-letter {
+    margin-left: 2em;
+}
+
+/* --- Rodapé (Footer) --- */
+footer {
+    background: #f7f7f7;
+    color: #777;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 50px;
+    border-top: 1px solid #e0e0e0;
+    font-size: 0.9rem;
+}
+
+/* --- Responsividade (Mantendo o Minimalismo) --- */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    header nav ul li {
+        margin: 0 8px;
+    }
+}
