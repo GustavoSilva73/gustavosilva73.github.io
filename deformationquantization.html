@@ -702,7 +702,7 @@ Em coordenadas, se \(f(q', p', q'', p'')\), então \(\Delta(f)(q, p) = f(q, p, q
 para quaisquer \(f, g \in C^\infty(E)\). Esta notação compacta será fundamental para a definição do produto estrela. Definimos agora o <i>produto de Moyal-Weyl</i> \(\star_\hbar: C^\infty(E) \otimes C^\infty(E) \to C^\infty(E)\) como a série formal:
 
 \begin{equation}
-f \star_\hbar g := \sum_{j=0}^\infty \frac{1}{j!} \left(\frac{i\hbar}{2}\right)^j f P^j g = f \exp\left(\frac{i\hbar}{2} P\right) g.
+f \star_\hbar g := \sum_{j=0}^\infty \frac{1}{j!} \left(\frac{i\hbar}{2}\right)^j f P^j g. \tag{13}
 \end{equation}
 
 Esta série deve ser interpretada no sentido de séries formais de potências em \(\hbar\) — não necessariamente convergente como série numérica, mas bem-definida ordem a ordem em \(\hbar\). Expandindo explicitamente os primeiros termos:
@@ -765,7 +765,7 @@ Isto estabelece que \(\text{Op}\) é um <i>isomorfismo de álgebras</i> (no sent
 \text{Op}: (C^\infty(E)[[\hbar]], \star_\hbar) \xrightarrow{\sim} (\mathcal{L}(L^2(\mathbb{R}^n)), \circ).
 \end{equation}</p>
 
-<p style="text-align: justify">A expressão (71) pode ser reescrita na forma exponencial compacta:
+<p style="text-align: justify">A expressão (13) pode ser reescrita na forma exponencial compacta:
 
 \begin{equation}
 f \star_\hbar g = f \exp\left(\frac{i\hbar}{2} P\right) g,
@@ -777,7 +777,7 @@ que é formalmente análoga à série de Taylor de uma função \(f \in C^\infty
 f(x + \varepsilon) = \exp\left(\varepsilon \frac{d}{dx}\right) f(x) = \sum_{k=0}^\infty \frac{\varepsilon^k}{k!} \frac{d^k f}{dx^k}(x),
 \end{equation}
 
-que converge se, e somente se, \(f\) for analítica real. Analogamente, a série (71) converge (no sentido de séries formais) para observáveis suficientemente regulares — tipicamente, funções analíticas ou no espaço de Schwartz.</p>
+que converge se, e somente se, \(f\) for analítica real. Analogamente, a série (13) converge (no sentido de séries formais) para observáveis suficientemente regulares — tipicamente, funções analíticas ou no espaço de Schwartz.</p>
 
 <p style="text-align: justify">Esta analogia justifica tratarmos \(\hbar\) como <i>parâmetro formal de deformação</i> e trabalharmos no anel de séries formais. Definimos, portanto:</p>
 
@@ -840,6 +840,7 @@ Esta álgebra é uma quantização por deformação da álgebra de Poisson \((C^
 </body>
 
 </html>
+
 
 
 
