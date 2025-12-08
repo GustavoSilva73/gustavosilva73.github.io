@@ -18,6 +18,12 @@
     box-sizing: border-box;
 }
 
+p {
+  text-align: justify;
+  text-indent: 1.5em;
+  line-height: 1.5; /* Melhora legibilidade entre linhas */
+}
+
 body {
     /* Fontes matemáticas/acadêmicas mais sóbrias */
     font-family: 'Charter', 'Bitstream Charter', 'Sitka Text', Cambria, serif;;
@@ -420,3 +426,4 @@ nav a.active {
     font-weight: 600;
 
 }
+
