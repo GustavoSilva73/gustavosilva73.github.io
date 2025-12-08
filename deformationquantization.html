@@ -95,9 +95,9 @@
 
         <h3>§1. O formalismo Newtoniano</h3>
 
-        <p>A mecânica clássica emerge, historicamente, como a formalização matemática da idealidade físico-geométrica inaugurada por Galileu, para quem a natureza só se torna legível sob a redução eidética do movimento à geometria dos tempos e distâncias, inaugurando aquilo que Husserl [HUSSERL-1936] criticou e nomeou de "matematização do mundo-da-vida" (<em>Mathematisierung der Lebenswelt</em>). Newton radicaliza essa virada ao postular, no <em>Principia</em>, uma dinâmica em que forças — entidades não diretamente fenomenológicas — estruturam o movimento segundo leis universais — o que, em uma leitura kantiana, constitui a articulação de juízos sintéticos a priori: princípios que, ao aplicarem as categorias puras ao conceito empírico de matéria, constituem <em>metafisicamente</em> a possibilidade de uma ciência exata do movimento. Com esse advento da mecânica clássica, estabelece-se um regime de objetividade fundado na idealização, no princípio de razão suficiente causal e na contínua matematização, produzindo um saber em que a realidade física é concebida como um sistema determinístico de estados — um mundo composto por substâncias extensas (corpos ou partículas dotadas de propriedades intrínsecas, como massa), interagindo por forças em um tempo e um espaço que Newton postula como absolutos — o que seria denunciado, em chave husserliana, como um caso paradigmático da "transcendência reificada" que provém da abstração geométrica.</p>
+        <p>A mecânica clássica emerge, historicamente, como a formalização matemática da idealidade físico-geométrica inaugurada por Galileu, para quem a natureza só se torna legível sob a redução eidética do movimento à geometria dos tempos e distâncias, inaugurando aquilo que Husserl, em <i>Krisis</i> criticou e nomeou de "matematização do mundo-da-vida" (<em>Mathematisierung der Lebenswelt</em>) [HUSSERL-1936]. Newton radicaliza essa virada ao postular, no <em>Principia</em>, uma dinâmica em que forças — entidades não diretamente fenomenológicas — estruturam o movimento segundo leis universais — o que, em uma leitura kantiana, constitui a articulação de juízos sintéticos a priori: princípios que, ao aplicarem as categorias puras ao conceito empírico de matéria, constituem <em>metafisicamente</em> a possibilidade de uma ciência exata do movimento. Com esse advento da mecânica clássica, estabelece-se um regime de objetividade fundado na idealização, no princípio de razão suficiente causal e na contínua matematização, produzindo um saber em que a realidade física é concebida como um sistema determinístico de estados — um mundo composto por substâncias extensas (corpos ou partículas dotadas de propriedades intrínsecas, como massa), interagindo por forças em um tempo e um espaço que Newton postula como absolutos — o que seria denunciado, em chave husserliana, como um caso paradigmático da "transcendência reificada" que provém da abstração geométrica.</p>
 
-        <p style="text-align: justify">Além disso, com a consolidação desse paradigma no século XVIII, desenvolve-se uma forma de realismo científico na qual as entidades teóricas tratadas pela física — forças gravitacionais, massas inerciais — passam a ser vistas não apenas como ferramentas matemáticas (<i>instrumenta rationis</i>), mas como correspondentes a estruturas da realidade exterior objetiva. Concomitantemente, estabelece-se um mecanicismo ontológico que interpreta os fenômenos como resultantes de interações causais regidas por leis invariantes. Essa cosmovisão prometia a inteligibilidade epistêmica do mundo através de sua redutibilidade teórica a um sistema determinístico fechado \(\mathcal{S}_C\), e veio a influenciar não somente as demais ciências positivas nos séculos subsequentes, mas também a própria filosofia — como se vê nos <i>Metaphysische Anfangsgründe der Naturwissenschaft</i>, onde Kant fornece os fundamentos metafísicos necessários para a mecânica newtoniana enquanto ciência propriamente dita (<i>eigentliche Wissenschaft</i>).</p>
+        <p style="text-align: justify">Além disso, com a consolidação desse paradigma no século XVIII, desenvolve-se uma forma de realismo científico na qual as entidades teóricas tratadas pela física — forças gravitacionais, massas inerciais — passam a ser vistas não apenas como ferramentas matemáticas (<i>instrumenta rationis</i>), mas como correspondentes a estruturas da realidade exterior objetiva. Concomitantemente, estabelece-se um mecanicismo ontológico que interpreta os fenômenos como resultantes de interações causais regidas por leis invariantes. Essa cosmovisão prometia a inteligibilidade epistêmica do mundo através de sua redutibilidade teórica a um sistema determinístico fechado \(\mathcal{S}_C\), e veio a influenciar não somente as demais ciências positivas nos séculos subsequentes, mas também a própria filosofia — como se vê nos <i>Metaphysische Anfangsgründe der Naturwissenschaft</i> [KANT-1786], onde Kant fornece os fundamentos metafísicos necessários para a mecânica newtoniana enquanto ciência propriamente dita (<i>eigentliche Wissenschaft</i>).</p>
 
         <p style="text-align: justify">
             <strong>Nota técnica 1:</strong> A formulação newtoniana trabalha primordialmente com o espaço de configurações \(\mathbb{R}^{3N}\), mas a estrutura completa do espaço de estados requer o fibrado tangente \(T\mathbb{R}^{3N} \cong \mathbb{R}^{3N} \times \mathbb{R}^{3N}\), onde as velocidades são tratadas como elementos do espaço tangente. Esta distinção será crucial para a transição ao formalismo hamiltoniano.
@@ -109,7 +109,7 @@
         \dot{\boldsymbol{\mathrm{x}}} = \dfrac{d\boldsymbol{\mathrm{x}}}{dt} \quad \text{e} \quad \ddot{\boldsymbol{\mathrm{x}}} = \dfrac{d^2\boldsymbol{\mathrm{x}}}{dt^2}. \tag{1}
         \end{equation}</p>
 
-        <p style="text-align: justify">Uma vez estabelecidas essas noções fundamentais, torna-se possível explicitar, formalmente, um dos traços epistemológicos e ontológicos centrais à mecânica newtoniana: seu supracitado determinismo. Com efeito, postula-se: <i>o movimento de qualquer sistema físico clássico em um intervalo de tempo \(\text{I} \subseteq \mathbb{R}\) — isto é, os conjuntos \(\{\boldsymbol{\mathrm{x}}_i(t) : i \leq N,\, t \in \text{I}\}\) e \(\{\dot{\boldsymbol{\mathrm{x}}}_i(t) : i \leq N,\, t \in \text{I}\}\) — é determinado exclusiva e univocamente pelo seu estado inicial</i>, i.e., por \(\boldsymbol{\mathrm{x}}_i(t_0)\) e \(\dot{\boldsymbol{\mathrm{x}}}_i(t_0)\), com \(t_0 = \inf\{\text{I}\}\). Este postulado — que Bhaskar, em sua ontologia realista crítica, identificaria como expressão transitiva da estrutura causal <i>generativa</i> subjacente aos fenômenos — traduz-se formalmente na relação:
+        <p style="text-align: justify">Uma vez estabelecidas essas noções fundamentais, torna-se possível explicitar, formalmente, um dos traços epistemológicos e ontológicos centrais à mecânica newtoniana: seu supracitado determinismo. Com efeito, postula-se: <i>o movimento de qualquer sistema físico clássico em um intervalo de tempo \(\text{I} \subseteq \mathbb{R}\) — isto é, os conjuntos \(\{\boldsymbol{\mathrm{x}}_i(t) : i \leq N,\, t \in \text{I}\}\) e \(\{\dot{\boldsymbol{\mathrm{x}}}_i(t) : i \leq N,\, t \in \text{I}\}\) — é determinado exclusiva e univocamente pelo seu estado inicial</i>, i.e., por \(\boldsymbol{\mathrm{x}}_i(t_0)\) e \(\dot{\boldsymbol{\mathrm{x}}}_i(t_0)\), com \(t_0 = \inf\{\text{I}\}\). Este postulado — que Bhaskar, em sua ontologia realista crítica [BHASKAR-1975], identificaria como expressão transitiva da estrutura causal <i>generativa</i> subjacente aos fenômenos — traduz-se formalmente na relação:
 
         \begin{equation}
         \ddot{\boldsymbol{\mathrm{x}}} = \boldsymbol{\Phi}, \tag{2}
@@ -133,9 +133,9 @@
         \|\boldsymbol{\Phi}(\boldsymbol{\mathrm{x}}_1, \boldsymbol{\mathrm{v}}_1, t) - \boldsymbol{\Phi}(\boldsymbol{\mathrm{x}}_2, \boldsymbol{\mathrm{v}}_2, t)\| \leq L\big(\|\boldsymbol{\mathrm{x}}_1 - \boldsymbol{\mathrm{x}}_2\| + \|\boldsymbol{\mathrm{v}}_1 - \boldsymbol{\mathrm{v}}_2\|\big).
         \end{equation}
         
-        Assim, pelo teorema de Picard–Lindelöf (que garante a existência e unicidade local para sistemas ordinários de primeira ordem), existe um intervalo aberto \(t_0 \in \text{I}\) e uma única solução \(\mathbf{y} \in C^1(\text{I}; \mathbb{R}^{3N} \times \mathbb{R}^{3N})\) que satisfaz a condição inicial \(\mathbf{y}(t_0) = \mathbf{y}_0\). Da definição de \(\mathbf{y}\) segue imediatamente que \(\boldsymbol{\mathrm{x}} \in C^2(\text{I}; \mathbb{R}^{3N})\) — o que está em plena concordância com o que fora estabelecido anteriormente — e que \(\boldsymbol{\mathrm{x}}\) é a única solução da equação de segunda ordem (2) com as condições iniciais dadas.</p>
+        Assim, pelo teorema de Picard–Lindelöf [PICARD-1890; CODDINGTON-1955] (que garante a existência e unicidade local para sistemas ordinários de primeira ordem), existe um intervalo aberto \(t_0 \in \text{I}\) e uma única solução \(\mathbf{y} \in C^1(\text{I}; \mathbb{R}^{3N} \times \mathbb{R}^{3N})\) que satisfaz a condição inicial \(\mathbf{y}(t_0) = \mathbf{y}_0\). Da definição de \(\mathbf{y}\) segue imediatamente que \(\boldsymbol{\mathrm{x}} \in C^2(\text{I}; \mathbb{R}^{3N})\) — o que está em plena concordância com o que fora estabelecido anteriormente — e que \(\boldsymbol{\mathrm{x}}\) é a única solução da equação de segunda ordem (2) com as condições iniciais dadas.</p>
 
-        <p style="text-align: justify">Do ponto de vista do estudo moderno das Equações Diferenciais, vale enfatizar dois pontos adicionais: (i) a solução \(\boldsymbol{\mathrm{x}}\) pode ser caracterizada como ponto fixo do operador integral de Volterra para a equação de segunda ordem. De fato, escrevendo a equação de movimento na forma (2) e integrando duas vezes, obtém-se:
+        <p style="text-align: justify">Do ponto de vista do estudo moderno das Equações Diferenciais, vale enfatizar dois pontos adicionais: (i) a solução \(\boldsymbol{\mathrm{x}}\) pode ser caracterizada como ponto fixo do operador integral de Volterra [CODDINGTON-1955, cap. 3] para a equação de segunda ordem. De fato, escrevendo a equação de movimento na forma (2) e integrando duas vezes, obtém-se:
 
         \begin{equation}
         \boldsymbol{\mathrm{x}}(t) = \boldsymbol{\mathrm{x}}_0 + (t - t_0)\dot{\boldsymbol{\mathrm{x}}}_0 + \int_{t_0}^t \int_{t_0}^s \boldsymbol{\Phi}(\boldsymbol{\mathrm{x}}(\tau), \dot{\boldsymbol{\mathrm{x}}}(\tau), \tau)\, d\tau\, ds,
@@ -199,7 +199,7 @@
 
         Novamente, introduzimos coordenadas redundantes \((x, y, z)\) e uma força de vínculo \(\boldsymbol{\lambda} = \lambda \nabla \phi\), resultando em um sistema com 4 incógnitas \((x, y, z, \lambda)\) para descrever apenas 2 graus de liberdade (coordenadas esféricas \(\theta, \varphi\)).</p>
 
-        <p style="text-align: justify"> Essa proliferação de entidades teóricas não observáveis (forças de vínculo) exemplifica o que Sellars chamaria de "mito do dado" na imagem científica — a pressuposição de que devemos postular entidades ocultas para explicar restrições que são, em última instância, puramente geométricas. Bhaskar, por outro lado, identificaria aqui uma confusão entre o <i>domínio transitivo</i> (nosso conhecimento do sistema) e o <i>domínio intransitivo</i> (as estruturas causais reais): as forças de vínculo são artefatos epistemológicos, não mecanismos causais.</p>
+        <p style="text-align: justify"> Essa proliferação de entidades teóricas não observáveis (forças de vínculo) exemplifica o que Sellars chamaria de "mito do dado" [SELLARS-1963] na imagem científica — a pressuposição de que devemos postular entidades ocultas para explicar restrições que são, em última instância, puramente geométricas. Bhaskar, por outro lado, identificaria aqui uma confusão entre o <i>domínio transitivo</i> (nosso conhecimento do sistema) e o <i>domínio intransitivo</i> (as estruturas causais reais): as forças de vínculo são artefatos epistemológicos, não mecanismos causais.</p>
 
         <p style="text-align: justify"><b>Exemplo 3 (Corpo rígido):</b> Um corpo rígido em \(\mathbb{R}^3\) possui \(N\) partículas com vínculos holônomos:
 
@@ -213,7 +213,7 @@
 
         <h3 style="color: #34495e; margin-top: 40px; margin-bottom: 20px; border-bottom: 2px solid #95a5a6; padding-bottom: 8px;">§2. O Formalismo Lagrangiano: Geometria do Fibrado Tangente</h3>
 
-        <p style="text-align: justify">A reformulação lagrangiana da mecânica clássica, desenvolvida por Euler e Lagrange no século XVIII e consolidada por Hamilton, Jacobi e Poincaré no XIX, representa uma sublimação conceitual (<i>Aufhebung</i>) da formulação newtoniana: preserva sua verdade empírica enquanto supera (<i>aufhebt</i>) suas limitações estruturais através de uma reconfiguração geométrico-variacional do edifício teórico. O que emerge é uma mecânica fundamentada não em forças, mas em uma função escalar — a <i>Lagrangiana</i> — que codifica toda a dinâmica do sistema através do <i>princípio de mínima ação</i>. Formalmente, agora quem assume o papel de <i>espaço de configurações</i> é  $Q$, uma variedade diferenciável suave de dimensão \(n\); para a partícula na esfera, \(Q = S^2\); para \(N\) partículas livres, \(Q = \mathbb{R}^{3N}\). O <i>fibrado tangente</i> \(TQ\) é definido como:
+        <p style="text-align: justify">A reformulação lagrangiana da mecânica clássica, desenvolvida por Euler e Lagrange no século XVIII e consolidada por Hamilton, Jacobi e Poincaré no XIX, representa uma sublimação conceitual (<i>Aufhebung</i>) da formulação newtoniana: preserva sua verdade empírica enquanto supera (<i>aufhebt</i>) suas limitações estruturais através de uma reconfiguração geométrico-variacional do edifício teórico. O que emerge é uma mecânica fundamentada não em forças, mas em uma função escalar — a <i>Lagrangiana</i> — que codifica toda a dinâmica do sistema através do <i>princípio de mínima ação</i>. Formalmente, agora quem assume o papel de <i>espaço de configurações</i> é  $Q$, uma variedade diferenciável suave de dimensão \(n\); para a partícula na esfera, \(Q = S^2\); para \(N\) partículas livres, \(Q = \mathbb{R}^{3N}\). O <i>fibrado tangente</i> \(TQ\) é definido como [LEE-2013; MARSDEN-1999]:
 
         \begin{equation}
         TQ = \bigcup_{q \in Q} \{q\} \times T_q Q,
@@ -247,7 +247,7 @@
         </p>
 
          <p style="text-align: justify">
-            <strong>Nota técnica 3 (Boa-definição do funcional de ação):</strong> Do ponto de vista da teoria da medida clássica, a integral (7) está bem definida, também sob hipóteses extremamente brandas. Consideremos \(I = [t_1, t_2]\) equipado com a medida de Lebesgue \(\mu\). Para uma curva \(\gamma \in C^2(I; Q)\), a aplicação \(t \mapsto L(\gamma(t), \dot{\gamma}(t), t)\) é mensurável em \((I, \mathcal{B}(I), \mu)\), onde \(\mathcal{B}(I)\) denota a σ-álgebra de Borel. Mais ainda, se \(L\) é localmente limitada e \(\gamma\) tem velocidade localmente limitada (o que é automático para \(\gamma \in C^2\) em intervalos compactos), então:
+            <strong>Nota técnica 3 (Boa-definição do funcional de ação):</strong> Do ponto de vista da teoria da medida clássica [EVANS-GARIEPY-2015], a integral (7) está bem definida, também sob hipóteses extremamente brandas. Consideremos \(I = [t_1, t_2]\) equipado com a medida de Lebesgue \(\mu\). Para uma curva \(\gamma \in C^2(I; Q)\), a aplicação \(t \mapsto L(\gamma(t), \dot{\gamma}(t), t)\) é mensurável em \((I, \mathcal{B}(I), \mu)\), onde \(\mathcal{B}(I)\) denota a σ-álgebra de Borel. Mais ainda, se \(L\) é localmente limitada e \(\gamma\) tem velocidade localmente limitada (o que é automático para \(\gamma \in C^2\) em intervalos compactos), então:
             
             \[
             t \mapsto L(\gamma(t), \dot{\gamma}(t), t) \in L^1(I, \mu),
@@ -259,7 +259,7 @@
             |L(q, v, t)| \leq C(1 + \|v\|^p), \quad p \geq 1,
             \]
             
-            tem-se \(S: W^{1,p}(I; Q) \to \mathbb{R}\) bem definido e contínuo. Do ponto de vista da teoria geométrica da medida, quando \(Q\) é uma variedade riemanniana, a ação pode ser interpretada como um funcional de <i>energia</i> sobre o espaço de curvas retificáveis. Para curvas Lipschitz \(\gamma: I \to Q\), a velocidade métrica \(|\dot{\gamma}|(t) = \lim_{h \to 0} d_Q(\gamma(t+h), \gamma(t))/|h|\) existe q.s., e podemos escrever:
+            tem-se \(S: W^{1,p}(I; Q) \to \mathbb{R}\) bem definido e contínuo. Do ponto de vista da teoria geométrica da medida [FEDERER-1969; MORGAN-2016], quando \(Q\) é uma variedade riemanniana, a ação pode ser interpretada como um funcional de <i>energia</i> sobre o espaço de curvas retificáveis. Para curvas Lipschitz \(\gamma: I \to Q\), a velocidade métrica \(|\dot{\gamma}|(t) = \lim_{h \to 0} d_Q(\gamma(t+h), \gamma(t))/|h|\) existe q.s., e podemos escrever:
             
             \[
             S[\gamma] = \int_I \mathcal{L}(\gamma(t), |\dot{\gamma}|(t), t)\, d\mu(t),
@@ -268,7 +268,7 @@
             onde \(\mathcal{L}\) é o Lagrangiano expresso em termos da norma da velocidade. Esta formulação permite generalizar o princípio variacional para espaços métricos mais gerais (espaços de Alexandrov, espaços \(\mathrm{RCD}(K, \infty)\)), conectando a mecânica clássica à teoria geométrica  da medida. A existência de minimizadores para \(S\) segue, sob condições de coercividade e semi-continuidade inferior fraca, do método direto do cálculo variacional nos espaços de Sobolev.
          </p>
 
-        <p style="text-align: justify">Mais precisamente, o que o princípio de Hamilton postula é que \(\gamma\) é um ponto crítico do funcional \(S\) no espaço de caminhos \(\Omega(Q; q_1, q_2) = \{\gamma \in C^2([t_1, t_2]; Q) : \gamma(t_1) = q_1, \gamma(t_2) = q_2\}\). Para determinar as equações de movimento, consideramos variações \(\gamma_\epsilon(t) = \gamma(t) + \epsilon \eta(t)\), onde \(\eta: [t_1, t_2] \to TQ\) é uma variação infinitesimal que se anula nos extremos: \(\eta(t_1) = \eta(t_2) = 0\). A condição de estacionariedade, \[\dfrac{d}{d\epsilon}\big|_{\epsilon=0} S[\gamma_\epsilon] = 0,\] implica que:
+        <p style="text-align: justify">Mais precisamente, o que o princípio de Hamilton [ARNOLD-1989; GOLDSTEIN-2002] postula é que \(\gamma\) é um ponto crítico do funcional \(S\) no espaço de caminhos \(\Omega(Q; q_1, q_2) = \{\gamma \in C^2([t_1, t_2]; Q) : \gamma(t_1) = q_1, \gamma(t_2) = q_2\}\). Para determinar as equações de movimento, consideramos variações \(\gamma_\epsilon(t) = \gamma(t) + \epsilon \eta(t)\), onde \(\eta: [t_1, t_2] \to TQ\) é uma variação infinitesimal que se anula nos extremos: \(\eta(t_1) = \eta(t_2) = 0\). A condição de estacionariedade, \[\dfrac{d}{d\epsilon}\big|_{\epsilon=0} S[\gamma_\epsilon] = 0,\] implica que:
 
         \begin{equation}
         0 = \int_{t_1}^{t_2} \left( \frac{\partial L}{\partial q^i} \eta^i + \frac{\partial L}{\partial \dot{q}^i} \frac{d\eta^i}{dt} \right) dt.
@@ -379,7 +379,7 @@
         \omega = -d\theta = dq^i \wedge dp_i.
         \end{equation}
 
-        A 2-forma \(\omega\) é fechada (\(d\omega = 0\)) e não-degenerada (para cada ponto, \(\omega_\alpha: T_\alpha(T^*Q) \times T_\alpha(T^*Q) \to \mathbb{R}\) é um produto interno antisimétrico não-singular). O par \((T^*Q, \omega)\) é uma <i>variedade simplética</i>.</p>
+        A 2-forma \(\omega\) é fechada (\(d\omega = 0\)) e não-degenerada (para cada ponto, \(\omega_\alpha: T_\alpha(T^*Q) \times T_\alpha(T^*Q) \to \mathbb{R}\) é um produto interno antisimétrico não-singular). O par \((T^*Q, \omega)\) é uma <i>variedade simplética</i> [ABRAHAM-1978; CANNAS-2001].</p>
 
         <p style="text-align: justify">Dada uma função \(f: T^*Q \to \mathbb{R}\), o <i>campo vetorial hamiltoniano</i> \(X_f\) é definido implicitamente por:
 
@@ -467,7 +467,7 @@
             Essas relações são o ponto de partida para a quantização canônica: substituindo \(\{\cdot, \cdot\} \to -\frac{i}{\hbar}[\cdot, \cdot]\), recuperamos as relações de comutação de Heisenberg.</p>
         </p>
 
-    <p style="text-align: justify"><b>Teorema de Noether (versão hamiltoniana):</b> Seja \(G\) um grupo de Lie agindo em \(Q\) por difeomorfismos, preservando a Lagrangiana. Então, para cada gerador infinitesimal \(\xi\) da ação, existe uma função \(J_\xi: T^*Q \to \mathbb{R}\) (momento associado à simetria) tal que:
+    <p style="text-align: justify"><b>Teorema de Noether (versão hamiltoniana) [NOETHER-1918]:</b> Seja \(G\) um grupo de Lie agindo em \(Q\) por difeomorfismos, preservando a Lagrangiana. Então, para cada gerador infinitesimal \(\xi\) da ação, existe uma função \(J_\xi: T^*Q \to \mathbb{R}\) (momento associado à simetria) tal que:
 
         \begin{equation}
         \{J_\xi, H\} = 0.
@@ -495,7 +495,7 @@
         \frac{d}{dt} \int_{\Omega(t)} \omega^n = 0,
         \end{equation}
 
-        para qualquer região \(\Omega(t)\) evoluída pelo fluxo hamiltoniano. É curioso pensar como, em uma perspectiva de realismo estrutural ôntico, a estrutura simplética ω seria identificada com a própria natureza do sistema físico — não haveria distinção entre 'mecanismo causal' e 'estrutura matemática', pois a realidade física é estrutura relacional. A quantização seria então uma transição entre regimes estruturais (simplético → não-comutativo) no próprio tecido da realidade física, não apenas em nossas descrições.
+        para qualquer região \(\Omega(t)\) evoluída pelo fluxo hamiltoniano. É curioso pensar como, em uma perspectiva de realismo estrutural ôntico [LADYMAN-2007], a estrutura simplética $\omega$ seria identificada com a própria natureza do sistema físico — não haveria distinção entre 'mecanismo causal' e 'estrutura matemática', pois a realidade física é estrutura relacional. A quantização seria então uma transição entre regimes estruturais (simplético → não-comutativo) no próprio tecido da realidade física, não apenas em nossas descrições.
         </p>
 
         <p style="text-align: justify">Encerramos esta seção observando que a formulação hamiltoniana, ao contrário da newtoniana, torna manifesta a estrutura de espaço de fases como variedade simplética \((T^*Q, \omega)\), uma vez que as posições e momentos emergem como coordenadas canônicas adaptadas a essa estrutura geométrica intrínseca. O colchete de Poisson (11), que codifica a dinâmica e as simetrias, será o objeto central da quantização por deformação: a passagem da mecânica clássica à quântica será realizada através de uma deformação algébrica do colchete de Poisson em um comutador de operadores, preservando a estrutura de álgebra de Lie. Contudo, antes de adentrarmos a quantização, é necessário formalizar rigorosamente a noção de <i>variedade de Poisson</i> — uma generalização da estrutura simplética que permite tratar sistemas com vínculos, redução simplética e outros fenômenos que transcendem o <i>setting</i> do fibrado cotangente. Essa será a ponte conceitual entre a mecânica clássica e a quantização por deformação.</p>
@@ -506,7 +506,7 @@
 
         <p>A estrutura simplética de \(T^*Q\) é um caso particular de uma estrutura geométrica mais geral e fundamental: a <i>estrutura de Poisson</i>. Enquanto a forma simplética \(\omega\) é uma estrutura tensorial (uma 2-forma), a estrutura de Poisson é primariamente <i>algébrica</i> — definida diretamente sobre o espaço de funções suaves, sem referência a uma forma diferencial específica.</p>
 
-        <p><b>Definição 1 (Variedade de Poisson):</b> Uma <i>variedade de Poisson</i> é um par \((M, \{\cdot, \cdot\})\), onde \(M\) é uma variedade diferenciável suave e \(\{\cdot, \cdot\}: C^\infty(M) \times C^\infty(M) \to C^\infty(M)\) é uma operação bilinear (o <i>colchete de Poisson</i>) satisfazendo:
+        <p><b>Definição 1 (Variedade de Poisson) [WEINSTEIN-1983]:</b> Uma <i>variedade de Poisson</i> é um par \((M, \{\cdot, \cdot\})\), onde \(M\) é uma variedade diferenciável suave e \(\{\cdot, \cdot\}: C^\infty(M) \times C^\infty(M) \to C^\infty(M)\) é uma operação bilinear (o <i>colchete de Poisson</i>) satisfazendo:
 
         <ol style="margin-left: 40px; line-height: 2;">
             <li><b>Antissimetria:</b> \(\{f, g\} = -\{g, f\}\)</li>
@@ -558,7 +558,7 @@
 
         O bivetor correspondente é \(\Pi = \partial/\partial q^i \wedge \partial/\partial p_i\), que é não-degenerado.</p>
 
-        <p style="text-align: justify"><b>Exemplo 9 (Álgebra de Lie como variedade de Poisson):</b> Seja \(\mathfrak{g}\) uma álgebra de Lie com colchete \([\cdot, \cdot]\). O dual \(\mathfrak{g}^*\) possui uma estrutura de Poisson natural (estrutura de Kirillov-Kostant-Souriau):
+        <p style="text-align: justify"><b>Exemplo 9 (Álgebra de Lie como variedade de Poisson):</b> Seja \(\mathfrak{g}\) uma álgebra de Lie com colchete \([\cdot, \cdot]\). O dual \(\mathfrak{g}^*\) possui uma estrutura de Poisson natural (estrutura de Kirillov-Kostant-Souriau) [VAISMAN-1994]:
 
         \begin{equation}
         \{f, g\}(\mu) = \langle \mu, [d_\mu f, d_\mu g] \rangle, \quad \mu \in \mathfrak{g}^*,
@@ -589,7 +589,7 @@
 
         <h3 style="color: #34495e; margin-top: 40px; margin-bottom: 20px; border-bottom: 2px solid #95a5a6; padding-bottom: 8px;">§5. A Ruptura Quântica: Da Álgebra Comutativa à Não-Comutatividade</h3>
 
-        <p style="text-align: justify">A transição da mecânica clássica à mecânica quântica não é meramente uma "correção" ou "refinamento" da teoria anterior, mas representa uma <i>ruptura epistemológica</i> radical — uma <i>coupure épistémologique</i> no sentido de Bachelard, ou uma <i>revolução científica</i> kuhniana. O que está em jogo não é apenas a precisão empírica das predições, mas a própria <i>estrutura categorial</i> através da qual conceituamos a realidade física. Do ponto de vista formal, a mecânica quântica emerge através de uma <i>deformação</i> da álgebra comutativa clássica em uma álgebra não-comutativa. Consideremos os seguintes contrastes estruturais:</p>
+        <p style="text-align: justify">A transição da mecânica clássica à mecânica quântica não é meramente uma "correção" ou "refinamento" da teoria anterior, mas representa uma <i>ruptura epistemológica</i> radical — uma <i>coupure épistémologique</i> no sentido de Bachelard [BACHELARD-1938], ou uma <i>revolução científica</i> kuhniana [KUHN-1962]. O que está em jogo não é apenas a precisão empírica das predições, mas a própria <i>estrutura categorial</i> através da qual conceituamos a realidade física. Do ponto de vista formal, a mecânica quântica emerge através de uma <i>deformação</i> da álgebra comutativa clássica em uma álgebra não-comutativa. Consideremos os seguintes contrastes estruturais:</p>
 
         <p style="text-align: justify"><b>Mecânica Clássica:</b></p>
         <ul style="margin-left: 40px; line-height: 2;">
@@ -619,7 +619,7 @@
 
         onde \(\hbar\) é a constante de Planck reduzida (\(\hbar \approx 1.055 \times 10^{-34}\) J·s). Esta relação sugere que o colchete de Poisson é a "parte principal" do comutador quando \(\hbar \to 0\). A não-comutatividade dos operadores quânticos não é um detalhe técnico, mas uma revolução ontológica. Em mecânica clássica, \(fg = gf\) para quaisquer observáveis \(f, g\) — a ordem de medição é irrelevante, refletindo a pressuposição de que as propriedades físicas possuem valores definidos independentemente da observação (realismo ingênuo). Na mecânica quântica, \([\hat{f}, \hat{g}] \neq 0\) implica que as medições de \(\hat{f}\) e \(\hat{g}\) são <i>mutuamente perturbadoras</i> — não podem ser simultaneamente realizadas com precisão arbitrária (princípio de incerteza de Heisenberg). Isso força uma reconsideração da própria noção de "propriedade física": as propriedades não são atributos intrínsecos pré-existentes, mas emergem na interação medição-sistema. </p>
 
-        <p style="text-align: justify">Formalmente, um <i>espaço de Hilbert</i> \(\mathcal{H}\) é um espaço vetorial complexo completo equipado com um produto interno \(\langle \cdot, \cdot \rangle: \mathcal{H} \times \mathcal{H} \to \mathbb{C}\) sesquilinear, positivo-definido e que induz uma norma completa. Para sistemas com \(n\) graus de liberdade, tipicamente \(\mathcal{H} = L^2(\mathbb{R}^n)\), o espaço de funções quadrado-integráveis:
+        <p style="text-align: justify">Formalmente, um <i>espaço de Hilbert</i> \(\mathcal{H}\) é um espaço vetorial complexo completo equipado com um produto interno \(\langle \cdot, \cdot \rangle: \mathcal{H} \times \mathcal{H} \to \mathbb{C}\) sesquilinear, positivo-definido e que induz uma norma completa [VON-NEUMANN-1932]. Para sistemas com \(n\) graus de liberdade, tipicamente \(\mathcal{H} = L^2(\mathbb{R}^n)\), o espaço de funções quadrado-integráveis:
 
         \begin{equation}
         L^2(\mathbb{R}^n) = \left\{ \psi: \mathbb{R}^n \to \mathbb{C} : \int_{\mathbb{R}^n} |\psi(x)|^2\, dx < \infty \right\},
@@ -706,7 +706,7 @@
             <li><b>Quantização por deformação:</b> Interpreta a passagem clássica-quântica como deformação algébrica contínua parametrizada por \(\hbar\).</li>
         </ul>
 
-        <p style="text-align: justify">É na <i>quantização por deformação</i> que a estrutura de Poisson revela sua importância fundamental. A ideia central, formalizada por Bayen, Flato, Fronsdal, Lichnerowicz e Sternheimer nos anos 1970, é a seguinte:</p>
+        <p style="text-align: justify">É na <i>quantização por deformação</i> que a estrutura de Poisson revela sua importância fundamental. A ideia central, formalizada por Bayen, Flato, Fronsdal, Lichnerowicz e Sternheimer nos anos 1970 [BAYEN-1978; BAYEN-1978b], é a seguinte:</p>
 
         <p style="text-align: justify"><b>Programa da Quantização por Deformação:</b> Dado um espaço de Poisson \((M, \{\cdot, \cdot\})\), construir uma família de produtos associativos \(\star_\hbar\) em \(C^\infty(M)[[\hbar]]\) (séries formais de potências em \(\hbar\)) tal que:
 
@@ -754,7 +754,7 @@ Em coordenadas, se \(f(q', p', q'', p'')\), então \(\Delta(f)(q, p) = f(q, p, q
 \{f, g\} = f P g = f \sum_{j=1}^n \left(\overleftarrow{\partial}_{q^j} \overrightarrow{\partial}_{p_j} - \overleftarrow{\partial}_{p_j} \overrightarrow{\partial}_{q^j}\right) g,
 \end{equation}
 
-para quaisquer \(f, g \in C^\infty(E)\). Esta notação compacta será fundamental para a definição do produto estrela. Definimos agora o <i>produto de Moyal-Weyl</i> \(\star_\hbar: C^\infty(E) \otimes C^\infty(E) \to C^\infty(E)\) como a série formal:
+para quaisquer \(f, g \in C^\infty(E)\). Esta notação compacta será fundamental para a definição do produto estrela. Definimos agora o <i>produto de Moyal-Weyl</i> \(\star_\hbar: C^\infty(E) \otimes C^\infty(E) \to C^\infty(E)\) como a série formal [MOYAL-1949; GROENEWOLD-1946; WEYL-1927]:
 
 \begin{equation}
 f \star_\hbar g := \sum_{j=0}^\infty \frac{1}{j!} \left(\frac{i\hbar}{2}\right)^j f P^j g = f \exp\left(\frac{i\hbar}{2} P\right) g.
@@ -860,7 +860,7 @@ Esta álgebra é uma quantização por deformação da álgebra de Poisson \((C^
 
 
 
-        <p style="text-align: justify">O teorema fundamental, provado por Kontsevich (1997, Fields Medal 1998), estabelece:</p>
+        <p style="text-align: justify">O teorema fundamental, provado por Kontsevich (1997, Fields Medal 1998), estabelece [KONTSEVICH-1997]:</p>
 
         <p style="text-align: justify"><b>Teorema (Kontsevich):</b> Toda variedade de Poisson finito-dimensional admite uma quantização por deformação, única módulo equivalência. Mais precisamente, o espaço de quantizações por deformação módulo equivalência é afim sobre o espaço de cohomologia de Hochschild \(HH^2(M)\).</p>
 
@@ -1071,6 +1071,7 @@ Esta álgebra é uma quantização por deformação da álgebra de Poisson \((C^
 </body>
 
 </html>
+
 
 
 
