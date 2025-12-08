@@ -20,7 +20,7 @@
 
 body {
     /* Fontes matemáticas/acadêmicas mais sóbrias */
-    font-family: 'Times New Roman', 'Georgia', serif;
+    font-family: 'Charter', 'Bitstream Charter', 'Sitka Text', Cambria, serif;;
     line-height: 1.7;
     color: var(--text-color);
     background-color: #fff;
@@ -418,4 +418,5 @@ body {
 nav a.active {
     text-decoration: underline;
     font-weight: 600;
+
 }
