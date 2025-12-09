@@ -113,9 +113,6 @@
 
         <p style="text-align: justify">Além disso, com a consolidação desse paradigma no século XVIII, desenvolve-se uma forma de realismo científico na qual as entidades teóricas tratadas pela física — forças gravitacionais, massas inerciais — passam a ser vistas não apenas como ferramentas matemáticas (<i>instrumenta rationis</i>), mas como correspondentes a estruturas da realidade exterior objetiva. Concomitantemente, estabelece-se um mecanicismo ontológico que interpreta os fenômenos como resultantes de interações causais regidas por leis invariantes. Essa cosmovisão prometia a inteligibilidade epistêmica do mundo através de sua redutibilidade teórica a um sistema determinístico fechado \(\mathcal{S}_C\), e veio a influenciar não somente as demais ciências positivas nos séculos subsequentes, mas também a própria filosofia — como se vê nos <i>Metaphysische Anfangsgründe der Naturwissenschaft</i>, onde Kant fornece os fundamentos metafísicos necessários para a mecânica newtoniana enquanto ciência propriamente dita (<i>eigentliche Wissenschaft</i>) [KANT-1786].</p>
 
-        <p style="text-align: justify">
-            <strong>Nota técnica 1:</strong> A formulação newtoniana trabalha primordialmente com o espaço de configurações \(\mathbb{R}^{3N}\), mas a estrutura completa do espaço de estados requer o fibrado tangente \(T\mathbb{R}^{3N} \cong \mathbb{R}^{3N} \times \mathbb{R}^{3N}\), onde as velocidades são tratadas como elementos do espaço tangente. Esta distinção será crucial para a transição ao formalismo hamiltoniano.
-        <p>
 
         <p style="text-align: justify">Formalmente, esses sistemas são descritos por meio de duas estruturas fundamentais: seu <i>espaço físico</i> (o espaço "real", onde os corpos e partículas habitam), modelado como o espaço 3-dimensional euclidiano \(\mathbb{R}^3\), e seu <i>espaço de configurações</i> (um construto puramente matemático, idealizado, que comporta todas as possíveis configurações do sistema), modelado como o espaço \(3N\)-dimensional também euclidiano \(\mathbb{R}^{3N}\) — onde \(N\) é o número de partículas (ou corpos) que compõe \(\mathcal{S}_C\). Desse modo, o absoluto espaço-tempo newtoniano é, em um sentido puramente formal, o produto cartesiano \(\mathbb{R} \times \mathbb{R}^3\). A trajetória de uma partícula (ou corpo) pontual \(a\) em \(\mathbb{R}^3\) é descrita pela sua linha-mundo, o gráfico \(\{(t_a, \boldsymbol{\mathrm{x}}_a(t_a)) : t_a \in \mathbb{R}\} \subset \mathbb{R} \times \mathbb{R}^3\), onde \(\boldsymbol{\mathrm{x}}_a \in C^2(\mathbb{R}; \mathbb{R}^{3})\) é a função posição e \((t_a, \boldsymbol{\mathrm{x}}_a(t_a))\) configura um <i>evento</i> — uma fotografia de \(a\) na posição \(\boldsymbol{\mathrm{x}}_a(t_a)\) no instante \(t_a\). Contudo, para tornar \(\mathbb{R} \times \mathbb{R}^3\) palco de um sistema dinâmico — e não apenas de imagens estáticas —, é necessário introduzir definições rigorosas de <i>velocidade</i> e <i>aceleração</i>. Newton o fez por meio do <i>método das fluxões</i>, da seguinte maneira: seja \(\boldsymbol{\mathrm{x}}\) o fluente (<i>fluens</i>, aquilo que flui ou varia continuamente no tempo) de uma partícula; sua fluxão primeira (<i>fluxio</i>, a taxa instantânea de variação do fluente em relação ao tempo) é denotada por \(\dot{\boldsymbol{\mathrm{x}}}\), isto é, sua velocidade. De modo análogo, a fluxão de \(\dot{\boldsymbol{\mathrm{x}}}\) — ou a segunda fluxão de \(\boldsymbol{\mathrm{x}}\) — é \(\ddot{\boldsymbol{\mathrm{x}}}\), que define sua aceleração. Na linguagem da análise matemática moderna, "aquilo que flui ou varia continuamente no tempo" nada mais é do que uma <i>função</i> diferenciável, e sua <i>fluxão</i> — sua variação instantânea no tempo — é sua <i>derivada</i> em relação a \(t\):
         
@@ -123,6 +120,10 @@
         \dot{\boldsymbol{\mathrm{x}}} = \dfrac{d\boldsymbol{\mathrm{x}}}{dt} \quad \text{e} \quad \ddot{\boldsymbol{\mathrm{x}}} = \dfrac{d^2\boldsymbol{\mathrm{x}}}{dt^2}. \tag{1}
         \end{equation}</p>
 
+         <p style="text-align: justify">
+            <strong>Nota técnica 1:</strong> A formulação newtoniana trabalha primordialmente com o espaço de configurações \(\mathbb{R}^{3N}\), mas a estrutura completa do espaço de estados requer o fibrado tangente \(T\mathbb{R}^{3N} \cong \mathbb{R}^{3N} \times \mathbb{R}^{3N}\), onde as velocidades são tratadas como elementos do espaço tangente. Esta distinção será crucial para a transição ao formalismo hamiltoniano.
+        <p>
+            
         <p style="text-align: justify">Uma vez estabelecidas essas noções fundamentais, torna-se possível explicitar, formalmente, um dos traços epistemológicos e ontológicos centrais à mecânica newtoniana: seu supracitado determinismo. Com efeito, postula-se: <i>o movimento de qualquer sistema físico clássico em um intervalo de tempo \(\text{I} \subseteq \mathbb{R}\) — isto é, os conjuntos \(\{\boldsymbol{\mathrm{x}}_i(t) : i \leq N,\, t \in \text{I}\}\) e \(\{\dot{\boldsymbol{\mathrm{x}}}_i(t) : i \leq N,\, t \in \text{I}\}\) — é determinado exclusiva e univocamente pelo seu estado inicial</i>, i.e., por \(\boldsymbol{\mathrm{x}}_i(t_0)\) e \(\dot{\boldsymbol{\mathrm{x}}}_i(t_0)\), com \(t_0 = \inf\{\text{I}\}\). Este postulado — que Bhaskar, em sua ontologia realista crítica [BHASKAR-1975], identificaria como expressão transitiva da estrutura causal <i>generativa</i> subjacente aos fenômenos — traduz-se formalmente na relação:
 
         \begin{equation}
@@ -1085,6 +1086,7 @@ Esta álgebra é uma quantização por deformação da álgebra de Poisson \((C^
 </body>
 
 </html>
+
 
 
 
