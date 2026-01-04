@@ -205,7 +205,7 @@ Em mecânica quântica, a medida desempenha o papel de codificar as probabilidad
         \[\int f \, d\mu = \lim_{n\to\infty} \int f_n \, d\mu\]
 </p>
 
-<p>Este último resultado, em particular, permite iterar limites e integrais sob condições muito gerais — operação que recorrente no contexto da mecânica quântica ao lidarmos com aproximações espectrais e limites de sequências de estados, por exemplo. A fim de ilustração deste segundo caso, considere uma sequência de funções de onda \(\psi_n \in L^2(\mathbb{R}^n)\) que converge pontualmente para um estado \(\psi\in L^2(\mathbb{R}^n)\) e um observável representado por uma função \(a: X \rightarrow \mathbb{R} \). O valor esperado de \(a\) é: 
+<p>Este último resultado, em particular, permite iterar limites e integrais sob condições muito gerais — operação que recorrente no contexto da mecânica quântica ao lidarmos com aproximações espectrais e limites de sequências de estados, por exemplo. A fim de ilustração deste segundo caso, em particular, considere uma sequência de funções de onda \(\psi_n \in L^2(\mathbb{R}^n)\) que converge pontualmente para um estado \(\psi\in L^2(\mathbb{R}^n)\) e um observável representado por uma função \(a: X \rightarrow \mathbb{R} \). O valor esperado de \(a\) é: 
 
     \[\langle A\rangle_{\psi_n} = \int_{X} a(x) |\psi(x)|^2 d\mu.\]
 
@@ -214,7 +214,7 @@ Assim, sob hipóteses usuais — como a de que \(g(x):= a(x) |\psi_n (x)|^2\) se
     \[\lim\limits_{n \rightarrow +\infty} \langle A \rangle_{\psi_n} = \langle A \rangle_\psi.\]
 </p>
 <p>
- É interessante como, além de ilustrar uma aplicação concreta do Teorema da Convergência Dominada, este exemplo reforça o papel da integral de Lebesgue na caracterização dos objetos da mecânica quântica — aqui, em particular, na definição do valor esperado de um observável.  Cabe mencionar ainda o teorema de Fubini-Tonelli, resultado  particularmente útil, uma vez que permite o cálculo de integrais múltiplas por meio da iteração de integrais simples:</p>
+ É interessante notar que, além de ilustrar uma aplicação concreta do Teorema da Convergência Dominada, este exemplo também reforça o papel da integral de Lebesgue na caracterização dos objetos da mecânica quântica — aqui, em particular, na definição do valor esperado para um observável.  Cabe mencionar ainda o teorema de Fubini-Tonelli, resultado particularmente útil que permite o cálculo de integrais múltiplas por meio da iteração de integrais simples:</p>
 
 <p>
     <strong>Teorema de Fubini-Tonelli:</strong> Sejam \((X, \Sigma, \mu)\) e \((Y, \mathcal{T}, \nu)\) espaços de medida \(\sigma\)-finitos, e \(f: X \times Y \to \mathbb{R}\) mensurável. Se \(f \geq 0\) ou se \(\int\int |f| \, d(\mu \times \nu) < \infty\), então:
@@ -2683,6 +2683,7 @@ Na segunda parte deste trabalho, continuaremos esta jornada explorando estrutura
 </body>
 
 </html>
+
 
 
 
