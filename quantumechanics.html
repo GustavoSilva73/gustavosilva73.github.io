@@ -193,7 +193,7 @@ Em mecânica quântica, a medida desempenha o papel de codificar as probabilidad
            </ol>
 </p>
 
-<p>A definição de diversos objetos da mecânica quântica, como a função de onda em espaços de dimensão infinita, bem como a caracterização de outros muitos objetos, como as densidades de probabilidade associadas a medições contínuas, apoiam-se integralmente na integral de Lebesgue. Isso garante que estes objetos estejam bem definidos mesmo que sejam problemáticos sob o paradigma rimanniano. Tão importante quanto, é o fato da integral de Lebesgue possuir propriedades de convergência muito mais fortes que a de Riemann:</p>
+<p>A definição de diversos objetos da mecânica quântica, como a função de onda em espaços de dimensão infinita, bem como a caracterização de outros muitos objetos, como as densidades de probabilidade associadas a medições contínuas, apoiam-se integralmente na integral de Lebesgue. Isso garante que estes objetos estejam bem definidos mesmo que sejam problemáticos sob o paradigma rimanniano. Além disso, a integral de Lebesgue possui propriedades de convergência muito mais fortes que a de Riemann:</p>
 
 <p>
     <strong>Teorema da Convergência Monótona:</strong> Se \((f_n)\) é uma sequência crescente de funções mensuráveis não-negativas com \(f_n \uparrow f\), então:
@@ -205,7 +205,7 @@ Em mecânica quântica, a medida desempenha o papel de codificar as probabilidad
         \[\int f \, d\mu = \lim_{n\to\infty} \int f_n \, d\mu\]
 </p>
 
-<p>Este último resultado, em particular, permite iterar limites e integrais sob condições muito gerais — uma operação que aparece naturalmente no contexto da mecânica quântica ao lidarmos, por exemplo, com valores esperados, aproximações espectrais e limites de sequências de estados. A fim de ilustração, considere uma sequência de funções de onda \(\psi_n \in L^2(\mathbb{R}^n)\) que converge pontualmente para um estado \(\psi\in L^2(\mathbb{R}^n)\) e um observável representado por uma função \(a: X \rightarrow \mathbb{R} \). O valor esperado de \(a\) é: 
+<p>Este último resultado, em particular, permite iterar limites e integrais sob condições muito gerais — operação que recorrente no contexto da mecânicaquântica ao lidarmos, por exemplo, com aproximações espectrais e limites de sequências de estados. A fim de ilustração, considere uma sequência de funções de onda \(\psi_n \in L^2(\mathbb{R}^n)\) que converge pontualmente para um estado \(\psi\in L^2(\mathbb{R}^n)\) e um observável representado por uma função \(a: X \rightarrow \mathbb{R} \). O valor esperado de \(a\) é: 
 
     \[\langle A\rangle_{\psi_n} = \int_{X} a(x) |\psi(x)|^2 d\mu.\]
 
@@ -214,24 +214,24 @@ Assim, sob hipóteses usuais — como a de que \(g(x):= a(x) |\psi_n (x)|^2\) se
     \[\lim\limits_{n \rightarrow +\infty} \langle A \rangle_{\psi_n} = \langle A \rangle_\psi.\]
 </p>
 <p>
-  Cumpre notar que, além de ilustrar uma aplicação concreta do Teorema da Convergência Dominada, este exemplo reforça o papel da integral de Lebesgue na caracterização dos objetos da mecânica quântica — aqui, em particular, na definição do valor esperado de um observável.  Cabe mencionar ainda o teorema de Fubini-Tonelli, resultado  particularmente útil, uma vez que permite o cálculo de integrais múltiplas por meio da iteração de integrais simples, um procedimento que, em contextos físicos, aparece de forma natural e recorrente:</p>
+ É interessante como, além de ilustrar uma aplicação concreta do Teorema da Convergência Dominada, este exemplo reforça o papel da integral de Lebesgue na caracterização dos objetos da mecânica quântica — aqui, em particular, na definição do valor esperado de um observável.  Cabe mencionar ainda o teorema de Fubini-Tonelli, resultado  particularmente útil, uma vez que permite o cálculo de integrais múltiplas por meio da iteração de integrais simples:</p>
 
 <p>
     <strong>Teorema de Fubini-Tonelli:</strong> Sejam \((X, \Sigma, \mu)\) e \((Y, \mathcal{T}, \nu)\) espaços de medida \(\sigma\)-finitos, e \(f: X \times Y \to \mathbb{R}\) mensurável. Se \(f \geq 0\) ou se \(\int\int |f| \, d(\mu \times \nu) < \infty\), então:
         \[\int_X \left(\int_Y f(x,y) \, d\nu(y)\right) d\mu(x) = \int_Y \left(\int_X f(x,y) \, d\mu(x)\right) d\nu(y) = \int_{X\times Y} f \, d(\mu \times \nu)\]
 </p>
 
-<p> Em um plano distinto, mas intimamente relacionado ao desenvolvido até aqui, reside a regra de Born: considere um estado representado por uma função de onda \(\psi \in L^2(\mathbb{R}^n)\) e um observável representado por um operador auto-adjunto \(\hat{A}\). A probabilidade de obter um resultado em um conjunto Borel-mensurável \(A \subseteq \mathbb{R}\) é dada por:
+<p>A regra de Born da mecânica quântica trata-se de um restultado de particular interesse, uma vez que reforça sua conexão com a teoria da medida: considere um estado representado por uma função de onda \(\psi \in L^2(\mathbb{R}^n)\) e um observável representado por um operador auto-adjunto \(\hat{A}\). A probabilidade de obter um resultado em um conjunto Borel-mensurável \(A \subseteq \mathbb{R}\) é dada por:
 
 
 \[P(A) = \int_A |\langle a|\psi\rangle|^2 \, dx = \int_{f^{-1}(A)} |\psi(x)|^2 \, dx\]
 
 
-onde \(f\) é a função que representa o observável. Note como fora do contexto da teoria da medida, esse enunciado sequer faria sentido, pois repousa essencialmente na noção de conjuntos mensuráveis; trata-se, portanto, de um resultado que reforça a conexão entre teoria da medida e mecânica quântica.
+onde \(f\) é a função que representa o observável. Fora do contexto da teoria da medida, esse enunciado sequer faria sentido, pois repousa essencialmente na noção de conjuntos mensuráveis.
 </p>
 
 <p>
-Estamos, agora, aptos a definir os espaços \(L^p(X)\); não como conjuntos de funções ponto a ponto, mas como conjuntos de <em>classes de equivalência</em> de funções mensuráveis. Considere \((X,\Sigma,\mu)\) um espaço de medida e seja \(1 \le p \le \infty\). Duas funções mensuráveis \(f,g : X \to \mathbb{C}\) são ditas <em>iguais quase em todo ponto</em> (q.t.p.) se o conjunto de pontos em que elas diferem é nulo, i.e. 
+Estamos finalmente aptos a definir os espaços \(L^p(X)\); não como conjuntos de funções ponto a ponto, mas como conjuntos de <em>classes de equivalência</em> de funções mensuráveis. Considere \((X,\Sigma,\mu)\) um espaço de medida e seja \(1 \le p \le \infty\). Duas funções mensuráveis \(f,g : X \to \mathbb{C}\) são ditas <em>iguais quase em todo ponto</em> (q.t.p.) se o conjunto de pontos em que elas diferem é nulo, i.e. 
 
 \[
 \mu\big(\{x \in X : f(x) \neq g(x)\}\big) = 0.
@@ -2683,6 +2683,7 @@ Na segunda parte deste trabalho, continuaremos esta jornada explorando estrutura
 </body>
 
 </html>
+
 
 
 
