@@ -102,7 +102,7 @@ Além disso, este texto servirá como referência para trabalhos posteriores, no
 
         <h3 style="color: #34495e; margin-top: 40px; margin-bottom: 20px; border-bottom: 2px solid #95a5a6; padding-bottom: 8px;">§1. Um Pouco de Teoria da Medida</h3>
  
-<p>Diante da ênfase algébrica que tradicionalmente domina o ensino da disciplina, a teoria da medida pode parecer um ponto de partida deveras abstrato para o estudo da mecânica quântica. Essa impressão, contudo, dissipa-se ao reconhecer que a mecânica quântica é intrinsecamente probabilística e que a teoria da medida constitui, em última instância, o alicerce  da teoria das probabilidades. Por conseguinte, um tratamento rigoroso da teoria exige a adoção da linguagem, dos objetos e de conceitos próprios a medida e a integração. Essencialmente, seus objetos de maior relevância para a disciplina são as medidas a valores em projeções e os espaços \(L^p(\mathbb{R}^n)\); antes da introdução formal destes objetos, contudo, é preciso estabelecer os fundamentos conceituais da teoria da medida.
+<p>Diante da ênfase algébrica que tradicionalmente domina o ensino da disciplina, a teoria da medida pode parecer um ponto de partida deveras abstrato para o estudo da mecânica quântica. Essa impressão, contudo, dissipa-se ao reconhecer que a mecânica quântica é intrinsecamente probabilística e que a teoria da medida constitui, em última instância, o alicerce  da teoria das probabilidades [FOLLAND‑1999]. Por conseguinte, um tratamento rigoroso da teoria exige a adoção da linguagem, dos objetos e de conceitos próprios a medida e a integração. Essencialmente, seus objetos de maior relevância para a disciplina são as medidas a valores em projeções e os espaços \(L^p(\mathbb{R}^n)\) [HALL‑2013]; antes da introdução formal destes objetos, contudo, é preciso estabelecer os fundamentos conceituais da teoria da medida.
 </p>
 
 <p>
@@ -154,7 +154,7 @@ Exemplos fundamentais de medidas incluem:
 </ol>
 
 <p>
-Em mecânica quântica, a medida desempenha o papel de codificar as probabilidades de resultados de medições físicas. Por exemplo, no caso do operador posição \(\hat{X}\), o estado \(\psi \in L^2(\mathbb{R}^n)\) induz a medida de probabilidade \(|\psi(x)|^2 \, dx\), que define uma distribuição de probabilidade sobre o espaço de configurações, permitindo o cálculo de valores esperados para os observáveis associados ao operador.
+Em mecânica quântica, a medida desempenha o papel de codificar as probabilidades de resultados de medições físicas [PERES‑1995]. Por exemplo, no caso do operador posição \(\hat{X}\), o estado \(\psi \in L^2(\mathbb{R}^n)\) induz a medida de probabilidade \(|\psi(x)|^2 \, dx\) [TESCHL‑2009] [REED‑SIMON‑1972‑1978], que define uma distribuição de probabilidade sobre o espaço de configurações, permitindo o cálculo de valores esperados para os observáveis associados ao operador.
 </p>
 
 <p>
@@ -193,7 +193,7 @@ Em mecânica quântica, a medida desempenha o papel de codificar as probabilidad
            </ol>
 </p>
 
-<p>A definição de diversos objetos da mecânica quântica, como a função de onda em espaços de dimensão infinita, bem como a caracterização de outros muitos objetos, como as densidades de probabilidade associadas a medições contínuas, apoiam-se integralmente na integral de Lebesgue. Isso garante que estes objetos estejam bem definidos mesmo que problemáticos sob o paradigma rimanniano. Além disso, a integral de Lebesgue possui propriedades de convergência muito mais fortes que a de Riemann:</p>
+<p>A definição de diversos objetos da mecânica quântica, como a função de onda em espaços de dimensão infinita, bem como a caracterização de outros muitos objetos, como as densidades de probabilidade associadas a medições contínuas, apoiam-se integralmente na integral de Lebesgue. Isso garante que estes objetos estejam bem definidos mesmo que problemáticos sob o paradigma rimanniano. Além disso, a integral de Lebesgue possui propriedades de convergência muito mais fortes que a de Riemann [FOLLAND‑1999]:</p>
 
 <p>
     <strong>Teorema da Convergência Monótona:</strong> Se \((f_n)\) é uma sequência crescente de funções mensuráveis não-negativas com \(f_n \uparrow f\), então:
@@ -207,7 +207,7 @@ Em mecânica quântica, a medida desempenha o papel de codificar as probabilidad
 
 <p>Este último resultado, em particular, permite iterar limites e integrais sob condições muito gerais — operação recorrente no contexto da mecânica quântica ao lidarmos com aproximações espectrais e limites de sequências de estados, por exemplo. A título de ilustração para este último caso, considere uma sequência de funções de onda \(\psi_n \in L^2(\mathbb{R}^n)\) que converge pontualmente para um estado \(\psi\in L^2(\mathbb{R}^n)\) e um observável representado por uma função \(a: X \rightarrow \mathbb{R} \). O valor esperado de \(a\) é: 
 
-    \[\langle A\rangle_{\psi_n} = \int_{X} a(x) |\psi(x)|^2 d\mu.\]
+    \[\langle A\rangle_{\psi_n} = \int_{X} a(x) |\psi(x)|^2 d\mu.\text{[HALL‑2013]}\]
 
 Assim, sob hipóteses usuais — como a de que \(g(x):= a(x) |\psi_n (x)|^2\) seja integrável à Lebesgue — tem-se, pelo Teorema da Convergencia Dominada, que:
 
@@ -221,7 +221,7 @@ Assim, sob hipóteses usuais — como a de que \(g(x):= a(x) |\psi_n (x)|^2\) se
         \[\int_X \left(\int_Y f(x,y) \, d\nu(y)\right) d\mu(x) = \int_Y \left(\int_X f(x,y) \, d\mu(x)\right) d\nu(y) = \int_{X\times Y} f \, d(\mu \times \nu)\]
 </p>
 
-<p>Ainda nesse espírito, um resultado de particular relevância, que merece ser mencionado, é a regra de Born: considere um estado representado por uma função de onda \(\psi \in L^2(\mathbb{R}^n)\) e um observável representado por um operador auto-adjunto \(\hat{A}\). A probabilidade de obter um resultado em um conjunto Borel-mensurável \(A \subseteq \mathbb{R}\) é dada por:
+<p>Ainda nesse espírito, um resultado de particular relevância, que merece ser mencionado, é a regra de Born [PERES‑1995]: considere um estado representado por uma função de onda \(\psi \in L^2(\mathbb{R}^n)\) e um observável representado por um operador auto-adjunto \(\hat{A}\). A probabilidade de obter um resultado em um conjunto Borel-mensurável \(A \subseteq \mathbb{R}\) é dada por:
 
 
 \[P(A) = \int_A |\langle a|\psi\rangle|^2 \, dx = \int_{f^{-1}(A)} |\psi(x)|^2 \, dx\]
@@ -302,7 +302,7 @@ onde \(\mathcal{P}\) denota uma família de projeções abstratas, satisfazendo 
 </ul>
 
 <p>
-Uma aplicação \(E\) com essas propriedades é chamada de <em>medida a valores em projeções</em> (ou <em>projection-valued measure</em>, PVM). Ela pode ser vista como uma generalização da noção de partição mensurável, tendo em vista que conjuntos disjuntos correspondem a alternativas mutuamente exclusivas, e a aditividade enumerável garante estabilidade sob refinamentos infinitos.
+Uma aplicação \(E\) com essas propriedades é chamada de <em>medida a valores em projeções</em> (ou <em>projection-valued measure</em>, PVM) [TESCHL‑2009]. Ela pode ser vista como uma generalização da noção de partição mensurável, tendo em vista que conjuntos disjuntos correspondem a alternativas mutuamente exclusivas, e a aditividade enumerável garante estabilidade sob refinamentos infinitos.
 Dada uma função mensurável real \(f : X \to \mathbb{R}\), é possível definir formalmente uma integral do tipo
 \[
 \int_X f(x)\, dE(x),
@@ -342,7 +342,7 @@ Nas próximas seções, essas ideias serão concretizadas por meio da álgebra l
 <p> A teoria da medida forneceu o arcabouço teórico necessário para atribuir probabilidades a eventos e definir a integração de Lebesgue, por meio dos espaços \(L^p\) e  das medidas espectrais. Contudo, a mecânica quântica não se limita a associar probabilidades a conjuntos mensuráveis: estados quânticos são vetores em espaços complexos, superposições correspondem a combinações lineares, e a evolução temporal é descrita por transformações unitárias. Assim sendo, ela demanda uma descrição algébrica dos próprios estados físicos e das transformações permitidas entre eles, e a álgebra linear que fornece essa linguagem. 
  </p> 
 
-<p> Os espaços vetoriais relevantes, no entanto, não são os \(\mathbb{C}^n\) finito-dimensionais dos cursos elementares de álgebra linear. Uma partícula livre em \(\mathbb{R}^3\), por exemplo, possui infinitos estados possíveis, descritos por funções de onda \(\psi \in L^2(\mathbb{R}^3)\). Nesse contexto, nem toda transformação linear é contínua, nem todo operador possui autovalores no sentido usual e os espaços de Hilbert — espaços vetoriais complexos, completos e munidos de produto interno — constituem o ambiente matemático ideal apra o tratamento dessas questões. </p>
+<p> Os espaços vetoriais relevantes, no entanto, não são os \(\mathbb{C}^n\) finito-dimensionais dos cursos elementares de álgebra linear [HALL‑2013]. Uma partícula livre em \(\mathbb{R}^3\), por exemplo, possui infinitos estados possíveis, descritos por funções de onda \(\psi \in L^2(\mathbb{R}^3)\). Nesse contexto, nem toda transformação linear é contínua, nem todo operador possui autovalores no sentido usual e os espaços de Hilbert — espaços vetoriais complexos, completos e munidos de produto interno — constituem o ambiente matemático ideal apra o tratamento dessas questões [HALL‑2013] [REED‑SIMON‑1972‑1978]. </p>
 
 <p>
      <strong>Definição 1 (Espaço Vetorial Complexo):</strong> Seja \(V \subset \mathbb{C}^n \) um conjunto não-vazio. \(V\) constitui um espaço vetorial complexo se está munido de duas operações: adição vetorial \(+: V \times V \to V\) e multiplicação escalar \(\cdot: \mathbb{C} \times V \to V\), satisfazendo, para todos \(\alpha, \beta \in \mathbb{C}\) e \(u, v, w \in V\), os seguintes axiomas:
@@ -439,7 +439,7 @@ Outro aspecto notável é que, porquanto espaços de Hilbert equidimensionais de
 Cumpre notar que até aqui trabalhamos sob a hipótese de que o estado de um sistema quântico é completamente descrito por um vetor \(\ket{\psi} \in \mathcal{H}\) (ou, mais precisamente, por uma classe de equivalência \([\ket{\psi}]\) de vetores no espaço Hilbert associado, já que vetores \(\ket{\psi}\) e \(e^{i\theta}\ket{\psi}\) representam o mesmo estado físico). Estados assim descritos são chamados de <em>estados puros</em>. Esta descrição é adequada quando possuímos informação completa sobre o sistema — quando, por exemplo, preparamos cuidadosamente um fóton em um estado de polarização definido ou isolamos um átomo em um estado energético específico.
 </p>
 <p>
-Contudo, a realidade frequentemente não permite tal precisão — mesmo a experimental, que compõe o que Bhaskar denotou por sistemas fechados, metodologicamente controlados. Considere um feixe de luz não polarizada: não é possível descrevê-lo como um único estado de polarização \(\ket{\psi}\), pois ele é, na verdade, uma mistura estatística de fótons com diferentes polarizações. Ou, ainda, considere um sistema quântico em equilíbrio térmico com um reservatório: o estado do sistema não é um vetor puro, mas uma superposição estatística de estados com diferentes energias, cada um ocorrendo com probabilidade ditada pela distribuição de Boltzmann. Em ambos os casos, a descrição vetorial torna-se insuficiente — precisamos de um formalismo que acomode nossa <em>ignorância estatística</em> sobre o sistema.
+Contudo, a realidade frequentemente não permite tal precisão — mesmo a experimental, que compõe o que Bhaskar denotou por sistemas fechados, metodologicamente controlados [BHASKAR‑1975]. Considere um feixe de luz não polarizada: não é possível descrevê-lo como um único estado de polarização \(\ket{\psi}\), pois ele é, na verdade, uma mistura estatística de fótons com diferentes polarizações. Ou, ainda, considere um sistema quântico em equilíbrio térmico com um reservatório: o estado do sistema não é um vetor puro, mas uma superposição estatística de estados com diferentes energias, cada um ocorrendo com probabilidade ditada pela distribuição de Boltzmann. Em ambos os casos, a descrição vetorial torna-se insuficiente — precisamos de um formalismo que acomode nossa <em>ignorância estatística</em> sobre o sistema.
 </p>
 <p>
 Neste ponto, é crucial distinguir dois tipos de incerteza na mecânica quântica. A primeira é a incerteza quântica imanente, manifestada pelo princípio da incerteza de Heisenberg: mesmo conhecendo perfeitamente o estado \(\ket{\psi}\), não é possível prever com certeza o resultado de medições de observáveis não-comutativos. Ao que tudo indica, esta incerteza é de nível ontológico, sendo inerente à teoria e persistindo mesmo para estados puros. A segunda é a incerteza clássica ou estatística, de origem epistemológica, que surge de nossa falta de informação sobre qual estado puro o sistema efetivamente ocupa. Um estado misto descreve uma situação onde ambos os tipos de incerteza estão presentes.
@@ -1327,7 +1327,7 @@ Para estados mistos, probabilidades são médias ponderadas de probabilidades co
 P(x) = |\alpha|^2|\langle x | \psi_A \rangle|^2 + |\beta|^2|\langle x | \psi_B \rangle|^2
 \]
 As franjas de interferência desaparecem. Este fenômeno exemplifica complementaridade de Bohr: informação sobre "caminho" (qual fenda) e padrão de interferência (evidência de superposição) são mutuamente exclusivas — adquirir uma destrói a outra.
-Seguindo Sellars, pode-se distinguir entre a "imagem manifesta"(que inclui conceitos como partícula-clássica-com-trajetória-definida, derivados da experiência perceptiva ordinária e do senso comum) e a "imagem científica" (construída a partir dos postulados teóricos e entidades da ciência, como o vetor de estado em um espaço de Hilbert).</p>
+Seguindo Sellars, pode-se distinguir entre a "imagem manifesta"(que inclui conceitos como partícula-clássica-com-trajetória-definida, derivados da experiência perceptiva ordinária e do senso comum) e a "imagem científica" (construída a partir dos postulados teóricos e entidades da ciência, como o vetor de estado em um espaço de Hilbert) [SELLARS‑1963].</p>
 
 <p>
     Nesse contexto, a tentação de atribuir uma trajetória clássica bem definida a uma partícula quântica antes da medição resulta de uma imposição inadequada da imagem manifesta sobre o domínio da imagem científica. Na imagem científica fornecida pela mecânica quântica padrão (não-relativística), o estado do sistema antes de uma medição de posição é descrito por um vetor de estado (ou uma função de onda) \( \ket{\Psi} \), que evolue de acordo com a equação de Schrödinger. Esse objeto matemático não codifica nem implica uma trajetória clássica única, mas sim uma superposição de possibilidades (ou uma distribuição de amplitude de probabilidade).
@@ -1543,7 +1543,7 @@ A entropia de entrelaçamento quantifica "quanto cada subsistema é incerto dado
     <li>\(S\) não pode aumentar sob operações locais e comunicação clássica (LOCC)</li>
 </ol>
 <p>
-A última propriedade — monotonicidade sob LOCC — fundamenta matematicamente a ideia de que entrelaçamento é "recurso" em informação quântica, no sentido de não pode ser criado por operações locais, apenas consumido™ (de modo análogo as mídias) ou preservado.
+A última propriedade — monotonicidade sob LOCC — fundamenta matematicamente a ideia de que entrelaçamento é "recurso" em informação quântica [NIELSEN‑CHUANG‑2010], no sentido de não pode ser criado por operações locais, apenas consumido™ (de modo análogo as mídias) ou preservado.
 Para estados mistos (descritos por operadores de densidade \(\rho_{AB}\)), a caracterização de entrelaçamento torna-se mais sutil:
 </p>
 <p>
@@ -1573,7 +1573,7 @@ Note como os estados entrelaçados, tal como apresentados até aqui, desafiam a 
 </p> -->
 
 <p>
-Merece atenção o fato de que o entrelaçamento é prontamente acomodado no contexto do realismo estrutural ôntico, conforme defendido por Ladyman. Nessa perspectiva, aceita-se como real, no sentido usual do termo, a estrutura relacional <!--  — isto é, o conjunto de correlações, simetrias e transformações permitidas —  -->codificada na formalização matemática do entrelaçamento quântico, sem qualquer compromisso ontológico com objetos ou propriedades intrínsecas dos sistemas e subsistemas envolvidos. O status ontológico primário recai, assim, sobre a própria estrutura de correlações, e não sobre os “objetos” correlacionados (<em>correlata</em>).  Em todo caso, a discussão acerca de métricas de entrelaçamento remete a questões epistemológicas que merecem um exame futuro mais aprofundado.
+Merece atenção o fato de que o entrelaçamento é prontamente acomodado no contexto do realismo estrutural ôntico, conforme defendido por Ladyman [LADYMAN‑2002]. Nessa perspectiva, aceita-se como real, no sentido usual do termo, a estrutura relacional <!--  — isto é, o conjunto de correlações, simetrias e transformações permitidas —  -->codificada na formalização matemática do entrelaçamento quântico, sem qualquer compromisso ontológico com objetos ou propriedades intrínsecas dos sistemas e subsistemas envolvidos. O status ontológico primário recai, assim, sobre a própria estrutura de correlações, e não sobre os “objetos” correlacionados (<em>correlata</em>).  Em todo caso, a discussão acerca de métricas de entrelaçamento remete a questões epistemológicas que merecem um exame futuro mais aprofundado.
 </p>
 
 
@@ -1778,7 +1778,7 @@ A discussão de interferência conecta-se profundamente com debates filosóficos
 
 
 <p>
-A não-localidade representa, possivelmente, o fenômeno mais filosoficamente provocativo da mecânica quântica, uma vez que desafia os consensos filósifico do corpo social que o produz (os cientistas naturais). Enquanto superposição (Seção §1) desafia intuições sobre estados individuais e interferência (Seção §3) revela propriedades ondulatórias da matéria — i.e., força reinterpretações de ou adições à conceitos menos fundamentais, em um âmbito intra-téorico —, a não-localidade impõe um revisão a nível meta-teórico: ela questiona pressupostos ontológicos, como o realismo local, que precedem e fundamentam a investigação do cientista natural. Estados entrelaçados (Seção §2) exibem correlações entre medições espacialmente separadas que transcendem qualquer explicação possível via teorias clássicas de variáveis ocultas locais. Esta seção desenvolve rigorosamente o argumento de Einstein-Podolsky-Rosen (EPR), deriva as desigualdades de Bell que testam realismo local, examina verificações experimentais que violam essas desigualdades, e analisa as implicações para nossa compreensão da estrutura causal do espaço-tempo.
+A não-localidade representa, possivelmente, o fenômeno mais filosoficamente provocativo da mecânica quântica, uma vez que desafia os consensos filósifico do corpo social que o produz (os cientistas naturais). Enquanto superposição (Seção §1) desafia intuições sobre estados individuais e interferência (Seção §3) revela propriedades ondulatórias da matéria — i.e., força reinterpretações de ou adições à conceitos menos fundamentais, em um âmbito intra-téorico —, a não-localidade impõe um revisão a nível meta-teórico: ela questiona pressupostos ontológicos, como o realismo local, que precedem e fundamentam a investigação do cientista natural. Estados entrelaçados (Seção §2) exibem correlações entre medições espacialmente separadas que transcendem qualquer explicação possível via teorias clássicas de variáveis ocultas locais [BELL‑2004]. Esta seção desenvolve rigorosamente o argumento de Einstein-Podolsky-Rosen (EPR), deriva as desigualdades de Bell que testam realismo local, examina verificações experimentais que violam essas desigualdades, e analisa as implicações para nossa compreensão da estrutura causal do espaço-tempo.
 </p>
 
 <p>
@@ -1825,7 +1825,7 @@ Note que variáveis ocultas não-locais (onde \(A\) depende de \(\mathbf{b}\)) s
 Com isso, podemos enunciar o Teorema de Bell:
 </p>
 <p>
-<strong>Teorema 4.1 (Desigualdade de Bell Original).</strong> Seja teoria de variáveis ocultas local conforme Definição 4.1, com resultados \(A(\mathbf{a}, \lambda), B(\mathbf{b}, \lambda) \in \{-1, +1\}\). Considere três direções de medição \(\mathbf{a}\), \(\mathbf{b}\), \(\mathbf{c}\). Defina as correlações
+<strong>Teorema 4.1 (Desigualdade de Bell Original) [BELL‑2004].</strong> Seja teoria de variáveis ocultas local conforme Definição 4.1, com resultados \(A(\mathbf{a}, \lambda), B(\mathbf{b}, \lambda) \in \{-1, +1\}\). Considere três direções de medição \(\mathbf{a}\), \(\mathbf{b}\), \(\mathbf{c}\). Defina as correlações
 \[
 E(\mathbf{a}, \mathbf{b}) := \int \rho(\lambda) A(\mathbf{a}, \lambda) B(\mathbf{b}, \lambda) \, d\lambda
 \]
@@ -1986,7 +1986,7 @@ Ademais, foi dito — e demonstrado — que a não-localidade desafia o realismo
 Para um realista estrutural, contudo, a situação é mais tênue: ele veria estas correlações não-locais como constituintes de uma estrutura relacional objetiva, mais fundamental que propriedades intrínsecas de subsistemas. O que é real é o padrão de correlações codificado no estado entrelaçado, não valores definidos de spin em A e B antes de medição. Esta perspectiva dissolve o paradoxo EPR: Einstein buscava elementos de realidade (valores de propriedades) que não existem; o que existe é estrutura relacional. A não-localidade não implica ação à distância entre objetos separados, mas reflete estrutura não-separável do estado quântico em espaço de Hilbert. A ontologia adequada para mecânica quântica seria estrutural, não substancialista.
 </p>
 <p>
-Um empirista construtivo com sua <em>preguiça intelectiva</em>, por outro lado, questionaria se debates sobre realismo local versus não-local não ultrapassaria os limites da ciência empírica. A mecânica quântica é empiricamente adequada: prevê corretamente distribuições de resultados experimentais, incluindo violações de desigualdades de Bell. Questionar "o que realmente acontece" entre preparação e medição, ou "como correlações não-locais são implementadas", pode ser demandar mais que ciência pode oferecer. A adequação empírica esgota o conteúdo científico da teoria; metafísica adicional é opcional, mas sem sentido empírico: um pseudoproblema filosófico. <!--Contudo, críticos de van Fraasen responderiam que violações de desigualdades de Bell não são meramente previsões empíricas, mas testes de hipóteses ontológicas (realismo local) com consequências observáveis. A ciência não apenas prevê fenômenos mas revela estrutura da realidade.-->
+Um empirista construtivo com sua <em>preguiça intelectiva</em>, por outro lado, questionaria se debates sobre realismo local versus não-local não ultrapassaria os limites da ciência empírica. A mecânica quântica é empiricamente adequada: prevê corretamente distribuições de resultados experimentais, incluindo violações de desigualdades de Bell. Questionar "o que realmente acontece" entre preparação e medição, ou "como correlações não-locais são implementadas", pode ser demandar mais que ciência pode oferecer. A adequação empírica esgota o conteúdo científico da teoria; metafísica adicional é opcional, mas sem sentido empírico: um pseudoproblema filosófico [VAN‑FRASEN‑1980]. <!--Contudo, críticos de van Fraasen responderiam que violações de desigualdades de Bell não são meramente previsões empíricas, mas testes de hipóteses ontológicas (realismo local) com consequências observáveis. A ciência não apenas prevê fenômenos mas revela estrutura da realidade.-->
 </p>
 
 
@@ -2667,6 +2667,7 @@ A amplitude de tópicos cobertos neste texto inevitavelmente sacrifica profundid
 </body>
 
 </html>
+
 
 
 
