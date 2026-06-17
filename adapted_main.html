@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Realism, Antirealism, and Structural Realism</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <header id="main-header">
+        <div class="header-content">
+            <h1><a href="index.html">The Ludens Topoï</a></h1>
+            <p class="tagline">A space for Physics, Mathematics, Philosophy and Game Studies</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="game-studies.html">Game Studies</a></li>
+                <li><a href="physics.html">Physics</a></li>
+                <li><a href="mathematics.html">Mathematics</a></li>
+                <li><a href="philosophy.html" class="active">Philosophy</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <article class="article-content">
+        <div class="article-header">
+            <h2>Scientific Realism, Antirealism, and Structural Realism: A Formal Transcendental and Phenomenological
+Framework</h2>
+            <div class="post-meta">
+                <span class="post-date">Author: Goonstav</span>
+                <span class="post-category">Philosophy</span>
+            </div>
+        </div>
+
+        
+<h1 id="introduction">Introduction</h1>
+<p>The philosophical foundation of a formalized structural realism
+relies on a critical synthesis of transcendental philosophy and
+phenomenology. Rather than treating the world as a collection of
+self-evident objects waiting to be cataloged, this lineage investigates
+the very conditions under which objectivity becomes accessible to
+cognitive agents. Roughly speaking, we have that:</p>
+<ul>
+<li><p><strong>Immanuel Kant</strong> initiated the transcendental turn
+by shifting the focus of philosophy from the objects of knowledge to our
+mode of cognition. In his <em>Critique of Pure Reason</em>, Kant argued
+that while data is received through raw sensibility, it remains a
+chaotic stream until it is structured by the <em>a priori</em>
+categories of the understanding (such as causality and substance).
+Reality is thus divided into <em>phenomena</em> (things as they appear
+to us under these categories) and <em>noumena</em>
+(things-in-themselves, independent of our cognitive framework) <span class="citation" data-cites="kant1781"></span>.</p></li>
+<li><p><strong>Edmund Husserl</strong> radicalized this approach through
+the development of phenomenology. Husserl bypassed traditional
+metaphysical speculation by focusing on the structure of consciousness
+itself, governed by the principle of <em>intentionality</em> — the fact
+that consciousness is always consciousness <em>of</em> something. By
+applying the phenomenological <em>epoché</em> (bracketing the question
+of the external world’s independent existence), Husserl demonstrated
+that objectivity is not passively received but actively
+<em>constituted</em> through intentional acts (<em>noesis</em>) directed
+at meaningful structures (<em>noema</em>) <span class="citation" data-cites="husserl1913"></span>.</p></li>
+<li><p><strong>Martin Heidegger</strong> reinterpreted Kant’s
+transcendental project as an inquiry into the ontological finitude of
+human existence (<em>Dasein</em>). In his analysis of Kant, Heidegger
+emphasized that because human beings do not create the universe, our
+cognition must be fundamentally <em>receptive</em>. For objects to be
+encountered at all, Dasein must project a pre-conceptual horizon—an open
+space of intelligibility—within which entities can manifest themselves
+and offer resistance to our understanding <span class="citation" data-cites="heidegger1929"></span>.</p></li>
+</ul>
+<p>This transcendental-phenomenological lineage, while seemingly removed
+from the concrete analysis of scientific practice, taken as referring to
+empirical sciences, provides the indispensable groundwork for it. The
+central insight shared by Kant, Husserl, and Heidegger is that the very
+notion of "objectivity" in science presupposes a prior structure of
+cognition and experience. Before we can meaningfully ask whether a
+scientific theory correctly represents the world, we must first
+understand the conditions under which a world can be represented at all.
+This foundational analysis does not aims to settle the debate between
+realism and antirealism; this, I believe, is too much to ask. However,
+it, at least, reframes it: the question is no longer simply whether theories
+correspond to a mind-independent reality, but rather how the structures
+of cognition and experience mediate, enable, and constrain our epistemic
+access to such a reality. We defend that it is from this new vantage point that the
+contemporary debate in the philosophy of science must be
+re-evaluated.</p>
+<p>The philosophy of science is fundamentally divided over the epistemic
+status of scientific theories. This debate hinges on whether scientific
+theories describe the actual fabric of a mind-independent world or
+merely serve as functional instruments for organizing human
+observations. The transcendental framework developed above provides the
+meta-epistemic lens through which the competing claims of realism and
+antirealism can be rigorously assessed. Traditional scientific realism
+(defended by thinkers like Mario Bunge <span class="citation" data-cites="bunge1977"></span> and Roy Bhaskar <span class="citation" data-cites="bhaskar1975"></span>) asserts that scientific entities exist
+independently of human theories. However, antirealists (such as Bas van
+Fraassen <span class="citation" data-cites="vanfraassen1980"></span>)
+point out that historically, highly successful theories (e.g., caloric
+theory, the luminiferous aether) were later revealed to possess entirely
+false ontologies. <em>Structural realism</em> solves this dilemma by
+shifting the realist commitment. It concedes to the antirealist that our
+descriptions of unobservable entities (like "electrons" or
+"gravitational strings") may change during paradigm shifts, but it
+preserves the realist intuition by showing that the <em>mathematical
+equations and structural relations</em> governing those entities remain
+invariant <span class="citation" data-cites="worrall1989"></span>.</p>
+<figure data-latex-placement="h!">
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Epistemic Stance</strong></th>
+<th style="text-align: left;"><strong>Ontological
+Commitment</strong></th>
+<th style="text-align: left;"><strong>Core Philosophy /
+Argument</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Scientific Realism</strong></td>
+<td style="text-align: left;">Mature theories provide true accounts of
+both observable and unobservable entities.</td>
+<td style="text-align: left;"><em>No-Miracles Argument:</em> It would be
+a cosmic coincidence if theories were predictive but ontologically
+false.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Scientific
+Antirealism</strong></td>
+<td style="text-align: left;">Science aims only at empirical adequacy;
+unobservables are pragmatic fictions.</td>
+<td style="text-align: left;"><em>Pessimistic Meta-Induction:</em> The
+history of science is a graveyard of empirically successful but
+discarded ontologies.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Structural Realism</strong></td>
+<td style="text-align: left;">We should commit not to the nature of
+entities, but to the relational structures between them.</td>
+<td style="text-align: left;"><em>Synthesizing Invariance:</em>
+Mathematical relations persist across paradigm shifts, even when entity
+descriptions change.</td>
+</tr>
+</tbody>
+</table>
+<center><figcaption>The Ontological and Epistemic Spectrum in the Philosophy of
+Science.</figcaption></center>
+</figure>
+<p>What follows is a defense of this realist position within the
+realist–antirealist debate. Our aim is to develop a rigorous
+formalization of structural realism through the use of mathematical
+tools and, on that basis, to argue that, within the proposed
+phenomenological and meta-epistemic framework, structural realism
+constitutes the more compelling position.</p>
+<h1 id="sec:kant-heidegger">The Transcendental-Phenomenological Core</h1>
+<h2 id="subsec:kant">The Meta-Metaphysical Turn in the Kantian Critical
+Project</h2>
+<p>Immanuel Kant’s <em>Critique of Pure Reason</em> and its subjecting
+of the very faculty of reason to a critical self-examination is truly
+revolutionary work in philosophy. As Deleuze rigorously articulates,
+Kant defines philosophy as “the science of the relation of all knowledge
+to the essential ends of human reason” <span class="citation" data-cites="deleuze1963"></span>. This definition already signals a
+struggle on two fronts: against empiricism, which reduces reason to a
+mere instrument for organizing natural inclinations, and against
+dogmatic rationalism, which subordinates reason to an external Good or
+theological order. Kant’s solution is the <strong>transcendental
+method</strong>: an immanent critique where reason acts as its own
+tribunal, determining its legitimate interests and the means of their
+realization <span class="citation" data-cites="deleuze1963"></span>. The
+cornerstone of Kant’s critical philosophy is the inversion of the
+relation between subject and object. In the dogmatic tradition,
+knowledge was conceived as a harmony—ultimately guaranteed by
+God—between the order of representations and the order of things. Kant
+replaces this pre-established harmony with a principle of <em>necessary
+submission</em>: objects must conform to our faculties of cognition, not
+vice versa <span class="citation" data-cites="deleuze1963"></span>. This
+is the essence of the Copernican Revolution. However, as Heidegger and
+Deleuze both emphasize, this is not a subjective idealism that reduces
+the world to human fancy. Kant, as a matter of fact, remains an somewhat empirical
+realist: phenomena genuinely affect us, but they can only appear to us
+under the <em>a priori</em> forms of sensibility (space and time) and
+the categories of the understanding (causality, substance, etc.).</p>
+<p>The crucial move is the identification of the
+<strong>understanding</strong> as the legislative faculty in the domain
+of theoretical knowledge. Sensibility, being receptive and passive,
+cannot legislate; it only provides the manifold of intuition. The
+imagination synthesizes this manifold, but it is the understanding which
+provides the transcendental unity of apperception — as he states in the
+<em>Critique</em>, the “I think” that must accompany all my
+representations — and its formal correlate, the “object in general”
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>)
+<span class="citation" data-cites="deleuze1963"></span>. The categories
+are not empirical generalizations but a priori concepts that prescribe
+universal laws to nature. As Deleuze notes, the understanding “does not
+tell us the laws which particular phenomena obey from the point of view
+of their content, but it constitutes the laws to which all phenomena are
+subject from the point of view of their form” <span class="citation" data-cites="deleuze1963"></span>. Thus, we are the legislators of
+Nature, but only regarding its formal structure, not its material
+content. Kant’s originality lies in positing a radical
+<strong>difference in nature</strong> between the faculties
+(sensibility, understanding, reason, imagination). Unlike empiricists or
+rationalists who reduce these to differences of degree, Kant insists
+they are distinct sources of representations. This raises a formidable
+problem: how can heterogeneous faculties—such as passive sensibility and
+active understanding — enter into an accord? In the <em>Critique of Pure
+Reason</em>, this accord is determined by the understanding through the
+schematism of the imagination, a “hidden art” that bridges the sensible
+and the conceptual by providing a transcendental time-determination. As
+Deleuze points out, the imagination schematizes only when the
+understanding presides <span class="citation" data-cites="deleuze1963"></span>.</p>
+<p>Reason, in the speculative interest, is not legislative but
+regulative. It generates transcendental Ideas (Soul, World, God) that
+seek the unconditioned totality of conditions. These Ideas have no
+constitutive role in knowledge but serve as heuristic fictions that
+guide the understanding toward systematic unity. Kant famously states
+that “pure reason abandons everything to the understanding” <span class="citation" data-cites="deleuze1963"></span>. Yet, this abandonment
+is not a defect; it is the condition for a legitimate, immanent use of
+reason. However, reason inevitably falls into transcendental illusion,
+claiming to know things in themselves through these Ideas. This illusion
+is not an empirical error but an inevitable outcome of reason’s natural
+drive — a theme that will be critically re-evaluated by Heidegger. The
+<em>Critique of Practical Reason</em> completes the transcendental
+architecture by identifying reason itself as the legislative faculty in
+the domain of desire. Unlike speculative reason, which must pass
+legislative power to the understanding, practical reason legislates
+immediately over the will through the pure form of the moral law. This
+law, defined by universalizability, is independent of all sensible
+content and determines the will autonomously <span class="citation" data-cites="deleuze1963"></span>. The concept of freedom, which was only
+a problematic Idea in speculative reason, acquires objective reality
+through the moral law. Practical reason thus legislates over the
+suprasensible domain — over rational beings as things in themselves,
+forming an intelligible nature under the moral law. This establishes the
+famous “great gulf” between sensible nature (governed by understanding)
+and suprasensible nature (governed by reason) <span class="citation" data-cites="deleuze1963"></span>. The ultimate task of the critical
+philosophy, consummated in the <em>Critique of Judgment</em>, is to
+bridge this gulf through the concept of finality, preparing the
+realization of freedom in the sensible world.</p>
+<h2 id="subsec:heidegger">Heidegger’s Phenomenological
+Appropriation</h2>
+<p>While Deleuze presents Kant’s system as a finely tuned machine of
+faculties and interests, Martin Heidegger reads the <em>Critique of Pure
+Reason</em> not as a theory of knowledge, but as a <strong>fundamental
+ontology</strong> — an inquiry into the very meaning of Being.
+Heidegger’s famous claim is that Kant’s central question is the question
+of being itself: “How is knowledge of that which ‘belongs to the being,
+no matter how it is always experienced and determined … [i.e.] knowledge
+which unveils the being itself [possible]?” <span class="citation" data-cites="serck-hanssen2015"></span>. For Heidegger, the
+<em>Critique</em> operates at the level of
+<strong>meta-metaphysics</strong>; it is not a positive metaphysical
+doctrine but a propaedeutic that lays the ground for ontology by
+investigating the possibility of a pre-ontological understanding of
+being <span class="citation" data-cites="serck-hanssen2015"></span>.
+Heidegger radically reinterprets Kant’s Copernican Revolution. Standard
+interpretations—whether metaphysical (appearances as numerically
+distinct from things-in-themselves) or methodological (two perspectives
+on the same object)—both lead to a dead end, either reducing metaphysics
+to phenomenalism or to a mere analysis of subjective perspectives <span class="citation" data-cites="serck-hanssen2015"></span>. Heidegger
+argues that these readings misunderstand the level on which the critique
+operates. The Copernican turn is not a reduction of objects to our
+cognitive conditions, but a <strong>progressive meta-inquiry</strong>
+that guides us toward the proper standpoint for ontology. By turning our
+attention away from objects and toward our way of knowing them, we do
+not negate the independent reality of things; rather, we make visible
+“what is already there in its being” <span class="citation" data-cites="heidegger1929"></span>.</p>
+<p>The phrase “mere appearance” is therefore not a diminishing of
+actuality. It is, Heidegger insists, “only the negation of [the
+assumption] that the being can be infinitely known in human knowledge”
+<span class="citation" data-cites="serck-hanssen2015"></span>.
+Appearances are not subjective phantasms but the things themselves,
+standing before us in their phenomenological richness and materiality,
+disclosing themselves to finite beings. The task of the
+<em>Critique</em> is to show how the development of ontology from its
+seeds is to be carried out, culminating in the disclosure of the
+temporalized objects of the schemata. Heidegger anchors his reading in
+the concept of the <strong>finite intellect</strong>. Unlike a divine
+understanding which creates its objects, human cognition is
+fundamentally receptive: we do not create beings, we must let them show
+themselves from themselves. This finitude dictates that metaphysics must
+begin from the perspective of the finite being (<em>Dasein</em>). The
+Transcendental Aesthetic is therefore not based on an incoherent causal
+premise of “transcendental affection” (as Jacobi and Vaihinger charged).
+Rather, Heidegger interprets transcendental affection as a
+<strong>meta-philosophical insight</strong>: for metaphysics to be
+possible, the primary objects of study must be objects as they affect
+us, as they confront or stand before us as <em>Gegenstände</em> <span class="citation" data-cites="serck-hanssen2015"></span>. Kant does not
+presuppose a mysterious causal route from noumenon to phenomenon; he
+simply brackets the question of causal origin to focus on the givenness
+of objects to a finite receiver.</p>
+<p>This reading resolves the notorious problem of Kant’s transcendental
+psychology. Peter Strawson famously dismissed Kant’s faculties as an
+incoherent theory of an “imaginary subject.” Heidegger counters that
+transcendental faculties (sensibility, understanding, imagination) are
+neither empirical nor noumenal faculties. They are <strong>perspectives
+on the finite being’s ways of encountering things</strong>, disclosed by
+the meta-level inquiry into the possibility of metaphysics. Sensibility
+is not just a biological sense organ; it is the ontological mode through
+which finite beings “can be open to a being that it itself is not and
+that therefore must be able to show itself from itself” <span class="citation" data-cites="serck-hanssen2015"></span>. Space and time
+are thus not merely forms of intuition but sensible horizons through
+which particulars stand forth as fully saturated beings <span class="citation" data-cites="serck-hanssen2015"></span>. Finally,
+Heidegger’s reading of Kant is phenomenological, but in a specifically
+<strong>hermeneutical</strong> sense. While Husserl’s transcendental
+phenomenology aims to disclose the a priori conditions of experience
+through an epoché, Heidegger emphasizes that understanding is
+historically embedded. Both the Marburg lectures and <em>Kant and the
+Problem of Metaphysics</em> argue that the reader must place herself
+within the history of the question of being to understand Kant’s
+project. Heidegger’s own interpretation unfolds through a spiral
+structure: the search for the proper approach to the question of being
+proceeds by repeatedly reinterpreting Kant’s texts in light of this
+question <span class="citation" data-cites="serck-hanssen2015"></span>.
+This hermeneutical conception fundamentally transforms the critical
+project. It is now a dynamic, temporal process of self-interpretation.
+The <em>Critique</em> is a “treatise on method” that guides the
+philosopher through a progressive unveiling, where the true starting
+point for ontology is only discovered at the end. This is why Heidegger
+can claim that Kant’s inquiry leads to the disclosure of the inner
+connection between categories and temporality, a move that anticipates
+Heidegger’s own project in <em>Being and Time</em>, where temporality is
+revealed as the horizon for the understanding of Being.</p>
+<h1 id="mathematical-tools-of-formalization">Mathematical Tools of
+Formalization</h1>
+<p>To ground these abstract philosophical frameworks in rigorous
+structural realism, we employ precise tools from model theory, set
+theory, and category theory. These mathematical structures serve as the
+formal language translating transcendental conditions into relational
+invariants. Before presenting the formal definitions, we establish the
+rigorous foundational vocabulary of these disciplines.</p>
+<h2 class="unnumbered" id="preliminaries-formal-definitions">Preliminaries: Formal
+Definitions</h2>
+<p><strong>1. Model Theory.</strong> Let a <em>signature</em> be defined
+as a triple
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Σ</mi><mo>=</mo><mo form="prefix" stretchy="false">⟨</mo><mi mathvariant="script">ℱ</mi><mo>,</mo><mi mathvariant="script">ℛ</mi><mo>,</mo><mrow><mi mathvariant="normal">ar</mi><mo>⁡</mo></mrow><mo form="postfix" stretchy="false">⟩</mo></mrow><annotation encoding="application/x-tex">\Sigma = \langle \mathcal{F}, \mathcal{R}, \mathop{\mathrm{ar}}\rangle</annotation></semantics></math>,
+where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">ℱ</mi><annotation encoding="application/x-tex">\mathcal{F}</annotation></semantics></math>
+is a set of function symbols,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">ℛ</mi><annotation encoding="application/x-tex">\mathcal{R}</annotation></semantics></math>
+is a set of relation symbols, and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">ar</mi><mo>⁡</mo></mrow><mo>:</mo><mi mathvariant="script">ℱ</mi><mo>∪</mo><mi mathvariant="script">ℛ</mi><mo>→</mo><mi mathvariant="double-struck">ℕ</mi></mrow><annotation encoding="application/x-tex">\mathop{\mathrm{ar}}: \mathcal{F} \cup \mathcal{R} \to \mathbb{N}</annotation></semantics></math>
+assigns a finite arity to each symbol. A
+<em><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="normal">Σ</mi><annotation encoding="application/x-tex">\Sigma</annotation></semantics></math>-structure</em>
+is a tuple
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="fraktur">𝔐</mi><mo>=</mo><mrow><mo form="prefix" stretchy="true">⟨</mo><mi>M</mi><mo>,</mo><mspace width="0.278em"></mspace><mo form="prefix" stretchy="false">{</mo><msup><mi>f</mi><mi mathvariant="fraktur">𝔐</mi></msup><mo>:</mo><msup><mi>M</mi><mrow><mrow><mi mathvariant="normal">ar</mi><mo>⁡</mo></mrow><mo form="prefix" stretchy="false">(</mo><mi>f</mi><mo form="postfix" stretchy="false">)</mo></mrow></msup><mo>→</mo><mi>M</mi><msub><mo form="postfix" stretchy="false">}</mo><mrow><mi>f</mi><mo>∈</mo><mi mathvariant="script">ℱ</mi></mrow></msub><mo>,</mo><mspace width="0.278em"></mspace><mo form="prefix" stretchy="false">{</mo><msup><mi>R</mi><mi mathvariant="fraktur">𝔐</mi></msup><mo>⊆</mo><msup><mi>M</mi><mrow><mrow><mi mathvariant="normal">ar</mi><mo>⁡</mo></mrow><mo form="prefix" stretchy="false">(</mo><mi>R</mi><mo form="postfix" stretchy="false">)</mo></mrow></msup><msub><mo form="postfix" stretchy="false">}</mo><mrow><mi>R</mi><mo>∈</mo><mi mathvariant="script">ℛ</mi></mrow></msub><mo form="postfix" stretchy="true">⟩</mo></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">\mathfrak{M} = \left\langle M, \; \{f^{\mathfrak{M}}: M^{\mathop{\mathrm{ar}}(f)} \to M\}_{f \in \mathcal{F}}, \; \{R^{\mathfrak{M}} \subseteq M^{\mathop{\mathrm{ar}}(R)}\}_{R \in \mathcal{R}} \right\rangle,</annotation></semantics></math>
+where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>M</mi><annotation encoding="application/x-tex">M</annotation></semantics></math>
+is a non-empty domain. For a first-order language
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">ℒ</mi><mo form="prefix" stretchy="false">(</mo><mi mathvariant="normal">Σ</mi><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathcal{L}(\Sigma)</annotation></semantics></math>,
+the satisfaction relation
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="fraktur">𝔐</mi><mo>⊨</mo><mi>ϕ</mi></mrow><annotation encoding="application/x-tex">\mathfrak{M} \models \phi</annotation></semantics></math>
+is defined recursively for formulas
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>.
+A <em>theory</em>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">𝒯</mi><annotation encoding="application/x-tex">\mathcal{T}</annotation></semantics></math>
+is a set of sentences in
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">ℒ</mi><mo form="prefix" stretchy="false">(</mo><mi mathvariant="normal">Σ</mi><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathcal{L}(\Sigma)</annotation></semantics></math>;
+its class of models is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Mod</mtext><mo form="prefix" stretchy="false">(</mo><mi mathvariant="script">𝒯</mi><mo form="postfix" stretchy="false">)</mo><mo>=</mo><mo form="prefix" stretchy="false">{</mo><mi mathvariant="fraktur">𝔐</mi><mo>∣</mo><mo>∀</mo><mi>ϕ</mi><mo>∈</mo><mi mathvariant="script">𝒯</mi><mo>,</mo><mi mathvariant="fraktur">𝔐</mi><mo>⊨</mo><mi>ϕ</mi><mo form="postfix" stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\text{Mod}(\mathcal{T}) = \{\mathfrak{M} \mid \forall \phi \in \mathcal{T}, \mathfrak{M} \models \phi\}</annotation></semantics></math>.</p>
+<p>A <em>homomorphism</em>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi><mo>:</mo><mi mathvariant="fraktur">𝔐</mi><mo>→</mo><mi mathvariant="fraktur">𝔑</mi></mrow><annotation encoding="application/x-tex">h: \mathfrak{M} \to \mathfrak{N}</annotation></semantics></math>
+between
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="normal">Σ</mi><annotation encoding="application/x-tex">\Sigma</annotation></semantics></math>-structures
+is a map
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi><mo>:</mo><mi>M</mi><mo>→</mo><mi>N</mi></mrow><annotation encoding="application/x-tex">h: M \to N</annotation></semantics></math>
+such that for every
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>-ary
+function symbol
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>∈</mo><mi mathvariant="script">ℱ</mi></mrow><annotation encoding="application/x-tex">f \in \mathcal{F}</annotation></semantics></math>
+and tuple
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix" stretchy="false">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub><mo form="postfix" stretchy="false">)</mo><mo>∈</mo><msup><mi>M</mi><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">(a_1, \dots, a_n) \in M^n</annotation></semantics></math>,
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi><mo form="prefix" stretchy="false">(</mo><msup><mi>f</mi><mi mathvariant="fraktur">𝔐</mi></msup><mo form="prefix" stretchy="false">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub><mo form="postfix" stretchy="false">)</mo><mo form="postfix" stretchy="false">)</mo><mo>=</mo><msup><mi>f</mi><mi mathvariant="fraktur">𝔑</mi></msup><mo form="prefix" stretchy="false">(</mo><mi>h</mi><mo form="prefix" stretchy="false">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo form="postfix" stretchy="false">)</mo><mo>,</mo><mi>…</mi><mo>,</mo><mi>h</mi><mo form="prefix" stretchy="false">(</mo><msub><mi>a</mi><mi>n</mi></msub><mo form="postfix" stretchy="false">)</mo><mo form="postfix" stretchy="false">)</mo><mo>,</mo></mrow><annotation encoding="application/x-tex">h(f^{\mathfrak{M}}(a_1, \dots, a_n)) = f^{\mathfrak{N}}(h(a_1), \dots, h(a_n)),</annotation></semantics></math>
+and for every
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>-ary
+relation symbol
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mo>∈</mo><mi mathvariant="script">ℛ</mi></mrow><annotation encoding="application/x-tex">R \in \mathcal{R}</annotation></semantics></math>,
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix" stretchy="false">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub><mo form="postfix" stretchy="false">)</mo><mo>∈</mo><msup><mi>R</mi><mi mathvariant="fraktur">𝔐</mi></msup><mo>⟹</mo><mo form="prefix" stretchy="false">(</mo><mi>h</mi><mo form="prefix" stretchy="false">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo form="postfix" stretchy="false">)</mo><mo>,</mo><mi>…</mi><mo>,</mo><mi>h</mi><mo form="prefix" stretchy="false">(</mo><msub><mi>a</mi><mi>n</mi></msub><mo form="postfix" stretchy="false">)</mo><mo form="postfix" stretchy="false">)</mo><mo>∈</mo><msup><mi>R</mi><mi mathvariant="fraktur">𝔑</mi></msup><mi>.</mi></mrow><annotation encoding="application/x-tex">(a_1, \dots, a_n) \in R^{\mathfrak{M}} \implies (h(a_1), \dots, h(a_n)) \in R^{\mathfrak{N}}.</annotation></semantics></math>
+If
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>h</mi><annotation encoding="application/x-tex">h</annotation></semantics></math>
+is injective, it is an <em>embedding</em> (denoted
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="fraktur">𝔐</mi><mo>↪</mo><mi mathvariant="fraktur">𝔑</mi></mrow><annotation encoding="application/x-tex">\mathfrak{M} \hookrightarrow \mathfrak{N}</annotation></semantics></math>),
+which preserves and reflects all atomic formulas.</p>
+<p><strong>2. Set Theory.</strong> Working within
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="sans-serif">𝖹</mi><mi mathvariant="sans-serif">𝖥</mi><mi mathvariant="sans-serif">𝖢</mi></mrow><annotation encoding="application/x-tex">\mathsf{ZFC}</annotation></semantics></math>,
+let the cumulative hierarchy
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>=</mo><msub><mo>⋃</mo><mrow><mi>α</mi><mo>∈</mo><mtext mathvariant="normal">Ord</mtext></mrow></msub><msub><mi>V</mi><mi>α</mi></msub></mrow><annotation encoding="application/x-tex">V = \bigcup_{\alpha \in \text{Ord}} V_\alpha</annotation></semantics></math>
+provide the universe of sets. For sets
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>,
+strict inclusion is defined as
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>⊊</mo><mi>B</mi><mo>⇔</mo><mo form="prefix" stretchy="false">(</mo><mo>∀</mo><mi>x</mi><mo form="prefix" stretchy="false">(</mo><mi>x</mi><mo>∈</mo><mi>A</mi><mo>⇒</mo><mi>x</mi><mo>∈</mo><mi>B</mi><mo form="postfix" stretchy="false">)</mo><mo form="postfix" stretchy="false">)</mo><mo>∧</mo><mo form="prefix" stretchy="false">(</mo><mo>∃</mo><mi>y</mi><mo>∈</mo><mi>B</mi><mo>\</mo><mi>A</mi><mo form="postfix" stretchy="false">)</mo><mi>.</mi></mrow><annotation encoding="application/x-tex">A \subsetneq B \iff (\forall x (x \in A \Rightarrow x \in B)) \land (\exists y \in B \setminus A).</annotation></semantics></math>
+This forms a strict partial order. Independence of domains is formalized
+by the existence of a property
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="normal">Φ</mi><annotation encoding="application/x-tex">\Phi</annotation></semantics></math>
+(definable in the language of set theory) such that
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Φ</mi><mo form="prefix" stretchy="false">(</mo><msub><mi mathvariant="script">𝒟</mi><mi>R</mi></msub><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\Phi(\mathcal{D}_R)</annotation></semantics></math>
+holds but
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Φ</mi><mo form="prefix" stretchy="false">(</mo><msub><mi mathvariant="script">𝒟</mi><mi>A</mi></msub><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\Phi(\mathcal{D}_A)</annotation></semantics></math>
+fails, i.e.,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="script">𝒟</mi><mi>R</mi></msub><mo>≢</mo><msub><mi mathvariant="script">𝒟</mi><mi>A</mi></msub></mrow><annotation encoding="application/x-tex">\mathcal{D}_R \not\equiv \mathcal{D}_A</annotation></semantics></math>
+in the elementary diagram.</p>
+<p><strong>3. Category Theory.</strong> A <em>category</em>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑪</mi><annotation encoding="application/x-tex">\mathbf{C}</annotation></semantics></math>
+consists of:</p>
+<ul>
+<li><p>A class
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">ob</mi><mo>⁡</mo></mrow><mo form="prefix" stretchy="false">(</mo><mi mathvariant="bold-italic">𝑪</mi><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathop{\mathrm{ob}}(\mathbf{C})</annotation></semantics></math>
+of objects;</p></li>
+<li><p>For each pair
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix" stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo form="postfix" stretchy="false">)</mo><mo>∈</mo><mrow><mi mathvariant="normal">ob</mi><mo>⁡</mo></mrow><mo form="prefix" stretchy="false">(</mo><mi mathvariant="bold-italic">𝑪</mi><msup><mo form="postfix" stretchy="false">)</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">(A,B) \in \mathop{\mathrm{ob}}(\mathbf{C})^2</annotation></semantics></math>,
+a set
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow><mi mathvariant="normal">Hom</mi><mo>⁡</mo></mrow><mi mathvariant="bold-italic">𝑪</mi></msub><mo form="prefix" stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathop{\mathrm{Hom}}_{\mathbf{C}}(A,B)</annotation></semantics></math>
+of morphisms;</p></li>
+<li><p>A composition operation
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∘</mi><mo>:</mo><mrow><mi mathvariant="normal">Hom</mi><mo>⁡</mo></mrow><mo form="prefix" stretchy="false">(</mo><mi>B</mi><mo>,</mo><mi>C</mi><mo form="postfix" stretchy="false">)</mo><mo>×</mo><mrow><mi mathvariant="normal">Hom</mi><mo>⁡</mo></mrow><mo form="prefix" stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo form="postfix" stretchy="false">)</mo><mo>→</mo><mrow><mi mathvariant="normal">Hom</mi><mo>⁡</mo></mrow><mo form="prefix" stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>C</mi><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\circ: \mathop{\mathrm{Hom}}(B,C) \times \mathop{\mathrm{Hom}}(A,B) \to \mathop{\mathrm{Hom}}(A,C)</annotation></semantics></math>
+for all
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>,</mo><mi>B</mi><mo>,</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">A,B,C</annotation></semantics></math>,
+which is associative:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix" stretchy="false">(</mo><mi>f</mi><mo>∘</mo><mi>g</mi><mo form="postfix" stretchy="false">)</mo><mo>∘</mo><mi>h</mi><mo>=</mo><mi>f</mi><mo>∘</mo><mo form="prefix" stretchy="false">(</mo><mi>g</mi><mo>∘</mo><mi>h</mi><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(f \circ g) \circ h = f \circ (g \circ h)</annotation></semantics></math>;</p></li>
+<li><p>For each
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>,
+an identity morphism
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mn mathvariant="bold">𝟏</mn><mi>A</mi></msub><mo>∈</mo><mrow><mi mathvariant="normal">Hom</mi><mo>⁡</mo></mrow><mo form="prefix" stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>A</mi><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathbf{1}_A \in \mathop{\mathrm{Hom}}(A,A)</annotation></semantics></math>
+acting as a two-sided unit.</p></li>
+</ul>
+<p>A <em>diagram</em> in
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑪</mi><annotation encoding="application/x-tex">\mathbf{C}</annotation></semantics></math>
+is a functor
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mo>:</mo><mi mathvariant="script">ℐ</mi><mo>→</mo><mi mathvariant="bold-italic">𝑪</mi></mrow><annotation encoding="application/x-tex">D: \mathcal{I} \to \mathbf{C}</annotation></semantics></math>
+from a small index category
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">ℐ</mi><annotation encoding="application/x-tex">\mathcal{I}</annotation></semantics></math>.
+A <em>cone</em> over
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>D</mi><annotation encoding="application/x-tex">D</annotation></semantics></math>
+is an object
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo>∈</mo><mrow><mi mathvariant="normal">ob</mi><mo>⁡</mo></mrow><mo form="prefix" stretchy="false">(</mo><mi mathvariant="bold-italic">𝑪</mi><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">L \in \mathop{\mathrm{ob}}(\mathbf{C})</annotation></semantics></math>
+equipped with a family of morphisms
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix" stretchy="false">{</mo><msub><mi>λ</mi><mi>i</mi></msub><mo>:</mo><mi>L</mi><mo>→</mo><mi>D</mi><mo form="prefix" stretchy="false">(</mo><mi>i</mi><mo form="postfix" stretchy="false">)</mo><msub><mo form="postfix" stretchy="false">}</mo><mrow><mi>i</mi><mo>∈</mo><mrow><mi mathvariant="normal">ob</mi><mo>⁡</mo></mrow><mo form="prefix" stretchy="false">(</mo><mi mathvariant="script">ℐ</mi><mo form="postfix" stretchy="false">)</mo></mrow></msub></mrow><annotation encoding="application/x-tex">\{\lambda_i: L \to D(i)\}_{i \in \mathop{\mathrm{ob}}(\mathcal{I})}</annotation></semantics></math>
+such that for every
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi><mo>:</mo><mi>i</mi><mo>→</mo><mi>j</mi></mrow><annotation encoding="application/x-tex">u: i \to j</annotation></semantics></math>
+in
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">ℐ</mi><annotation encoding="application/x-tex">\mathcal{I}</annotation></semantics></math>,
+we have
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mo form="prefix" stretchy="false">(</mo><mi>u</mi><mo form="postfix" stretchy="false">)</mo><mo>∘</mo><msub><mi>λ</mi><mi>i</mi></msub><mo>=</mo><msub><mi>λ</mi><mi>j</mi></msub></mrow><annotation encoding="application/x-tex">D(u) \circ \lambda_i = \lambda_j</annotation></semantics></math>.
+The cone
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix" stretchy="false">(</mo><mi>L</mi><mo>,</mo><mi>λ</mi><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(L, \lambda)</annotation></semantics></math>
+is a <em>limit</em> (inverse limit) if for any other cone
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix" stretchy="false">(</mo><msup><mi>L</mi><mo>′</mo></msup><mo>,</mo><msup><mi>λ</mi><mo>′</mo></msup><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(L', \lambda')</annotation></semantics></math>,
+there exists a unique morphism
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi><mo>:</mo><msup><mi>L</mi><mo>′</mo></msup><mo>→</mo><mi>L</mi></mrow><annotation encoding="application/x-tex">u: L' \to L</annotation></semantics></math>
+such that
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>λ</mi><mi>i</mi></msub><mo>∘</mo><mi>u</mi><mo>=</mo><msubsup><mi>λ</mi><mi>i</mi><mo>′</mo></msubsup></mrow><annotation encoding="application/x-tex">\lambda_i \circ u = \lambda'_i</annotation></semantics></math>
+for all
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math>.</p>
+<p>For a directed set
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix" stretchy="false">⟨</mo><mi>I</mi><mo>,</mo><mo>≤</mo><mo form="postfix" stretchy="false">⟩</mo></mrow><annotation encoding="application/x-tex">\langle I, \leq \rangle</annotation></semantics></math>,
+an inverse system is a functor
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>:</mo><msup><mi>I</mi><mtext mathvariant="normal">op</mtext></msup><mo>→</mo><mi mathvariant="bold-italic">𝑪</mi></mrow><annotation encoding="application/x-tex">F: I^{\text{op}} \to \mathbf{C}</annotation></semantics></math>
+with bonding morphisms
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>:</mo><mi>F</mi><mo form="prefix" stretchy="false">(</mo><mi>j</mi><mo form="postfix" stretchy="false">)</mo><mo>→</mo><mi>F</mi><mo form="prefix" stretchy="false">(</mo><mi>i</mi><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f_{ij}: F(j) \to F(i)</annotation></semantics></math>
+for
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mo>≤</mo><mi>j</mi></mrow><annotation encoding="application/x-tex">i \leq j</annotation></semantics></math>.
+Its inverse limit is concretely represented as the equalizer: <span class="math display">$$\varprojlim_{i \in I} F(i) = \left\{ (x_i)_{i \in
+I} \in \prod_{i \in I} F(i) \;\middle|\; \forall i \leq j, \;
+f_{ij}(x_j) = x_i \right\}.$$</span></p>
+<h2 class="unnumbered" id="model-theoretic-formalization-of-theories">1.
+Model-Theoretic Formalization of Theories</h2>
+<p>A scientific theory
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">𝒯</mi><annotation encoding="application/x-tex">\mathcal{T}</annotation></semantics></math>
+is formally modeled as the structured system:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">𝒯</mi><mo>=</mo><mo form="prefix" stretchy="false">⟨</mo><mi mathvariant="script">ℒ</mi><mo form="prefix" stretchy="false">(</mo><mi mathvariant="normal">Σ</mi><mo form="postfix" stretchy="false">)</mo><mo>,</mo><mi mathvariant="script">𝒜</mi><mo>,</mo><mtext mathvariant="normal">Mod</mtext><mo form="prefix" stretchy="false">(</mo><mi mathvariant="script">𝒯</mi><mo form="postfix" stretchy="false">)</mo><mo form="postfix" stretchy="false">⟩</mo><mo>,</mo></mrow><annotation encoding="application/x-tex">\mathcal{T} = \langle \mathcal{L}(\Sigma), \mathcal{A}, \text{Mod}(\mathcal{T}) \rangle,</annotation></semantics></math>
+where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">ℒ</mi><mo form="prefix" stretchy="false">(</mo><mi mathvariant="normal">Σ</mi><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathcal{L}(\Sigma)</annotation></semantics></math>
+is the formal language over signature
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="normal">Σ</mi><annotation encoding="application/x-tex">\Sigma</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">𝒜</mi><annotation encoding="application/x-tex">\mathcal{A}</annotation></semantics></math>
+is the set of logical and non-logical axioms, and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Mod</mtext><mo form="prefix" stretchy="false">(</mo><mi mathvariant="script">𝒯</mi><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\text{Mod}(\mathcal{T})</annotation></semantics></math>
+is the category (or class) of all
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="normal">Σ</mi><annotation encoding="application/x-tex">\Sigma</annotation></semantics></math>-structures
+satisfying
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">𝒜</mi><annotation encoding="application/x-tex">\mathcal{A}</annotation></semantics></math>.
+Let
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="normal">Σ</mi><mtext mathvariant="normal">obs</mtext></msub><mo>⊆</mo><mi mathvariant="normal">Σ</mi></mrow><annotation encoding="application/x-tex">\Sigma_{\text{obs}} \subseteq \Sigma</annotation></semantics></math>
+denote the observational sub-signature, and let
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="fraktur">𝔒</mi><annotation encoding="application/x-tex">\mathfrak{O}</annotation></semantics></math>
+be the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="normal">Σ</mi><mtext mathvariant="normal">obs</mtext></msub><annotation encoding="application/x-tex">\Sigma_{\text{obs}}</annotation></semantics></math>-structure
+representing observable phenomena. <em>Empirical adequacy</em> is
+formally defined as the existence of an injective homomorphism
+(embedding)
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="fraktur">𝔒</mi><mo>↪</mo><mi mathvariant="fraktur">𝔐</mi><msub><mo form="prefix" stretchy="false">|</mo><msub><mi mathvariant="normal">Σ</mi><mtext mathvariant="normal">obs</mtext></msub></msub></mrow><annotation encoding="application/x-tex">\mathfrak{O} \hookrightarrow \mathfrak{M}|_{\Sigma_{\text{obs}}}</annotation></semantics></math>
+for some
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="fraktur">𝔐</mi><mo>∈</mo><mtext mathvariant="normal">Mod</mtext><mo form="prefix" stretchy="false">(</mo><mi mathvariant="script">𝒯</mi><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathfrak{M} \in \text{Mod}(\mathcal{T})</annotation></semantics></math>,
+where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="fraktur">𝔐</mi><msub><mo form="prefix" stretchy="false">|</mo><msub><mi mathvariant="normal">Σ</mi><mtext mathvariant="normal">obs</mtext></msub></msub></mrow><annotation encoding="application/x-tex">\mathfrak{M}|_{\Sigma_{\text{obs}}}</annotation></semantics></math>
+is the reduct of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="fraktur">𝔐</mi><annotation encoding="application/x-tex">\mathfrak{M}</annotation></semantics></math>
+to the observational signature <span class="citation" data-cites="vanfraassen1980"></span>.</p>
+<h2 class="unnumbered" id="set-theoretic-ontological-stratification">2.
+Set-Theoretic Ontological Stratification</h2>
+<p>To formalize Bhaskar’s critical realism <span class="citation" data-cites="bhaskar1975"></span>, we utilize strict subset relations to
+represent reality as nested domains:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="script">𝒟</mi><mi>E</mi></msub><mo>⊊</mo><msub><mi mathvariant="script">𝒟</mi><mi>A</mi></msub><mo>⊊</mo><msub><mi mathvariant="script">𝒟</mi><mi>R</mi></msub><mo>,</mo></mrow><annotation encoding="application/x-tex">\mathcal{D}_E \subsetneq \mathcal{D}_A \subsetneq \mathcal{D}_R,</annotation></semantics></math>
+where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="script">𝒟</mi><mi>E</mi></msub><annotation encoding="application/x-tex">\mathcal{D}_E</annotation></semantics></math>
+is the domain of empirical experiences,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="script">𝒟</mi><mi>A</mi></msub><annotation encoding="application/x-tex">\mathcal{D}_A</annotation></semantics></math>
+is the domain of actual events, and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="script">𝒟</mi><mi>R</mi></msub><annotation encoding="application/x-tex">\mathcal{D}_R</annotation></semantics></math>
+is the domain of generative mechanisms. This chain implies a transitive
+hierarchy of ontological strata. The independence of the deepest stratum
+is formalized by the condition that there exists a mechanism
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>∈</mo><msub><mi mathvariant="script">𝒟</mi><mi>R</mi></msub></mrow><annotation encoding="application/x-tex">m \in \mathcal{D}_R</annotation></semantics></math>
+such that for any sensory map
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>:</mo><msub><mi mathvariant="script">𝒟</mi><mi>R</mi></msub><mo>→</mo><msub><mi mathvariant="script">𝒟</mi><mi>E</mi></msub></mrow><annotation encoding="application/x-tex">s: \mathcal{D}_R \to \mathcal{D}_E</annotation></semantics></math>,
+we have
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo form="prefix" stretchy="false">(</mo><mi>m</mi><mo form="postfix" stretchy="false">)</mo><mo>∉</mo><msub><mi mathvariant="script">𝒟</mi><mi>E</mi></msub></mrow><annotation encoding="application/x-tex">s(m) \notin \mathcal{D}_E</annotation></semantics></math>.
+More formally, the projection
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>π</mi><mo>:</mo><msub><mi mathvariant="script">𝒟</mi><mi>R</mi></msub><mo>→</mo><msub><mi mathvariant="script">𝒟</mi><mi>E</mi></msub></mrow><annotation encoding="application/x-tex">\pi: \mathcal{D}_R \to \mathcal{D}_E</annotation></semantics></math>
+is not surjective, i.e.,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Im</mtext><mo form="prefix" stretchy="false">(</mo><mi>π</mi><mo form="postfix" stretchy="false">)</mo><mo>⊊</mo><msub><mi mathvariant="script">𝒟</mi><mi>E</mi></msub></mrow><annotation encoding="application/x-tex">\text{Im}(\pi) \subsetneq \mathcal{D}_E</annotation></semantics></math>,
+demonstrating that generative mechanisms are not reducible to empirical
+observations.</p>
+<h2 class="unnumbered" id="category-theory-and-inverse-limits">3.
+Category Theory and Inverse Limits</h2>
+<p>The most elusive concept in transcendental philosophy—Kant’s
+“Transcendental Object
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo><mi>X</mi></mrow><annotation encoding="application/x-tex">= X</annotation></semantics></math>”—is
+formalized using the category-theoretic concept of the <em>inverse
+limit</em>. Let
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">ℐ</mi><annotation encoding="application/x-tex">\mathcal{I}</annotation></semantics></math>
+be a small category representing the historical sequence or varying
+empirical framings. Let
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mo>:</mo><mi mathvariant="script">ℐ</mi><mo>→</mo><mi mathvariant="bold-italic">𝑪</mi></mrow><annotation encoding="application/x-tex">D: \mathcal{I} \to \mathbf{C}</annotation></semantics></math>
+be a diagram where each
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mo form="prefix" stretchy="false">(</mo><mi>i</mi><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">D(i)</annotation></semantics></math>
+is a model of the world under perspective
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math>,
+and the morphisms
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mo form="prefix" stretchy="false">(</mo><mi>u</mi><mo form="postfix" stretchy="false">)</mo><mo>:</mo><mi>D</mi><mo form="prefix" stretchy="false">(</mo><mi>j</mi><mo form="postfix" stretchy="false">)</mo><mo>→</mo><mi>D</mi><mo form="prefix" stretchy="false">(</mo><mi>i</mi><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">D(u): D(j) \to D(i)</annotation></semantics></math>
+(for
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi><mo>:</mo><mi>i</mi><mo>→</mo><mi>j</mi></mrow><annotation encoding="application/x-tex">u: i \to j</annotation></semantics></math>)
+represent the translation or reduction between perspectives. The
+transcendental object is defined as the universal cone over this
+diagram, i.e., the limit object: <span class="math display">$$X =
+\varprojlim_{i \in \mathcal{I}} D(i).$$</span> Explicitly, for an
+inverse system indexed by directed set
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>I</mi><annotation encoding="application/x-tex">I</annotation></semantics></math>:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo>=</mo><mrow><mo form="prefix" stretchy="true">{</mo><mo form="prefix" stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><msub><mo form="postfix" stretchy="false">)</mo><mrow><mi>i</mi><mo>∈</mo><mi>I</mi></mrow></msub><mo>∈</mo><munder><mo>∏</mo><mrow><mi>i</mi><mo>∈</mo><mi>I</mi></mrow></munder><mi>D</mi><mo form="prefix" stretchy="false">(</mo><mi>i</mi><mo form="postfix" stretchy="false">)</mo><mspace width="0.278em"></mspace><mo form="infix" stretchy="true">|</mo><mspace width="0.278em"></mspace><mo>∀</mo><mi>i</mi><mo>≤</mo><mi>j</mi><mo>,</mo><mspace width="0.278em"></mspace><msub><mi>f</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo form="prefix" stretchy="false">(</mo><msub><mi>x</mi><mi>j</mi></msub><mo form="postfix" stretchy="false">)</mo><mo>=</mo><msub><mi>x</mi><mi>i</mi></msub><mo form="postfix" stretchy="true">}</mo></mrow><mi>.</mi></mrow><annotation encoding="application/x-tex">X = \left\{ (x_i)_{i \in I} \in \prod_{i \in I} D(i) \;\middle|\; \forall i \leq j, \; f_{ij}(x_j) = x_i \right\}.</annotation></semantics></math>
+This definition ensures that the “Object
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo><mi>X</mi></mrow><annotation encoding="application/x-tex">= X</annotation></semantics></math>”
+is not an unapproachable metaphysical mystery, but rather the structural
+limit of convergent scientific inquiry—the maximal invariant core that
+maps consistently under all perspective transformations.</p>
+<h1 id="formalization-of-the-realismantirealism-spectrum">Formalization
+of the Realism–Antirealism Spectrum</h1>
+<p>Let
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">𝒲</mi><annotation encoding="application/x-tex">\mathcal{W}</annotation></semantics></math>
+denote the world, modeled as a mind-independent domain of entities, and
+let
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">𝒯</mi><annotation encoding="application/x-tex">\mathcal{T}</annotation></semantics></math>
+denote a scientific theory. We define a theory
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">𝒯</mi><mo>=</mo><mo form="prefix" stretchy="false">⟨</mo><mi mathvariant="script">ℒ</mi><mo>,</mo><mi mathvariant="script">𝒜</mi><mo>,</mo><mi mathvariant="script">ℳ</mi><mo form="postfix" stretchy="false">⟩</mo></mrow><annotation encoding="application/x-tex">\mathcal{T} = \langle \mathcal{L}, \mathcal{A}, \mathcal{M}\rangle</annotation></semantics></math>
+as a tuple consisting of a formal mathematical language
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">ℒ</mi><annotation encoding="application/x-tex">\mathcal{L}</annotation></semantics></math>,
+a set of axioms
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">𝒜</mi><annotation encoding="application/x-tex">\mathcal{A}</annotation></semantics></math>,
+and a class of models
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">ℳ</mi><annotation encoding="application/x-tex">\mathcal{M}</annotation></semantics></math>.
+Let
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>
+be the set of all entities postulated by
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">𝒯</mi><annotation encoding="application/x-tex">\mathcal{T}</annotation></semantics></math>,
+partitioned such that
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>=</mo><msub><mi>E</mi><mi>O</mi></msub><mo>∪</mo><msub><mi>E</mi><mi>U</mi></msub></mrow><annotation encoding="application/x-tex">E = E_O \cup E_U</annotation></semantics></math>,
+where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>E</mi><mi>O</mi></msub><annotation encoding="application/x-tex">E_O</annotation></semantics></math>
+is the set of observable entities and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>E</mi><mi>U</mi></msub><annotation encoding="application/x-tex">E_U</annotation></semantics></math>
+is the set of unobservable theoretical entities
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mi>O</mi></msub><mo>∩</mo><msub><mi>E</mi><mi>U</mi></msub><mo>=</mo><mi>∅</mi></mrow><annotation encoding="application/x-tex">E_O \cap E_U = \emptyset</annotation></semantics></math>).</p>
+<p>The traditional debate pivots on the existence and semantic reach of
+an interpretation mapping
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">ℐ</mi><mo>:</mo><mi mathvariant="script">ℒ</mi><mo>→</mo><mi mathvariant="script">𝒲</mi></mrow><annotation encoding="application/x-tex">\mathcal{I}: \mathcal{L} \to \mathcal{W}</annotation></semantics></math>.</p>
+<ol>
+<li><p><strong>Scientific Realism</strong> asserts that
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">ℐ</mi><annotation encoding="application/x-tex">\mathcal{I}</annotation></semantics></math>
+is an injective homomorphism that maps both
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>E</mi><mi>O</mi></msub><annotation encoding="application/x-tex">E_O</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>E</mi><mi>U</mi></msub><annotation encoding="application/x-tex">E_U</annotation></semantics></math>
+onto real components of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">𝒲</mi><annotation encoding="application/x-tex">\mathcal{W}</annotation></semantics></math>,
+and that
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">𝒯</mi><annotation encoding="application/x-tex">\mathcal{T}</annotation></semantics></math>
+yields an approximate truth value
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="double-struck">𝕍</mi><mo form="prefix" stretchy="false">(</mo><mi mathvariant="script">𝒯</mi><mo form="postfix" stretchy="false">)</mo><mo>→</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\mathbb{V}(\mathcal{T}) \to 1</annotation></semantics></math>.</p></li>
+<li><p><strong>Empirical Antirealism (e.g., van Fraassen <span class="citation" data-cites="vanfraassen1980"></span>)</strong>
+restricts the veridical domain of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">ℐ</mi><annotation encoding="application/x-tex">\mathcal{I}</annotation></semantics></math>
+exclusively to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>E</mi><mi>O</mi></msub><annotation encoding="application/x-tex">E_O</annotation></semantics></math>.
+The unobservable component
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>E</mi><mi>U</mi></msub><annotation encoding="application/x-tex">E_U</annotation></semantics></math>
+is treated as an instrumental fiction; hence, the epistemic requirement
+is reduced to <em>empirical adequacy</em>, formally stated as the
+existence of an isomorphic embedding of observable phenomena
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">𝒫</mi><annotation encoding="application/x-tex">\mathcal{P}</annotation></semantics></math>
+into a submodel of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">ℳ</mi><annotation encoding="application/x-tex">\mathcal{M}</annotation></semantics></math>:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∃</mo><mi>ϕ</mi><mo>:</mo><mi mathvariant="script">𝒫</mi><mo>↪</mo><mi mathvariant="script">ℳ</mi><msub><mo form="postfix" stretchy="false">|</mo><msub><mi>E</mi><mi>O</mi></msub></msub></mrow><annotation encoding="application/x-tex">\exists \phi: \mathcal{P} \hookrightarrow \mathcal{M}\vert_{E_O}</annotation></semantics></math></p></li>
+</ol>
+<h2 class="unnumbered" id="the-syntactic-semantic-formalization-of-bunge-and-bhaskar">The
+Syntactic-Semantic Formalization of Bunge and Bhaskar</h2>
+<p>For Mario Bunge <span class="citation" data-cites="bunge1977"></span>, a mature scientific theory maps a
+mathematical structure
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="script">𝒮</mi><mi>M</mi></msub><annotation encoding="application/x-tex">\mathcal{S}_M</annotation></semantics></math>
+to a physical domain
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="script">𝒮</mi><mi>P</mi></msub><annotation encoding="application/x-tex">\mathcal{S}_P</annotation></semantics></math>.
+Let
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="script">ℛ</mi><mi>B</mi></msub><mo>:</mo><msub><mi mathvariant="script">𝒮</mi><mi>M</mi></msub><mo>→</mo><msub><mi mathvariant="script">𝒮</mi><mi>P</mi></msub></mrow><annotation encoding="application/x-tex">\mathcal{R}_B: \mathcal{S}_M \to \mathcal{S}_P</annotation></semantics></math>
+be a denotation reference relation. Bunge rejects pure instrumentalism
+by demanding that the causal mechanisms
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">𝒞</mi><annotation encoding="application/x-tex">\mathcal{C}</annotation></semantics></math>
+represented within
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="script">𝒮</mi><mi>M</mi></msub><annotation encoding="application/x-tex">\mathcal{S}_M</annotation></semantics></math>
+correspond to objective laws
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="script">ℒ</mi><mi>W</mi></msub><mo>⊂</mo><mi mathvariant="script">𝒲</mi></mrow><annotation encoding="application/x-tex">\mathcal{L}_W \subset \mathcal{W}</annotation></semantics></math>.
+Mathematization is formalised as an injective functor from conceptual
+relations to physical systems, ensuring that formal precision tracks
+physical ontology.</p>
+<p>Roy Bhaskar’s <span class="citation" data-cites="bhaskar1975"></span>
+critical realism introduces an explicit <em>stratified ontology</em>.
+Let reality
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">𝒲</mi><annotation encoding="application/x-tex">\mathcal{W}</annotation></semantics></math>
+be structured as a triple of nested domains:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="script">𝒟</mi><mi>E</mi></msub><mo>⊊</mo><msub><mi mathvariant="script">𝒟</mi><mi>A</mi></msub><mo>⊊</mo><msub><mi mathvariant="script">𝒟</mi><mi>R</mi></msub></mrow><annotation encoding="application/x-tex">\mathcal{D}_E \subsetneq \mathcal{D}_A \subsetneq \mathcal{D}_R</annotation></semantics></math>
+where:</p>
+<ul>
+<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="script">𝒟</mi><mi>E</mi></msub><annotation encoding="application/x-tex">\mathcal{D}_E</annotation></semantics></math>
+is the <strong>Empirical domain</strong> (the set of human sensations
+and observations
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>O</mi><annotation encoding="application/x-tex">O</annotation></semantics></math>).</p></li>
+<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="script">𝒟</mi><mi>A</mi></msub><annotation encoding="application/x-tex">\mathcal{D}_A</annotation></semantics></math>
+is the <strong>Actual domain</strong> (the set of all events
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>,
+whether observed or unobserved, such that
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo>⊆</mo><mi>E</mi></mrow><annotation encoding="application/x-tex">O \subseteq E</annotation></semantics></math>).</p></li>
+<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="script">𝒟</mi><mi>R</mi></msub><annotation encoding="application/x-tex">\mathcal{D}_R</annotation></semantics></math>
+is the <strong>Real domain</strong> (the set of transfactual generative
+mechanisms and structures
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>M</mi><annotation encoding="application/x-tex">M</annotation></semantics></math>,
+possessing causal powers
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="script">𝒫</mi><mi>C</mi></msub><annotation encoding="application/x-tex">\mathcal{P}_C</annotation></semantics></math>
+capable of producing
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>).</p></li>
+</ul>
+<p>Bhaskar’s transcendental question can be formalized as follows: given
+the success of experimental closure (where a scientist isolates a system
+to generate a constant regularity
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="normal">Δ</mi><annotation encoding="application/x-tex">\Delta</annotation></semantics></math>),
+what must
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">𝒲</mi><annotation encoding="application/x-tex">\mathcal{W}</annotation></semantics></math>
+be like? If science were restricted to positivism, laws would be
+identical to empirical regularities:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="script">ℒ</mi><mi>W</mi></msub><mo>=</mo><msub><mi mathvariant="script">𝒟</mi><mi>E</mi></msub></mrow><annotation encoding="application/x-tex">\mathcal{L}_W = \mathcal{D}_E</annotation></semantics></math>.
+However, because experimental interventions are required to manifest
+these regularities, the underlying mechanisms must operate in open
+systems where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="script">𝒟</mi><mi>A</mi></msub><mo>≠</mo><msub><mi mathvariant="script">𝒟</mi><mi>E</mi></msub></mrow><annotation encoding="application/x-tex">\mathcal{D}_A \neq \mathcal{D}_E</annotation></semantics></math>.
+Thus, the condition of possibility for experimentation implies:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="script">𝒫</mi><mi>C</mi></msub><mo form="prefix" stretchy="false">(</mo><mi>M</mi><mo form="postfix" stretchy="false">)</mo><mo>→</mo><mi>E</mi><mspace width="1.0em"></mspace><mrow><mtext mathvariant="normal">independent of </mtext><mspace width="0.333em"></mspace></mrow><mi>O</mi></mrow><annotation encoding="application/x-tex">\mathcal{P}_C(M) \to E \quad \text{independent of } O</annotation></semantics></math></p>
+<h1 id="the-husserlian-constitution-kh-transcendental-topology">The
+Husserlian Constitution &amp; K/H Transcendental Topology</h1>
+<p>Edmund Husserl <span class="citation" data-cites="husserl1913"></span> demonstrates that
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">𝒲</mi><annotation encoding="application/x-tex">\mathcal{W}</annotation></semantics></math>
+cannot be treated as a naively given set of raw data points. Objectivity
+is constituted through intentional correlations between acts of
+consciousness (<em>noeses</em>) and their intended objects
+(<em>noemata</em>). However, genuine objectivity requires more than
+individual constitution: it is ultimately grounded in the possibility of
+intersubjective verification within a community of transcendental
+subjects. Let
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="script">𝒜</mi><mi>I</mi></msub><annotation encoding="application/x-tex">\mathcal{A}_I</annotation></semantics></math>
+be an intentional act (<em>noesis</em>) and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">ℋ</mi><annotation encoding="application/x-tex">\mathcal{H}</annotation></semantics></math>
+be the horizon of experience. Objectivity
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">𝒪</mi><annotation encoding="application/x-tex">\mathcal{O}</annotation></semantics></math>
+(<em>noema</em>) is given through a constitutive operator
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">𝒦</mi><annotation encoding="application/x-tex">\mathcal{K}</annotation></semantics></math>:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">𝒦</mi><mo>:</mo><msub><mi mathvariant="script">𝒜</mi><mi>I</mi></msub><mo>×</mo><mi mathvariant="script">ℋ</mi><mo>→</mo><mi mathvariant="script">𝒪</mi></mrow><annotation encoding="application/x-tex">\mathcal{K}: \mathcal{A}_I \times \mathcal{H} \longrightarrow \mathcal{O}</annotation></semantics></math>
+Within this framework, scientific categories (such as space-time metrics
+or mass coefficients) are not uninterpreted mind-independent substances,
+nor are they arbitrary subjectivisms. They are invariants arising from
+specific operations of intentional disclosure. If
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="script">ℋ</mi><mi>S</mi></msub><annotation encoding="application/x-tex">\mathcal{H}_S</annotation></semantics></math>
+represents a specialized scientific horizon (e.g., an experimental setup
+or mathematical paradigm), then the constituted scientific object
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="script">𝒪</mi><mi>S</mi></msub><mo>=</mo><mi mathvariant="script">𝒦</mi><mo form="prefix" stretchy="false">(</mo><msub><mi mathvariant="script">𝒜</mi><mi>I</mi></msub><mo>,</mo><msub><mi mathvariant="script">ℋ</mi><mi>S</mi></msub><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathcal{O}_S = \mathcal{K}(\mathcal{A}_I, \mathcal{H}_S)</annotation></semantics></math>
+is a rigorously grounded manifest of reality. The intentional
+constitution is the cognitive mapping that stabilizes our reference to
+mind-independent systems.</p>
+<p>So, while Husserl explains how scientific objects are constituted
+within intentional experience, Heidegger asks a more fundamental
+question: what ontological conditions make such intentional disclosure
+possible in the first place? Throught its reading of Immanuel Kant <span class="citation" data-cites="heidegger1929"></span>, Martin Heidegger
+formalizes the ontological conditions making the mapping
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">ℐ</mi><mo>:</mo><mi mathvariant="script">ℒ</mi><mo>→</mo><mi mathvariant="script">𝒲</mi></mrow><annotation encoding="application/x-tex">\mathcal{I}: \mathcal{L} \to \mathcal{W}</annotation></semantics></math>
+possible in the first place. This requires modeling the
+<em>finitude</em> of human cognition.</p>
+<div class="axiom">
+<p><strong>Axiom 1</strong> (Finitude of Cognition). <em>Let
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>K</mi><annotation encoding="application/x-tex">K</annotation></semantics></math>
+be a finite cognitive architecture, and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">ℰ</mi><annotation encoding="application/x-tex">\mathcal{E}</annotation></semantics></math>
+be an independent entity (the essent). Human cognition is non-creative
+(<em>not ontically creative</em>):
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∀</mo><mi mathvariant="script">ℰ</mi><mo>∈</mo><mi mathvariant="script">𝒲</mi><mo>,</mo><mspace width="1.0em"></mspace><mi>K</mi><mo form="prefix" stretchy="false">(</mo><mi mathvariant="script">ℰ</mi><mo form="postfix" stretchy="false">)</mo><mo>⟹̸</mo><mtext mathvariant="normal">Create</mtext><mo form="prefix" stretchy="false">(</mo><mi mathvariant="script">ℰ</mi><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\forall \mathcal{E} \in \mathcal{W}, \quad K(\mathcal{E}) \not\implies \text{Create}(\mathcal{E})</annotation></semantics></math>
+Finite knowledge is strictly a receptive relation requiring that the
+entity independently declare itself from an antecedent domain:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Intuition</mtext><mo>:</mo><mi mathvariant="script">ℰ</mi><mo>→</mo><mtext mathvariant="normal">Sensibility</mtext></mrow><annotation encoding="application/x-tex">\text{Intuition}: \mathcal{E} \to \text{Sensibility}</annotation></semantics></math>.</em></p>
+</div>
+<p>To prevent this receptive intuition from collapsing into disjointed,
+chaotic data streams, Heidegger formalizes Kant’s <span class="citation" data-cites="kant1781"></span> process of <em>ob-jectification</em>
+(<em>Vergegenständlichung</em>). This can be modeled as a projection
+operator
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="normal">Π</mi><mi mathvariant="script">ℋ</mi></msub><annotation encoding="application/x-tex">\Pi_{\mathcal{H}}</annotation></semantics></math>
+that maps the raw essent
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">ℰ</mi><annotation encoding="application/x-tex">\mathcal{E}</annotation></semantics></math>
+into a structured horizon of objective rules governed by the
+understanding (the “faculty of rules”
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="script">ℱ</mi><mi>R</mi></msub><annotation encoding="application/x-tex">\mathcal{F}_R</annotation></semantics></math>).
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="normal">Π</mi><mi mathvariant="script">ℋ</mi></msub><mo form="prefix" stretchy="false">(</mo><mi mathvariant="script">ℰ</mi><mo form="postfix" stretchy="false">)</mo><mo>=</mo><msub><mi mathvariant="script">𝒪</mi><mi>X</mi></msub></mrow><annotation encoding="application/x-tex">\Pi_{\mathcal{H}}(\mathcal{E}) = \mathcal{O}_X</annotation></semantics></math>
+This projection satisfies a constraint termed the <strong>precursory
+resistance of Being</strong>
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>R</mi><mi>B</mi></msub><annotation encoding="application/x-tex">R_B</annotation></semantics></math>).
+The world is not infinitely plastic; it exerts a structural pushback
+that restricts the permissible configurations of our theoretical rules:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>B</mi></msub><mo>:</mo><msub><mi mathvariant="script">ℱ</mi><mi>R</mi></msub><mo>↪</mo><mtext mathvariant="normal">Valid-Unities</mtext><mo form="prefix" stretchy="false">(</mo><mi mathvariant="script">𝒲</mi><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">R_B: \mathcal{F}_R \hookrightarrow \text{Valid-Unities}(\mathcal{W})</annotation></semantics></math></p>
+<p>What scientific inquiry targets through this mathematical projection
+is the <strong>Transcendental Object
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo><mi>X</mi></mrow><annotation encoding="application/x-tex">= X</annotation></semantics></math></strong>.
+Rather than an ontological substance concealed behind a veil,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>
+is formalized as the structural limit or the inverse limit of all
+possible empirical determinations under a given categorial framework.
+Let
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="script">𝒟</mi><mi>i</mi></msub><annotation encoding="application/x-tex">\mathcal{D}_i</annotation></semantics></math>
+be specific empirical profiles of an entity. The transcendental object
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>
+is the invariant core that guarantees identity across varying
+perspectives: <span class="math display">$$X = \varprojlim
+\mathcal{D}_i$$</span> Ontological knowledge does not synthesize the
+physical matter of the object; rather, it <em>forms transcendence</em>
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="script">𝒯</mi><mi>R</mi></msub><annotation encoding="application/x-tex">\mathcal{T}_R</annotation></semantics></math>),
+holding open the topological space within which the independent truth of
+the entity can appear:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="script">𝒯</mi><mi>R</mi></msub><mo>:</mo><mi mathvariant="script">ℋ</mi><mo>→</mo><mo form="prefix" stretchy="false">{</mo><mi mathvariant="script">ℰ</mi><mo>∈</mo><mi mathvariant="script">𝒲</mi><mo>∣</mo><mi mathvariant="script">ℰ</mi><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> can stand in opposition to </mtext><mspace width="0.333em"></mspace></mrow><mi>K</mi><mo form="postfix" stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\mathcal{T}_R: \mathcal{H} \longrightarrow \{ \mathcal{E} \in \mathcal{W} \mid \mathcal{E} \text{ can stand in opposition to } K \}</annotation></semantics></math></p>
+<h1 id="formal-defense-of-structural-realism-via-schematism">Formal
+Defense of Structural Realism via Schematism</h1>
+<p>The primary threat to naïve entity-realism is the Pessimistic
+Meta-Induction (PMI). Let a sequence of historical theories be indexed
+by
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>∈</mo><mi mathvariant="double-struck">ℕ</mi></mrow><annotation encoding="application/x-tex">n \in \mathbb{N}</annotation></semantics></math>:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix" stretchy="false">{</mo><msub><mi>T</mi><mi>n</mi></msub><msub><mo form="postfix" stretchy="false">}</mo><mrow><mi>n</mi><mo>∈</mo><mi mathvariant="double-struck">ℕ</mi></mrow></msub><mo>⊂</mo><mi mathvariant="fraktur">𝔗</mi><mo>,</mo></mrow><annotation encoding="application/x-tex">\{T_n\}_{n \in \mathbb{N}} \subset \mathfrak{T},</annotation></semantics></math>
+where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="fraktur">𝔗</mi><annotation encoding="application/x-tex">\mathfrak{T}</annotation></semantics></math>
+is the space of all empirically adequate physical theories. For each
+theory
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>T</mi><mi>n</mi></msub><annotation encoding="application/x-tex">T_n</annotation></semantics></math>,
+let
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">ℰ</mi><mo form="prefix" stretchy="false">(</mo><msub><mi>T</mi><mi>n</mi></msub><mo form="postfix" stretchy="false">)</mo><mo>:=</mo><mo form="prefix" stretchy="false">{</mo><mi>e</mi><mo>∣</mo><msub><mi>T</mi><mi>n</mi></msub><mo>⊨</mo><mo>∃</mo><mi>!</mi><mi>x</mi><mspace width="0.167em"></mspace><mo form="prefix" stretchy="false">(</mo><msub><mi>P</mi><mi>e</mi></msub><mo form="prefix" stretchy="false">(</mo><mi>x</mi><mo form="postfix" stretchy="false">)</mo><mo>∧</mo><msub><mi>ϕ</mi><mi>n</mi></msub><mo form="prefix" stretchy="false">(</mo><mi>x</mi><mo form="postfix" stretchy="false">)</mo><mo form="postfix" stretchy="false">)</mo><mo form="postfix" stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\mathcal{E}(T_n) := \{ e \mid T_n \vDash \exists! x \, (P_e(x) \wedge \phi_n(x)) \}</annotation></semantics></math>
+be the set of primitive ontological entities posited by
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>T</mi><mi>n</mi></msub><annotation encoding="application/x-tex">T_n</annotation></semantics></math>,
+with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>P</mi><mi>e</mi></msub><annotation encoding="application/x-tex">P_e</annotation></semantics></math>
+being the type-predicate and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ϕ</mi><mi>n</mi></msub><annotation encoding="application/x-tex">\phi_n</annotation></semantics></math>
+its dynamical profile. The PMI asserts that for every
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>∈</mo><mi mathvariant="double-struck">ℕ</mi></mrow><annotation encoding="application/x-tex">N \in \mathbb{N}</annotation></semantics></math>,
+there exists some
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>&gt;</mo><mi>N</mi></mrow><annotation encoding="application/x-tex">m &gt; N</annotation></semantics></math>
+such that:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">ℰ</mi><mo form="prefix" stretchy="false">(</mo><msub><mi>T</mi><mi>m</mi></msub><mo form="postfix" stretchy="false">)</mo><mo>∩</mo><mi mathvariant="script">ℰ</mi><mo form="prefix" stretchy="false">(</mo><msub><mi>T</mi><mi>N</mi></msub><mo form="postfix" stretchy="false">)</mo><mo>=</mo><mi>⌀</mi><mo>,</mo></mrow><annotation encoding="application/x-tex">\mathcal{E}(T_m) \cap \mathcal{E}(T_N) = \varnothing,</annotation></semantics></math>
+or more strongly,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow><mi mathvariant="normal">limsup</mi><mo>⁡</mo></mrow><mrow><mi>n</mi><mo>→</mo><mi>∞</mi></mrow></msub><mi mathvariant="script">ℰ</mi><mo form="prefix" stretchy="false">(</mo><msub><mi>T</mi><mi>n</mi></msub><mo form="postfix" stretchy="false">)</mo><mo>=</mo><mi>∅</mi></mrow><annotation encoding="application/x-tex">\limsup_{n \to \infty} \mathcal{E}(T_n) = \emptyset</annotation></semantics></math>
+with respect to the refinement ordering. Standard realism, which ties
+truth to the existence of specific relata, collapses under this semantic
+discontinuity.</p>
+<p>Structural realism circumvents this by shifting the truth-bearer from
+individual entities to relational invariants. Define a theory
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>T</mi><mi>n</mi></msub><annotation encoding="application/x-tex">T_n</annotation></semantics></math>
+as a triple
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix" stretchy="false">(</mo><msub><mi mathvariant="script">ℒ</mi><mi>n</mi></msub><mo>,</mo><msub><mi mathvariant="script">ℳ</mi><mi>n</mi></msub><mo>,</mo><msub><mi mathvariant="script">ℐ</mi><mi>n</mi></msub><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(\mathcal{L}_n, \mathcal{M}_n, \mathcal{I}_n)</annotation></semantics></math>,
+where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="script">ℒ</mi><mi>n</mi></msub><annotation encoding="application/x-tex">\mathcal{L}_n</annotation></semantics></math>
+is a signature,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="script">ℳ</mi><mi>n</mi></msub><annotation encoding="application/x-tex">\mathcal{M}_n</annotation></semantics></math>
+a class of models, and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="script">ℐ</mi><mi>n</mi></msub><annotation encoding="application/x-tex">\mathcal{I}_n</annotation></semantics></math>
+an interpretation. Let
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">ℛ</mi><mo form="prefix" stretchy="false">(</mo><msub><mi>T</mi><mi>n</mi></msub><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathcal{R}(T_n)</annotation></semantics></math>
+be the set of all
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>-ary
+relations definable in
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="script">ℒ</mi><mi>n</mi></msub><annotation encoding="application/x-tex">\mathcal{L}_n</annotation></semantics></math>.
+The structural realist claims that while
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">ℰ</mi><mo form="prefix" stretchy="false">(</mo><msub><mi>T</mi><mi>i</mi></msub><mo form="postfix" stretchy="false">)</mo><mo>≠</mo><mi mathvariant="script">ℰ</mi><mo form="prefix" stretchy="false">(</mo><msub><mi>T</mi><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></msub><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathcal{E}(T_i) \neq \mathcal{E}(T_{i+1})</annotation></semantics></math>,
+there exists a non-trivial homomorphism:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="normal">Φ</mi><mrow><mi>i</mi><mo>,</mo><mi>i</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>:</mo><mi mathvariant="script">ℛ</mi><mo form="prefix" stretchy="false">(</mo><msub><mi>T</mi><mi>i</mi></msub><mo form="postfix" stretchy="false">)</mo><mo>↪</mo><mi mathvariant="script">ℛ</mi><mo form="prefix" stretchy="false">(</mo><msub><mi>T</mi><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></msub><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\Phi_{i,i+1}: \mathcal{R}(T_i) \hookrightarrow \mathcal{R}(T_{i+1})</annotation></semantics></math>
+preserving the logical form and dynamical dependencies.</p>
+<p>This structural continuity is precisely the formal achievement of the
+Kantian <strong>Transcendental Schematism</strong>. Pure conceptual
+structures
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">𝒞</mi><annotation encoding="application/x-tex">\mathcal{C}</annotation></semantics></math>
+— which are abstract, non-sensible, and given a priori — are
+heterogeneous to the raw empirical parameters
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="script">𝒫</mi><mi>E</mi></msub><annotation encoding="application/x-tex">\mathcal{P}_E</annotation></semantics></math>,
+which carry a continuous, temporally indexed topology. To bridge this
+ontological gap, Kant introduces the schema
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="script">𝒮</mi><mi>C</mi></msub><annotation encoding="application/x-tex">\mathcal{S}_C</annotation></semantics></math>
+as a <em>transcendental time-determination</em>. Formally, let
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">𝒞</mi><annotation encoding="application/x-tex">\mathcal{C}</annotation></semantics></math>
+be a finitely presented category of pure concepts, and let
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="bold">𝐑𝐞𝐥</mtext><mo form="prefix" stretchy="false">(</mo><msub><mi mathvariant="script">𝒫</mi><mi>E</mi></msub><mo>×</mo><mi mathvariant="double-struck">𝕋</mi><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\textbf{Rel}(\mathcal{P}_E \times \mathbb{T})</annotation></semantics></math>
+be the category of relations over the product of empirical parameters
+and the time axis
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="double-struck">𝕋</mi><mo>≅</mo><mi mathvariant="double-struck">ℝ</mi></mrow><annotation encoding="application/x-tex">\mathbb{T} \cong \mathbb{R}</annotation></semantics></math>.
+The schema is a functor:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="script">𝒮</mi><mi>C</mi></msub><mo>:</mo><mi mathvariant="script">𝒞</mi><mo>→</mo><mtext mathvariant="bold">𝐑𝐞𝐥</mtext><mo form="prefix" stretchy="false">(</mo><msub><mi mathvariant="script">𝒫</mi><mi>E</mi></msub><mo>×</mo><mi mathvariant="double-struck">𝕋</mi><mo form="postfix" stretchy="false">)</mo><mo>,</mo></mrow><annotation encoding="application/x-tex">\mathcal{S}_C: \mathcal{C} \longrightarrow \textbf{Rel}(\mathcal{P}_E \times \mathbb{T}),</annotation></semantics></math>
+which acts on objects by
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>↦</mo><mo form="prefix" stretchy="false">{</mo><mo form="prefix" stretchy="false">(</mo><mi>p</mi><mo>,</mo><mi>t</mi><mo form="postfix" stretchy="false">)</mo><mo>∈</mo><msub><mi mathvariant="script">𝒫</mi><mi>E</mi></msub><mo>×</mo><mi mathvariant="double-struck">𝕋</mi><mo>∣</mo><mrow><mtext mathvariant="normal">construction rule </mtext><mspace width="0.333em"></mspace></mrow><msub><mi mathvariant="normal">Γ</mi><mi>A</mi></msub><mo form="prefix" stretchy="false">(</mo><mi>p</mi><mo>,</mo><mi>t</mi><mo form="postfix" stretchy="false">)</mo><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> holds</mtext></mrow><mo form="postfix" stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">A \mapsto \{ (p, t) \in \mathcal{P}_E \times \mathbb{T} \mid \text{construction rule } \Gamma_A(p,t) \text{ holds} \}</annotation></semantics></math>,
+and on morphisms by naturality constraints. This functor must satisfy
+the commutativity condition for any conceptual morphism
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>:</mo><mi>A</mi><mo>→</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">f: A \to B</annotation></semantics></math>:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="script">𝒮</mi><mi>C</mi></msub><mo form="prefix" stretchy="false">(</mo><mi>f</mi><mo form="postfix" stretchy="false">)</mo><mo>∘</mo><msub><mi mathvariant="script">𝒮</mi><mi>C</mi></msub><mo form="prefix" stretchy="false">(</mo><mi>A</mi><mo form="postfix" stretchy="false">)</mo><mo>⊆</mo><msub><mi mathvariant="script">𝒮</mi><mi>C</mi></msub><mo form="prefix" stretchy="false">(</mo><mi>B</mi><mo form="postfix" stretchy="false">)</mo><mo>∘</mo><mi>π</mi><mo>,</mo></mrow><annotation encoding="application/x-tex">\mathcal{S}_C(f) \circ \mathcal{S}_C(A) \subseteq \mathcal{S}_C(B) \circ \pi,</annotation></semantics></math>
+where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>π</mi><annotation encoding="application/x-tex">\pi</annotation></semantics></math>
+is the projection onto the temporal factor.</p>
+<p>In modern mathematical physics, these schemata manifest as universal
+mathematical invariants. Let
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>G</mi><annotation encoding="application/x-tex">G</annotation></semantics></math>
+be a Lie symmetry group,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>∇</mi><annotation encoding="application/x-tex">\nabla</annotation></semantics></math>
+a covariant derivative, and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>g</mi><mrow><mi>μ</mi><mi>ν</mi></mrow></msub><annotation encoding="application/x-tex">g_{\mu\nu}</annotation></semantics></math>
+a metric tensor. The schema of substance, which Kant defines as the
+“permanence of the real in time” <span class="citation" data-cites="kant1781"></span>, corresponds to the existence of a Killing
+vector field
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ξ</mi><mi>μ</mi></msup><annotation encoding="application/x-tex">\xi^\mu</annotation></semantics></math>
+such that
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="script">ℒ</mi><mi>ξ</mi></msub><msub><mi>g</mi><mrow><mi>μ</mi><mi>ν</mi></mrow></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\mathcal{L}_\xi g_{\mu\nu} = 0</annotation></semantics></math>.
+Its formal invariant is the conserved Noether charge:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Q</mi><mo form="prefix" stretchy="false">(</mo><mi>ξ</mi><mo form="postfix" stretchy="false">)</mo><mo>=</mo><msub><mo>∫</mo><mi mathvariant="normal">Σ</mi></msub><msup><mi>J</mi><mi>μ</mi></msup><mo form="prefix" stretchy="false">[</mo><mi>ϕ</mi><mo form="postfix" stretchy="false">]</mo><mspace width="0.167em"></mspace><mi>d</mi><msub><mi mathvariant="normal">Σ</mi><mi>μ</mi></msub><mo>,</mo></mrow><annotation encoding="application/x-tex">Q(\xi) = \int_{\Sigma} J^\mu[\phi] \, d\Sigma_\mu,</annotation></semantics></math>
+with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>∂</mi><mi>μ</mi></msub><msup><mi>J</mi><mi>μ</mi></msup><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\partial_\mu J^\mu = 0</annotation></semantics></math>,
+which is invariant under gauge transformations
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>δ</mi><mi>ϵ</mi></msub><mi>ϕ</mi><mo>=</mo><mo form="prefix" stretchy="false">{</mo><mi>ϕ</mi><mo>,</mo><mi>ϵ</mi><mo form="postfix" stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\delta_\epsilon \phi = \{\phi, \epsilon\}</annotation></semantics></math>.
+It should be noted that Noether’s theorem, in this form, applies to
+Lagrangian systems with continuous symmetries; the correspondence
+between Killing fields and conserved charges presupposes that the
+relevant field theories admit a Lagrangian formulation and that the
+symmetries are smooth. Moreover, this
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Q</mi><mo form="prefix" stretchy="false">(</mo><mi>ξ</mi><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">Q(\xi)</annotation></semantics></math>
+is exactly the schema’s output for the concept of substance, providing a
+procedural rule for detecting permanence across arbitrary coordinate
+rescaling.</p>
+<p>Now, let
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Σ</mi><mo form="prefix" stretchy="false">(</mo><msub><mi>T</mi><mi>n</mi></msub><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\Sigma(T_n)</annotation></semantics></math>
+denote the maximal set of structural invariants extracted from
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>T</mi><mi>n</mi></msub><annotation encoding="application/x-tex">T_n</annotation></semantics></math>
+via the schema
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="script">𝒮</mi><mi>C</mi></msub><annotation encoding="application/x-tex">\mathcal{S}_C</annotation></semantics></math>:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Σ</mi><mo form="prefix" stretchy="false">(</mo><msub><mi>T</mi><mi>n</mi></msub><mo form="postfix" stretchy="false">)</mo><mo>=</mo><mo form="prefix" stretchy="false">{</mo><mi>σ</mi><mo>∈</mo><mi mathvariant="script">𝒞</mi><mo>∣</mo><msub><mi mathvariant="script">𝒮</mi><mi>C</mi></msub><mo form="prefix" stretchy="false">(</mo><mi>σ</mi><mo form="postfix" stretchy="false">)</mo><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> is a conserved current in </mtext><mspace width="0.333em"></mspace></mrow><msub><mi>T</mi><mi>n</mi></msub><mo form="postfix" stretchy="false">}</mo><mi>.</mi></mrow><annotation encoding="application/x-tex">\Sigma(T_n) = \{ \sigma \in \mathcal{C} \mid \mathcal{S}_C(\sigma) \text{ is a conserved current in } T_n \}.</annotation></semantics></math>
+Between successive theories
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>T</mi><mi>n</mi></msub><annotation encoding="application/x-tex">T_n</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>T</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><annotation encoding="application/x-tex">T_{n+1}</annotation></semantics></math>,
+the dynamics of theory-change define a natural transformation
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>η</mi><mi>n</mi></msub><mo>:</mo><mi mathvariant="normal">Σ</mi><mo form="prefix" stretchy="false">(</mo><msub><mi>T</mi><mi>n</mi></msub><mo form="postfix" stretchy="false">)</mo><mo>⇒</mo><mi mathvariant="normal">Σ</mi><mo form="prefix" stretchy="false">(</mo><msub><mi>T</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\eta_n: \Sigma(T_n) \Rightarrow \Sigma(T_{n+1})</annotation></semantics></math>.
+Structural realism posits the existence of a <em>structural preservation
+mapping</em>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="normal">Ψ</mi><annotation encoding="application/x-tex">\Psi</annotation></semantics></math>
+for the limit: <span class="math display">$$\Psi: \varprojlim_{n}
+\Sigma(T_n) \longrightarrow \varinjlim_{n} \Sigma(T_n),$$</span> which,
+under the condition of <em>convergent realism</em>, is actually an
+isomorphism in the category of invariants. To make this precise,
+consider the pullback diagram for two consecutive theories:</p>
+<p><p>
+\[
+\begin{array}{ccc}
+\Sigma(T_n) & \xrightarrow{\eta_n} & \Sigma(T_{n+1}) \\[6pt]
+\Big\downarrow{\scriptstyle \iota_n} & & \Big\downarrow{\scriptstyle \iota_{n+1}} \\[6pt]
+\mathrm{Obs}_S(T_n) & \xrightarrow{\infty} & \mathrm{Obs}_S(T_{n+1})
+\end{array}
+\]
+</p>where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mtext mathvariant="normal">Obs</mtext><mi mathvariant="script">𝒮</mi></msub><annotation encoding="application/x-tex">\text{Obs}_{\mathcal{S}}</annotation></semantics></math>
+is the set of observable consequences mediated by the schema. Since
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>η</mi><mi>n</mi></msub><annotation encoding="application/x-tex">\eta_n</annotation></semantics></math>
+may not be injective on entities but is bijective on invariants, we
+have:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∃</mo><mi mathvariant="normal">Ψ</mi><mo>:</mo><msub><mi>σ</mi><mn>1</mn></msub><mo>→</mo><msub><mi>σ</mi><mn>2</mn></msub><mspace width="1.0em"></mspace><mtext mathvariant="normal">with</mtext><mspace width="1.0em"></mspace><msup><mi mathvariant="normal">Ψ</mi><mo>*</mo></msup><mo form="prefix" stretchy="false">(</mo><msub><mi mathvariant="script">ℒ</mi><msub><mi>T</mi><mn>2</mn></msub></msub><mo form="postfix" stretchy="false">)</mo><mo>=</mo><msub><mi mathvariant="script">ℒ</mi><msub><mi>T</mi><mn>1</mn></msub></msub><mo>+</mo><mtext mathvariant="normal">total derivative</mtext><mo>,</mo></mrow><annotation encoding="application/x-tex">\exists \Psi: \sigma_1 \longrightarrow \sigma_2 \quad \text{with} \quad \Psi^*(\mathcal{L}_{T_2}) = \mathcal{L}_{T_1} + \text{total derivative},</annotation></semantics></math>
+where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="script">ℒ</mi><msub><mi>T</mi><mi>i</mi></msub></msub><annotation encoding="application/x-tex">\mathcal{L}_{T_i}</annotation></semantics></math>
+is the Lagrangian density of theory
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>T</mi><mi>i</mi></msub><annotation encoding="application/x-tex">T_i</annotation></semantics></math>.
+Thus,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="normal">Ψ</mi><annotation encoding="application/x-tex">\Psi</annotation></semantics></math>
+preserves the Euler-Lagrange equations up to a boundary term:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi>δ</mi><msub><mi mathvariant="script">ℒ</mi><msub><mi>T</mi><mn>1</mn></msub></msub></mrow><mrow><mi>δ</mi><mi>ϕ</mi></mrow></mfrac><mo>=</mo><mn>0</mn><mo>⇔</mo><mfrac><mrow><mi>δ</mi><msub><mi mathvariant="script">ℒ</mi><msub><mi>T</mi><mn>2</mn></msub></msub></mrow><mrow><mi>δ</mi><mo form="prefix" stretchy="false">(</mo><mi mathvariant="normal">Ψ</mi><mi>ϕ</mi><mo form="postfix" stretchy="false">)</mo></mrow></mfrac><mo>=</mo><mn>0</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">\frac{\delta \mathcal{L}_{T_1}}{\delta \phi} = 0 \iff \frac{\delta \mathcal{L}_{T_2}}{\delta (\Psi \phi)} = 0.</annotation></semantics></math></p>
+<p>More generally, let
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mrow><mi mathvariant="fraktur">ℭ</mi><mi mathvariant="fraktur">𝔞</mi><mi mathvariant="fraktur">𝔱</mi></mrow><mrow><mi mathvariant="fraktur">𝔗</mi><mi mathvariant="fraktur">𝔥</mi></mrow></msub><annotation encoding="application/x-tex">\mathfrak{Cat}_{\mathfrak{Th}}</annotation></semantics></math>
+be the category whose objects are theories and whose morphisms are
+inter-theoretic reductions. The schema functor
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="script">𝒮</mi><mi>C</mi></msub><annotation encoding="application/x-tex">\mathcal{S}_C</annotation></semantics></math>
+lifts to a functor on this category:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mover><mi mathvariant="script">𝒮</mi><mo accent="true">¯</mo></mover><mi>C</mi></msub><mo>:</mo><msub><mrow><mi mathvariant="fraktur">ℭ</mi><mi mathvariant="fraktur">𝔞</mi><mi mathvariant="fraktur">𝔱</mi></mrow><mrow><mi mathvariant="fraktur">𝔗</mi><mi mathvariant="fraktur">𝔥</mi></mrow></msub><mo>→</mo><msub><mrow><mi mathvariant="fraktur">ℭ</mi><mi mathvariant="fraktur">𝔞</mi><mi mathvariant="fraktur">𝔱</mi></mrow><mrow><mi mathvariant="fraktur">ℑ</mi><mi mathvariant="fraktur">𝔫</mi><mi mathvariant="fraktur">𝔳</mi></mrow></msub><mo>,</mo></mrow><annotation encoding="application/x-tex">\overline{\mathcal{S}}_C: \mathfrak{Cat}_{\mathfrak{Th}} \longrightarrow \mathfrak{Cat}_{\mathfrak{Inv}},</annotation></semantics></math>
+where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mrow><mi mathvariant="fraktur">ℭ</mi><mi mathvariant="fraktur">𝔞</mi><mi mathvariant="fraktur">𝔱</mi></mrow><mrow><mi mathvariant="fraktur">ℑ</mi><mi mathvariant="fraktur">𝔫</mi><mi mathvariant="fraktur">𝔳</mi></mrow></msub><annotation encoding="application/x-tex">\mathfrak{Cat}_{\mathfrak{Inv}}</annotation></semantics></math>
+is the category of invariant structures (e.g., symplectic manifolds,
+Hilbert spaces up to unitary equivalence, or
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>C</mi><mo>*</mo></msup><annotation encoding="application/x-tex">C^*</annotation></semantics></math>-algebras
+up to Morita equivalence). The PMI is then the statement that the
+forgetful functor
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>:</mo><msub><mrow><mi mathvariant="fraktur">ℭ</mi><mi mathvariant="fraktur">𝔞</mi><mi mathvariant="fraktur">𝔱</mi></mrow><mrow><mi mathvariant="fraktur">𝔗</mi><mi mathvariant="fraktur">𝔥</mi></mrow></msub><mo>→</mo><mtext mathvariant="bold">𝐒𝐞𝐭</mtext></mrow><annotation encoding="application/x-tex">U: \mathfrak{Cat}_{\mathfrak{Th}} \to \textbf{Set}</annotation></semantics></math>
+(which extracts entity sets) is not continuous, whereas
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mover><mi mathvariant="script">𝒮</mi><mo accent="true">¯</mo></mover><mi>C</mi></msub><annotation encoding="application/x-tex">\overline{\mathcal{S}}_C</annotation></semantics></math>
+is a faithful and conservative functor. Consequently, for any
+theoretical shift
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mn>1</mn></msub><mo>→</mo><msub><mi>T</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">T_1 \to T_2</annotation></semantics></math>,
+the commuting triangle:</p>
+<p>\[
+\begin{array}{ccc}
+T_1 & \xrightarrow{F} & T_2 \\
+\mathcal{S}_C \Big\downarrow & \swarrow \exists! \widetilde{\Psi} & \Big\downarrow \mathcal{S}_C \\
+\Sigma(T_1) & \xrightarrow{\Psi} & \Sigma(T_2)
+\end{array}
+\]</p>
+<p>holds uniquely up to natural isomorphism. The mapping
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="normal">Ψ</mi><annotation encoding="application/x-tex">\Psi</annotation></semantics></math>
+does not identify the empirical predictions pointwise, but it does
+establish a homomorphic preservation of the entire dynamical algebra:
+for any observable
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∈</mo><mi mathvariant="script">𝒜</mi><mo form="prefix" stretchy="false">(</mo><msub><mi>T</mi><mn>1</mn></msub><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">A \in \mathcal{A}(T_1)</annotation></semantics></math>,
+there exists
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>∈</mo><mi mathvariant="script">𝒜</mi><mo form="prefix" stretchy="false">(</mo><msub><mi>T</mi><mn>2</mn></msub><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">B \in \mathcal{A}(T_2)</annotation></semantics></math>
+such that
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix" stretchy="false">[</mo><mi>A</mi><mo>,</mo><msub><mi mathvariant="script">ℋ</mi><msub><mi>T</mi><mn>1</mn></msub></msub><mo form="postfix" stretchy="false">]</mo><mo>=</mo><mn>0</mn><mo>⇔</mo><mo form="prefix" stretchy="false">[</mo><mi>B</mi><mo>,</mo><msub><mi mathvariant="script">ℋ</mi><msub><mi>T</mi><mn>2</mn></msub></msub><mo form="postfix" stretchy="false">]</mo><mo>=</mo><mn>0</mn><mo>,</mo></mrow><annotation encoding="application/x-tex">[A, \mathcal{H}_{T_1}] = 0 \iff [B, \mathcal{H}_{T_2}] = 0,</annotation></semantics></math>
+where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">ℋ</mi><annotation encoding="application/x-tex">\mathcal{H}</annotation></semantics></math>
+is the Hamiltonian. Hence, the formal core of physical law remains
+invariant under ontological revision, thereby defeating the PMI by
+demonstrating that such change occurs only in the non-invariant fiber of
+the schema-functor, without denying the entity change.</p>
+<h2 class="unnumbered" id="epistemic-and-ontic-variants-of-structural-realism">Epistemic and
+Ontic Variants of Structural Realism</h2>
+<p>The structural realism defended in the preceding sections requires
+internal differentiation. Following Ladyman <span class="citation" data-cites="ladyman1998"></span> and French <span class="citation" data-cites="french2014"></span>, two distinct positions must be
+distinguished.</p>
+<p><em>Epistemic Structural Realism</em> (ESR), the view originating
+with Worrall <span class="citation" data-cites="worrall1989"></span>,
+holds that while we cannot know the intrinsic natures of unobservable
+objects, we can have genuine knowledge of the relational structures in
+which those objects stand. On this reading, objects—electrons, fields,
+branes—remain ontologically presupposed; our epistemic access is simply
+restricted to their structural roles. The homomorphism
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="normal">Φ</mi><mrow><mi>i</mi><mo>,</mo><mi>i</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>:</mo><mi>R</mi><mo form="prefix" stretchy="false">(</mo><msub><mi>T</mi><mi>i</mi></msub><mo form="postfix" stretchy="false">)</mo><mo>↪</mo><mi>R</mi><mo form="prefix" stretchy="false">(</mo><msub><mi>T</mi><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></msub><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\Phi_{i,i+1} : R(T_i) \hookrightarrow R(T_{i+1})</annotation></semantics></math>
+established above is, on this reading, a claim about what science can
+know, not about what exists. ESR is therefore compatible with a residual
+ontological commitment to entities as the “nodes” that instantiate
+structural relations, even if those nodes are epistemically opaque to
+us.</p>
+<p><em>Ontic Structural Realism</em> (OSR), developed by French and
+Ladyman, takes the stronger metaphysical step of eliminating objects
+altogether: there are no entities that stand in relations; there are
+only the structures and the relations themselves. On this view, the
+entity sets
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo form="prefix" stretchy="false">(</mo><msub><mi>T</mi><mi>n</mi></msub><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">E(T_n)</annotation></semantics></math>
+figuring in the PMI are not merely epistemically inaccessible—they are
+ontological fictions whose eliminability is the very point. OSR draws
+support from modern physics, where quantum particles lack determinate
+identity conditions (permutation invariance, non-individuality under
+bosonic and fermionic statistics), suggesting that the notion of a
+self-subsisting individual object is inapplicable at the fundamental
+level.</p>
+<p>The formal apparatus of this paper is most naturally read as
+supporting ESR. The inverse limit <span class="math inline">$X =
+\varprojlim_{n} D_i$</span> preserves a role for the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>D</mi><mi>i</mi></msub><annotation encoding="application/x-tex">D_i</annotation></semantics></math>
+as distinct empirical perspectives that are <em>coordinated</em> and not
+dissolved by the limit construction. Likewise, Heidegger’s Axiom of
+Finitude presupposes an independent entity
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>∈</mo><mi>W</mi></mrow><annotation encoding="application/x-tex">E \in W</annotation></semantics></math>
+that “declares itself” to cognition; this receptivity presupposes there
+is something to receive, resisting a fully structure-only ontology. The
+precursory resistance
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>B</mi></msub><mo>:</mo><msub><mi>F</mi><mi>R</mi></msub><mo>↪</mo><mrow><mi mathvariant="normal">V</mi><mi mathvariant="normal">a</mi><mi mathvariant="normal">l</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">d</mi><mtext mathvariant="normal">-</mtext><mi mathvariant="normal">U</mi><mi mathvariant="normal">n</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">t</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">e</mi><mi mathvariant="normal">s</mi></mrow><mo form="prefix" stretchy="false">(</mo><mi>W</mi><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">R_B : F_R \hookrightarrow \mathrm{Valid\text{-}Unities}(W)</annotation></semantics></math>
+encodes exactly this residual ontological commitment: the world is not
+infinitely plastic precisely because it contains entities that push
+back.</p>
+<p>Nevertheless, the schema functor
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>C</mi></msub><mo>:</mo><msub><mrow><mi mathvariant="fraktur">ℭ</mi><mi mathvariant="fraktur">𝔞</mi><mi mathvariant="fraktur">𝔱</mi></mrow><mrow><mi mathvariant="fraktur">𝔗</mi><mi mathvariant="fraktur">𝔥</mi></mrow></msub><mo>→</mo><msub><mrow><mi mathvariant="fraktur">ℭ</mi><mi mathvariant="fraktur">𝔞</mi><mi mathvariant="fraktur">𝔱</mi></mrow><mrow><mi mathvariant="fraktur">ℑ</mi><mi mathvariant="fraktur">𝔫</mi><mi mathvariant="fraktur">𝔳</mi></mrow></msub></mrow><annotation encoding="application/x-tex">S_C : \mathfrak{Cat}_{\mathfrak{Th}} \to \mathfrak{Cat}_{\mathfrak{Inv}}</annotation></semantics></math>
+admits a re-reading in OSR terms. If the objects of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mrow><mi mathvariant="fraktur">ℭ</mi><mi mathvariant="fraktur">𝔞</mi><mi mathvariant="fraktur">𝔱</mi></mrow><mrow><mi mathvariant="fraktur">ℑ</mi><mi mathvariant="fraktur">𝔫</mi><mi mathvariant="fraktur">𝔳</mi></mrow></msub><annotation encoding="application/x-tex">\mathfrak{Cat}_{\mathfrak{Inv}}</annotation></semantics></math>
+— symplectic manifolds,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>C</mi><mo>*</mo></msup><annotation encoding="application/x-tex">C^*</annotation></semantics></math>-algebras,
+Hilbert spaces up to unitary equivalence — are taken as ontologically
+primitive rather than as representations of an underlying
+entity-populated world, then the isomorphism <span class="math inline">$\Psi : \varprojlim_{n} \Sigma(T_n)
+\cong  \varinjlim_{n} \Sigma(T_n)$</span> becomes a claim not merely
+about scientific knowledge but about the structure of reality itself. On
+this reading, the Poisson bracket
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix" stretchy="false">{</mo><mi>⋅</mi><mo>,</mo><mi>⋅</mi><mo form="postfix" stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\{\cdot, \cdot\}</annotation></semantics></math>
+would not be an invariant that <em>tracks</em> a mind-independent
+Poisson manifold; it <em>would be</em> the Poisson manifold, with no
+further fact of the matter about what the bracket is “really”
+describing.</p>
+<p>This paper does not adjudicate between ESR and OSR—both positions are
+consistent with the formal results established here. What the formalism
+secures is a minimal <em>invariance thesis</em>: regardless of which
+variant one adopts, the mathematical schema
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mi>C</mi></msub><annotation encoding="application/x-tex">S_C</annotation></semantics></math>
+is faithful and conservative where the entity-extracting functor
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>U</mi><annotation encoding="application/x-tex">U</annotation></semantics></math>
+is not. The metaphysical stakes of this result differ between the two
+readings, but the formal result itself is neutral.</p>
+<p>A further point bears emphasis with respect to reference fixing. Both
+ESR and OSR face the challenge of explaining how theoretical terms like
+“electron” manage to refer to the same structural role across successive
+theories, given that the intrinsic nature of the bearer is either
+unknown (ESR) or absent (OSR). Psillos’s causal-descriptive
+account <span class="citation" data-cites="psillos1999"></span> offers
+one resource: terms refer in virtue of the causal roles they pick out,
+and structural continuity of those roles across
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="normal">Φ</mi><mrow><mi>i</mi><mo>,</mo><mi>i</mi><mo>+</mo><mn>1</mn></mrow></msub><annotation encoding="application/x-tex">\Phi_{i,i+1}</annotation></semantics></math>
+guarantees referential stability. The Ramsey-sentence approach
+(formalised by Ladyman <span class="citation" data-cites="ladyman1998"></span>) provides another: existentially
+quantifying over the theoretical entities while retaining the structural
+predicates yields a sentence whose truth-conditions are precisely the
+invariant relational facts that
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mi>C</mi></msub><annotation encoding="application/x-tex">S_C</annotation></semantics></math>
+preserves.</p>
+<h1 id="conclusion-and-further-discussion">Conclusion and Further
+Discussion</h1>
+<p>By formalizing the phenomenological and transcendental insights of
+Husserl, Kant, and Heidegger, we construct a robust defense of
+structural realism. Finite cognition requires receptive intuition
+(Ontological Realism), yet access to this domain requires a rule-based
+projection operator (Phenomenological Constitution). Because the
+mathematical schema
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="script">𝒮</mi><mi>C</mi></msub><annotation encoding="application/x-tex">\mathcal{S}_C</annotation></semantics></math>
+captures the invariant relational laws (<span class="math inline">$X =
+\varprojlim \mathcal{D}_i$</span>) that withstand the resistance of
+Being
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>R</mi><mi>B</mi></msub><annotation encoding="application/x-tex">R_B</annotation></semantics></math>),
+scientific progress is mathematically verified as the increasingly
+precise convergence of structural models tracking a fully
+mind-independent reality. Moreover, the preceding formal apparatus finds
+a concrete mathematical instantiation in the the process of
+<em>deformation quantization</em>. It shows, in explicit computational
+terms, how a structural invariant persists across radical theoretical
+transformations.</p>
+<p>Let
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix" stretchy="false">(</mo><mi>M</mi><mo>,</mo><mi>ω</mi><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(M, \omega)</annotation></semantics></math>
+be a symplectic manifold, equivalently formulated as a Poisson manifold
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix" stretchy="false">(</mo><mi>M</mi><mo>,</mo><mo form="prefix" stretchy="false">{</mo><mi>⋅</mi><mo>,</mo><mi>⋅</mi><mo form="postfix" stretchy="false">}</mo><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(M, \{\cdot,\cdot\})</annotation></semantics></math>,
+where the Poisson bracket equips the commutative algebra of smooth
+functions
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>C</mi><mi>∞</mi></msup><mo form="prefix" stretchy="false">(</mo><mi>M</mi><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">C^\infty(M)</annotation></semantics></math>
+with a Lie algebra structure satisfying the Leibniz rule:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix" stretchy="false">{</mo><mi>f</mi><mo>,</mo><mi>g</mi><mi>h</mi><mo form="postfix" stretchy="false">}</mo><mo>=</mo><mo form="prefix" stretchy="false">{</mo><mi>f</mi><mo>,</mo><mi>g</mi><mo form="postfix" stretchy="false">}</mo><mi>h</mi><mo>+</mo><mi>g</mi><mo form="prefix" stretchy="false">{</mo><mi>f</mi><mo>,</mo><mi>h</mi><mo form="postfix" stretchy="false">}</mo><mo>,</mo><mspace width="2.0em"></mspace><mo>∀</mo><mi>f</mi><mo>,</mo><mi>g</mi><mo>,</mo><mi>h</mi><mo>∈</mo><msup><mi>C</mi><mi>∞</mi></msup><mo form="prefix" stretchy="false">(</mo><mi>M</mi><mo form="postfix" stretchy="false">)</mo><mi>.</mi></mrow><annotation encoding="application/x-tex">\{f, gh\} = \{f, g\}h + g\{f, h\}, \qquad \forall f,g,h \in C^\infty(M).</annotation></semantics></math>
+Deformation quantization seeks to construct a non-commutative
+associative algebra
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>C</mi><mi>∞</mi></msup><mo form="prefix" stretchy="false">(</mo><mi>M</mi><mo form="postfix" stretchy="false">)</mo><mo form="prefix" stretchy="false">[</mo><mo form="prefix" stretchy="false">[</mo><mi>ℏ</mi><mo form="postfix" stretchy="false">]</mo><mo form="postfix" stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">C^\infty(M)[[\hbar]]</annotation></semantics></math>
+equipped with a <em>star product</em>:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><msub><mo>*</mo><mi>ℏ</mi></msub><mi>g</mi><mo>=</mo><mi>f</mi><mi>g</mi><mo>+</mo><mfrac><mrow><mi>i</mi><mi>ℏ</mi></mrow><mn>2</mn></mfrac><mo form="prefix" stretchy="false">{</mo><mi>f</mi><mo>,</mo><mi>g</mi><mo form="postfix" stretchy="false">}</mo><mo>+</mo><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>2</mn></mrow><mo accent="false">∞</mo></munderover><msup><mi>ℏ</mi><mi>n</mi></msup><msub><mi>B</mi><mi>n</mi></msub><mo form="prefix" stretchy="false">(</mo><mi>f</mi><mo>,</mo><mi>g</mi><mo form="postfix" stretchy="false">)</mo><mo>,</mo></mrow><annotation encoding="application/x-tex">f *_\hbar g = fg + \frac{i\hbar}{2}\{f,g\} + \sum_{n=2}^\infty \hbar^n B_n(f,g),</annotation></semantics></math>
+where each
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>B</mi><mi>n</mi></msub><annotation encoding="application/x-tex">B_n</annotation></semantics></math>
+is a bidifferential operator. Kontsevich’s formality theorem establishes
+the existence of such a star product for any finite-dimensional Poisson
+manifold, proving that the Poisson structure is the unique invariant
+controlling all quantum corrections <span class="citation" data-cites="kontsevich2003"></span>.</p>
+<p>This mathematical structure directly validates our category-theoretic
+definition of the Transcendental Object. For a sequence of theories
+ordered by
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ℏ</mi><annotation encoding="application/x-tex">\hbar</annotation></semantics></math>-expansion
+— where the classical theory is indexed by
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ℏ</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\hbar = 0</annotation></semantics></math>
+and quantum corrections by
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ℏ</mi><mo>→</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\hbar \to 0</annotation></semantics></math>
+— the inverse limit over the deformation quantization procedure yields:
+<span class="math display">$$X = \varprojlim_{\hbar \to 0} \left(
+C^\infty(M)[[\hbar]], *_\hbar \right) \cong (C^\infty(M),
+\{\cdot,\cdot\}),$$</span> where the isomorphism holds up to gauge
+equivalence. The Poisson bracket
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix" stretchy="false">{</mo><mi>⋅</mi><mo>,</mo><mi>⋅</mi><mo form="postfix" stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\{\cdot,\cdot\}</annotation></semantics></math>
+is precisely the invariant core that maps consistently under all
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ℏ</mi><annotation encoding="application/x-tex">\hbar</annotation></semantics></math>-dependent
+transformations. This structural limit of convergent quantization is
+precisely the mathematical avatar of Kant’s "Thing in Itself".</p>
+<p>Furthermore, the schema functor
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="script">𝒮</mi><mi>C</mi></msub><mo>:</mo><msub><mrow><mi mathvariant="script">𝒞</mi><mi mathvariant="script">𝒶</mi><mi mathvariant="script">𝓉</mi></mrow><mi mathvariant="script">ℋ</mi></msub><mo>→</mo><msub><mrow><mi mathvariant="script">𝒞</mi><mi mathvariant="script">𝒶</mi><mi mathvariant="script">𝓉</mi></mrow><msup><mi mathvariant="script">ℋ</mi><mrow><mi>u</mi><mi>n</mi></mrow></msup></msub></mrow><annotation encoding="application/x-tex">\mathcal{S}_C: \mathcal{Cat}_{\mathcal{H}} \to \mathcal{Cat}_{\mathcal{H}^{un}}</annotation></semantics></math>
+is realized by Kontsevich’s
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>L</mi><mi>∞</mi></msub><annotation encoding="application/x-tex">L_\infty</annotation></semantics></math>-quasi-isomorphism
+between the differential graded Lie algebra (DGLA) of polyvector fields
+and the DGLA of polydifferential operators. The category
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mrow><mi mathvariant="script">𝒞</mi><mi mathvariant="script">𝒶</mi><mi mathvariant="script">𝓉</mi></mrow><msup><mi mathvariant="script">ℋ</mi><mrow><mi>u</mi><mi>n</mi></mrow></msup></msub><annotation encoding="application/x-tex">\mathcal{Cat}_{\mathcal{H}^{un}}</annotation></semantics></math>
+of invariant structures explicitly includes:</p>
+<ul>
+<li><p><em>Symplectic manifolds</em>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix" stretchy="false">(</mo><mi>M</mi><mo>,</mo><mi>ω</mi><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(M, \omega)</annotation></semantics></math>
+up to symplectomorphism;</p></li>
+<li><p><em>Hilbert spaces</em> up to unitary equivalence;</p></li>
+<li><p><em>Poisson algebras</em>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix" stretchy="false">(</mo><msup><mi>C</mi><mi>∞</mi></msup><mo form="prefix" stretchy="false">(</mo><mi>M</mi><mo form="postfix" stretchy="false">)</mo><mo>,</mo><mo form="prefix" stretchy="false">{</mo><mi>⋅</mi><mo>,</mo><mi>⋅</mi><mo form="postfix" stretchy="false">}</mo><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(C^\infty(M), \{\cdot,\cdot\})</annotation></semantics></math>
+up to isomorphism;</p></li>
+<li><p><em><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>C</mi><mo>*</mo></msup><annotation encoding="application/x-tex">C^*</annotation></semantics></math>-algebras</em>
+up to Morita equivalence.</p></li>
+</ul>
+<p>The forgetful functor
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>:</mo><msub><mrow><mi mathvariant="script">𝒞</mi><mi mathvariant="script">𝒶</mi><mi mathvariant="script">𝓉</mi></mrow><mi mathvariant="script">ℋ</mi></msub><mo>→</mo><mrow><mi mathvariant="bold-italic">𝑺</mi><mi mathvariant="bold-italic">𝒆</mi><mi mathvariant="bold-italic">𝒕</mi></mrow></mrow><annotation encoding="application/x-tex">U: \mathcal{Cat}_{\mathcal{H}} \to \mathbf{Set}</annotation></semantics></math>,
+which extracts the underlying set of points or observables, fails to be
+continuous because the pointwise spectra of position and momentum do not
+survive quantization. However,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="script">𝒮</mi><mi>C</mi></msub><annotation encoding="application/x-tex">\mathcal{S}_C</annotation></semantics></math>
+remains faithful and conservative: the Poisson bracket is preserved
+under deformation, ensuring that the structural relations are strictly
+transferred from the classical to the quantum domain.</p>
+<p>This result resonates with Bhaskar’s ontological stratification.
+Consider, once again, the empirical domain
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="script">𝒟</mi><mi>E</mi></msub><annotation encoding="application/x-tex">\mathcal{D}_E</annotation></semantics></math>
+of measurement outcomes (spectral projections),
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="script">𝒟</mi><mi>A</mi></msub><annotation encoding="application/x-tex">\mathcal{D}_A</annotation></semantics></math>
+the actual domain of quantum states and operators, and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="script">𝒟</mi><mi>R</mi></msub><annotation encoding="application/x-tex">\mathcal{D}_R</annotation></semantics></math>
+the generative domain of the underlying Poisson manifold. Under
+deformation quantization, we have the strict chain:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="script">𝒟</mi><mi>E</mi></msub><mo>⊊</mo><msub><mi mathvariant="script">𝒟</mi><mi>A</mi></msub><mo>⊊</mo><msub><mi mathvariant="script">𝒟</mi><mi>R</mi></msub><mo>,</mo></mrow><annotation encoding="application/x-tex">\mathcal{D}_E \subsetneq \mathcal{D}_A \subsetneq \mathcal{D}_R,</annotation></semantics></math>
+where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="script">𝒟</mi><mi>R</mi></msub><annotation encoding="application/x-tex">\mathcal{D}_R</annotation></semantics></math>
+is represented by the symplectic foliation of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>M</mi><annotation encoding="application/x-tex">M</annotation></semantics></math>,
+which operates independently of the observer’s choice of a particular
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ℏ</mi><annotation encoding="application/x-tex">\hbar</annotation></semantics></math>-dependent
+representation. The projection
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>π</mi><mo>:</mo><msub><mi mathvariant="script">𝒟</mi><mi>R</mi></msub><mo>→</mo><msub><mi mathvariant="script">𝒟</mi><mi>E</mi></msub></mrow><annotation encoding="application/x-tex">\pi: \mathcal{D}_R \to \mathcal{D}_E</annotation></semantics></math>
+is not surjective; the Poisson bracket
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix" stretchy="false">{</mo><mi>f</mi><mo>,</mo><mi>g</mi><mo form="postfix" stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\{f,g\}</annotation></semantics></math>
+does not correspond to any single observable in the empirical spectrum,
+yet it generates the entire dynamics. Finally, the commuting square for
+successive approximations
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ℏ</mi><mi>n</mi></msub><mo>→</mo><msub><mi>ℏ</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><annotation encoding="application/x-tex">\hbar_n \to \hbar_{n+1}</annotation></semantics></math>
+becomes:</p>
+<p>\[
+\begin{array}{ccc}
+\Sigma(T_n) & \xrightarrow{\eta_n} & \Sigma(T_{n+1}) \\
+\iota_n \Big\downarrow & & \Big\downarrow \iota_{n+1} \\
+\mathrm{Obs}_S(T_n) & \xrightarrow[\infty]{} & \mathrm{Obs}_S(T_{n+1})
+\end{array}
+\]</p>
+<p>Here,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Σ</mi><mo form="prefix" stretchy="false">(</mo><msub><mi>T</mi><mi>n</mi></msub><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\Sigma(T_n)</annotation></semantics></math>
+denotes the Poisson algebra at order
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℏ</mi><mi>n</mi></msup><annotation encoding="application/x-tex">\hbar^n</annotation></semantics></math>,
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow><mi mathvariant="normal">O</mi><mi mathvariant="normal">b</mi><mi mathvariant="normal">s</mi></mrow><mi>S</mi></msub><mo form="prefix" stretchy="false">(</mo><msub><mi>T</mi><mi>n</mi></msub><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathrm{Obs}_S(T_n)</annotation></semantics></math>
+denotes the algebra of spectral observables. The horizontal map
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>η</mi><mi>n</mi></msub><annotation encoding="application/x-tex">\eta_n</annotation></semantics></math>
+is the deformation quantization step, while the vertical maps
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ι</mi><mi>n</mi></msub><annotation encoding="application/x-tex">\iota_n</annotation></semantics></math>
+are the forgetting of non-commutative phase information. The bottom
+horizontal map
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>∞</mi><annotation encoding="application/x-tex">\infty</annotation></semantics></math>
+is the empirical limit as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ℏ</mi><mo>→</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\hbar \to 0</annotation></semantics></math>—the
+classical correspondence principle. The transversal arrow
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>δ</mi><mo>:</mo><mi mathvariant="normal">Σ</mi><mo form="prefix" stretchy="false">(</mo><msub><mi>T</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo form="postfix" stretchy="false">)</mo><mo>→</mo><msub><mrow><mi mathvariant="normal">O</mi><mi mathvariant="normal">b</mi><mi mathvariant="normal">s</mi></mrow><mi>S</mi></msub><mo form="prefix" stretchy="false">(</mo><msub><mi>T</mi><mi>n</mi></msub><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\delta: \Sigma(T_{n+1}) \to \mathrm{Obs}_S(T_n)</annotation></semantics></math>
+ensures that the entire diagram commutes, capturing the structural
+continuity of the Poisson bracket across all theoretical strata.</p>
+<p>In summary, deformation quantization provides an ontological proof
+that transcendental structural realism is physically implementable. The
+invariant Poisson manifold stands as the formal limit of convergent
+scientific inquiry, confirming that the "Object
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo><mi>X</mi></mrow><annotation encoding="application/x-tex">= X</annotation></semantics></math>",
+contrary to some beliefes where its merely a speculative ghost or a
+linguistic placeholder, the rigorously definable structural core of
+quantum-classical correspondence.</p>
+
+<h3>Bibliografia</h3>
+<div class="bibliography">
+    <p><strong>Filosofia da Ciência e Realismo Científico.</strong></p>
+    <ul>
+        <li>Bhaskar, R., <em>A Realist Theory of Science</em> (1975). Fundação do realismo crítico, defendendo uma ontologia estratificada e a existência de mecanismos causais subjacentes aos fenômenos observáveis</li>
+        <li>Bunge, M., <em>Treatise on Basic Philosophy, Volume 3: Ontology I: The Furniture of the World</em> (1977). Sistema ontológico abrangente que busca catalogar os tipos fundamentais de entidades e suas interações</li>
+        <li>van Fraassen, B. C., <em>The Scientific Image</em> (1980). Empirismo construtivo, argumentando que a ciência visa a adequação empírica, não a verdade literal sobre o mundo inobservável</li>
+        <li>Psillos, S., <em>Scientific Realism: How Science Tracks Truth</em> (1999). Defesa robusta do realismo científico contra argumentos pessimistas, com análise detalhada de casos históricos</li>
+    </ul>
+    
+    <p><strong>Realismo Estrutural e Ontologia da Física.</strong></p>
+    <ul>
+        <li>Worrall, J., "Structural realism: The best of both worlds?" <em>Dialectica</em> 43(1–2):99–124 (1989). Artigo seminal propondo o realismo estrutural como posição que preserva o sucesso preditivo da ciência sem compromisso com a verdade de entidades inobserváveis</li>
+        <li>Ladyman, J., "What is structural realism?" <em>Studies in History and Philosophy of Science Part A</em> 29(3):409–424 (1998). Elucidação e defesa do realismo estrutural, distinguindo suas variantes e respondendo a críticas</li>
+        <li>French, S., <em>The Structure of the World: Metaphysics and Representation</em> (2014). Desenvolvimento sofisticado do realismo estrutural aplicado à física contemporânea, incluindo mecânica quântica e teoria quântica de campos</li>
+        <li>Rynasiewicz, R., "By their properties, causes and effects: Newton's Scholium on time, space, place and motion – I. The text." <em>Studies in History and Philosophy of Science Part A</em> 23(3):373–394 (1992). Análise detalhada do Escólio de Newton, revelando a complexidade de sua ontologia do espaço-tempo</li>
+    </ul>
+    
+    <p><strong>Filosofia Geral.</strong></p>
+    <ul>
+        <li>Kant, I., <em>Kritik der reinen Vernunft</em> (1781/1787). Obra fundacional da filosofia transcendental, estabelecendo as condições de possibilidade do conhecimento científico e da experiência</li>
+        <li>Husserl, E., <em>Ideen zu einer reinen Phänomenologie und phänomenologischen Philosophie</em> (1913). Desenvolvimento sistemático da fenomenologia transcendental como ciência rigorosa da consciência e da intencionalidade</li>
+        <li>Heidegger, M., <em>Kant und das Problem der Metaphysik</em> (1929). Interpretação original da Crítica da Razão Pura, enfatizando a questão do ser e os limites da filosofia transcendental</li>
+    </ul>
+
+    <p><strong>Fundamentos Matemáticos e Física Teórica.</strong></p>
+    <ul>
+        <li>Kontsevich, M., "Deformation quantization of Poisson manifolds." <em>Letters in Mathematical Physics</em> 66(3):157–216 (2003). <a href="https://arxiv.org/abs/q-alg/9709040"><code>arXiv:q-alg/9709040</code></a>. Solução do problema de quantização por deformação, estabelecendo a correspondência entre estruturas Poisson e álgebras não comutativas</li>
+    </ul>
+</div>
+
+    </article>
+
+    <footer id="main-footer">
+        <div class="footer-content">
+            <p>&copy; The Ludens Topoï</p>
+        </div>
+    </footer>
+</body>
+</html>
