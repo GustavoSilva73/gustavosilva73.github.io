@@ -1,178 +1,113 @@
 <!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="pandoc" name="generator"/>
-<meta content="width=device-width, initial-scale=1.0, user-scalable=yes" name="viewport"/>
-<title>Hochschild (Co)Homology for Commutative Algebra</title>
-<style>
-    /* Default styles provided by pandoc.
-    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-    */
-    html {
-      color: #1a1a1a;
-      background-color: #fdfdfd;
-    }
-    body {
-      margin: 0 auto;
-      max-width: 36em;
-      padding-left: 50px;
-      padding-right: 50px;
-      padding-top: 50px;
-      padding-bottom: 50px;
-      hyphens: auto;
-      overflow-wrap: break-word;
-      text-rendering: optimizeLegibility;
-      font-kerning: normal;
-    }
-    @media (max-width: 600px) {
-      body {
-        font-size: 0.9em;
-        padding: 12px;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <!-- Descrição -->
+    <meta name="description" content="Turning Hochschild Complex into a DGLA...">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://gustavosilva73.github.io/formalstructuralrealism.html">
+    <meta property="og:title" content="Hochschild Complex as an Differential Graduated Lie Algebra: HKR Theorem and Deformation Theory.">
+    <meta property="og:description" content="Hochschild Complex as an Differential Graduated Lie Algebra: HKR Theorem and Deformation Theory.">
+    <meta property="og:image" content="https://gustavosilva73.github.io/imagens/vlcsnap-2026-02-05-23h10m08s827.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Hochschild Complex as an Differential Graduated Lie Algebra: HKR Theorem and Deformation Theory.">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="The Ludens Topoï">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://gustavosilva73.github.io/formalstructuralrealism.html">
+    <meta name="twitter:title" content="Hochschild Complex as an Differential Graduated Lie Algebra: HKR Theorem and Deformation Theory.">
+    <meta name="twitter:description" content="Exploranmos a relação entre mecânica clássica, geometria simplética, estruturas de Poisson e a transição para a mecânica quântica através da quantização por deformação.">
+    <meta name="twitter:image" content="https://gustavosilva73.github.io/imagens/vlcsnap-2026-02-05-23h10m08s827.png">
+    <meta name="twitter:image:alt" content="Hochschild Complex as an Differential Graduated Lie Algebra: HKR Theorem and Deformation Theory.">
+    
+    <!-- Autor e keywords -->
+    <meta name="author" content="Gustav">
+    <meta name="keywords" content="matematica, fisica, deformacao, teoria das deformacoes, quantizacao, quantizacao por deformacao">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://gustavosilva73.github.io/formalstructuralrealism.html">
+    <title>Hochschild Complex as an Differential Graduated Lie Algebra: HKR Theorem and Deformation Theory - The Ludens Topoï</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+                  },
+              chtml: {
+    l    inebreaks: { automatic: true }
+      },
+      svg: {
+        linebreaks: { automatic: true }
       }
-      h1 {
-        font-size: 1.8em;
-      }
-    }
-    @media print {
-      html {
-        background-color: white;
-      }
-      body {
-        background-color: transparent;
-        color: black;
-        font-size: 12pt;
-      }
-      p, h2, h3 {
-        orphans: 3;
-        widows: 3;
-      }
-      h2, h3, h4 {
-        page-break-after: avoid;
-      }
-    }
-    p {
-      margin: 1em 0;
-    }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
-    }
-    img {
-      max-width: 100%;
-    }
-    svg {
-      height: auto;
-      max-width: 100%;
-    }
-    h1, h2, h3, h4, h5, h6 {
-      margin-top: 1.4em;
-    }
-    h5, h6 {
-      font-size: 1em;
-      font-style: italic;
-    }
-    h6 {
-      font-weight: normal;
-    }
-    ol, ul {
-      padding-left: 1.7em;
-      margin-top: 1em;
-    }
-    li > ol, li > ul {
-      margin-top: 0;
-    }
-    blockquote {
-      margin: 1em 0 1em 1.7em;
-      padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
-      color: #606060;
-    }
-    code {
-      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
-      font-size: 85%;
-      margin: 0;
-      hyphens: manual;
-    }
-    pre {
-      margin: 1em 0;
-      overflow: auto;
-    }
-    pre code {
-      padding: 0;
-      overflow: visible;
-      overflow-wrap: normal;
-    }
-    .sourceCode {
-     background-color: transparent;
-     overflow: visible;
-    }
-    hr {
-      border: none;
-      border-top: 1px solid #1a1a1a;
-      height: 1px;
-      margin: 1em 0;
-    }
-    table {
-      margin: 1em 0;
-      border-collapse: collapse;
-      width: 100%;
-      overflow-x: auto;
-      display: block;
-      font-variant-numeric: lining-nums tabular-nums;
-    }
-    table caption {
-      margin-bottom: 0.75em;
-    }
-    tbody {
-      margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
-    }
-    th {
-      border-top: 1px solid #1a1a1a;
-      padding: 0.25em 0.5em 0.25em 0.5em;
-    }
-    td {
-      padding: 0.125em 0.5em 0.25em 0.5em;
-    }
-    header {
-      margin-bottom: 4em;
-      text-align: center;
-    }
-    #TOC li {
-      list-style: none;
-    }
-    #TOC ul {
-      padding-left: 1.3em;
-    }
-    #TOC > ul {
-      padding-left: 0;
-    }
-    #TOC a:not(:hover) {
-      text-decoration: none;
-    }
-    code{white-space: pre-wrap;}
-    span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    /* The extra [class] is a hack that increases specificity enough to
-       override a similar rule in reveal.js */
-    ul.task-list[class]{list-style: none;}
-    ul.task-list li input[type="checkbox"] {
-      font-size: inherit;
-      width: 0.8em;
-      margin: 0 0.8em 0.2em -1.6em;
-      vertical-align: middle;
-    }
-  </style>
+    };
+</script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+
+        .MathJax_Display {
+              display: block;
+              width: 100%;
+              box-sizing: border-box;
+            }
+        
+        .mathjax-responsive {
+              max-width: 100%;
+              overflow-x: auto;               /* lets user scroll if needed */
+              -webkit-overflow-scrolling: touch;
+              padding: 0.25em 0;
+              box-sizing: border-box;
+            }
+        .category-intro {
+            background: var(--light-bg);
+            padding: 2rem 0;
+        }
+        .category-intro-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+        nav a.active {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-<header id="title-block-header">
+    <header id="main-header">
+        <div class="header-content">
+            <h1><a href="index.html">The Ludens Topoï</a></h1>
+            <p class="tagline">A space for Physics, Mathematics, Philosophy and Game Studies</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="game-studies.html">Game Studies</a></li>
+                <li><a href="physics.html">Physics</a></li>
+                <li><a href="mathematics.html">Mathematics</a></li>
+                <li><a href="philosophy.html" class="active">Philosophy</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <article class="article-content">
+        <div class="article-header">
+            <h2>Scientific Realism, Antirealism, and Structural Realism: A Formal Transcendental and Phenomenological
+Framework</h2>
+            <div class="post-meta">
+                <span class="post-date">Published by Gustav on July 15, 2026</span>
+                <span class="post-category">Philosophy</span>
+            </div>
+        </div>
+
 <h2 class="title">I. HOCHSCHILD (CO)HOMOLOGY FOR COMMUTATIVE ALGEBRA</h2>
 </header>
 <h2 class="unnumbered" id="introduction">II. INTRODUCTION</h2>
