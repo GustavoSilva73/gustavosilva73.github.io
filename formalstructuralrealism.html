@@ -405,6 +405,36 @@ invariants. Before presenting the formal definitions, we establish the
 rigorous foundational vocabulary of these disciplines.</p>
 <h4 class="unnumbered" id="preliminaries-formal-definitions">Preliminaries: Formal
 Definitions</h2>
+<p><strong>1. Model Theory.</strong><p> This section is based primarily on (). Its purpose is merely to provide sufficient background in model theory to facilitate an understanding of the present work. Consequently, it should not be regarded as a rigorous or comprehensive introduction to the subject.</p>
+
+<h4>Structural Foundations</h4>
+
+<p>A language \(\mathcal{L}\) is a set of constants, function symbols, and relation symbols[cite: 746]. An \(\mathcal{L}\)-structure \(\mathfrak{A} = \langle A, \dots \rangle\) provides the semantics via interpretations[cite: 757].</p>
+    <div class="formal-box">
+        <span class="theorem">(<b>Elementary Equivalence</b>) </span> \(\mathfrak{A} \equiv \mathfrak{B}\) if they satisfy the same set of first-order sentences[cite: 756]. This distinguishes structures that are logically indistinguishable, regardless of isomorphism.
+    </div>
+
+    <p>The relationship between syntax and semantics is governed by the following core results:</p>
+    <ul>
+        <li><strong>Compactness Theorem:</strong> A set of sentences \(T\) has a model if and only if every finite subset of \(T\) has a model[cite: 107].</li>
+        <li><strong>Löwenheim–Skolem Theorem:</strong> If a theory has an infinite model, it possesses models of every cardinality \(\kappa \geq \max(|\mathcal{L}|, \aleph_0)\)[cite: 759].</li>
+        <li><strong>Tarski’s Chain Lemma:</strong> The union of an elementary directed family of structures is an elementary extension of all its members[cite: 85].</li>
+    </ul>
+
+<h4>Quantifier Elimination and Types</h4>
+    <p>Quantifier elimination (QE) allows for a reduction of formula complexity, simplifying the analysis of models[cite: 202].</p>
+    <div class="formal-box">
+        <span class="theorem">Omitting Types Theorem:</span> If \(T\) is countable and consistent, and a set of formulas \(\Sigma(x)\) is not isolated, then \(T\) has a model that omits \(\Sigma(x)\)[cite: 275].
+    </div>
+
+    <h4>Stability and Categoricity</h4>
+    <p>Stability theory classifies theories based on the complexity of their types:</p>
+    <ul>
+        <li><strong>Baldwin-Lachlan Theorem:</strong> If a countable theory is \(\aleph_1\)-categorical, it is categorical in all uncountable cardinalities[cite: 724].</li>
+        <li><strong>Morley Rank:</strong> A measure of the dimension of definable sets, crucial for analyzing uncountably categorical theories[cite: 727].</li>
+        <li><strong>Simple Theories:</strong> A generalization of stable theories introduced by Shelah, characterized by a robust notion of independence via forking[cite: 729].</li>
+    </ul>
+
 <p><strong>1. Model Theory.</strong> Let a <em>signature</em> be defined
 as a triple
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Σ</mi><mo>=</mo><mo form="prefix" stretchy="false">⟨</mo><mi mathvariant="script">ℱ</mi><mo>,</mo><mi mathvariant="script">ℛ</mi><mo>,</mo><mrow><mi mathvariant="normal">ar</mi><mo>⁡</mo></mrow><mo form="postfix" stretchy="false">⟩</mo></mrow><annotation encoding="application/x-tex">\Sigma = \langle \mathcal{F}, \mathcal{R}, \mathop{\mathrm{ar}}\rangle</annotation></semantics></math>,
@@ -475,6 +505,806 @@ holds but
 fails, i.e.,
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="script">𝒟</mi><mi>R</mi></msub><mo>≢</mo><msub><mi mathvariant="script">𝒟</mi><mi>A</mi></msub></mrow><annotation encoding="application/x-tex">\mathcal{D}_R \not\equiv \mathcal{D}_A</annotation></semantics></math>
 in the elementary diagram.</p>
+
+<h4>Signatures, Structures, and Languages</h4>
+
+
+
+
+<p><strong>Definition 1</strong> (Signature). A <em>signature</em> (or <em>language</em>) is a triple
+\[
+\Sigma = \langle \mathcal{F}, \mathcal{R}, \mathop{\mathrm{ar}} \rangle,
+\]
+where:
+- \(\mathcal{F}\) is a set of <em>function symbols</em>;
+- \(\mathcal{R}\) is a set of <em>relation symbols</em> (including possibly the equality symbol \(\doteq\));
+- \(\mathop{\mathrm{ar}}: \mathcal{F} \cup \mathcal{R} \to \mathbb{N}\) assigns a finite <em>arity</em> to each symbol.</p>
+
+<p>Constants are regarded as 0-ary function symbols. As we shall shortly see, of a signature isolates precisely those features of a scientific theory that are regarded as structurally significant. So, rather than beginning with particular objects, one begins with the formal vocabulary through which relations between objects are expressed, which is fundamental for any structuralist interpretation of scientific theories.</p> We write \(\Sigma\) for the set of symbols itself when the arity function is understood.</p>
+
+<p><strong>Definition</strong> (\(\Sigma\)-Structure). A <em>\(\Sigma\)-structure</em> is a tuple
+\[
+\mathfrak{M} = \left\langle M, \; \{f^{\mathfrak{M}}: M^{\mathop{\mathrm{ar}}(f)} \to M\}_{f \in \mathcal{F}}, \; \{R^{\mathfrak{M}} \subseteq M^{\mathop{\mathrm{ar}}(R)}\}_{R \in \mathcal{R}} \right\rangle,
+\]
+where \(M\) is a non-empty set called the <em>domain</em> (or <em>universe</em>) of \(\mathfrak{M}\), and each \(f^{\mathfrak{M}}\) and \(R^{\mathfrak{M}}\) is the interpretation of the corresponding symbol in \(\mathfrak{M}\).</p>
+
+<p>The <em>cardinality</em> of \(\mathfrak{M}\) is \(|M|\), denoted \(|\mathfrak{M}|\).</p>
+
+<p><strong>Definition</strong> (First-Order Language). For a signature \(\Sigma\), the <em>first-order language</em> \(\mathcal{L}(\Sigma)\) consists of:
+1. <strong>Terms</strong>: Built inductively from variables \(v_0, v_1, \ldots\), constants, and function symbols.
+2. <strong>Formulas</strong>: Built from atomic formulas \(t_1 \doteq t_2\) and \(R(t_1, \ldots, t_n)\) using:
+   - Boolean connectives: \(\neg\), \(\wedge\) (and derived \(\vee\), \(\to\), \(\leftrightarrow\));
+   - Quantifiers: \(\exists x\) and \(\forall x\) (the latter defined as \(\neg \exists x \neg\)).</p>
+
+<p><strong>Definition 4</strong> (Satisfaction). For a \(\Sigma\)-structure \(\mathfrak{M}\), an assignment \(\vec{b}\) of elements of \(M\) to variables, and a formula \(\phi\), the <em>satisfaction relation</em>
+\[
+\mathfrak{M} \models \phi[\vec{b}]
+\]
+is defined recursively:
+- For atomic formulas: using the interpretations of function and relation symbols;
+- For Boolean combinations: via truth-functional semantics;
+- For quantifiers: \(\mathfrak{M} \models \exists x \phi[\vec{b}]\) iff there exists \(a \in M\) such that \(\mathfrak{M} \models \phi[\vec{b}(a/x)]\).</p>
+
+<p>A <em>sentence</em> is a formula with no free variables; for sentences we write \(\mathfrak{M} \models \phi\).</p>
+
+<h4> Homomorphisms, Embeddings, and Isomorphisms</h4>
+
+<p><strong>Definition</strong> (Homomorphism). A <em>homomorphism</em> \(h: \mathfrak{M} \to \mathfrak{N}\) between \(\Sigma\)-structures is a map \(h: M \to N\) such that:
+1. For every constant symbol \(c\), \(h(c^{\mathfrak{M}}) = c^{\mathfrak{N}}\);
+2. For every \(n\)-ary function symbol \(f\) and all \(a_1, \ldots, a_n \in M\):
+   \[
+   h(f^{\mathfrak{M}}(a_1, \ldots, a_n)) = f^{\mathfrak{N}}(h(a_1), \ldots, h(a_n));
+   \]
+3. For every \(n\)-ary relation symbol \(R\) and all \(a_1, \ldots, a_n \in M\):
+   \[
+   (a_1, \ldots, a_n) \in R^{\mathfrak{M}} \implies (h(a_1), \ldots, h(a_n)) \in R^{\mathfrak{N}}.
+   \]</p>
+
+<p><strong>Definition</strong> (Embedding). An <em>embedding</em> is an injective homomorphism that additionally reflects relation symbols:
+\[
+(a_1, \ldots, a_n) \in R^{\mathfrak{M}} \iff (h(a_1), \ldots, h(a_n)) \in R^{\mathfrak{N}}.
+\]
+We denote embeddings by \(\mathfrak{M} \hookrightarrow \mathfrak{N}\).</p>
+
+<p><strong>Definition </strong> (Isomorphism). An <em>isomorphism</em> is a surjective embedding. Isomorphic structures are denoted \(\mathfrak{M} \cong \mathfrak{N}\).</p>
+
+<p><strong>Lemma</strong> (Preservation of Quantifier-Free Formulas). If \(h: \mathfrak{M} \to \mathfrak{N}\) is an embedding, then for every quantifier-free formula \(\phi(x_1, \ldots, x_n)\) and all \(a_1, \ldots, a_n \in M\):
+\[
+\mathfrak{M} \models \phi(a_1, \ldots, a_n) \iff \mathfrak{N} \models \phi(h(a_1), \ldots, h(a_n)).
+\]</p>
+
+<h4>Substructure and Generated Structures</h4>
+
+<p><strong>Definition</strong> (Substructure). A \(\Sigma\)-structure \(\mathfrak{A}\) is a <em>substructure</em> of \(\mathfrak{B}\) (denoted \(\mathfrak{A} \subseteq \mathfrak{B}\)) if:
+1. \(A \subseteq B\);
+2. The inclusion map \(A \hookrightarrow B\) is an embedding.</p>
+
+<p><strong>Lemma</strong> (Generated Substructure). For a subset \(S \subseteq M\), the substructure <em>generated by \(S\)</em>, denoted \(\langle S \rangle^{\mathfrak{M}}\), is the smallest substructure of \(\mathfrak{M}\) containing \(S\). Moreover:
+\[
+\langle S \rangle^{\mathfrak{M}} = \{ t^{\mathfrak{M}}[s_1, \ldots, s_n] \mid t \text{ is a term}, s_1, \ldots, s_n \in S \}.
+\]</p>
+
+<p><strong>Corollary</strong> (Cardinality of Generated Substructure).
+\[
+|\langle S \rangle^{\mathfrak{M}}| \leq \max(|S|, |\Sigma|, \aleph_0).
+\]</p>
+
+<h4>Theories and Models</h4>
+
+<p><strong>Definition</strong> (Theory). A <em>theory</em> \(\mathcal{T}\) is a set of \(\Sigma\)-sentences. A <em>model</em> of \(\mathcal{T}\) is a \(\Sigma\)-structure \(\mathfrak{M}\) such that \(\mathfrak{M} \models \phi\) for every \(\phi \in \mathcal{T}\). The class of models is denoted:
+\[
+\text{Mod}(\mathcal{T}) = \{ \mathfrak{M} \mid \forall \phi \in \mathcal{T}, \mathfrak{M} \models \phi \}.
+\]</p>
+
+<p><strong>Definition</strong> (Consistency and Completeness). A theory \(\mathcal{T}\) is:
+- <em>Consistent</em> if it has at least one model;
+- <em>Complete</em> if for every \(\Sigma\)-sentence \(\phi\), either \(\mathcal{T} \models \phi\) or \(\mathcal{T} \models \neg \phi\).</p>
+
+<p><strong>Definition </strong> (Elementary Equivalence). Two \(\Sigma\)-structures \(\mathfrak{A}\) and \(\mathfrak{B}\) are <em>elementarily equivalent</em> (denoted \(\mathfrak{A} \equiv \mathfrak{B}\)) if:
+\[
+\text{Th}(\mathfrak{A}) := \{ \phi \mid \mathfrak{A} \models \phi \} = \text{Th}(\mathfrak{B}).
+\]</p>
+
+<p><strong>Theorem </strong> (Completeness Theorem, Gödel 1930). For any theory \(\mathcal{T}\) and sentence \(\phi\):
+\[
+\mathcal{T} \models \phi \iff \mathcal{T} \vdash \phi
+\]
+where \(\vdash\) denotes provability in a sound and complete proof system for first-order logic.</p>
+
+<h4>Elementary Extensions and Compactness</h4>
+
+
+<p><strong>Definition </strong> (Elementary Embedding). A map \(h: \mathfrak{A} \to \mathfrak{B}\) is an <em>elementary embedding</em> if for every formula \(\phi(x_1, \ldots, x_n)\) and all \(a_1, \ldots, a_n \in A\):
+\[
+\mathfrak{A} \models \phi(a_1, \ldots, a_n) \iff \mathfrak{B} \models \phi(h(a_1), \ldots, h(a_n)).
+\]
+We write \(h: \mathfrak{A} \prec \mathfrak{B}\).</p>
+
+<p><strong>Definition </strong> (Elementary Extension). If \(\mathfrak{A} \subseteq \mathfrak{B}\) and the inclusion map is elementary, then \(\mathfrak{A}\) is an <em>elementary substructure</em> of \(\mathfrak{B}\), denoted \(\mathfrak{A} \prec \mathfrak{B}\). \(\mathfrak{B}\) is an <em>elementary extension</em> of \(\mathfrak{A}\).</p>
+
+<p><strong>Theorem</strong> (Tarski's Test). Let \(\mathfrak{B}\) be a \(\Sigma\)-structure and \(A \subseteq B\). Then \(A\) is the universe of an elementary substructure of \(\mathfrak{B}\) iff for every \(L(A)\)-formula \(\phi(x)\) that is satisfiable in \(\mathfrak{B}\), there exists \(a \in A\) such that \(\mathfrak{B} \models \phi(a)\).</p>
+
+<p><strong>Corollary </strong> (Downward Löwenheim–Skolem–Tarski). If \(\mathfrak{B}\) is a \(\Sigma\)-structure and \(S \subseteq B\) with \(\kappa\) an infinite cardinal such that
+\[
+\max(|S|, |\Sigma|) \leq \kappa \leq |\mathfrak{B}|,
+\]
+then \(\mathfrak{B}\) has an elementary substructure of cardinality \(\kappa\) containing \(S\).</p>
+
+<p><strong>Theorem </strong> (Tarski's Chain Lemma). The union of an elementary directed family of structures is an elementary extension of all its members.</p>
+
+
+<p><strong>Theorem </strong> (Compactness Theorem). A theory \(\mathcal{T}\) is consistent iff every finite subset of \(\mathcal{T}\) is consistent.</p>
+
+<p><strong>Corollary </strong>. A set of formulas \(\Sigma(x_1, \ldots, x_n)\) is consistent with a theory \(\mathcal{T}\) iff every finite subset of \(\Sigma\) is consistent with \(\mathcal{T}\).</p>
+
+<p><strong>Definition</strong> (Type). A <em>type</em> over a set \(A \subseteq M\) is a maximal finitely satisfiable set \(p(x)\) of \(L(A)\)-formulas. The set of all such types is denoted \(\mathrm{S}(A)\) (or \(\mathrm{S}^{\mathfrak{M}}(A)\)). For \(a \in M\), the <em>type of \(a\) over \(A\)</em> is:
+\[
+\mathrm{tp}(a/A) = \{ \phi(x) \in L(A) \mid \mathfrak{M} \models \phi(a) \}.
+\]</p>
+
+<p><strong>Lemma </strong>. Every structure \(\mathfrak{A}\) has an elementary extension \(\mathfrak{B}\) in which all types over \(A\) are realized.</p>
+
+<p><strong>Corollary </strong>. A set of formulas \(\Sigma(x)\) is finitely satisfiable in \(\mathfrak{A}\) iff there exists an elementary extension \(\mathfrak{B} \succ \mathfrak{A}\) realizing \(\Sigma\).</p>
+
+
+<p><strong>Theorem </strong> (Upward Löwenheim–Skolem). If \(\mathfrak{B}\) is an infinite \(\Sigma\)-structure and \(\kappa\) is an infinite cardinal with
+\[
+\max(|\mathfrak{B}|, |\Sigma|) \leq \kappa,
+\]
+then \(\mathfrak{B}\) has an elementary extension of cardinality \(\kappa\).</p>
+
+<p><strong>Corollary </strong>. A consistent theory with an infinite model has models in every cardinality \(\kappa \geq \max(|\Sigma|, \aleph_0)\).</p>
+
+<p><strong>Definition </strong> (\(\kappa\)-Categoricity). A complete theory \(\mathcal{T}\) with \(|\mathcal{T}| \leq \kappa\) is <em>\(\kappa\)-categorical</em> if it has exactly one model of cardinality \(\kappa\) up to isomorphism.</p>
+
+<p><strong>Theorem 2.3.4</strong> (Vaught's Test). A \(\kappa\)-categorical theory \(\mathcal{T}\) is complete if:
+1. \(\mathcal{T}\) is consistent;
+2. \(\mathcal{T}\) has no finite models;
+3. \(|\Sigma| \leq \kappa\).</p>
+
+<h4>Quantifier Elimination and Preservation Theorems</h4>
+
+
+<p><strong>Definition </strong> (Universal and Existential Formulas). A formula is:
+- <em>Universal</em> if it is in negation normal form and contains no existential quantifiers;
+- <em>Existential</em> if it is in negation normal form and contains no universal quantifiers.</p>
+
+<p><strong>Lemma </strong> (Separation Lemma). Let \(\mathcal{T}_1, \mathcal{T}_2\) be theories and \(\mathcal{H}\) a set of sentences closed under \(\wedge, \vee\), containing \(\top\) and \(\bot\). Then there exists \(\phi \in \mathcal{H}\) separating \(\mathcal{T}_1\) from \(\mathcal{T}_2\) iff every model of \(\mathcal{T}_1\) can be separated from every model of \(\mathcal{T}_2\) by a sentence in \(\mathcal{H}\).</p>
+
+<p><strong>Theorem </strong>. The following are equivalent:
+1. There exists a universal sentence separating \(\mathcal{T}_1\) from \(\mathcal{T}_2\);
+2. No model of \(\mathcal{T}_2\) is a substructure of a model of \(\mathcal{T}_1\).</p>
+
+<p><strong>Corollary </strong>. A theory is equivalent to a universal theory iff all substructures of its models are models.</p>
+
+<p><strong>Theorem </strong>. The following are equivalent:
+1. There exists an \(\forall\exists\)-sentence separating \(\mathcal{T}_1\) from \(\mathcal{T}_2\);
+2. No model of \(\mathcal{T}_2\) is the union of a directed family of models of \(\mathcal{T}_1\).</p>
+
+
+<p><strong>Definition </strong> (Quantifier Elimination). A theory \(\mathcal{T}\) has <em>quantifier elimination</em> if every formula is equivalent modulo \(\mathcal{T}\) to a quantifier-free formula.</p>
+
+<p><strong>Theorem </strong> (Quantifier Elimination Criterion). A theory \(\mathcal{T}\) has quantifier elimination iff for all models \(\mathfrak{M}_1, \mathfrak{M}_2\) of \(\mathcal{T}\) with a common substructure \(\mathfrak{A}\):
+\[
+\mathfrak{M}_1 \equiv_{\mathfrak{A}} \mathfrak{M}_2
+\]
+(where \(\equiv_{\mathfrak{A}}\) denotes elementary equivalence in the language expanded by constants for elements of \(A\)).</p>
+
+<p>To end  this subsection, what follows is, unavoidably, a veritable cascade of definitions, lemmas, and theorems. The reader has been warned.</p>
+
+<p><strong>Lemma </strong> It suffices to eliminate quantifiers for primitive existential formulas (i.e., formulas \(\exists y \rho(x, y)\) where \(\rho\) is a conjunction of atomic and negated atomic formulas).</p>
+
+<p><strong>Theorem </strong> (Robinson's Test). A theory \(\mathcal{T}\) is model complete iff every formula is equivalent modulo \(\mathcal{T}\) to a universal formula.</p>
+
+
+
+<p><strong>Theorem </strong> (Infset). The theory of infinite sets (in the empty language) has quantifier elimination and is complete.</p>
+
+<p><strong>Theorem </strong> (DLO). The theory of dense linear orders without endpoints has quantifier elimination.</p>
+
+<p><strong>Theorem </strong> (Vector Spaces). For any field \(K\), the theory of infinite \(K\)-vector spaces has quantifier elimination.</p>
+
+<p><strong>Theorem </strong> (ACF, Tarski). The theory of algebraically closed fields has quantifier elimination. Consequently, for each prime \(p\) or \(p=0\), \(\mathrm{ACF}_p\) is complete.</p>
+
+<p><strong>Corollary </strong> (Hilbert's Nullstellensatz). If \(K\) is a field and \(I \subseteq K[X_1, \ldots, X_n]\) is a proper ideal, then \(I\) has a zero in the algebraic closure of \(K\).</p>
+
+<p><strong>Theorem </strong> (RCF, Tarski–Seidenberg). The theory of real closed fields has quantifier elimination and is complete.</p>
+
+<p><strong>Theorem </strong> (DCF\(_0\)). The theory of differentially closed fields of characteristic 0 has quantifier elimination and is complete.</p>
+
+<h4>Types and Countable Models</h4>
+
+
+<p><strong>Definition </strong> (Isolation). A formula \(\phi(x)\) <em>isolates</em> a set of formulas \(\Sigma(x)\) relative to a theory \(\mathcal{T}\) if:
+1. \(\phi(x)\) is consistent with \(\mathcal{T}\);
+2. \(\mathcal{T} \models \forall x(\phi(x) \to \sigma(x))\) for every \(\sigma \in \Sigma\).</p>
+
+<p><strong>Theorem </strong> (Omitting Types Theorem). If \(\mathcal{T}\) is a countable consistent theory and \(\Sigma(x)\) is not isolated in \(\mathcal{T}\), then \(\mathcal{T}\) has a model that omits \(\Sigma\).</p>
+
+<p><strong>Corollary </strong>. If \(\mathcal{T}\) is countable and \(\Sigma_0, \Sigma_1, \ldots\) is a countable sequence of non-isolated partial types, then \(\mathcal{T}\) has a model omitting all of them.</p>
+
+
+<p><strong>Definition </strong> (Type Space). For a theory \(\mathcal{T}\), the <em>type space</em> \(\mathrm{S}_n(\mathcal{T})\) is the set of all complete \(n\)-types consistent with \(\mathcal{T}\). For a formula \(\phi(x_1, \ldots, x_n)\), define:
+\[
+[\phi] = \{ p \in \mathrm{S}_n(\mathcal{T}) \mid \phi \in p \}.
+\]</p>
+
+<p><strong>Theorem </strong> (Stone Space). The sets \([\phi]\) form a basis of clopen sets for a compact, Hausdorff, 0-dimensional topology on \(\mathrm{S}_n(\mathcal{T})\).</p>
+
+<p><strong>Lemma </strong>. A type \(p \in \mathrm{S}_n(\mathcal{T})\) is isolated iff it is an isolated point in the Stone space.</p>
+
+<p><strong>Corollary </strong>. A formula \(\phi\) isolates a type iff \(\phi\) is complete.</p>
+
+
+
+<p><strong>Theorem</strong> (Ryll–Nardzewski). A countable complete theory \(\mathcal{T}\) is \(\aleph_0\)-categorical iff for every \(n < \omega\), there are only finitely many \(\Sigma\)-formulas in \(n\) free variables up to equivalence modulo \(\mathcal{T}\).</p>
+
+<p><strong>Lemma </strong>. Two elementarily equivalent, countable, \(\omega\)-saturated structures are isomorphic.</p>
+
+<p><strong>Corollary </strong>. If \(\mathcal{T}\) is countable and \(\aleph_0\)-categorical, then all countable models are \(\omega\)-saturated.</p>
+
+<p><strong>Theorem </strong> (Vaught's Theorem). A countable complete theory cannot have exactly two countable models up to isomorphism.</p>
+
+
+
+<p><strong>Definition </strong> (Fraïssé Limit). A class \(\mathcal{K}\) of finitely generated structures has the <em>amalgamation property</em> if for any embeddings \(f_0: \mathfrak{A} \to \mathfrak{B}_0\) and \(f_1: \mathfrak{A} \to \mathfrak{B}_1\) with \(\mathfrak{A}, \mathfrak{B}_0, \mathfrak{B}_1 \in \mathcal{K}\), there exists \(\mathfrak{D} \in \mathcal{K}\) and embeddings \(g_0: \mathfrak{B}_0 \to \mathfrak{D}\), \(g_1: \mathfrak{B}_1 \to \mathfrak{D}\) such that \(g_0 \circ f_0 = g_1 \circ f_1\).</p>
+
+<p><strong>Theorem </strong> (Fraïssé). Let \(\mathcal{K}\) be a countable class of finitely generated structures closed under substructures and with the joint embedding and amalgamation properties. Then there exists a unique countable structure \(\mathfrak{M}\), the <em>Fraïssé limit</em> of \(\mathcal{K}\), that is \(\mathcal{K}\)-saturated.</p>
+
+<p><strong>Theorem </strong>. If \(\mathcal{K}\) is a class of finite structures in a finite relational language with the amalgamation property, then the theory of its Fraïssé limit is \(\aleph_0\)-categorical and has quantifier elimination.</p>
+
+<p><strong>Example </strong> (Random Graph). The Fraïssé limit of the class of finite graphs is the countable random graph, whose theory is \(\aleph_0\)-categorical and has quantifier elimination.</p>
+
+
+
+<p><strong>Definition </strong> (Prime Model). A model \(\mathfrak{M}\) of a theory \(\mathcal{T}\) is <em>prime</em> if it elementarily embeds into every model of \(\mathcal{T}\).</p>
+
+<p><strong>Theorem </strong>. A model is prime iff it is countable and atomic (i.e., every tuple realizes an isolated type).</p>
+
+<p><strong>Theorem </strong>. A countable complete theory has a prime model iff the isolated types are dense in every type space \(\mathrm{S}_n(\mathcal{T})\).</p>
+
+<p><strong>Corollary </strong>. Prime models, when they exist, are unique up to isomorphism.</p>
+
+<p><strong>Theorem </strong>. A countable complete theory \(\mathcal{T}\) has no binary tree of consistent formulas iff \(\mathcal{T}\) is small (i.e., \(\mathrm{S}_n(\mathcal{T})\) is countable for every \(n\)).</p>
+
+<h4>\(\aleph_1\)-Categorical Theories</h4>
+
+<p><strong>Definition </strong> (Indiscernibles). A sequence \((a_i)_{i \in I}\) in a structure \(\mathfrak{M}\) is <em>indiscernible</em> over \(A \subseteq M\) if for every formula \(\phi(x_1, \ldots, x_n)\) and all increasing tuples \(i_1 < \cdots < i_n\), \(j_1 < \cdots < j_n\) in \(I\):
+\[
+\mathfrak{M} \models \phi(a_{i_1}, \ldots, a_{i_n}) \iff \mathfrak{M} \models \phi(a_{j_1}, \ldots, a_{j_n}).
+\]</p>
+
+<p><strong>Lemma </strong> (Standard Lemma). Let \(\mathcal{I} = (a_i)_{i \in I}\) be a sequence and \(J\) a linear order. Then there exists a structure \(\mathfrak{M}' \equiv \mathfrak{M}\) with an indiscernible sequence \((b_j)_{j \in J}\) realizing the Ehrenfeucht–Mostowski type of \(\mathcal{I}\).</p>
+
+<p><strong>Corollary </strong> (Ramsey's Theorem). If \(T\) has an infinite model, then for any linear order \(I\), \(T\) has a model with a sequence of distinct indiscernibles indexed by \(I\).</p>
+
+<p><strong>Lemma </strong>. If a countable structure is generated by a well-ordered sequence of indiscernibles, then it realizes only countably many types over every countable subset.</p>
+
+
+
+<p><strong>Definition </strong> (\(\kappa\)-Stability). A theory \(\mathcal{T}\) is <em>\(\kappa\)-stable</em> if for every model \(\mathfrak{M}\) of \(\mathcal{T}\) and every set \(A \subseteq M\) with \(|A| \leq \kappa\), we have \(|\mathrm{S}_n(A)| \leq \kappa\) for every \(n < \omega\).</p>
+
+<p><strong>Theorem </strong> (Morley's Stability Theorem). If a countable theory is categorical in some uncountable cardinal, then it is \(\omega\)-stable.</p>
+
+<p><strong>Theorem </strong> (Totally Transcendental Theories). A theory is \(\omega\)-stable iff it is totally transcendental (i.e., has no binary tree of consistent formulas).</p>
+
+<p><strong>Theorem </strong> (Saturated Models). A countable theory \(\mathcal{T}\) is \(\kappa\)-categorical iff all models of cardinality \(\kappa\) are saturated.</p>
+
+<p><strong>Lemma </strong>. If \(\mathcal{T}\) is \(\kappa\)-stable, then for every regular \(\lambda \leq \kappa\), there exists a model of cardinality \(\kappa\) that is \(\lambda\)-saturated.</p>
+
+
+<p><strong>Definition </strong> (Prime Extension). A model \(\mathfrak{M}\) is a <em>prime extension</em> of \(A \subseteq M\) if every elementary map \(A \to \mathfrak{N}\) extends to an elementary map \(\mathfrak{M} \to \mathfrak{N}\).</p>
+
+<p><strong>Definition </strong> (Constructible). A set \(B \subseteq M\) is <em>constructible</em> over \(A\) if it has an enumeration \((b_\alpha)_{\alpha < \lambda}\) such that each \(b_\alpha\) is atomic over \(A \cup \{b_\beta \mid \beta < \alpha\}\).</p>
+
+<p><strong>Lemma </strong>. Constructible extensions are prime.</p>
+
+<p><strong>Theorem </strong>. If \(\mathcal{T}\) is totally transcendental, then every subset of a model has a constructible prime extension.</p>
+
+<p><strong>Theorem </strong>. In totally transcendental theories, prime extensions are atomic.</p>
+
+
+<p><strong>Theorem </strong> (Lachlan). Let \(\mathcal{T}\) be totally transcendental and \(\mathfrak{M}\) an uncountable model. Then \(\mathfrak{M}\) has arbitrarily large elementary extensions that omit every countable set of \(L(M)\)-formulas omitted in \(\mathfrak{M}\).</p>
+
+<p><strong>Corollary </strong> (Downward Morley). If a countable theory is \(\kappa\)-categorical for some uncountable \(\kappa\), then it is \(\aleph_1\)-categorical.</p>
+
+
+<p><strong>Definition</strong> (Vaughtian Pair). A theory \(\mathcal{T}\) has a <em>Vaughtian pair</em> if there exist models \(\mathfrak{M} \prec \mathfrak{N}\) and an \(L(M)\)-formula \(\phi(x)\) such that:
+1. \(\mathfrak{M} \neq \mathfrak{N}\);
+2. \(\phi(\mathfrak{M})\) is infinite;
+3. \(\phi(\mathfrak{M}) = \phi(\mathfrak{N})\).</p>
+
+<p><strong>Theorem </strong> (Vaught's Two-Cardinal Theorem). If \(\mathcal{T}\) has a Vaughtian pair, then it has a model \(\mathfrak{M}\) of cardinality \(\aleph_1\) with \(\phi(\mathfrak{M})\) countable for some formula \(\phi(x)\).</p>
+
+<p><strong>Corollary </strong>. If \(\mathcal{T}\) is categorical in an uncountable cardinal, then \(\mathcal{T}\) has no Vaughtian pair.</p>
+
+<p><strong>Lemma </strong>. A theory without Vaughtian pairs eliminates the quantifier \(\exists^\infty x\).</p>
+
+
+<p><strong>Definition </strong> (Algebraic Closure). For \(A \subseteq M\), the <em>algebraic closure</em> of \(A\) is:
+\[
+\mathrm{acl}(A) = \{ a \in M \mid \text{there exists an } L(A)\text{-formula } \phi(x) \text{ with } \phi(\mathfrak{M}) \text{ finite and } \mathfrak{M} \models \phi(a) \}.
+\]</p>
+
+<p><strong>Lemma </strong>. The algebraic closure operator satisfies:
+- Reflexivity: \(A \subseteq \mathrm{acl}(A)\);
+- Finite character: \(\mathrm{acl}(A) = \bigcup_{A_0 \subseteq A, |A_0| < \omega} \mathrm{acl}(A_0)\);
+- Transitivity: \(\mathrm{acl}(\mathrm{acl}(A)) = \mathrm{acl}(A)\).</p>
+
+<p><strong>Lemma </strong> (Exchange Property). If \(\mathcal{T}\) is stable and \(a, b\) are in a strongly minimal set, then:
+\[
+a \in \mathrm{acl}(A \cup \{b\}) \setminus \mathrm{acl}(A) \implies b \in \mathrm{acl}(A \cup \{a\}).
+\]</p>
+
+
+<p><strong>Definition </strong> (Strongly Minimal). A formula \(\phi(x)\) is <em>strongly minimal</em> if for every elementary extension \(\mathfrak{M}'\) of \(\mathfrak{M}\) and every \(L(M')\)-formula \(\psi(x)\), either \(\phi(\mathfrak{M}') \cap \psi(\mathfrak{M}')\) is finite or its complement in \(\phi(\mathfrak{M}')\) is finite.</p>
+
+<p><strong>Lemma </strong>. If \(\phi\) is strongly minimal, then \(\mathrm{acl}\) defines a pregeometry on \(\phi(\mathfrak{M})\).</p>
+
+<p><strong>Theorem </strong>. If \(\mathcal{T}\) is strongly minimal, then models are uniquely determined by their dimension (the size of a basis in the associated pregeometry).</p>
+
+<p><strong>Corollary </strong>. A countable strongly minimal theory is categorical in every uncountable cardinality.</p>
+
+
+
+<p><strong>Theorem </strong> (Baldwin–Lachlan). A countable theory is categorical in some uncountable cardinal iff it is \(\omega\)-stable and has no Vaughtian pairs.</p>
+
+<p><strong>Corollary </strong> (Morley's Theorem). If a countable theory is categorical in some uncountable cardinal, then it is categorical in every uncountable cardinal.</p>
+
+<p><strong>Corollary 5</strong>. Every \(\aleph_1\)-categorical theory has a strongly minimal formula.</p>
+
+<h4>Morley Rank</h4>
+
+
+<p><strong>Definition </strong> (Monster Model). A <em>monster model</em> \(\mathfrak{C}\) is a very large, saturated, homogeneous model of a complete theory \(\mathcal{T}\) in which all models are elementarily embedded.</p>
+
+<p><strong>Properties</strong>:
+1. \(\mathfrak{C}\) is \(\kappa\)-saturated for all cardinals \(\kappa\);
+2. Every elementary bijection between subsets extends to an automorphism of \(\mathfrak{C}\);
+3. Two elements have the same type over \(A\) iff they are conjugate over \(A\).</p>
+
+
+<p><strong>Definition </strong> (Morley Rank). For a formula \(\phi(x)\), define \(\mathbf{MR}(\phi) \geq \alpha\) inductively:
+- \(\mathbf{MR}(\phi) \geq 0\) if \(\phi\) is consistent;
+- \(\mathbf{MR}(\phi) \geq \alpha + 1\) if there exists an infinite family \((\phi_i(x))_{i < \omega}\) of pairwise inconsistent formulas each implying \(\phi\) and with \(\mathbf{MR}(\phi_i) \geq \alpha\);
+- For limit \(\lambda\), \(\mathbf{MR}(\phi) \geq \lambda\) if \(\mathbf{MR}(\phi) \geq \beta\) for all \(\beta < \lambda\).</p>
+
+<p>Then:
+\[
+\mathbf{MR}(\phi) = \max\{ \alpha \mid \mathbf{MR}(\phi) \geq \alpha \}
+\]
+if such a maximum exists; otherwise \(\mathbf{MR}(\phi) = \infty\).</p>
+
+<p><strong>Lemma </strong> (Properties of Morley Rank).
+1. \(\mathbf{MR}(\phi \vee \psi) = \max(\mathbf{MR}(\phi), \mathbf{MR}(\psi))\);
+2. If \(\phi\) implies \(\psi\), then \(\mathbf{MR}(\phi) \leq \mathbf{MR}(\psi)\).</p>
+
+<p><strong>Definition </strong> (Morley Degree). For a formula \(\phi\) with \(\mathbf{MR}(\phi) = \alpha < \infty\), the <em>Morley degree</em> \(\mathbf{MD}(\phi)\) is the number of \(\alpha\)-strongly minimal components of \(\phi\).</p>
+
+<p><strong>Theorem </strong>. A theory is totally transcendental iff every formula has Morley rank.</p>
+
+<p><strong>Lemma </strong> (Components). Every formula \(\phi\) of rank \(\alpha\) is equivalent to a finite disjoint union of \(\alpha\)-strongly minimal formulas. The components are unique up to \(\alpha\)-equivalence.</p>
+
+
+
+<p><strong>Theorem </strong> (Baldwin–Lachlan Classification). If \(\mathcal{T}\) is \(\aleph_1\)-categorical, then for any cardinal \(m \geq m_0\), there is a unique model \(M\) of \(\mathcal{T}\) with \(\dim_{\phi}(M) = m\), where \(m_0\) is the dimension of the prime model.</p>
+
+<p><strong>Theorem </strong>. If \(\mathcal{T}\) is \(\aleph_1\)-categorical, the countable models are in one-to-one correspondence with the possible dimensions \(m \in \{m_0, m_0 + 1, \ldots, \omega\}\).</p>
+
+<p><strong>Corollary </strong>. \(\mathcal{T}\) is \(\aleph_0\)-categorical iff the prime model has infinite dimension.</p>
+
+
+
+<p><strong>Theorem </strong> (Additivity). If \(\phi\) is strongly minimal and \(a_1, \ldots, a_n\) are independent realizations, then:
+\[
+\mathbf{MR}(a_1, \ldots, a_n) = n.
+\]</p>
+
+<p><strong>Corollary </strong>. In algebraically closed fields, Morley rank equals transcendence degree.</p>
+
+<p><strong>Corollary </strong>. In differentially closed fields, Morley rank is bounded by the dimension of the differential field extension.</p>
+
+<h4>Simple Theories</h4>
+
+
+<p><strong>Definition </strong> (Dividing). A formula \(\phi(x, b)\) <em>divides</em> over \(A\) if there exists a sequence \((b_i)_{i < \omega}\) of realizations of \(\mathrm{tp}(b/A)\) such that \(\{\phi(x, b_i) \mid i < \omega\}\) is \(k\)-inconsistent for some \(k < \omega\).</p>
+
+<p><strong>Definition </strong> (Forking). A set of formulas \(\pi(x)\) <em>forks</em> over \(A\) if it implies a finite disjunction of formulas each dividing over \(A\).</p>
+
+<p><strong>Lemma </strong> (Finite Character). If \(\pi(x)\) forks over \(A\), then some finite subset of \(\pi\) forks over \(A\).</p>
+
+<p><strong>Lemma </strong> (Existence). If a partial type does not fork over \(A\), it has an extension to a complete type that does not fork over \(A\).</p>
+
+
+<p><strong>Definition </strong> (Tree Property). A formula \(\phi(x, y)\) has the <em>tree property</em> if there exists a tree of parameters \((a_s)_{\emptyset \neq s \in {}^{<\omega}\omega}\) such that:
+1. For each \(s\), the family \((\phi(x, a_{si}))_{i < \omega}\) is \(k\)-inconsistent for some \(k\);
+2. For each path \(\sigma \in {}^{\omega}\omega\), the set \(\{\phi(x, a_{\sigma|n}) \mid n < \omega\}\) is consistent.</p>
+
+<p><strong>Definition</strong> (Simple Theory). A theory \(\mathcal{T}\) is <em>simple</em> if no formula has the tree property.</p>
+
+<p><strong>Theorem</strong> (Kim–Pillay Characterization). For a complete theory \(\mathcal{T}\), the following are equivalent:
+1. \(\mathcal{T}\) is simple;
+2. (Local Character) Every type does not divide over some subset of size at most \(|\mathcal{T}|\);
+3. There exists \(\kappa\) such that every type over a model does not divide over some subset of size at most \(\kappa\).</p>
+
+<p><strong>Theorem</strong> (Symmetry). In simple theories, forking is symmetric:
+\[
+a \perp_C b \iff b \perp_C a.
+\]</p>
+
+<p><strong>Theorem </strong> (Transitivity). In simple theories:
+\[
+a \perp_C B \text{ and } a \perp_{C \cup B} D \iff a \perp_C B \cup D.
+\]</p>
+
+<p><strong>Lemma </strong> (Existence). In simple theories, every type has a non-forking extension to any superset of parameters.</p>
+
+
+<p><strong>Theorem</strong> (Independence Theorem, Kim–Pillay). Let \(\mathcal{T}\) be simple. Suppose \(b\) and \(c\) have the same type over a model \(M\), and:
+\[
+B \perp_M C, \quad b \perp_M B, \quad c \perp_M C.
+\]
+Then there exists \(d\) such that:
+\[
+d \perp_M B \cup C, \quad \mathrm{tp}(d/B) = \mathrm{tp}(b/B), \quad \mathrm{tp}(d/C) = \mathrm{tp}(c/C).
+\]</p>
+
+
+
+<p><strong>Definition</strong> (Lascar Strong Type). Let \(\mathrm{Aut}_f(\mathfrak{C}/A)\) be the subgroup of \(\mathrm{Aut}(\mathfrak{C}/A)\) generated by all \(\mathrm{Aut}(\mathfrak{C}/M)\) for models \(M\) containing \(A\). Then \(a\) and \(b\) have the same <em>Lascar strong type</em> over \(A\) if there exists \(\alpha \in \mathrm{Aut}_f(\mathfrak{C}/A)\) with \(\alpha(a) = b\).</p>
+
+<p><strong>Theorem </strong> (Independence Theorem for Lascar Types). In a simple theory, if \(\mathrm{Lstp}(b/A) = \mathrm{Lstp}(c/A)\), \(B \perp C\), \(b \perp B\), and \(c \perp C\), then there exists \(d\) with:
+\[
+d \perp B \cup C, \quad \mathrm{Lstp}(d/B) = \mathrm{Lstp}(b/B), \quad \mathrm{Lstp}(d/C) = \mathrm{Lstp}(c/C).
+\]</p>
+
+
+<p><strong>Definition </strong> (Pseudo-Finite Field). A perfect field \(K\) is <em>pseudo-finite</em> if:
+1. \(K\) is pseudo-algebraically closed (every absolutely irreducible variety over \(K\) has a \(K\)-rational point);
+2. The absolute Galois group \(\mathrm{Gal}(K^{\mathrm{sep}}/K) \cong \widehat{\mathbb{Z}}\).</p>
+
+<p><strong>Theorem</strong>. Pseudo-finite fields are simple. Forking coincides with algebraic independence.</p>
+
+<p><strong>Theorem </strong>. The elementary theory of a pseudo-finite field \(L\) is determined by the isomorphism type of its absolute part \(\mathrm{Abs}(L)\) (the relative algebraic closure of the prime field).</p>
+
+<h4>Stable Theories</h4>
+
+
+
+<p><strong>Definition </strong> (Heir). A type \(q \in \mathrm{S}(B)\) extending \(p \in \mathrm{S}(M)\) is an <em>heir</em> of \(p\) if for every \(L(M)\)-formula \(\phi(x, y)\) and \(b \in B\) with \(\phi(x, b) \in q\), there exists \(m \in M\) with \(\phi(x, m) \in p\).</p>
+
+<p><strong>Definition </strong> (Coheir). A type \(q \in \mathrm{S}(B)\) is a <em>coheir</em> of \(p \in \mathrm{S}(M)\) if \(q\) is finitely satisfiable in \(M\).</p>
+
+<p><strong>Definition </strong> (Definable Type). A type \(p \in \mathrm{S}(B)\) is <em>definable</em> over \(C\) if for every formula \(\phi(x, y)\), there exists an \(L(C)\)-formula \(d_p x \phi(x, y)\) such that for all \(b \in B\):
+\[
+\phi(x, b) \in p \iff \mathfrak{C} \models d_p x \phi(x, b).
+\]</p>
+
+<p><strong>Lemma </strong>. A definable type over a model has a unique heir to any superset.</p>
+
+<p><strong>Lemma </strong>. A global type that is a coheir of its restriction to a model is invariant over that model.</p>
+
+
+
+<p><strong>Definition </strong> (Order Property). A formula \(\phi(x, y)\) has the <em>order property</em> if there exist \((a_i)_{i < \omega}\), \((b_i)_{i < \omega}\) such that:
+\[
+\mathfrak{C} \models \phi(a_i, b_j) \iff i < j.
+\]</p>
+
+<p><strong>Theorem </strong> (Equivalence Theorem). For a formula \(\phi(x, y)\), the following are equivalent:
+1. \(\phi\) is stable (i.e., \(|\mathrm{S}_\phi(B)| \leq |B|\) for all infinite \(B\));
+2. \(\phi\) does not have the order property;
+3. \(\phi\) does not have the binary tree property.</p>
+
+<p><strong>Corollary </strong>. A theory is stable iff every formula is stable.</p>
+
+
+
+<p><strong>Theorem </strong>. A formula \(\phi(x, y)\) is stable iff every \(\phi\)-type is definable.</p>
+
+<p><strong>Corollary </strong>. A theory is stable iff all types are definable.</p>
+
+<p><strong>Theorem </strong> (Harrington's Lemma). If \(\mathcal{T}\) is stable and \(p(x), q(y)\) are global types, then for every formula \(\phi(x, y)\):
+\[
+d_p x \phi(x, y) \in q(y) \iff d_q y \phi(x, y) \in p(x).
+\]</p>
+
+<p><strong>Theorem </strong> (Stability implies Simplicity). Every stable theory is simple.</p>
+
+<p><strong>Corollary 8.3.5</strong>. In a stable theory:
+1. A type is definable iff it does not fork over its domain;
+2. Types over models have unique non-forking extensions;
+3. Heirs and coheirs coincide with non-forking extensions.</p>
+
+
+
+<p><strong>Definition </strong> (Canonical Parameter). A tuple \(d\) is a <em>canonical parameter</em> for a definable set \(D\) if every automorphism fixing \(D\) pointwise fixes \(d\), and conversely.</p>
+
+<p><strong>Definition </strong> (Elimination of Imaginaries). A theory \(\mathcal{T}\) <em>eliminates imaginaries</em> if every definable equivalence class \(e/E\) has a canonical parameter in the home sort.</p>
+
+<p><strong>Theorem</strong> (Construction of \(T^{\mathrm{eq}}\)). Every complete theory \(\mathcal{T}\) has a conservative extension \(T^{\mathrm{eq}}\) in a many-sorted language such that:
+1. \(T^{\mathrm{eq}}\) eliminates imaginaries;
+2. Every automorphism of a model of \(\mathcal{T}\) extends uniquely to an automorphism of its \(T^{\mathrm{eq}}\)-expansion;
+3. Stability, \(\kappa\)-categoricity, and simplicity are preserved.</p>
+
+<p><strong>Theorem </strong> (ACF Eliminates Imaginaries). Algebraically closed fields eliminate imaginaries.</p>
+
+<p><strong>Theorem </strong> (DCF\(_0\) Eliminates Imaginaries). Differentially closed fields of characteristic 0 eliminate imaginaries.</p>
+
+
+
+<p><strong>Theorem </strong> (Forking Properties). In a stable theory:
+1. (Conjugacy) Non-forking extensions are conjugate over the base;
+2. (Boundedness) A type has at most \(2^{|\mathcal{T}|}\) non-forking extensions;
+3. (Open Mapping) The restriction map \(\mathrm{N}(B/A) \to \mathrm{S}(A)\) is open.</p>
+
+<p><strong>Theorem</strong> (Stationarity). Every type over an algebraically closed set is stationary (has a unique non-forking extension).</p>
+
+<p><strong>Lemma </strong> (Canonical Base). A stationary type \(p \in \mathrm{S}(A)\) is based on \(B \subseteq A\) iff \(\mathrm{Cb}(p) \subseteq \mathrm{dcl}(B)\).</p>
+
+<p><strong>Theorem </strong> (Characterization of Forking). A theory is stable iff there exists a notion of non-forking satisfying invariance, local character, weak boundedness, existence, transitivity, and weak monotonicity.</p>
+
+<p><strong>Corollary </strong>. In totally transcendental theories, a type extension is non-forking iff it has the same Morley rank.</p>
+
+
+<p><strong>Definition </strong> (SU-Rank). For a type \(p\), define \(\mathrm{SU}(p) \geq \alpha\) inductively:
+- \(\mathrm{SU}(p) \geq 0\) always;
+- \(\mathrm{SU}(p) \geq \alpha + 1\) if \(p\) has a forking extension of SU-rank at least \(\alpha\);
+- \(\mathrm{SU}(p) \geq \lambda\) for limit \(\lambda\) if \(\mathrm{SU}(p) \geq \beta\) for all \(\beta < \lambda\).</p>
+
+<p><strong>Lemma </strong>. In a simple theory, a type extension is non-forking iff it has the same SU-rank.</p>
+
+<p><strong>Theorem </strong> (Stability Spectrum). For a countable theory, there are four possibilities:
+1. Totally transcendental: \(\mathrm{Spec}(\mathcal{T}) = \{\kappa \mid \kappa \geq \aleph_0\}\);
+2. Superstable but not totally transcendental: \(\mathrm{Spec}(\mathcal{T}) = \{\kappa \mid \kappa \geq 2^{\aleph_0}\}\);
+3. Stable but not superstable: \(\mathrm{Spec}(\mathcal{T}) = \{\kappa \mid \kappa^{\aleph_0} = \kappa\}\);
+4. Unstable: \(\mathrm{Spec}(\mathcal{T}) = \emptyset\).</p>
+
+<h4>Prime Extensions</h4>
+
+
+
+<p><strong>Theorem</strong>. In a stable theory, indiscernible sequences are totally indiscernible (i.e., order does not matter).</p>
+
+<p><strong>Definition </strong> (Average Type). The <em>average type</em> of an indiscernible sequence \(\mathcal{I} = (a_i)_{i \in I}\) is:
+\[
+\mathrm{Av}(\mathcal{I}) = \{ \phi(x, b) \mid \mathfrak{C} \models \phi(a_i, b) \text{ for all but finitely many } i \in I \}.
+\]</p>
+
+<p><strong>Theorem </strong>. In a stable theory, every infinite indiscernible sequence is a Morley sequence for some stationary type.</p>
+
+
+
+<p><strong>Theorem </strong> (Shelah). Let \(\mathcal{T}\) be totally transcendental.
+1. A model \(M\) is a prime extension of \(A\) iff it is atomic over \(A\) and contains no uncountable set of indiscernibles over \(A\);
+2. Prime extensions are unique (if they exist).</p>
+
+<p><strong>Theorem </strong> (Ressayre). Constructible prime extensions are unique.</p>
+
+
+<p><strong>Theorem </strong> (Shelah). If \(\mathcal{T}\) is countable and stable, then every subset of a constructible set is constructible.</p>
+
+<p><strong>Corollary </strong>. If \(\mathcal{T}\) is countable and stable, then prime extensions are unique (if they exist).</p>
+
+<h4>The Fine Structure of \(\aleph_1\)-Categorical Theories</h4>
+
+
+
+<p><strong>Definition </strong> (Internal Type). A partial type \(\pi(x)\) is <em>\(\mathbb{F}\)-internal</em> if there exists a set \(B\) such that \(\pi(\mathfrak{C}) \subseteq \mathrm{dcl}(\mathbb{F} \cup B)\).</p>
+
+<p><strong>Lemma </strong>. A partial type is \(\mathbb{F}\)-internal iff some finite conjunction of formulas in it is \(\mathbb{F}\)-internal.</p>
+
+<p><strong>Lemma </strong>. A formula \(\phi\) is \(\mathbb{F}\)-internal iff there is a definable surjection from some \(\mathbb{F}^n\) onto \(\phi(\mathfrak{C})\).</p>
+
+<p><strong>Theorem </strong> (Hrushovski's Binding Groupoid). Let \(\mathcal{T}\) be totally transcendental and \(\mathbb{E}, \mathbb{F}\) 0-definable with \(\mathbb{E}\) \(\mathbb{F}\)-internal and nonempty. Then \(\mathbb{E}\) is an object of a 0-definable connected groupoid with:
+1. All other objects in \(\mathbb{F}^{\mathrm{eq}}\);
+2. \(\mathrm{Aut}_{\mathcal{G}}(\mathbb{E}) = \mathrm{Aut}(\mathbb{E}/\mathbb{F})\).</p>
+
+<p><strong>Corollary </strong> (Binding Group). There is a definable group \(\mathbb{G} \subseteq \mathbb{F}^{\mathrm{eq}}\) acting regularly on a definable class \(\mathbb{A}\) such that \(\mathbb{E} \subseteq \mathrm{dcl}(\mathbb{F} \cup \{a\})\) for all \(a \in \mathbb{A}\).</p>
+
+
+
+<p><strong>Definition </strong> (Analysable Type). A type \(p\) is <em>\(\mathbb{F}\)-analysable</em> if for every realization \(a\) of \(p\), there is a sequence \(a_0, \ldots, a_n = a\) in \(\mathrm{dcl}(a)\) such that each \(\mathrm{tp}(a_i/a_0, \ldots, a_{i-1})\) is \(\mathbb{F}\)-internal.</p>
+
+<p><strong>Theorem </strong> (Hrushovski). If \(\mathcal{T}\) is \(\aleph_1\)-categorical and \(\mathbb{F}\) is a 0-definable strongly minimal set, then every type is \(\mathbb{F}\)-analysable.</p>
+
+<p><strong>Corollary</strong> (Zilber). If an \(\aleph_1\)-categorical theory has no infinite definable group in \(T^{\mathrm{eq}}\), then it is almost strongly minimal.</p>
+
+<p><strong>Theorem </strong> (Baldwin). Every \(\aleph_1\)-categorical theory has finite Morley rank.</p>
+
+<p><strong>Theorem </strong> (Erimbetov). A countable theory is \(\aleph_1\)-categorical iff it is \(\omega\)-stable and unidimensional.</p>
+
+
+
+<p><strong>Definition </strong> (Modular). A strongly minimal set \(\phi\) is <em>modular</em> if for all algebraically closed \(A, B \subseteq \phi(\mathfrak{C})\):
+\[
+\dim(A \cup B) + \dim(A \cap B) = \dim(A) + \dim(B).
+\]</p>
+
+<p><strong>Definition </strong> (1-Based). A formula \(\psi(x)\) is <em>1-based</em> if:
+\[
+A \perp_{\mathrm{acl}^{\mathrm{eq}}(A) \cap \mathrm{acl}^{\mathrm{eq}}(B)} B
+\]
+for all \(B\) and \(A \subseteq \psi(\mathfrak{C})\).</p>
+
+<p><strong>Theorem </strong>. For a strongly minimal formula \(\phi\), the following are equivalent:
+1. \(\phi\) is locally modular;
+2. \(\phi\) is 1-based;
+3. Every family of plane curves in \(\phi\) has dimension at most 1.</p>
+
+<p><strong>Proposition </strong>. A totally transcendental theory that contains an infinite definable field is not 1-based.</p>
+
+
+
+<p><strong>Theorem </strong> (Hrushovski Construction). There exists a strongly minimal structure \(M_\mu\) with the following properties:
+1. It is not locally modular;
+2. It does not interpret an infinite field;
+3. It is almost strongly minimal and has Morley rank 2.</p>
+
+<p><strong>Corollary </strong> (Counterexample to Zilber's Conjecture). There exists a strongly minimal theory that is not locally modular and does not interpret an infinite field.</p>
+
+<h4>Appendix A: Set Theory</h4>
+
+
+<p><strong>Axioms of ZFC</strong> (Zermelo–Fraenkel with Choice):
+1. Extensionality
+2. Empty Set
+3. Pairing
+4. Union
+5. Power Set
+6. Infinity
+7. Separation (Comprehension)
+8. Replacement
+9. Foundation (Regularity)
+10. Choice</p>
+
+<p><strong>Bernays–Gödel Set Theory (BG)</strong> extends ZFC by allowing classes:
+- Sets are classes that are elements of other classes;
+- Proper classes are classes that are not sets;
+- Global Choice: There exists a choice function on all nonempty sets.</p>
+
+<p><strong>Theorem A.1.1</strong> (BG is Conservative over ZFC). Any set-theoretic statement provable in BG is provable in ZFC.</p>
+
+
+<p><strong>Definition A.2.1</strong> (Ordinal). An <em>ordinal</em> is a transitive set well-ordered by \(\in\). The class of all ordinals is denoted \(\mathrm{On}\).</p>
+
+<p><strong>Properties</strong>:
+1. Every element of an ordinal is an ordinal;
+2. Every well-ordered set is isomorphic to a unique ordinal (its order type);
+3. \(\mathrm{On}\) is a proper class well-ordered by \(\in\).</p>
+
+<p><strong>Definition A.2.2</strong> (Successor and Limit Ordinals).
+- \(\alpha + 1 = \alpha \cup \{\alpha\}\) is the successor of \(\alpha\);
+- A limit ordinal is an ordinal \(> 0\) that is not a successor.</p>
+
+<p><strong>Theorem A.2.3</strong> (Transfinite Induction). If \(P(\alpha)\) is a property and:
+1. \(P(0)\) holds;
+2. \(P(\alpha) \implies P(\alpha + 1)\) for all \(\alpha\);
+3. For limit \(\lambda\), \((\forall \alpha < \lambda) P(\alpha) \implies P(\lambda)\);
+then \(P(\alpha)\) holds for all ordinals \(\alpha\).</p>
+
+
+
+<p><strong>Definition A.3.1</strong> (Cardinal). A <em>cardinal</em> is an ordinal \(\kappa\) such that no \(\alpha < \kappa\) has the same cardinality as \(\kappa\).</p>
+
+<p><strong>Theorem A.3.2</strong> (Cantor).
+1. \(2^\kappa > \kappa\) for all cardinals \(\kappa\);
+2. \(\kappa \cdot \kappa = \kappa\) for all infinite cardinals \(\kappa\).</p>
+
+<p><strong>Definition A.3.3</strong> (\(\aleph_\alpha\)). The sequence of infinite cardinals is defined by:
+\[
+\aleph_0 = \omega, \quad \aleph_{\alpha+1} = \aleph_\alpha^+, \quad \aleph_\lambda = \sup_{\alpha < \lambda} \aleph_\alpha \text{ for limit } \lambda.
+\]</p>
+
+<p><strong>Definition A.3.4</strong> (Cofinality). The <em>cofinality</em> of a linear order \(X\), denoted \(\mathrm{cf}(X)\), is the smallest cardinality of a cofinal subset.</p>
+
+<p><strong>Definition A.3.5</strong> (Regular Cardinal). A cardinal \(\kappa\) is <em>regular</em> if \(\mathrm{cf}(\kappa) = \kappa\). Otherwise it is <em>singular</em>.</p>
+
+<p><strong>Theorem A.3.6</strong> (König's Theorem).
+\[
+\kappa^{\mathrm{cf}(\kappa)} > \kappa.
+\]</p>
+
+<p><strong>Theorem A.3.7</strong> (Löwenheim–Skolem in Set Theory). For any infinite cardinal \(\kappa\), the set of all functions from \(\kappa\) to \(\kappa\) has cardinality \(\kappa^\kappa\).</p>
+
+<h4>Appendix B: Fields</h4>
+
+
+
+<p><strong>Definition B.1.1</strong> (Ordered Field). A field \(K\) with a linear order \(<\) is <em>ordered</em> if:
+1. \(x < y \implies x + z < y + z\);
+2. \(x < y\) and \(0 < z \implies xz < yz\).</p>
+
+<p><strong>Theorem B.1.2</strong> (Artin–Schreier). A field is orderable iff \(-1\) is not a sum of squares.</p>
+
+<p><strong>Definition B.1.3</strong> (Real Closed Field). An ordered field \(R\) is <em>real closed</em> if:
+1. Every positive element has a square root;
+2. Every polynomial of odd degree has a root in \(R\).</p>
+
+<p><strong>Theorem B.1.4</strong>. Every ordered field has a real closure, unique up to isomorphism.</p>
+
+<p><strong>Theorem B.1.5</strong> (Fundamental Theorem of Algebra). If \(R\) is real closed, then \(R(\sqrt{-1})\) is algebraically closed.</p>
+
+
+<p><strong>Definition B.2.1</strong> (Derivation). A <em>derivation</em> on a ring \(R\) is an additive map \(d: R \to R\) satisfying the Leibniz rule:
+\[
+d(xy) = x \, dy + y \, dx.
+\]</p>
+
+<p><strong>Definition B.2.2</strong> (Differential Field). A <em>differential field</em> is a field \(K\) with a derivation \(d\).</p>
+
+<p><strong>Theorem B.2.3</strong>. Every differential field embeds into a differentially closed field (a model of DCF\(_0\)).</p>
+
+<p><strong>Theorem B.2.4</strong> (Linear Differential Equations). In a model of DCF\(_0\), the solution space of \(dy = Ay\) (with \(A\) an \(n \times n\) matrix) is an \(n\)-dimensional vector space over the constants.</p>
+
+<p><strong>Definition B.3.1</strong> (Linearly Disjoint). Fields \(K, L\) over a common subfield \(F\) are <em>linearly disjoint</em> if every \(F\)-linearly independent subset of \(K\) remains linearly independent over \(L\).</p>
+
+<p><strong>Definition B.3.2</strong> (Regular Extension). An extension \(L/K\) is <em>regular</em> if \(L\) and \(K^{\mathrm{alg}}\) are linearly disjoint over \(K\).</p>
+
+<p><strong>Theorem B.3.3</strong>. An extension \(L/K\) is regular iff it is separable and \(K\) is relatively algebraically closed in \(L\).</p>
+
+<p><strong>Lemma B.3.4</strong>. If \(L/K\) is regular and \(H/K\) is algebraically independent from \(L/K\), then \(L\) and \(H\) are linearly disjoint over \(K\).</p>
+
+<p><strong>Definition B.3.5</strong> (p-Basis). For a field \(K\) of characteristic \(p > 0\), a <em>\(p\)-basis</em> is a set \(B \subseteq K\) such that the monomials \(b_1^{\epsilon_1} \cdots b_n^{\epsilon_n}\) (with \(0 \leq \epsilon_i < p\)) form a basis of \(K\) over \(K^p\).</p>
+
+
+<p><strong>Definition B.4.1</strong> (Profinite Group). A <em>profinite group</em> is a compact Hausdorff totally disconnected topological group.</p>
+
+<p><strong>Definition B.4.2</strong> (Procyclic Group). A profinite group is <em>procyclic</em> if it is topologically generated by a single element.</p>
+
+<p><strong>Theorem B.4.3</strong>. A profinite group is procyclic iff it is an inverse limit of finite cyclic groups.</p>
+
+<p><strong>Definition B.4.4</strong> (Absolute Galois Group). For a field \(K\), \(\mathrm{Gal}(K^{\mathrm{sep}}/K)\) is the <em>absolute Galois group</em> of \(K\).</p>
+
+<p><strong>Definition B.4.5</strong> (Pseudo-Finite Field). A perfect field \(K\) is <em>pseudo-finite</em> if:
+1. \(K\) is PAC (every absolutely irreducible variety over \(K\) has a \(K\)-point);
+2. \(\mathrm{Gal}(K^{\mathrm{sep}}/K) \cong \widehat{\mathbb{Z}}\).</p>
+
+<p><strong>Theorem B.4.6</strong> (Ax). Every pseudo-finite field is elementarily equivalent to an ultraproduct of finite fields.</p>
+
+<h4>Appendix C: Combinatorics</h4>
+
+
+
+<p><strong>Definition C.1.1</strong> (Pregeometry). A <em>pregeometry</em> (or <em>matroid</em>) is a pair \((X, \mathrm{cl})\) where \(\mathrm{cl}: \mathcal{P}(X) \to \mathcal{P}(X)\) satisfies:
+1. \(A \subseteq \mathrm{cl}(A)\) (Reflexivity);
+2. \(\mathrm{cl}(A) = \bigcup_{A_0 \subseteq A, |A_0| < \omega} \mathrm{cl}(A_0)\) (Finite Character);
+3. \(\mathrm{cl}(\mathrm{cl}(A)) = \mathrm{cl}(A)\) (Transitivity);
+4. \(a \in \mathrm{cl}(A \cup \{b\}) \setminus \mathrm{cl}(A) \implies b \in \mathrm{cl}(A \cup \{a\})\) (Exchange).</p>
+
+<p><strong>Definition C.1.2</strong> (Basis). A set \(B \subseteq X\) is a <em>basis</em> if it is independent and generating.</p>
+
+<p><strong>Theorem C.1.3</strong>. All bases of a pregeometry have the same cardinality.</p>
+
+<p><strong>Definition C.1.4</strong> (Dimension). The <em>dimension</em> of a pregeometry is the size of any basis.</p>
+
+<p><strong>Theorem C.1.5</strong> (Submodularity).
+\[
+\dim(A \cup B) + \dim(A \cap B) \leq \dim(A) + \dim(B).
+\]</p>
+
+<p><strong>Definition C.1.6</strong> (Modular Pregeometry). A pregeometry is <em>modular</em> if equality holds in the submodularity law for all closed sets.</p>
+
+
+<p><strong>Theorem C.2.1</strong> (Erdős–Makkai). Let \(B\) be an infinite set and \(\mathcal{S}\) a family of subsets of \(B\) with \(|\mathcal{S}| > |B|\). Then there exist sequences \((b_i)_{i < \omega}\) in \(B\) and \((S_i)_{i < \omega}\) in \(\mathcal{S}\) such that either:
+\[
+b_i \in S_j \iff j < i
+\]
+or
+\[
+b_i \in S_j \iff i < j
+\]
+for all \(i, j < \omega\).</p>
+
+
+<p><strong>Definition C.3.1</strong> (Arrow Notation). \(\kappa \to (\lambda)^n_\mu\) means that every coloring of \([\kappa]^n\) with \(\mu\) colors has a homogeneous subset of size \(\lambda\).</p>
+
+<p><strong>Theorem C.3.2</strong> (Ramsey). \(\omega \to (\omega)^n_k\) for all finite \(n, k\).</p>
+
+<p><strong>Theorem C.3.3</strong> (Erdős–Rado).
+\[
+\beth_n(\kappa)^+ \to (\kappa^+)^{n+1}_\kappa.
+\]</p>
 <p><strong>3. Category Theory.</strong> A <em>category</em>
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑪</mi><annotation encoding="application/x-tex">\mathbf{C}</annotation></semantics></math>
 consists of:</p>
