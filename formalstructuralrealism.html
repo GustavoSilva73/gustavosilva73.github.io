@@ -420,269 +420,76 @@ models; consequently, the presentation below is intentionally selective rather
 than encyclopaedic.
 </p>
 
-<p>
-As we shall shortly see, the central philosophical question is not whether a
-particular model represents reality uniquely, but rather which aspects of its
-structure remain invariant under mathematically appropriate transformations.
-This perspective motivates the definitions introduced below.
-</p>
-
-<h4>Signatures and Structures</h4>
-
-<p><strong>Definition.</strong> A <em>signature</em> is a triple
-\[
-\Sigma=\langle\mathcal F,\mathcal R,\operatorname{ar}\rangle,
-\]
+Let a <em>signature</em> be defined
+as a triple
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Σ</mi><mo>=</mo><mo form="prefix" stretchy="false">⟨</mo><mi mathvariant="script">ℱ</mi><mo>,</mo><mi mathvariant="script">ℛ</mi><mo>,</mo><mrow><mi mathvariant="normal">ar</mi><mo>⁡</mo></mrow><mo form="postfix" stretchy="false">⟩</mo></mrow><annotation encoding="application/x-tex">\Sigma = \langle \mathcal{F}, \mathcal{R}, \mathop{\mathrm{ar}}\rangle</annotation></semantics></math>,
 where
-\(\mathcal F\) is a collection of function symbols,
-\(\mathcal R\) is a collection of relation symbols,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">ℱ</mi><annotation encoding="application/x-tex">\mathcal{F}</annotation></semantics></math>
+is a set of function symbols,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">ℛ</mi><annotation encoding="application/x-tex">\mathcal{R}</annotation></semantics></math>
+is a set of relation symbols, and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">ar</mi><mo>⁡</mo></mrow><mo>:</mo><mi mathvariant="script">ℱ</mi><mo>∪</mo><mi mathvariant="script">ℛ</mi><mo>→</mo><mi mathvariant="double-struck">ℕ</mi></mrow><annotation encoding="application/x-tex">\mathop{\mathrm{ar}}: \mathcal{F} \cup \mathcal{R} \to \mathbb{N}</annotation></semantics></math>
+assigns a finite arity to each symbol. A
+<em><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="normal">Σ</mi><annotation encoding="application/x-tex">\Sigma</annotation></semantics></math>-structure</em>
+is a tuple
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="fraktur">𝔐</mi><mo>=</mo><mrow><mo form="prefix" stretchy="true">⟨</mo><mi>M</mi><mo>,</mo><mspace width="0.278em"></mspace><mo form="prefix" stretchy="false">{</mo><msup><mi>f</mi><mi mathvariant="fraktur">𝔐</mi></msup><mo>:</mo><msup><mi>M</mi><mrow><mrow><mi mathvariant="normal">ar</mi><mo>⁡</mo></mrow><mo form="prefix" stretchy="false">(</mo><mi>f</mi><mo form="postfix" stretchy="false">)</mo></mrow></msup><mo>→</mo><mi>M</mi><msub><mo form="postfix" stretchy="false">}</mo><mrow><mi>f</mi><mo>∈</mo><mi mathvariant="script">ℱ</mi></mrow></msub><mo>,</mo><mspace width="0.278em"></mspace><mo form="prefix" stretchy="false">{</mo><msup><mi>R</mi><mi mathvariant="fraktur">𝔐</mi></msup><mo>⊆</mo><msup><mi>M</mi><mrow><mrow><mi mathvariant="normal">ar</mi><mo>⁡</mo></mrow><mo form="prefix" stretchy="false">(</mo><mi>R</mi><mo form="postfix" stretchy="false">)</mo></mrow></msup><msub><mo form="postfix" stretchy="false">}</mo><mrow><mi>R</mi><mo>∈</mo><mi mathvariant="script">ℛ</mi></mrow></msub><mo form="postfix" stretchy="true">⟩</mo></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">\mathfrak{M} = \left\langle M, \; \{f^{\mathfrak{M}}: M^{\mathop{\mathrm{ar}}(f)} \to M\}{f \in \mathcal{F}}, \; \{R^{\mathfrak{M}} \subseteq M^{\mathop{\mathrm{ar}}(R)}\}{R \in \mathcal{R}} \right\rangle,</annotation></semantics></math>
+where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>M</mi><annotation encoding="application/x-tex">M</annotation></semantics></math>
+is a non-empty domain. For a first-order language
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">ℒ</mi><mo form="prefix" stretchy="false">(</mo><mi mathvariant="normal">Σ</mi><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathcal{L}(\Sigma)</annotation></semantics></math>,
+the satisfaction relation
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="fraktur">𝔐</mi><mo>⊨</mo><mi>ϕ</mi></mrow><annotation encoding="application/x-tex">\mathfrak{M} \models \phi</annotation></semantics></math>
+is defined recursively for formulas
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>.
+A <em>theory</em>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">𝒯</mi><annotation encoding="application/x-tex">\mathcal{T}</annotation></semantics></math>
+is a set of sentences in
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">ℒ</mi><mo form="prefix" stretchy="false">(</mo><mi mathvariant="normal">Σ</mi><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathcal{L}(\Sigma)</annotation></semantics></math>;
+its class of models is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Mod</mtext><mo form="prefix" stretchy="false">(</mo><mi mathvariant="script">𝒯</mi><mo form="postfix" stretchy="false">)</mo><mo>=</mo><mo form="prefix" stretchy="false">{</mo><mi mathvariant="fraktur">𝔐</mi><mo>∣</mo><mo>∀</mo><mi>ϕ</mi><mo>∈</mo><mi mathvariant="script">𝒯</mi><mo>,</mo><mi mathvariant="fraktur">𝔐</mi><mo>⊨</mo><mi>ϕ</mi><mo form="postfix" stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\text{Mod}(\mathcal{T}) = \{\mathfrak{M} \mid \forall \phi \in \mathcal{T}, \mathfrak{M} \models \phi\}</annotation></semantics></math>.</p>
+<p>A <em>homomorphism</em>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi><mo>:</mo><mi mathvariant="fraktur">𝔐</mi><mo>→</mo><mi mathvariant="fraktur">𝔑</mi></mrow><annotation encoding="application/x-tex">h: \mathfrak{M} \to \mathfrak{N}</annotation></semantics></math>
+between
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="normal">Σ</mi><annotation encoding="application/x-tex">\Sigma</annotation></semantics></math>-structures
+is a map
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi><mo>:</mo><mi>M</mi><mo>→</mo><mi>N</mi></mrow><annotation encoding="application/x-tex">h: M \to N</annotation></semantics></math>
+such that for every
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>-ary
+function symbol
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>∈</mo><mi mathvariant="script">ℱ</mi></mrow><annotation encoding="application/x-tex">f \in \mathcal{F}</annotation></semantics></math>
+and tuple
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix" stretchy="false">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub><mo form="postfix" stretchy="false">)</mo><mo>∈</mo><msup><mi>M</mi><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">(a_1, \dots, a_n) \in M^n</annotation></semantics></math>,
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi><mo form="prefix" stretchy="false">(</mo><msup><mi>f</mi><mi mathvariant="fraktur">𝔐</mi></msup><mo form="prefix" stretchy="false">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub><mo form="postfix" stretchy="false">)</mo><mo form="postfix" stretchy="false">)</mo><mo>=</mo><msup><mi>f</mi><mi mathvariant="fraktur">𝔑</mi></msup><mo form="prefix" stretchy="false">(</mo><mi>h</mi><mo form="prefix" stretchy="false">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo form="postfix" stretchy="false">)</mo><mo>,</mo><mi>…</mi><mo>,</mo><mi>h</mi><mo form="prefix" stretchy="false">(</mo><msub><mi>a</mi><mi>n</mi></msub><mo form="postfix" stretchy="false">)</mo><mo form="postfix" stretchy="false">)</mo><mo>,</mo></mrow><annotation encoding="application/x-tex">h(f^{\mathfrak{M}}(a_1, \dots, a_n)) = f^{\mathfrak{N}}(h(a_1), \dots, h(a_n)),</annotation></semantics></math>
+and for every
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>-ary
+relation symbol
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mo>∈</mo><mi mathvariant="script">ℛ</mi></mrow><annotation encoding="application/x-tex">R \in \mathcal{R}</annotation></semantics></math>,
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix" stretchy="false">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub><mo form="postfix" stretchy="false">)</mo><mo>∈</mo><msup><mi>R</mi><mi mathvariant="fraktur">𝔐</mi></msup><mo>⟹</mo><mo form="prefix" stretchy="false">(</mo><mi>h</mi><mo form="prefix" stretchy="false">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo form="postfix" stretchy="false">)</mo><mo>,</mo><mi>…</mi><mo>,</mo><mi>h</mi><mo form="prefix" stretchy="false">(</mo><msub><mi>a</mi><mi>n</mi></msub><mo form="postfix" stretchy="false">)</mo><mo form="postfix" stretchy="false">)</mo><mo>∈</mo><msup><mi>R</mi><mi mathvariant="fraktur">𝔑</mi></msup><mi>.</mi></mrow><annotation encoding="application/x-tex">(a_1, \dots, a_n) \in R^{\mathfrak{M}} \implies (h(a_1), \dots, h(a_n)) \in R^{\mathfrak{N}}.</annotation></semantics></math>
+If
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>h</mi><annotation encoding="application/x-tex">h</annotation></semantics></math>
+is injective, it is an <em>embedding</em> (denoted
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="fraktur">𝔐</mi><mo>↪️</mo><mi mathvariant="fraktur">𝔑</mi></mrow><annotation encoding="application/x-tex">\mathfrak{M} \hookrightarrow \mathfrak{N}</annotation></semantics></math>),
+which preserves and reflects all atomic formulas.</p>
+<p><strong>2. Set Theory.</strong> Working within
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="sans-serif">𝖹</mi><mi mathvariant="sans-serif">𝖥</mi><mi mathvariant="sans-serif">𝖢</mi></mrow><annotation encoding="application/x-tex">\mathsf{ZFC}</annotation></semantics></math>,
+let the cumulative hierarchy
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>=</mo><msub><mo>⋃</mo><mrow><mi>α</mi><mo>∈</mo><mtext mathvariant="normal">Ord</mtext></mrow></msub><msub><mi>V</mi><mi>α</mi></msub></mrow><annotation encoding="application/x-tex">V = \bigcup_{\alpha \in \text{Ord}} V_\alpha</annotation></semantics></math>
+provide the universe of sets. For sets
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
 and
-\(\operatorname{ar}\)
-assigns a finite arity to each symbol.
-Constants are treated as \(0\)-ary function symbols.
-</p>
-
-<p>
-A signature specifies only the formal vocabulary of a theory. It determines the
-relations and operations that may be discussed without committing one to any
-particular mathematical realisation.
-</p>
-
-<p><strong>Definition.</strong>
-A <em>\(\Sigma\)-structure</em> is a tuple
-
-\[
-\mathfrak M=
-\left\langle
-M,
-\{f^{\mathfrak M}\},
-\{R^{\mathfrak M}\}
-\right\rangle,
-\]
-
-where each symbol of the signature receives an interpretation on the domain
-\(M\).
-</p>
-
-<p>
-The distinction between language and structure is philosophically significant.
-A scientific theory specifies a formal vocabulary, whereas a model provides one
-possible mathematical realisation of that vocabulary.
-</p>
-
-<h4>Languages and Satisfaction</h4>
-
-<p><strong>Definition.</strong>
-Given a signature \(\Sigma\), the first-order language
-\(\mathcal L(\Sigma)\)
-consists of terms, formulas, Boolean connectives, and quantifiers constructed
-in the usual recursive manner.
-</p>
-
-<p><strong>Definition.</strong>
-For a structure \(\mathfrak M\), the satisfaction relation
-
-\[
-\mathfrak M\models\varphi
-\]
-
-states that the sentence \(\varphi\) is true in
-\(\mathfrak M\).
-</p>
-
-<p>
-The satisfaction relation establishes the connection between syntax and
-semantics. It provides the formal notion according to which a mathematical
-structure represents a scientific theory.
-</p>
-
-<h4>Homomorphisms, Embeddings and Isomorphisms</h4>
-
-<p><strong>Definition.</strong>
-A homomorphism
-
-\[
-h:\mathfrak M\rightarrow\mathfrak N
-\]
-
-preserves the interpretation of all function and relation symbols.
-</p>
-
-<p><strong>Definition.</strong>
-An embedding is an injective homomorphism that reflects as well as preserves the
-relations of the language.
-</p>
-
-<p><strong>Definition.</strong>
-An isomorphism is a bijective embedding.
-Isomorphic structures are written
-
-\[
-\mathfrak M\cong\mathfrak N.
-\]
-</p>
-
-<p>
-These notions formalise progressively stronger forms of structural
-preservation. Since structural realism attributes epistemic significance to
-relations rather than individual objects, embeddings and isomorphisms naturally
-express when two scientific representations preserve the same structural
-content.
-</p>
-
-<h4>Theories and Models</h4>
-
-<p><strong>Definition.</strong>
-A <em>theory</em> is a set of first-order sentences.
-
-A structure
-\(\mathfrak M\)
-is a model of the theory
-\(\mathcal T\)
-whenever
-
-\[
-\mathfrak M\models\phi
-\]
-
-for every
-\(\phi\in\mathcal T\).
-The class of all such models is denoted
-
-\[
-\operatorname{Mod}(\mathcal T).
-\]
-</p>
-
-<p>
-Scientific theories will therefore be represented not by individual models but
-by classes of admissible models satisfying the same axioms.
-</p>
-
-<h4>Elementary Equivalence</h4>
-
-<p><strong>Definition.</strong>
-Two structures
-\(\mathfrak M\)
-and
-\(\mathfrak N\)
-are <em>elementarily equivalent</em>
-
-\[
-\mathfrak M\equiv\mathfrak N
-\]
-
-whenever they satisfy precisely the same first-order sentences.
-</p>
-
-<p>
-Elementary equivalence distinguishes logical indistinguishability from
-isomorphism. Two structures may satisfy exactly the same first-order theory
-while nevertheless failing to be isomorphic. This observation is central to the
-structural realist position, since empirical equivalence alone need not
-determine a unique ontology.
-</p>
-
-<h4>Elementary Embeddings</h4>
-
-<p><strong>Definition.</strong>
-An embedding
-
-\[
-h:\mathfrak A\rightarrow\mathfrak B
-\]
-
-is elementary if every first-order formula has the same truth value before and
-after applying the embedding.
-</p>
-
-<p>
-Elementary embeddings preserve not merely algebraic structure but the entire
-first-order content of a theory. They therefore provide one of the strongest
-formal notions of structural preservation available within first-order logic.
-</p>
-
-<h4>Compactness</h4>
-
-<p><strong>Theorem (Compactness).</strong>
-
-A first-order theory is satisfiable if and only if every finite subset of its
-axioms is satisfiable.
-</p>
-
-<p>
-Compactness demonstrates that global consistency is determined entirely by
-finite fragments. Philosophically, this explains why locally coherent
-idealisations may nevertheless admit a common mathematical realisation.
-</p>
-
-<h4>Löwenheim--Skolem</h4>
-
-<p><strong>Theorem (Löwenheim--Skolem).</strong>
-
-If a first-order theory possesses one infinite model, then it possesses models
-of many different infinite cardinalities.
-</p>
-
-<p>
-This theorem is particularly important for structural realism. Since
-first-order theories generally fail to determine a unique underlying domain,
-the mathematical objects themselves cannot plausibly constitute the primary
-content of scientific knowledge. What remains invariant across models is instead
-their structural organisation.
-</p>
-
-<h4>Categoricity</h4>
-
-<p><strong>Definition.</strong>
-
-A theory is
-\(\kappa\)-categorical
-if all of its models of cardinality
-\(\kappa\)
-are isomorphic.
-</p>
-
-<p>
-Categoricity measures the extent to which a theory determines its models
-uniquely up to isomorphism. Highly categorical theories therefore exhibit a
-particularly robust notion of structural determination.
-</p>
-
-<h4>Quantifier Elimination</h4>
-
-<p><strong>Definition.</strong>
-
-A theory admits
-<em>quantifier elimination</em>
-if every formula is equivalent, modulo the theory, to a quantifier-free
-formula.
-</p>
-
-<p>
-Quantifier elimination often renders the structure of a theory considerably
-more transparent. In many mathematically important examples it allows structural
-comparisons to be reduced to purely algebraic considerations.
-</p>
-
-<h4>Summary</h4>
-
-<p>
-The concepts introduced above constitute the model-theoretic foundation of the
-present work. Scientific theories are represented by first-order theories,
-their semantic interpretations by mathematical structures, and structural
-preservation by embeddings and isomorphisms. The Compactness and
-Löwenheim--Skolem Theorems show that first-order logic seldom determines a
-unique universe of objects, thereby reinforcing one of the principal
-motivations for structural scientific realism: scientific knowledge is most
-naturally understood as knowledge of invariant mathematical structure rather
-than of the intrinsic identity of the objects instantiating that structure. In
-the following sections this logical perspective will be reformulated in
-category-theoretic terms, where structural preservation becomes the primary
-mathematical notion.
-</p>
-
-
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>,
+strict inclusion is defined as
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>⊊</mo><mi>B</mi><mo>⇔</mo><mo form="prefix" stretchy="false">(</mo><mo>∀</mo><mi>x</mi><mo form="prefix" stretchy="false">(</mo><mi>x</mi><mo>∈</mo><mi>A</mi><mo>⇒</mo><mi>x</mi><mo>∈</mo><mi>B</mi><mo form="postfix" stretchy="false">)</mo><mo form="postfix" stretchy="false">)</mo><mo>∧</mo><mo form="prefix" stretchy="false">(</mo><mo>∃</mo><mi>y</mi><mo>∈</mo><mi>B</mi><mo>\</mo><mi>A</mi><mo form="postfix" stretchy="false">)</mo><mi>.</mi></mrow><annotation encoding="application/x-tex">A \subsetneq B \iff (\forall x (x \in A \Rightarrow x \in B)) \land (\exists y \in B \setminus A).</annotation></semantics></math>
+This forms a strict partial order. Independence of domains is formalized
+by the existence of a property
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="normal">Φ</mi><annotation encoding="application/x-tex">\Phi</annotation></semantics></math>
+(definable in the language of set theory) such that
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Φ</mi><mo form="prefix" stretchy="false">(</mo><msub><mi mathvariant="script">𝒟</mi><mi>R</mi></msub><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\Phi(\mathcal{D}_R)</annotation></semantics></math>
+holds but
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Φ</mi><mo form="prefix" stretchy="false">(</mo><msub><mi mathvariant="script">𝒟</mi><mi>A</mi></msub><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\Phi(\mathcal{D}_A)</annotation></semantics></math>
+fails, i.e.,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="script">𝒟</mi><mi>R</mi></msub><mo>≢</mo><msub><mi mathvariant="script">𝒟</mi><mi>A</mi></msub></mrow><annotation encoding="application/x-tex">\mathcal{D}_R \not\equiv \mathcal{D}_A</annotation></semantics></math>
+in the elementary diagram.</p>
     
 <p><strong>3. Category Theory.</strong> A <em>category</em>
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑪</mi><annotation encoding="application/x-tex">\mathbf{C}</annotation></semantics></math>
