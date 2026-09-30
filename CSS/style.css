@@ -1,0 +1,162 @@
+/* style.css - The Ludens Topoï Theme */
+
+/* --- Typography & Variables --- */
+:root {
+    --win98-bg: #d4d0c8;
+    --win98-highlight: #ffffff;
+    --win98-shadow: #808080;
+    --win98-dark-shadow: #404040;
+    
+    /* Gruvbox Palette */
+    --win98-title-bg: #3c3836; /* Dark earthy grey */
+    --win98-title-text: #ebdbb2; /* Aged paper white */
+    
+    --chalkboard-bg: #282828; /* Deep warm charcoal */
+    --chalk-text: #ebdbb2; /* Aged paper white */
+    --chalk-dim: #a89984; /* Muted stone */
+}
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: var(--win98-bg);
+    font-family: 'Tahoma', 'MS Sans Serif', sans-serif;
+    color: #000;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* --- i3wm Style Tiling Grid --- */
+.desktop-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto 1fr;
+    gap: 8px;
+    padding: 8px;
+    height: 100vh;
+}
+
+/* --- Win98 Window Chrome --- */
+.window {
+    background-color: var(--win98-bg);
+    border-top: 2px solid var(--win98-highlight);
+    border-left: 2px solid var(--win98-highlight);
+    border-right: 2px solid var(--win98-dark-shadow);
+    border-bottom: 2px solid var(--win98-dark-shadow);
+    box-shadow: inset -1px -1px 0px var(--win98-shadow), inset 1px 1px 0px var(--win98-highlight);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.title-bar {
+    background: var(--win98-title-bg);
+    color: var(--win98-title-text);
+    padding: 3px 5px;
+    font-weight: bold;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    letter-spacing: 1px;
+}
+
+.title-bar-controls {
+    display: flex;
+    gap: 2px;
+}
+
+.btn {
+    background: var(--win98-bg);
+    border-top: 1px solid var(--win98-highlight);
+    border-left: 1px solid var(--win98-highlight);
+    border-right: 1px solid var(--win98-dark-shadow);
+    border-bottom: 1px solid var(--win98-dark-shadow);
+    width: 16px;
+    height: 14px;
+    cursor: pointer;
+}
+
+.btn:active {
+    border-top: 1px solid var(--win98-dark-shadow);
+    border-left: 1px solid var(--win98-dark-shadow);
+    border-right: 1px solid var(--win98-highlight);
+    border-bottom: 1px solid var(--win98-highlight);
+}
+
+/* --- Dark Academia Chalkboard Content --- */
+.content-area {
+    flex-grow: 1;
+    background-color: var(--chalkboard-bg);
+    color: var(--chalk-text);
+    font-family: 'Georgia', 'Times New Roman', serif;
+    padding: 20px;
+    overflow-y: auto;
+    border: 2px solid var(--win98-shadow);
+    margin: 4px;
+    box-shadow: inset 2px 2px 5px rgba(0,0,0,0.5);
+    background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" stitchTiles="stitch"/></filter><rect width="100" height="100" filter="url(%23noise)" opacity="0.05"/></svg>'); /* Subtle chalk dust texture */
+}
+
+.content-area h1, .content-area h2, .content-area h3 {
+    font-family: 'Courier New', Courier, monospace;
+    border-bottom: 1px dashed var(--chalk-dim);
+    padding-bottom: 5px;
+    font-weight: normal;
+}
+
+.content-area p {
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.content-area a {
+    color: #ffd700;
+    text-decoration: none;
+    border-bottom: 1px solid #ffd700;
+}
+
+.content-area a:hover {
+    background-color: rgba(255, 215, 0, 0.2);
+}
+
+/* --- Navigation Menu (i3 bar / Hub) --- */
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu li {
+    margin-bottom: 10px;
+}
+
+.nav-menu a {
+    display: block;
+    color: var(--chalk-text);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.1em;
+}
+
+.nav-menu a::before {
+    content: "> ";
+    color: var(--chalk-dim);
+}
+
+/* Grid Specifics */
+.header-window {
+    grid-column: 1 / -1;
+}
+
+.sidebar-window {
+    grid-column: 1 / 2;
+}
+
+.main-window {
+    grid-column: 2 / 3;
+}
