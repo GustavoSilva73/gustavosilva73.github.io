@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Title - The Ludens Topoï</title>
+    
+    <!-- Assuming this is saved inside the Posts/ folder -->
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="https://tikzjax.com/v1/fonts.css">
+    
+    <!-- MathJax for rendering equations -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!-- TikZJax for Category Theory diagrams -->
+    <script src="https://tikzjax.com/v1/tikzjax.js"></script>
+</head>
+<body>
+
+    <div class="desktop-grid">
+        
+        <!-- Sidebar / Navigation Hub -->
+        <div class="window sidebar-window">
+            <div class="title-bar">
+                <span>navigation_hub.exe</span>
+                <div class="title-bar-controls">
+                    <div class="btn"></div><div class="btn"></div><div class="btn"></div>
+                </div>
+            </div>
+            <div class="content-area">
+                <h2>Directories</h2>
+                <ul class="nav-menu">
+                    <li><a href="../index.html">~/home/welcome</a></li>
+                    <li><a href="philosophy.html">~/docs/philosophy</a></li>
+                    <li><a href="physics.html">~/docs/physics</a></li>
+                    <li><a href="mathematics.html">~/docs/mathematics</a></li>
+                    <li><a href="game-studies.html">~/docs/game-studies</a></li>
+                </ul>
+                
+                <h2 style="margin-top: 40px;">Links</h2>
+                <ul class="nav-menu">
+                    <li><a href="https://github.com/gustavosilva73" target="_blank">GitHub</a></li>
+                    <li><a href="#">PhilPapers</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Main Content Window -->
+        <div class="window main-window">
+            <div class="title-bar">
+                <span>vim post_title.md</span>
+                <div class="title-bar-controls">
+                    <div class="btn"></div><div class="btn"></div><div class="btn"></div>
+                </div>
+            </div>
+            <div class="content-area">
+                <h2>Structure, Ontology, and the Quarrel over the Foundations of Mathematics</h2>
+                <p><em>Published: [YYYY-MM-DD]</em></p>
+                
+                <h2>&sect; I. <i>Mathesis</i> as Structure: Categories, HoTT, and Subjectless Structuralism</h2>
+                
+                <h3>&sect; I.A Formal Framework I: Category Theory and the Yoneda Lemma</h3>
+                <p>
+                &para; 1. The concept of a category can be formalized within two primary theoretical frameworks. The  first relies on a purely axiomatic approach, wherein these structures are designated as <i>metacategories</i>. The second framework, which serves a natural extetion — or, more rigorously, a particular case — of the former, represents the standard formulation of categories within Zermelo-Fraenkel set theory with Axiom of Choice (ZFC). We thus commence our exposition by introducing this strictly axiomatic characterization:
+                </p>
+
+                <div class="latex-env">
+                     <span class="env-title">Definition 1 (Metagraph).</span> 
+                        A <em>Metagraph</em> comprises a collection of objects \(a,b,c,\dots\), a collection of arrows \(f,g,h\dots\) and two operations, defined as follows: (i) <em>Domain</em>, which assigns to each arrow \(f\) an object \(a = \operatorname{dom}(f)\); (ii) <em>Codomain</em>, which assigns to each arrow \(f\) an object \(b = \operatorname{cod}(f)\).
+                </div>
+
+                <p>
+                Diagrammatically, these operations may be depicted as arrows from \(a\) to \(b\), denoted by \(a \xrightarrow[]{f} b\). Consequently, a finite graph can be conceptualized as a concatenation of such arrows, expressed, for example, as \(a \xrightarrow[]{f} b \xrightarrow[]{g} c \xrightarrow[]{h}\). Equipped with the underlying structure of a metagraph, we can proceed to the definition of a metacategory:
+                </p>
+
+                <div class="latex-env">
+                    <span class="env-title">Definition 2 (Metacategory). </span>
+                    A \textit{metacategory} is a metagraph equipped with two additional operations, namely: (i) <i>Identity</i>, wich assigns to each object \(a\) an arrow \(a \xrightarrow[]{\mathrm{id}_a} a\); (ii) \textit{Composition}, commonly denoted by \(\circ\) or by \(\cdot\), which assigns to each pair \(\langle g, f \rangle\) of arrows with \(\operatorname{dom} (g) = \operatorname{cod} (f)\) an arrow \(\operatorname{dom} (f) \xrightarrow[]{g \circ f} \operatorname{cod} (g) \), which is called their composite, which is visually represented by the following commutative diagram:
+
+                    <div style="text-align: center;">
+                        <iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsMyxbMCwwLCJhIl0sWzEsMCwiYiJdLFsyLDAsImMiXSxbMCwxLCJmIl0sWzAsMiwiZyBcXGNpcmMgZiIsMix7ImN1cnZlIjoxfV0sWzEsMiwiZyJdXQ==&embed&theme=dark&scale=-0.5" width="432" height="176" style="border-radius: 8px; border: none;"></iframe>
+                    </div>
+                </div>
+
+                <div class="latex-env">
+                     <span class="env-title">Example 1.</span> 
+                The metacategory of sets consists of all sets \(X, Y, \dots\) as objects and all functions between sets, \(f: X \rightarrow Y\), as arrows, equipped with standard function composition.
+                </div>
+
+                <div class="latex-env">
+                    <span class="env-title">Example 2.</span>
+                 The metacategory of groups consists of all groups \(G, H, \dots\) as objects and all group homomorphisms, \(f: G \rightarrow H\), as arrows, equipped with standard function composition.
+                </div>
+
+                <p> 
+                Moreover, composition and the assignment of identities to objects are subject to the following axioms, understood to hold whenever the arrows in question are composable:
+                </p>
+                <ul>
+                    <li>(<em>Associativity</em>): For any composable arrows \(a \xrightarrow{f} b \xrightarrow{g} c \xrightarrow{h} d\), one always has \(h \circ (g \circ f) = (h \circ g) \circ f\).</li>
+                    <li>(<em>Identity Law</em>): For any arrows \(a \xrightarrow{f} b\) and \(b \xrightarrow{g} c\), the identity arrow \(\mathrm{id}_b\) satisfies \(\mathrm{id}_b \circ f = f\) and \(g \circ \mathrm{id}_b = g\).</li>
+                </ul>
+
+                <p> 
+                The associativity axiom admits the following diagrammatic representation:
+                </p>
+
+                    <div style="display: flex; justify-content: center; padding: 50px 0;">
+
+                        <!-- Inner wrapper handles the scale and the screen blend mode -->
+                        <div style="filter: invert(1) brightness(1.2); mix-blend-mode: screen; transform: scale(1.4); transform-origin: center center;">
+                            <script type="text/tikz">
+                                % I slightly increased the row/col sep here so the arrow labels have more breathing room when scaled
+                                \begin{tikzcd}[row sep=2.5cm, column sep=4.0cm]
+                                a \arrow[r, "h \circ (g \circ f) = (h \circ g) \circ f"] 
+                                  \arrow[d, "f"'] 
+                                  \arrow[dr, "g \circ f" near start] 
+                                  & d \\
+                                b \arrow[r, "g"'] 
+                                  \arrow[ur, "h \circ g" near end, crossing over] 
+                                  & c \arrow[u, "h"']
+                                \end{tikzcd}
+                            </script>
+                        </div>
+
+                    </div>
+
+
+                <p>
+                Both routes from \(a\) to \(d\) traced through the diagram, via \(b\) and via \(c\), compose to the arrow labeling the top edge, giving a diagrammatic rendering of associativity of composition. The identity law asserts that the identity arrow \(\mathrm{id}_b\) leaves composition unaffected; pictorially, this may be represented by the following commutative diagram:
+                </p>
+
+                <div style="text-align: center;">
+                    <!-- https://q.uiver.app/#q=WzAsNCxbMCwwLCJhIl0sWzEsMCwiYiJdLFsxLDEsImIiXSxbMiwxLCJjIl0sWzAsMSwiZiJdLFswLDIsImYiLDJdLFsxLDIsIlxcbWF0aHJte2lkfV9iIiwyXSxbMSwzLCJnIl0sWzIsMywiZyIsMl1d -->
+                    <iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsNCxbMCwwLCJhIl0sWzEsMCwiYiJdLFsxLDEsImIiXSxbMiwxLCJjIl0sWzAsMSwiZiJdLFswLDIsImYiLDJdLFsxLDIsIlxcbWF0aHJte2lkfV9iIiwyXSxbMSwzLCJnIl0sWzIsMywiZyIsMl1d&embed&theme=dark&scale=-0.5" width="432" height="304" style="border-radius: 8px; border: none;"></iframe>
+                </div>
+
+                <p>
+                Formally, a <i>commutative diagram</i> is defined as follows: let \(\Gamma\) be a diagram representing a collection of objects and arrows within a metacategory \(C\). We say that \(\Gamma\) commutes if, for any two objects \(x\) and \(y\) in \(\Gamma\), all directed paths of arrows connecting \(x\) to \(y\) yield the same composite arrow in \(C\). The two diagrams above are instances of this notion: in each, every directed path between a given pair of objects composes to the same arrow.
+                </p>
+
+                <p>
+                Furthermore, the identity arrow of an object \(b\) within a metacategory \(C\) is uniquely determined: if \(e\) and \(e'\) both satisfy the identity law for \(b\), then \(e = e \circ e' = e'\), the first equality using \(e\) as a left identity and the second using \(e'\) as a right identity. Consequently, it is common practice to identify this arrow directly with the object itself, establishing the notational equivalence \(b = \mathrm{id}_b\). This identification is licensed by the fact that identity arrows are themselves characterizable in purely arrow-theoretic terms --- as those arrows \(e\) satisfying \(e \circ f = f\) and \(g \circ e = g\) whenever the respective compositions are defined --- and stand in canonical bijective correspondence with the objects of the category. It thereby becomes possible to dispense with objects altogether, defining a category instead as a class of arrows equipped with a partial composition operation subject to the usual associativity and identity axioms, with objects recovered only derivatively, as the identity arrows themselves. The data for an arrows-only metacategory consists of a class of arrows \(A\), together with an operation that assigns to each composable pair \(\langle g, f \rangle\) their composite, namely, the arrow \(g \circ f\). In this context, one defines a unit (which will assume the role of the identity arrow) in \(A\) as follows:
+                </p>
+
+                <div class="latex-env">
+                    <span class="env-title">Definition 3 (Unit).</span>
+                    Let \(A\) be a class equipped with a partial binary operation of composition. An arrow \(u \in A\) is a unit in \(A\) if
+
+                    <ul>
+                        <li> \(u \circ u\) is defined and \(u \circ u = u\);
+                        <li> for every \(k \in A\), if \(u \circ k\) is defined then \(u \circ k = k\);
+                        <li>  for every \(k \in A\), if \(k \circ u\) is defined then \(k \circ u = k\).
+                    </ul>
+                </div>
+
+                <p>
+                An arrow \(u\) that already sits inside an objects-and-arrows metacategory as some \(\mathrm{id}_b\) is trivially its own left and right unit. So, to dispense with objects, this absorbing behavior is taken as the <i>definition</i> of the arrows that will play their role. With this established, one can formally define an arrows-only metacategory as follows: 
+                </p>
+
+                <div class="latex-env">
+                    <span class="env-title">Definition 4 (Arrows-only Metacategory).</span>
+                    An <i>arrows-only metacategory</i> is a class \(A\) equipped with a partial binary operation of composition, subject to the following axioms:
+                    <ul>
+                        <li> (<i>Associativity</i>): For all \(f, g, h \in A\), \(h \circ (g \circ f)\) is defined if and only if \(g \circ f\) and \(h \circ g\) are both defined; and in that case, \((h \circ g) \circ f\) is also defined and \(h \circ (g \circ f) = (h \circ g) \circ f\).
+                        <li> (<i>Existence of Units</i>): For every \(f \in A\), there exist units \(u, v\) (Definition 3) such that \(u \circ f = f\) and \(f \circ v = f\).
+                    </ul>
+                </div>
+
+                <p> 
+                The uniqueness of the identity arrow proved above for a fixed object \(b\) rested on \(e\) and \(e'\) already sharing the same domain and codomain, which made \(e \circ e'\) automatically defined. Once objects are gone, that composability can no longer be assumed and has to be extracted from the Associativity axiom itself.
+                </p>
+
+                            <!-- === Lemmas and Proofs === -->
+                <div class="latex-env" id="lem-unique-units">
+                    <span class="env-title">Lemma 1 (Uniqueness of units).</span> 
+                    Let \(f \in A\). If \(u\) and \(u'\) are units with \(u \circ f = f\) and \(u' \circ f = f\), then \(u = u'\). Likewise, if \(v\) and \(v'\) are units with \(f \circ v = f\) and \(f \circ v' = f\), then \(v = v'\).
+                </div>
+
+                <p><em>Proof.</em> We prove the first statement; the second is symmetric. Since \(u \circ f = f\), the expression \(u' \circ (u \circ f)\) equals \(u' \circ f\), which is defined by hypothesis. By Associativity, since \(u' \circ (u \circ f)\) is defined, so are \(u \circ f\) (already known) and \(u' \circ u\). As \(u'\) is a unit and \(u' \circ u\) is defined, \(u' \circ u = u\); as \(u\) is a unit and \(u' \circ u\) is defined, \(u' \circ u = u'\). Hence \(u = u' \circ u = u'\). &#9632;</p>
+
+                <div class="latex-env" id="def-domcod">
+                    <span class="env-title">Definition 1 (Domain and codomain).</span> 
+                    By the Existence of Units axiom and Lemma 1, for each \(f \in A\) there is a unique unit \(u\) with \(u \circ f = f\) and a unique unit \(v\) with \(f \circ v = f\). Write \(\mathrm{cod}(f) := u\) and \(\mathrm{dom}(f) := v\).
+                </div>
+
+                <div class="latex-env" id="lem-self">
+                    <span class="env-title">Lemma 2.</span> 
+                    If \(u\) is a unit, then \(\mathrm{cod}(u) = \mathrm{dom}(u) = u\).
+                </div>
+
+                <p><em>Proof.</em> Since \(u\) is a unit, \(u \circ u\) is defined and \(u \circ u = u\). Thus \(u\) itself satisfies the defining property of \(\mathrm{cod}(u)\), so \(u = \mathrm{cod}(u)\) by Lemma 1; the same equality gives \(u = \mathrm{dom}(u)\). &#9632;</p>
+
+                <div class="latex-env" id="lem-composability">
+                    <span class="env-title">Lemma 3 (Composability criterion).</span> 
+                    For \(f, g \in A\), \(g \circ f\) is defined if and only if \(\mathrm{cod}(f) = \mathrm{dom}(g)\).
+                </div>
+
+                <p><em>Proof.</em> (\(\Rightarrow\)) Suppose \(g \circ f\) is defined; write \(u := \mathrm{cod}(f)\), so \(u \circ f = f\). Then \(g \circ (u \circ f) = g \circ f\) is defined, so by Associativity \(u \circ f\) (known) and \(g \circ u\) are both defined. Since \(u\) is a unit and \(g \circ u\) is defined, \(g \circ u = g\); thus \(u\) is a unit satisfying \(g \circ u = g\), so \(u = \mathrm{dom}(g)\) by Lemma 1. Hence \(\mathrm{cod}(f) = \mathrm{dom}(g)\).</p>
+
+                <p>(\(\Leftarrow\)) Suppose \(\mathrm{cod}(f) = \mathrm{dom}(g) =: u\). Then \(u \circ f = f\) and \(g \circ u = g\) are both defined, so by Associativity \(g \circ (u \circ f)\) is defined. Since \(u \circ f = f\), this composite is \(g \circ f\); hence \(g \circ f\) is defined. &#9632;</p>
+
+                <div class="latex-env" id="thm-equivalence">
+                    <span class="env-title">Theorem 1 (Equivalence of the two axiomatizations).</span> 
+                    The objects-and-arrows axioms for a metacategory given above (Associativity and Identity Law, together with objects, domain, and codomain) and the arrows-only axioms of Definition [Arrows-only] determine the same class of structures:
+                    <ol>
+                        <li>If \(C\) is an objects-and-arrows metacategory, then \(\mathrm{Ar}(C)\), with its given partial composition, is an arrows-only metacategory whose units are exactly the identity arrows \(\{\mathrm{id}_b\}_{b \in \mathrm{Ob}(C)}\).</li>
+                        <li>If \((A, \circ)\) is an arrows-only metacategory, then \(\mathrm{Ob} := \{u \in A : u \text{ is a unit}\}\), \(\mathrm{Ar} := A\), \(\mathrm{dom}\) and \(\mathrm{cod}\) as in Definition 1, composition restricted to pairs with \(\mathrm{cod}(f) = \mathrm{dom}(g)\), and \(\mathrm{id}_u := u\), define an objects-and-arrows metacategory.</li>
+                        <li>These two constructions are mutually inverse.</li>
+                    </ol>
+                </div>
+
+                <p><em>Proof.</em> (1) The Associativity and Identity Law axioms of \(C\), together with the fact that \(g \circ f\) is defined exactly when \(\mathrm{cod}(f) = \mathrm{dom}(g)\), give the Associativity axiom of Definition [Arrows-only] directly. For Existence of Units, given \(f : a \to b\) in \(C\), the arrows \(\mathrm{id}_b\) and \(\mathrm{id}_a\) satisfy \(\mathrm{id}_b \circ f = f\) and \(f \circ \mathrm{id}_a = f\) by the Identity Law, and each \(\mathrm{id}_c\) is a unit: \(\mathrm{id}_c \circ \mathrm{id}_c = \mathrm{id}_c\) by the Identity Law applied to \(f = \mathrm{id}_c\), and \(\mathrm{id}_c\) absorbs on both sides by the same law. These identity arrows are the <em>only</em> units. Suppose \(u\) is a unit of \((\mathrm{Ar}(C), \circ)\); write \(u : a \to a'\) in \(C\). Since \(u \circ u\) is defined, \(a = a'\), so \(u : a \to a\). Now \(\mathrm{id}_a \circ u\) is defined, so \(\mathrm{id}_a \circ u = u\) by the Identity Law; but since \(u\) is a unit and \(\mathrm{id}_a \circ u\) is defined, \(\mathrm{id}_a \circ u = \mathrm{id}_a\) as well. Hence \(u = \mathrm{id}_a\).</p>
+
+                <p>(2) Associativity for the constructed data is immediate from Definition [Arrows-only] together with Lemma 3. The Identity Law, for \(f\) with \(\mathrm{id}_{\mathrm{cod}(f)} := \mathrm{cod}(f)\) and \(\mathrm{id}_{\mathrm{dom}(f)} := \mathrm{dom}(f)\), reads \(\mathrm{cod}(f) \circ f = f\) and \(f \circ \mathrm{dom}(f) = f\), which is exactly Definition 1.</p>
+
+                <p>(3) Starting from \(C\), converting and converting back recovers the same objects (by the classification of units in (1)), the same \(\mathrm{dom}\) and \(\mathrm{cod}\) (since \(C\)'s own \(\mathrm{id}_{\mathrm{dom}(f)}, \mathrm{id}_{\mathrm{cod}(f)}\) already satisfy Definition 1, hence coincide with the reconstructed ones by Lemma 1), and the same composition. Starting from \((A, \circ)\), converting and converting back recovers the same class \(A\), the same units (by (1)'s argument, a unit of the reconstructed metacategory is exactly \(\mathrm{id}_u = u\) for \(u\) an original unit), and the same \(\circ\), whose domain of definition is unchanged by Lemma 3. &#9632;</p>
+
+                <!-- === Analytical Proposition === -->
+                <p><strong>&para; 2.</strong> Incidentally, this "arrows-only" reformulation exemplifies the structuralist ethos underlying category theory, in which objects are characterized entirely by their relational properties within the network of arrows, rather than by any intrinsic internal content. Within this established foundation, one takes a <em>category</em> to be any interpretation of the metacategory axioms within a standard (ZFC) set-theoretic background. To formally define a category, we follow the same steps used to define a metacategory in the beginning of this section:</p>
+
+                <div class="latex-env">
+                    <span class="env-title">Definition 2 (Direct Graph).</span> 
+                    A direct graph is a set \(O\) of objects, a set \(A\) of arrows and two functions 
+                    \[ A \underset{\mathrm{cod}}{\overset{\mathrm{dom}}{\rightleftarrows}} O. \]
+                    The set of composable pairs of arrows is the set 
+                    \[ A \times_O A = \{ \langle g,f \rangle \mid g,f \in A \; \text{and} \; \operatorname{dom}(g) = \operatorname{cod}(f) \}, \] 
+                    denoted by product over O.
+                </div>
+
+                <p>Thus:</p>
+
+                <div class="latex-env" id="def-category">
+                    <span class="env-title">Definition 3 (Category).</span> 
+                    A category is a graph with two additional functions,
+                    \[
+                        \begin{aligned}
+                             O &\xrightarrow{\operatorname{id}} A, & A \times_O A &\xrightarrow{\circ} A, \\
+                             c &\longmapsto \operatorname{id}_c, & \langle g, f \rangle &\longmapsto g \circ f,
+                        \end{aligned}
+                    \]
+                    called identity and composition, such that, for all \(a \in O\) and composable pairs of arrows \(\langle f,g \rangle \in A \times_O A\), the <em>Associativity</em> and <em>Unit</em> axioms and following properties holds: \(\operatorname{dom}(\operatorname{id}_a) = a = \operatorname{cod}(\operatorname{id}_a)\), \(\operatorname{dom}(g \circ f) = \operatorname{dom}(f)\) and \(\operatorname{cod}(g \circ f) = \operatorname{cod}(g)\).
+                </div>
+
+                <p>
+                Conventionally, the collection of objects of a category \( \mathscr{C} \) is denoted by \(\operatorname{Ob}(\mathscr{C})\), and the collection of its arrows (henceforth, morphisms) by \(\operatorname{Mor}(\mathscr{C})\). For any two objects \(a,b \in \operatorname{Ob}(\mathscr{C})\), the collection of morphisms \(a \rightarrow b\), called a <i>hom-set</i>, is denoted by \(\operatorname{Hom}_{\mathscr{C}}(a,b) := \{ f \in \operatorname{Mor}(\mathscr{C}) \mid \operatorname{dom}(f) = a \text{ and } \operatorname{cod}(f) = b \}\).
+                </p>
+
+           
+                <div class="latex-env" id="rem-size">
+                    <span class="env-title">Remark 1 (Small and large categories).</span> 
+                    A category \(\mathscr{C}\) is <em>small</em> if \(\operatorname{Ob}(\mathscr{C})\) and \(\operatorname{Mor}(\mathscr{C})\) are both sets, and <em>large</em> otherwise; it is <em>locally small</em> if \(\operatorname{Hom}_{\mathscr{C}}(a,b)\) is a set for every \(a,b\), irrespective of the size of \(\operatorname{Ob}(\mathscr{C})\) itself. Mac Lane (the main resource for this section) resolves the resulting set-theoretic difficulties, e.g. \(\mathbf{Set}\) is locally small although its objects do not form a set, by working relative to a fixed universe. 
+                </div>
+
+                <div class="latex-env" id="rem-duality">
+                    <span class="env-title">Remark 2 (The duality principle).</span> 
+                    To every category \(\mathscr{C}\) one associates its <em>opposite</em> \(\mathscr{C}^{\mathrm{op}}\), with \(\operatorname{Ob}(\mathscr{C}^{\mathrm{op}}) := \operatorname{Ob}(\mathscr{C})\) and \(\operatorname{Hom}_{\mathscr{C}^{\mathrm{op}}}(a,b) := \operatorname{Hom}_{\mathscr{C}}(b,a)\), composition being inherited from \(\mathscr{C}\) in reverse order. Since the axioms of Definition 3 are symmetric under this reversal, Mac Lane's <em>duality principle</em> asserts that every valid statement of category theory, expressed solely via objects, morphisms, composition, and identities, remains valid upon systematically reversing all arrows, i.e. upon replacing \(\mathscr{C}\) by \(\mathscr{C}^{\mathrm{op}}\) throughout.
+                </div>
+
+                <div class="latex-env" id="ex-discrete">
+                    <span class="env-title">Example 1 (Discrete Category).</span> 
+                    A category \(\mathscr{D}\) is said to be <em>discrete</em> if its only morphisms are the identity morphisms. Formally, for every \(f \in \operatorname{Mor}(\mathscr{D})\), there exists an object \(a \in \operatorname{Ob}(\mathscr{D})\) such that \(f = \operatorname{id}_a\).
+                </div>
+
+                <div class="latex-env" id="ex-monoid">
+                    <span class="env-title">Example 2 (Monoid).</span> 
+                    A <em>monoid</em> can be equivalently defined as a category with a single object, say \(\star\). Consequently, any two morphisms in \(\operatorname{Hom}_{\mathscr{C}}(\star, \star)\) can be composed. Thus, a monoid is characterized as a set \(M = \operatorname{Mor}(\mathscr{C})\) equipped with a binary operation \(M \times M \rightarrow M\) (representing morphism composition) which is associative and admits an identity element. In other words, a monoid is a semigroup with an identity element. 
+                </div>
+
+                <div class="latex-env" id="ex-groupoid">
+                    <span class="env-title">Example 3 (Groupoid).</span> 
+                    A category \(\mathscr{G}\) is a <em>groupoid</em> if every morphism is invertible: for each \(f : a \to b\) there exists \(f^{-1} : b \to a\) with \(f^{-1} \circ f = \operatorname{id}_a\) and \(f \circ f^{-1} = \operatorname{id}_b\). A discrete category (Example 1) is trivially a groupoid, each identity being its own inverse; a one-object groupoid is precisely a <em>group</em>, exactly as a one-object category is a monoid (Example 2). A groupoid is thus the common refinement of Examples 1 and 2, obtained by additionally requiring invertibility.
+                </div>
+
+                <!-- === Analytical Proposition === -->
+                <p><strong>&para; 2.</strong> Furthermore, a small category can be elegantly defined as a <em>monoid object</em> in the category of directed graphs (or spans) over a fixed vertex set \(O = \operatorname{Ob}(\mathscr{C})\).</p>
+
+                <div class="latex-env" id="prop-internal-monoid">
+                    <span class="env-title">Proposition 1 (Categories as internal monoids).</span> 
+                    Let \(\mathscr{C}\) be a small category (Remark 1), and set \(O := \operatorname{Ob}(\mathscr{C})\), \(M := \operatorname{Mor}(\mathscr{C})\), equipped with \(s := \operatorname{dom}\), \(t := \operatorname{cod} : M \to O\). Form the fibered product (or the pullback) of \(M\) with itself over \(O\),
+                    \[ M \times_O M := \{ (g,f) \in M \times M \mid s(g) = t(f) \}, \]
+                    the set of composable pairs, and, iterating, the set \(M \times_O M \times_O M\) of composable triples. Definition 3 then states precisely that:
+                    <ul>
+                        <li>(<em>Composition</em>) there is a map \(\circ : M \times_O M \to M\);</li>
+                        <li>(<em>Associativity</em>) the two induced maps \(M \times_O M \times_O M \to M\), given by \((h,g,f) \mapsto (h \circ g) \circ f\) and \((h,g,f) \mapsto h \circ (g \circ f)\), coincide;</li>
+                        <li>(<em>Identity</em>) there is a map \(\operatorname{id} : O \to M\) such that \(\operatorname{id}_b \circ f = f = f \circ \operatorname{id}_a\) whenever \(s(f)=a\), \(t(f)=b\).</li>
+                    </ul>
+                    Equivalently: \(M\), together with \(s,t : M \to O\), is a <em>monoid object</em> in the category \(\mathbf{Graph}(O)\) of graphs with fixed vertex set \(O\) (equivalently, endo-spans \(O \xleftarrow{s} M \xrightarrow{t} O\) in \(\mathbf{Set}\)), with respect to the monoidal product \(\times_O\) and unit the identity span \(O \xleftarrow{\operatorname{id}} O \xrightarrow{\operatorname{id}} O\). When \(O\) is a singleton, \(\times_O\) reduces to the ordinary product \(\times\), and one recovers exactly Example 2; in other words, a small category is, precisely, the many-object generalization of a monoid.
+                </div>
+
+               
+                <p><strong>&para; 3.</strong> Beyond these structural and somewhat fundamental examples, category theory furnishes the natural language for several fields in physics and mathematics, such as constructions central to both quantum mechanics formalism and quantization, both geometric and algebraic.</p>
+
+                <div class="latex-env" id="ex-hilb">
+                    <span class="env-title">Example 4 (Category of Hilbert Spaces).</span> 
+                    In the categorical formulation of quantum mechanics, one studies the category \(\mathbf{Hilb}\), whose objects are complex Hilbert spaces and whose morphisms are bounded linear operators. It carries a symmetric monoidal structure given by the (completed) Hilbert-space tensor product \(\otimes\), essential for describing composite quantum systems and entanglement. Moreover, the assignment \(f \mapsto f^\dagger\) of the adjoint operator defines, in the language of Remark 2, an identity-on-objects functor \((-)^\dagger : \mathbf{Hilb}^{\mathrm{op}} \to \mathbf{Hilb}\) with \((-)^{\dagger\dagger} = \operatorname{id}\); this involutive structure, standard in categorical quantum mechanics, singles out the physically distinguished self-adjoint morphisms (observables) and unitary isomorphisms (symmetries).
+                </div>
+
+                <div class="latex-env" id="ex-symp">
+                    <span class="env-title">Example 5 (Symplectic Category and Lagrangian Correspondences).</span> 
+                    Weinstein's <em>symplectic category</em> \(\mathbf{Symp}\) has as objects symplectic manifolds \((M,\omega)\). A morphism from \((M_1,\omega_1)\) to \((M_2,\omega_2)\) is a <em>canonical relation</em>: a Lagrangian submanifold \(L \subset \overline{M_1} \times M_2\), where \(\overline{M_1} := (M_1,-\omega_1)\). Given \(L_1 \subset \overline{M_1} \times M_2\) and \(L_2 \subset \overline{M_2} \times M_3\), their composite is defined, as for ordinary relations, by
+                    \[ L_2 \circ L_1 := \{ (x,z) \mid \exists\, y \in M_2,\ (x,y)\in L_1,\ (y,z)\in L_2 \}, \]
+                    which is Lagrangian provided the defining fibered product is transverse (or clean); absent this hypothesis \(L_2 \circ L_1\) may fail even to be a smooth submanifold, so that \(\mathbf{Symp}\) satisfies Definition 3 only generically — a defect repaired by Wehrheim and Woodward through the formal adjunction of composites. The symplectic category nonetheless furnishes the intended domain of a (still largely conjectural) <em>quantization functor</em> \(Q : \mathbf{Symp} \to \mathbf{Hilb}\), assigning to each classical phase space a Hilbert space of quantum states.
+                </div>
+
+                <div class="latex-env" id="ex-cstar">
+                    <span class="env-title">Example 6 (Category of C*-Algebras and Gelfand--Naimark Duality).</span> 
+                    Let \(\mathbf{C^*Alg}\) denote the category of unital C*-algebras and unital *-homomorphisms. Its full subcategory \(\mathbf{CommC^*Alg}\) of commutative unital C*-algebras is, by the Gelfand--Naimark theorem, dually equivalent to the category \(\mathbf{CompHaus}\) of compact Hausdorff spaces: the functor \(C(-) : \mathbf{CompHaus}^{\mathrm{op}} \to \mathbf{CommC^*Alg}\), sending \(X\) to its algebra of continuous complex-valued functions, is an equivalence. This is a concrete instance of the duality principle (Remark 2), in which \(\mathbf{CompHaus}^{\mathrm{op}}\) is equivalent to a category of an entirely different, algebraic nature, and it renders precise the passage, central to quantization, from a commutative algebra of classical observables to a possibly noncommutative one. Every Hilbert space \(H\) yields the C*-algebra \(B(H)\) of bounded operators; although \(H \mapsto B(H)\) is not functorial on all of \(\mathbf{Hilb}\), it restricts to a functor from the wide subgroupoid of \(\mathbf{Hilb}\) whose morphisms are unitary isomorphisms to the subgroupoid of \(\mathbf{C^*Alg}\) spanned by *-isomorphisms, via \(u \mapsto (T \mapsto uTu^{-1})\), thereby relating this example to Example 4.
+                </div>
+
+                <div class="latex-env">
+                    <span class="env-title">Example 7 (Cobordism Category and TQFTs).</span> 
+                    Fundamental to the axiomatization of Topological Quantum Field Theories (TQFTs) is the cobordism category, denoted by \(\mathbf{Cob}_n\). The objects are closed, oriented \((n-1)\)-dimensional manifolds, and the morphisms are equivalence classes of \(n\)-dimensional oriented cobordisms between them. Composition of morphisms corresponds to the topological gluing of manifolds along their boundaries.
+                </div>
+
+                <!-- === Functors === -->
+                <p><strong>&para; 4.</strong> Until now, we have worked with the notion of maps between objects within a category, namely, the aforementioned <em>morphisms</em> (or, more abstractly, <em>arrows</em>, in the case of metacategories). There is, however, a broader notion: that of morphisms between categories themselves. Such morphisms are called <em>functors</em>. Formally, we define:</p>
+
+                <div class="latex-env" id="def-functor">
+                    <span class="env-title">Definition 4 (Functor).</span> 
+                    Let \(\mathscr{C}\) and \(\mathscr{D}\) be categories. A functor \(\mathrm{F}: \mathscr{C} \rightarrow \mathscr{D}\) with \(\operatorname{dom}(\mathrm{F}) = \mathscr{C}\) and \(\operatorname{cod}(\mathrm{F}) = \mathscr{D}\) consists of a pair of functions \((\mathrm{F}_\mathrm{ob}, \mathrm{F}_{\mathrm{ar}})\), where \(\mathrm{F}_\mathrm{ob}\) acts on elements of \(\operatorname{Ob}(\mathscr{C})\) as \(T(a) = Ta \in \operatorname{Ob}(\mathscr{D})\), and \(\mathrm{F}_\mathrm{ar}\) acts on elements of \(\operatorname{Mor}(\mathscr{C})\) as \((a \xrightarrow{}[f] a') \mapsto (\mathrm{F}f:\mathrm{F}a \rightarrow \mathrm{F}c')\) in such a way that 
+                    \[ \mathrm{F} \operatorname{id}_\mathscr{C} = \operatorname{id}_{T_\mathscr{C}} \quad \text{and} \quad \mathrm{F} (g \circ f) = \mathrm{F}g \circ \mathrm{F}f \] 
+                    for any composable pair \(\langle f, g \rangle \in \operatorname{Mor}(\mathscr{C})\).
+                </div>
+
+                <div class="latex-env">
+                    <span class="env-title">Remark 3 (Notation).</span> 
+                    The use of the notation \(\mathrm{F}_\mathrm{ob}\) and \(\mathrm{F}_\mathrm{ar}\) were due to pedagogical purposes. But, henceforth, and to avoid cumbersome notation, we will refer to both as \(\mathrm{F}\).
+                </div>
+
+                <p>Analogously, a functor can be described in an "<em>arrow only</em>" framework, where \(\mathrm{F}\) is treated as a function that maps arrows \(f \in \operatorname{Mor}(\mathscr{C})\) to arrows \(\mathrm{F}f \in \operatorname{Mor}(\mathscr{D})\), mapping identity onto identity and, for each composable pair \(f \circ g \in \operatorname{Mor}(\mathscr{C})\), one has a associated composable pair \(\mathrm{F}f \circ \mathrm{F}g \in \operatorname{Mor}(\mathscr{D})\).</p>
+
+                <div class="latex-env">
+                    <span class="env-title">Example 8 (Quantization as a functor).</span> 
+                    The symplectic category \(\mathbf{Symp}\) has symplectic manifolds as objects and, in the construction described above, suitably composable Lagrangian correspondences as morphisms. A quantization procedure may be organized as a functor \(Q:\mathbf{Symp}\longrightarrow\mathbf{Hilb}\). At the level of objects, \(Q\) assigns to a classical phase space \((M,\omega)\) a Hilbert space \(Q(M,\omega)\) of quantum states. At the level of morphisms, a Lagrangian correspondence \(L:M_1\longrightarrow M_2\) is assigned an operator \(Q(L):Q(M_1,\omega_1)\longrightarrow Q(M_2,\omega_2)\). An essential requirement is that they respect the categorical structure:
+                    \[ Q(1_M)=1_{Q(M)}, \qquad Q(L_2\circ L_1)=Q(L_2)\circ Q(L_1) \]
+                    whenever the composite \(L_2\circ L_1\) is defined. Thus the functor turns composition of classical processes into composition of quantum operators. It is worth emphasizing that the notation \(Q:\mathbf{Symp}\to\mathbf{Hilb}\) denotes a particular quantization functor only after a quantization construction satisfying these properties has been specified. The categorical point is purely abstract, and it aims only to structurally organize and establish the construction of such functor. 
+                </div>
+
+                <div class="latex-env">
+                    <span class="env-title">Example 9 (Topological quantum field theory).</span> 
+                    Consider the cobordism category \(\mathbf{Cob}_n\), whose objects are closed oriented \((n-1)\)-dimensional manifolds and whose morphisms are \(n\)-dimensional oriented cobordisms, up to the chosen notion of equivalence. An \(n\)-dimensional topological quantum field theory is organized as a symmetric monoidal functor \(Z:\mathbf{Cob}_n\longrightarrow\mathbf{Hilb}\). At the object level, \(\Sigma\longmapsto Z(\Sigma)\) assigns a Hilbert space to each spatial manifold. At the morphism level, a cobordism \(M:\Sigma_0\longrightarrow\Sigma_1\) is assigned an operator \(Z(M):Z(\Sigma_0)\longrightarrow Z(\Sigma_1)\). Gluing cobordisms corresponds to composition of operators:
+                    \[ Z(M_2\circ M_1) = Z(M_2)\circ Z(M_1), \]
+                    and the identity cylinder on \(\Sigma\) is sent to the identity operator on \(Z(\Sigma)\). The monoidal structure adds further compatibility. Disjoint union of manifolds is sent to the tensor product of Hilbert spaces,
+                    \[ Z(\Sigma_1\sqcup\Sigma_2) \cong Z(\Sigma_1)\otimes Z(\Sigma_2), \]
+                    and disjoint union of cobordisms is sent to tensor product of the corresponding operators. 
+                </div>
+
+                <p><strong>&para; 5.</strong> There are some special kinds of functors worth mentioning before we venture forth:</p>
+
+                <ul>
+                    <li>a functor \(\mathrm{F}: \mathscr{C} \rightarrow \mathscr{D}\) is <em>forgetful</em> when it forgets some algebraic structure(s) of objects of \(\mathscr{C}\). For example, the functor \(U: \mathrm{Grp} \rightarrow \operatorname{Set}\) assigns to each group \(G\) the set \(UG\) of its elements, forgetting the multiplication --- and, hence, the group structure --- defined on \(G\).</li>
+                    <li>a functor \(\mathrm{F}: \mathscr{C} \rightarrow \mathscr{D}\) is <em>full</em> when, for each pair \(c, c' \in \operatorname{Ob}(\mathscr{C})\) and for every arrow \(\mathrm{F}c \xrightarrow{g} \mathrm{F}c'\), there is a arrow \(c \xrightarrow{f} c' \in \operatorname{Mor}(\mathscr{C})\) with \(g = \operatorname{F}f\).</li>
+                    <li>a functor \(\mathrm{F}: \mathscr{C} \rightarrow \mathscr{D}\) is <em>faithful</em> when, to every pair \(c, c' \in \operatorname{Ob}(\mathscr{C})\) and to every pair \(c \xrightarrow{f_1, f_2} c'\in \operatorname{Mor}(\mathscr{C})\), the equality \(\operatorname{F}c \xrightarrow{\mathrm{F}f_1 = \mathrm{F}f_2} \operatorname{F}c'\) implies \(f_1 = f_2\). An example of functor that is both full and faithful, is the functor \(2\text{-}\mathrm{Vects} \xrightarrow{\mathrm{F}} \mathrm{Ch}_{[-1,0]}(\mathrm{Vects})\). In particular, \(\mathrm{F}\) is also an <em>almost surjective</em> functor, and establishes the equivalence that \(\mathrm{F}\) is an equivalence of categories \(\Leftrightarrow\) \(V^\bullet \xrightarrow{f} W^\bullet\) is a quasi-isomorphism, a particular case of the Dold-Kan theorem.</li>
+                </ul>
+
+                <!-- === Natural Transformations === -->
+                <div class="latex-env" id="def-natural-trans">
+                    <span class="env-title">Definition 5 (Natural Transformation).</span> 
+                    Consider two functors \(\mathrm{F}, \mathrm{G}: \mathscr{C} \rightarrow \mathscr{D}\). A <em>natural transformation</em> \(\eta: \mathrm{F} \rightarrow \mathrm{G}\) is a function which assigns to each \(c \in \operatorname{Ob}(\mathscr{C})\) an arrow \(\mathrm{F}c \xrightarrow{\eta_c} \mathrm{G}c \in \operatorname{Mor}(\mathscr{D})\) in such a way that every arrow \(c \xrightarrow{f} c' \in \operatorname{Mor}(\mathscr{C})\) yields the commutative diagram:
+
+                    <!-- Flexbox container for TikZ naturality square -->
+                    <div style="display: flex; justify-content: center; padding: 50px 0;">
+                        <div style="filter: invert(1) brightness(1.2); mix-blend-mode: screen; transform: scale(1.4); transform-origin: center center;">
+                            <script type="text/tikz">
+                                \begin{tikzcd}[row sep=2.5cm, column sep=3.5cm]
+                                \operatorname{F}c \arrow[r, "\eta_c"] \arrow[d, "\operatorname{F}f"'] & \operatorname{G}c \arrow[d, "\operatorname{G}f"] \\
+                                \operatorname{F}c' \arrow[r, "\eta_{c'}"] & \operatorname{G}c'
+                                \end{tikzcd}
+                            </script>
+                        </div>
+                    </div>
+
+                    In particular, a natural transformation \(\eta\) with every component \(\eta_c\) invertible in \(\mathscr{D}\) is called a <em>natural isomorphism</em>, \(\eta: \operatorname{F} \cong \operatorname{G}\).
+                </div>
+
+                <p><strong>&para; 6.</strong> Natural transformations may also be examined from another, equally interesting perspective. If one considers that functors create pictures of their source category within a target category, each picture being denoted by the functor itself, then \(\mathrm{F}\) is a picture of \(\operatorname{Ob}(\mathscr{C})\) and \(\operatorname{Mor}(\mathscr{C})\) in \(\mathscr{D}\), and \(\mathrm{G}\) is likewise a picture of \(\operatorname{Ob}(\mathscr{C})\) and \(\operatorname{Mor}(\mathscr{C})\) in \(\mathscr{D}\). A natural transformation may then be regarded as a collection of translations between such pictures, where the maps \(\eta_a, \eta_b, \eta_c, \dots\) as defined above act as the translators, rendering the corresponding collection of commutative diagrams. This idea is formally expressed in the following diagram, known as the naturality prism:</p>
+
+
+
+
+
+
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</body>
+</html>

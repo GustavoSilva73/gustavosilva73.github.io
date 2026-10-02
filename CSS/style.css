@@ -31,6 +31,33 @@ body, html {
     box-sizing: inherit;
 }
 
+.diagram-center svg {
+    width: 100%;
+    max-width: 500px; /* Adjust this value to perfectly match your Quiver iframes */
+    height: auto;
+    margin: 10px 0;   /* Adds breathing room so it doesn't touch the text below */
+}
+
+/* Base container for all LaTeX-like environments (Definitions, Theorems, Lemmas) */
+.latex-env {
+    margin: 1.5em 0;
+    padding: 10px 15px;
+    background-color: rgba(255, 255, 255, 0.03); /* Subtle contrast against the dark background */
+    border-left: 3px solid var(--chalk-dim, #888); /* Provides a clear visual boundary */
+    line-height: 1.6;
+}
+
+/* Replicates the bolding of the environment title and optional argument */
+.env-title {
+    font-weight: bold;
+    margin-right: 0.5em;
+}
+
+/* Optional: If you want to replicate \begin{theorem} where the body text is italicized */
+.latex-theorem .env-body {
+    font-style: italic;
+}
+
 /* --- i3wm Style Tiling Grid --- */
 .desktop-grid {
     display: grid;
