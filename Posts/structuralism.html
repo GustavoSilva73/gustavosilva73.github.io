@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Post Title - The Ludens Topoï</title>
+    <title>Reinterpreting 𝑀𝑎𝑡ℎ𝑒𝑠𝑖𝑠- The Ludens Topoï</title>
     
     <!-- Assuming this is saved inside the Posts/ folder -->
     <link rel="stylesheet" href="../CSS/style.css">
@@ -22,7 +21,7 @@
     <div class="desktop-grid">
         
         <!-- Sidebar / Navigation Hub -->
-        <div class="window sidebar-window">
+              <div class="window sidebar-window">
             <div class="title-bar">
                 <span>navigation_hub.exe</span>
                 <div class="title-bar-controls">
@@ -30,27 +29,36 @@
                 </div>
             </div>
             <div class="content-area">
-                <h2>Directories</h2>
-                <ul class="nav-menu">
-                    <li><a href="../index.html">~/home/welcome</a></li>
-                    <li><a href="philosophy.html">~/docs/philosophy</a></li>
-                    <li><a href="physics.html">~/docs/physics</a></li>
-                    <li><a href="mathematics.html">~/docs/mathematics</a></li>
-                    <li><a href="game-studies.html">~/docs/game-studies</a></li>
-                </ul>
-                
+                <!-- === NOVA PARTE QUE VAIS COLAR AQUI === -->
+                 <h2>~/sys/nav</h2>
+                    <ul class="nav-menu" style="list-style: none; padding-left: 0; margin-bottom: 40px; font-family: monospace;">
+                        <li><a href="index.html">~/home/welcome</a></li>
+                        <li><a href="Posts/about.html">~/sys/whoami</a></li>
+                    </ul>
+
+                <h2>~/logs/recent</h2>
+                    <ul class="terminal-index">
+                        <li>
+                            <span class="post-date">2026-YY-XX</span>
+                            <a href="Posts/structuralism.html" class="post-title">French Structuralism and Foundations of Mathematics</a>
+                            <span class="post-flags">[math &cap; phil]</span>
+                        </li>
+                    </ul>
+                    
                 <h2 style="margin-top: 40px;">Links</h2>
                 <ul class="nav-menu">
                     <li><a href="https://github.com/gustavosilva73" target="_blank">GitHub</a></li>
                     <li><a href="#">PhilPapers</a></li>
+                    <li><a href="#">Arxiv</a></li>
+                    <li><a href="#">Repositorio USP</a></li>
                 </ul>
-            </div>
+            
+              </div>
         </div>
-
         <!-- Main Content Window -->
         <div class="window main-window">
             <div class="title-bar">
-                <span>vim post_title.md</span>
+                <span>vim structuralism.md</span>
                 <div class="title-bar-controls">
                     <div class="btn"></div><div class="btn"></div><div class="btn"></div>
                 </div>
@@ -58,7 +66,84 @@
             <div class="content-area">
                 <h2>Structure, Ontology, and the Quarrel over the Foundations of Mathematics</h2>
                 <p><em>Published: [YYYY-MM-DD]</em></p>
-                
+
+                <h2>Introduction: Reinterpretin <i>Mathesis</i></h2>
+
+            <p>
+               <span class="lettrine" style="float: left; font-size: 3em; line-height: 1; padding: 0.1em 0.15em; margin-right: 0.15em; background-color: --win98-bg; color: #ebdbb2; font-family: serif;">C</span>ontemporary dispute over the foundations of mathematics, between the set-theoretic orthodoxy of ZFC and the structural alternatives of category theory and homotopy type theory, invites a reconsideration of the early modern idea of a <em>mathesis universalis</em>, that is, of a universal science whose unity may be sought either in the objects it treats or in the relations that order them. This work then asks, as a guiding hypothesis, whether the classical idea may be reinterpreted in the light of the modern debate. The reinterpretation begins at the threshold of modernity, with the dissatisfaction from which Descartes' formulation arose. Seeking the necessary method for discovering the truth, Descartes recalls the ancients and questions their rationale for treating a knowledge of mathematics, however rudimentary, as a <em>conditio sine qua non</em> for embarking upon the intellectual life.
+            </p>
+
+            <p>
+                Yet, he harboured a profound dissatisfaction with the prevailing state of these disciplines; perceiving the arithmetic and geometry of his time as a disjointed collection of arbitrary rules, he found them lacking in a deeper methodological unity. Consequently, he abstracts away from the vulgar mathematics of his epoch &mdash; comprising rules applied to those &ldquo;empty problems with which arithmeticians and geometers are wont to amuse themselves&rdquo; &mdash; and recovers a mathematics that contains &ldquo;the primary rudiments of human reason&rdquo; and which, as a discipline, is capable of extending &ldquo;to the eliciting of true results on every subject&rdquo; [Descartes, 1985]. That is to say, Descartes arrives at a mathematics which, as a method, is in a certain sense more general than the vulgar one, concerning itself with whatever can be investigated insofar as it involves order and measure, independently of whether its objects are numbers, geometric figures, stars, sounds, or other things. Furthermore, as a discipline, it proves superior in utility and facility to the other mathematical sciences &mdash; such as astronomy, optics, and mechanics &mdash; by subordinating their particular investigations to the more general examination of order and measure. This subordination is evident in the fact that it encompasses the same objects as these particular sciences, while extending beyond them to many others. It is this foundational science<a href="#fn1" id="ref1"><sup>1</sup></a> that Descartes terms <em>Mathesis Universalis</em> &mdash; or, Universal Mathematics. However, as noted by Rabouin in [Rabouin, 2009], the concept of <em>mathesis universalis</em> appears before Descartes within philosophical reflections on the unity of mathematics, rather than the mathematization of nature. This concept is explicitly linked &mdash; primarily by Descartes himself &mdash; to a long tradition of problems. It does not accompany a claim of a conceptual rupture, however. Instead, this reflection is situated <em>within</em> the heritage of the Ancients, above all Proclus, whose discussion of the problem develops in opposition to a solution previously proposed by Aristotle.
+            </p>
+
+            <p>
+                Such a Cartesian concept of <em>mathesis universalis</em>, embedded in the geometrical concepts of his time (despite his critique of their lack of a general method, as outlined), constitutes a first structural intellectualisation of extension &mdash; that is, of &ldquo;whatever has length, breadth and depth&rdquo; [Descartes, 1985] &mdash;, and thus remained undisturbed for a considerable period of time. Yet the advent of the differential calculus in the seventeenth century brought a crisis into the concept of the continuum. Beyond the appearance of infinitesimal quantities, mathematical determination came to depend upon relations between quantities in variation. In the (Leibnizian) expression for a derivative
+            </p>
+
+            
+            <p>\[\frac{dy}{dx},\]</p>
+           
+
+            <p>
+                neither \(dy\) nor \(dx\) possesses an independent determination sufficient for the mathematical operations in which they figure, it is unsurprising that Newton was compelled to conceptualise these quantities dynamically, designating them as `fluxions' and `fluents' [Newton, 1687]. The continuum could no longer be exhausted by determinate extension and magnitude, and had to be apprehended through variation, dependence, and limiting relations. This compelled the post-Cartesian reconsideration of Descartes' methodological project. Driven by this shift, Leibniz sought to extend the universality of <em>mathesis</em> beyond the domain of magnitude, connecting it with a general logic of relations. The universal was consequently displaced from quantities, that is, from measurement, towards the formal relations through which terms are necessarily connected. In his correspondence with Arnauld, Leibniz writes that &ldquo;there must always be some basis for the connection between the terms of a proposition, and it is to be found in their concepts&rdquo; [Leibniz, 1686]. In this sense, <em>mathesis universalis</em> is transfigured into an <em>ars combinatoria</em>, in which the intelligibility of a system resides in the necessary relational structure through which its terms are constituted.
+            </p>
+
+            <p>
+                Later, this conception of <em>mathesis</em> embraced by Leibniz was construed [Husserl, 1936; Koyré, 1939; Foucault, 1966] as an idea of mathematising nature; nevertheless, Foucault's archaeology of the classical <em>épistémè</em> retrospectively clarifies the significance of this transfiguration. He diagnoses not only the reordering of the relation between measure and order, such that problems of measure can ultimately be reduced to problems of order, but also clarifies that <em>mathesis universalis</em>, understood as a general science of order and measure, was never primarily aimed at the mathematization of nature [Foucault, 1966]:
+            </p>
+
+            <blockquote class="quotation"  style="font-size: 0.65em; margin: 20px 40px; color: var(--chalk-dim);">
+                Mais ni cet effort ni les essais du mécanisme ne doivent être confondus avec le rapport que tout le savoir classique, en sa forme la plus générale, entretient avec la <em>mathesis</em>, entendue comme science universelle de la mesure et de l'ordre. Sous les mots vides, obscurément magiques, d'« influence cartésienne » ou de « modèle newtonien », les historiens des idées ont l'habitude de mêler ces trois choses, et de définir le rationalisme classique par la tentation de rendre la nature mécanique et calculable. Les autres &mdash; les demi-habiles &mdash; s'efforcent de découvrir sous ce rationalisme le jeu de « forces contraires » : celles d'une nature et d'une vie qui ne se laissent réduire ni à l'algèbre ni à la physique du mouvement et qui maintiennent ainsi, au fond du classicisme, la ressource du non rationalisable. Ces deux formes d'analyse sont aussi insuffisantes l'une que l'autre. Car le fondamental, pour l'<em>épistémè</em> classique, ce n'est ni le succès ou l'échec du mécanisme, ni le droit ou l'impossibilité de mathématiser la nature, mais bien un rapport à la <em>mathesis</em> qui, jusqu'à la fin du XVIII<sup>e</sup> siècle, demeure constant et inaltéré. Ce rapport présente deux caractères essentiels. Le premier c'est que les relations entre les êtres seront bien pensées sous la forme de l'ordre et de la mesure, mais avec ce déséquilibre fondamental qu'on peut toujours ramener les problèmes de la mesure à ceux de l'ordre.
+            </blockquote>
+
+            <p>
+                Cavaillès later formulates the same insight in the words &ldquo;Le lien nécessaire aperçu entre deux termes garantit l'ensemble&rdquo; [Cavaillès, 1947], presenting the extension of a system through iteration and combination as at once a source of novelty and a guarantee of intelligibility. In this sense, the Leibnizian transformation that Foucault retrospectively identifies as characteristic of the classical <em>mathesis</em> receives, in Cavaillès, a more explicitly structural and dynamic formulation, as what guarantees the unity of a system is not the independent determination of its terms, but the necessary relations through which the system is extended and transformed.
+            </p>
+
+            <p>
+                This structuralist character, which Leibniz imparted to the <em>mathesis universalis</em>, nevertheless encountered an obstacle in the very foundations of the discipline that had inspired it. The advent of set theory &mdash; grounded in the Zermelo&ndash;Fraenkel axioms together with the Axiom of Choice &mdash; sought to formalise mathematics and to resolve many of its conceptual difficulties in the early twentieth century. In doing so, it brought to light an extensional ontology that grounded mathematics in a bottom-up framework: simpler and more fundamental objects were defined first, and more complex mathematical objects were then constructed from them. Such an ontology was substantial in essence rather than structural. Here, a number &mdash; say, \(n\) &mdash; is defined and entirely characterized by its internal constitution, namely
+            </p>
+
+           
+            <p>\[n = \left\{ \emptyset,\, \{\emptyset\},\, \{\emptyset,\{\emptyset\}\},\, \ldots,\, \{0,1,\ldots,n-2\} \right\}.\]</p>
+            
+
+            <p>
+                where \(\emptyset\) denotes the empty set. For example, for the natural numbers \(0, 1, 2\) and \(3\), one have \(0 = \emptyset\), \(1 = \{\emptyset\} = \{0\}\), \(2 = \{\emptyset, \{\emptyset\}\} = \{0, 1\}\) and \(3 = \{\emptyset, \{\emptyset\}, \{\emptyset, \{\emptyset\}\}\} = \{0,1,2\}\), and so on, <em>ad infinitum</em>, within the von Neumann framework. Consequently, an object is reduced to its extensional composition; its relations to other mathematical objects, or its role within the broader mathematical structure it inhabits or even defines, are rendered strictly secondary to this atomic, bottom-up characterisation. This foundational framework of mathematics remained largely unchallenged for some time, but already in the late nineteenth (with regard to <em>naive</em> set theory) and early twentieth centuries, the paradoxes associated with Cantor [Cantor, 1895], Burali-Forti [Burali-Forti, 1897], Russell [Russell, 1903], and Frege [Frege, 1903] exposed serious difficulties in the unrestricted conception of sets and in the logical principles underlying such foundations. Later, Gödel's incompleteness theorems [Gödel, 1931] revealed fundamental limitations on what sufficiently expressive formal systems can establish about themselves, while Benacerraf [Benacerraf, 1965] raised a different, albeit more important to the present work, philosophical problem concerning the identification and ontology of mathematical objects, arguing that the natural numbers cannot be uniquely identified with any particular set-theoretic construction. The latter reintroduces a structuralist motif to the discussion, as it entails that numbers are merely positions within an abstract structure [Benacerraf, 1965],
+            </p>
+
+            <blockquote class="quotation" style="font-size: 0.65em; margin: 20px 40px; color: var(--chalk-dim);">
+                [&dots;] numbers are not objects at all, because in giving the properties (that is, necessary and sufficient) of numbers you merely characterize an abstract structure &mdash; and the distinction lies in the fact that the "elements" of the structure have no properties other than those relating them to other "elements" of the same structure. That a system of objects exhibits the structure of the integers implies that the elements of that system have some properties not dependent on structure.
+            </blockquote>
+
+            <p>
+                These fractures within the set-theoretic foundations of mathematics consequently compelled mathematicians to seek alternatives that would allow them to rigorously maintain and expand the theoretical corpus of the discipline, whilst staunching these newly exposed vulnerabilities. As noted above, Category Theory emerged as one such alternative. Initially proposed by Eilenberg and Mac Lane [Eilenberg &amp; Mac Lane, 1945] to address problems in algebraic topology &mdash; or, more precisely, to study natural transformations, as Mac Lane himself famously observed, "Categories have been defined in order to be able to define functors, and functors have been defined in order to be able to define natural transformations" [Mac Lane, 1998]. Over time, Category Theory acquired a degree of autonomy, one that freed it from being perceived as a mere heuristic device or organisational tool within the set-theoretic paradigm. It thereby assumed a central position in the discourse on the foundations of mathematics, a paradigm shift fundamentally driven by the advent of topos theory. While the concept of a topos was initially conceived by Grothendieck for algebraic geometry [Artin, Grothendieck, &amp; Verdier, 1972], it was Lawvere and Tierney who rigorously developed elementary topos theory in the late 1960s and early 1970s [Lawvere, 1970; Tierney, 1972]. By elegantly abstracting the properties of the category of sets, topos theory demonstrated that mathematics could be firmly grounded upon categorical structures and their internal logic &mdash; often intuitionistic &mdash; thereby offering a robust, self-contained alternative to classical Zermelo-Fraenkel set theory. More recently, Homotopy Type Theory stood as yet another structuralist alternative to the extensional set-theoretic foundations of mathematics. As the name suggests, Homotopy Type Theory combines Type Theory, first introduced by Bertrand Russell [Russell, 1903; Russell, 1908] in order to cope with some contradictions he found in his account of set theory [Coquand, 2013; Univalent Foundations Program, 2013], and with homotopy theory, a branch of algebraic topology that investigates mathematical contexts wherein morphisms are endowed with a concept of <em>equivalent deformations</em> &mdash; that is, contexts in which they are equipped with a <em>homotopy</em> \(\kappa\) between them,
+            </p>
+
+            <div style="display: flex; justify-content: center; padding: 50px 0;">
+                <div style="filter: invert(1) brightness(1.2); mix-blend-mode: screen; transform: scale(1.4); transform-origin: center center;">
+                    <script type="text/tikz">
+                        \begin{tikzcd}[row sep=5em, column sep=5em] 
+                        x \arrow[r, "\gamma_1", bend left=50, ""{name=U, below}]   \arrow[r, "\gamma_2"', bend right=50, ""{name=D, above}] & y \arrow[Rightarrow, from=U, to=D, "\kappa"'] 
+                        \end{tikzcd}
+                    </script>
+                </div>
+            </div>
+
+            <p>
+                a notion which shall be rigorously defined in what follows. Such homotopical interpretation of Type Theory eventually acquired an explicitly foundational ambition with the formulation of the <em>Univalence Axiom</em> and the emergence of the <em>Univalent Foundations</em> programme [Univalent Foundations Program, 2013]. Of greater consequence still, the adoption of Homotopy Type Theory as a foundational framework, together with the <em>Univalence Axiom</em> and its homotopical interpretation of identity, enables the establishment of a genuinely invariant notion of mathematical objects. This implies, notably, that isomorphic mathematical structures may be legitimately identified. Remarkably, such identification constitutes an everyday operative norm for the working mathematician, yet a conceptual transgression against the orthodox set-theoretic foundations.
+            </p>
+
+            <p>
+                Ultimately, both Category Theory and Homotopy Type Theory provide formal frameworks through which the relational conception of <em>mathesis universalis</em>, as envisioned by Leibniz and retrospectively diagnosed by Foucault, can be reinterpreted. The historical trajectory of modern mathematics can thus be understood through a fundamental dichotomy. On one side stands the set-theoretic orthodoxy of ZFC, which embodies a `substantial' <em>mathesis</em> &mdash; an extensional framework anchoring mathematics in the atomic, bottom-up accumulation of static objects. On the other side stand these modern categorical and homotopical alternatives, which champion a truly `structural' <em>mathesis</em>. Within this relational paradigm, the internal substance of an object is rendered virtually obsolete; mathematical entities are instead exhaustively determined by the network of mappings, equivalences, and transformations (the morphisms) that situate them within a broader structure. This perspective, I argue, provides a contemporary formal setting in which the Leibnizian ambition underlying the <em>characteristica universalis</em> may be reinterpreted, as under such framework, intelligibility is no longer grounded primarily in the independent determination of objects, but in the necessary relations through which they are connected. The present work, then, aims at the possibility of reinterpretation as its guiding hypothesis. It does not assume a historical continuity between the classical <em>mathesis universalis</em> and contemporary structural (or even substantial) foundations of mathematics, however. Instead, it asks whether the emergence of categorical and homotopical foundations may be understood as a reconfiguration of the universalising ambition that underlay the earlier conception of a universal science of order. In this sense, the structural alternatives to set-theoretic foundations are considered not as a recovery of an abandoned philosophical programme &mdash; I am, admittedly, unable to sustain such a strong claim &mdash; but as a contemporary reformulation of a problem that has accompanied the project of mathematical universality from its earliest modern articulations.
+            </p>
+
+            <p>
+                This work is organised in two main parts. The first is devoted to the conception of mathematics as grounded in substance. It begins with a formal introduction to ZFC and an examination of the way in which set theory operates as a foundation for mathematics. It then turns to its relation to the <em>characteristica universalis</em>, before considering the cumulative hierarchy as a foundational construction ultimately grounded in mathematical objects. The second part turns to category theory, initially treating categories in their more usual role as a mathematical theory in their own right. It then introduces the notion of a topos and considers the foundational ambitions of categorical mathematics, followed by a formal introduction to Homotopy Type Theory. The Yoneda Lemma will be discussed throughout these different settings, serving as a recurring point of comparison between their respective conceptions of structure. The discussion then turns to the relativisation of the individual, examining how arrows in category theory and spaces and paths in homotopy theory bear upon the structural conception of <em>mathesis universalis</em> associated here with Leibniz and retrospectively articulated by Foucault. The final subsection, <em>The Archaeology of Order and the Autonomous Dialectic of the Concept</em>, takes this connection in a more exploratory direction, bringing the structural character of category theory and Homotopy Type Theory into conversation with Cavaillès's philosophy of the concept and Foucault's conception of <em>mathesis</em> as an order operating without a subject.
+            </p>
+
+
                 <h2>&sect; I. <i>Mathesis</i> as Structure: Categories, HoTT, and Subjectless Structuralism</h2>
                 
                 <h3>&sect; I.A Formal Framework I: Category Theory and the Yoneda Lemma</h3>
@@ -112,7 +197,7 @@
                         <div style="filter: invert(1) brightness(1.2); mix-blend-mode: screen; transform: scale(1.4); transform-origin: center center;">
                             <script type="text/tikz">
                                 % I slightly increased the row/col sep here so the arrow labels have more breathing room when scaled
-                                \begin{tikzcd}[row sep=2.5cm, column sep=4.0cm]
+                                \begin{tikzcd}[row sep=3.5cm, column sep=4.0cm]
                                 a \arrow[r, "h \circ (g \circ f) = (h \circ g) \circ f"] 
                                   \arrow[d, "f"'] 
                                   \arrow[dr, "g \circ f" near start] 
@@ -159,7 +244,7 @@
                 An arrow \(u\) that already sits inside an objects-and-arrows metacategory as some \(\mathrm{id}_b\) is trivially its own left and right unit. So, to dispense with objects, this absorbing behavior is taken as the <i>definition</i> of the arrows that will play their role. With this established, one can formally define an arrows-only metacategory as follows: 
                 </p>
 
-                <div class="latex-env">
+                <div class="latex-env"https://x.com/aufklarungtopoi/status/2106787905997770936?s=20>
                     <span class="env-title">Definition 4 (Arrows-only Metacategory).</span>
                     An <i>arrows-only metacategory</i> is a class \(A\) equipped with a partial binary operation of composition, subject to the following axioms:
                     <ul>
@@ -247,10 +332,59 @@
                 Conventionally, the collection of objects of a category \( \mathscr{C} \) is denoted by \(\operatorname{Ob}(\mathscr{C})\), and the collection of its arrows (henceforth, morphisms) by \(\operatorname{Mor}(\mathscr{C})\). For any two objects \(a,b \in \operatorname{Ob}(\mathscr{C})\), the collection of morphisms \(a \rightarrow b\), called a <i>hom-set</i>, is denoted by \(\operatorname{Hom}_{\mathscr{C}}(a,b) := \{ f \in \operatorname{Mor}(\mathscr{C}) \mid \operatorname{dom}(f) = a \text{ and } \operatorname{cod}(f) = b \}\).
                 </p>
 
-           
+            <!-- === Remarks and Initial Examples === -->
                 <div class="latex-env" id="rem-size">
                     <span class="env-title">Remark 1 (Small and large categories).</span> 
                     A category \(\mathscr{C}\) is <em>small</em> if \(\operatorname{Ob}(\mathscr{C})\) and \(\operatorname{Mor}(\mathscr{C})\) are both sets, and <em>large</em> otherwise; it is <em>locally small</em> if \(\operatorname{Hom}_{\mathscr{C}}(a,b)\) is a set for every \(a,b\), irrespective of the size of \(\operatorname{Ob}(\mathscr{C})\) itself. Mac Lane (the main resource for this section) resolves the resulting set-theoretic difficulties, e.g. \(\mathbf{Set}\) is locally small although its objects do not form a set, by working relative to a fixed universe. 
+                </div>
+               
+                <div class="latex-env" id="def-monoid">
+                <span class="env-title">Definition (Monoid).</span> 
+                A monoid is an object \(M \in \mathbf{Set}\) together with a pair of morphisms \(M \times M \xrightarrow{\mu} M \) and \(\star \xrightarrow{\eta} M\) so that the following diagrams commute:
+                
+                <!-- Flexbox container for side-by-side TikZ diagrams with responsive wrapping -->
+                <div style="display: flex; justify-content: center; align-items: center; gap: 80px; padding: 50px 0; flex-wrap: wrap;">
+                    
+                    <!-- Associativity Diagram -->
+                    <div style="filter: invert(1) brightness(1.2); mix-blend-mode: screen; transform: scale(1.4); transform-origin: center center;">
+                        <script type="text/tikz">
+                            \begin{tikzcd}[row sep=3em, column sep=5em]
+                            M \times M \times M \arrow[r, "M \times \mu"] \arrow[d, "\mu \times M"'] 
+                            & M \times M \arrow[d, "\mu"] \\
+                            M \times M \arrow[r, "\mu"] 
+                            & M
+                            \end{tikzcd}
+                        </script>
+                    </div>
+                    
+                    <!-- Unit Diagram -->
+                    <div style="filter: invert(1) brightness(1.2); mix-blend-mode: screen; transform: scale(1.4); transform-origin: center center;">
+                        <script type="text/tikz">
+                            \begin{tikzcd}[row sep=3em, column sep=5em]
+                            M \arrow[r, "\eta \times M"] \arrow[dr, "\operatorname{id}_M"'] 
+                            & M \times M \arrow[d, "\mu"] 
+                            & M \arrow[l, "M \times \eta"'] \arrow[dl, "\operatorname{id}_M"] \\
+                            & M &
+                            \end{tikzcd}
+                        </script>
+                    </div>
+
+                </div>
+            </div>
+                
+                 <p><strong>&para; 2.</strong> Furthermore, a small category can be elegantly defined as a <em>monoid object</em> in the category of directed graphs (or spans) over a fixed vertex set \(O = \operatorname{Ob}(\mathscr{C})\).</p>
+
+                <div class="latex-env" id="prop-internal-monoid">
+                    <span class="env-title">Proposition 1 (Categories as internal monoids).</span> 
+                    Let \(\mathscr{C}\) be a small category (Remark 1), and set \(O := \operatorname{Ob}(\mathscr{C})\), \(M := \operatorname{Mor}(\mathscr{C})\), equipped with \(s := \operatorname{dom}\), \(t := \operatorname{cod} : M \to O\). Form the fibered product (or the pullback) of \(M\) with itself over \(O\),
+                    \[ M \times_O M := \{ (g,f) \in M \times M \mid s(g) = t(f) \}, \]
+                    the set of composable pairs, and, iterating, the set \(M \times_O M \times_O M\) of composable triples. Definition 3 then states precisely that:
+                    <ul>
+                        <li>(<em>Composition</em>) there is a map \(\circ : M \times_O M \to M\);</li>
+                        <li>(<em>Associativity</em>) the two induced maps \(M \times_O M \times_O M \to M\), given by \((h,g,f) \mapsto (h \circ g) \circ f\) and \((h,g,f) \mapsto h \circ (g \circ f)\), coincide;</li>
+                        <li>(<em>Identity</em>) there is a map \(\operatorname{id} : O \to M\) such that \(\operatorname{id}_b \circ f = f = f \circ \operatorname{id}_a\) whenever \(s(f)=a\), \(t(f)=b\).</li>
+                    </ul>
+                    Equivalently: \(M\), together with \(s,t : M \to O\), is a <em>monoid object</em> in the category \(\mathbf{Graph}(O)\) of graphs with fixed vertex set \(O\) (equivalently, endo-spans \(O \xleftarrow{s} M \xrightarrow{t} O\) in \(\mathbf{Set}\)), with respect to the monoidal product \(\times_O\) and unit the identity span \(O \xleftarrow{\operatorname{id}} O \xrightarrow{\operatorname{id}} O\). When \(O\) is a singleton, \(\times_O\) reduces to the ordinary product \(\times\), and one recovers exactly Example 2; in other words, a small category is, precisely, the many-object generalization of a monoid.
                 </div>
 
                 <div class="latex-env" id="rem-duality">
@@ -271,22 +405,6 @@
                 <div class="latex-env" id="ex-groupoid">
                     <span class="env-title">Example 3 (Groupoid).</span> 
                     A category \(\mathscr{G}\) is a <em>groupoid</em> if every morphism is invertible: for each \(f : a \to b\) there exists \(f^{-1} : b \to a\) with \(f^{-1} \circ f = \operatorname{id}_a\) and \(f \circ f^{-1} = \operatorname{id}_b\). A discrete category (Example 1) is trivially a groupoid, each identity being its own inverse; a one-object groupoid is precisely a <em>group</em>, exactly as a one-object category is a monoid (Example 2). A groupoid is thus the common refinement of Examples 1 and 2, obtained by additionally requiring invertibility.
-                </div>
-
-                <!-- === Analytical Proposition === -->
-                <p><strong>&para; 2.</strong> Furthermore, a small category can be elegantly defined as a <em>monoid object</em> in the category of directed graphs (or spans) over a fixed vertex set \(O = \operatorname{Ob}(\mathscr{C})\).</p>
-
-                <div class="latex-env" id="prop-internal-monoid">
-                    <span class="env-title">Proposition 1 (Categories as internal monoids).</span> 
-                    Let \(\mathscr{C}\) be a small category (Remark 1), and set \(O := \operatorname{Ob}(\mathscr{C})\), \(M := \operatorname{Mor}(\mathscr{C})\), equipped with \(s := \operatorname{dom}\), \(t := \operatorname{cod} : M \to O\). Form the fibered product (or the pullback) of \(M\) with itself over \(O\),
-                    \[ M \times_O M := \{ (g,f) \in M \times M \mid s(g) = t(f) \}, \]
-                    the set of composable pairs, and, iterating, the set \(M \times_O M \times_O M\) of composable triples. Definition 3 then states precisely that:
-                    <ul>
-                        <li>(<em>Composition</em>) there is a map \(\circ : M \times_O M \to M\);</li>
-                        <li>(<em>Associativity</em>) the two induced maps \(M \times_O M \times_O M \to M\), given by \((h,g,f) \mapsto (h \circ g) \circ f\) and \((h,g,f) \mapsto h \circ (g \circ f)\), coincide;</li>
-                        <li>(<em>Identity</em>) there is a map \(\operatorname{id} : O \to M\) such that \(\operatorname{id}_b \circ f = f = f \circ \operatorname{id}_a\) whenever \(s(f)=a\), \(t(f)=b\).</li>
-                    </ul>
-                    Equivalently: \(M\), together with \(s,t : M \to O\), is a <em>monoid object</em> in the category \(\mathbf{Graph}(O)\) of graphs with fixed vertex set \(O\) (equivalently, endo-spans \(O \xleftarrow{s} M \xrightarrow{t} O\) in \(\mathbf{Set}\)), with respect to the monoidal product \(\times_O\) and unit the identity span \(O \xleftarrow{\operatorname{id}} O \xrightarrow{\operatorname{id}} O\). When \(O\) is a singleton, \(\times_O\) reduces to the ordinary product \(\times\), and one recovers exactly Example 2; in other words, a small category is, precisely, the many-object generalization of a monoid.
                 </div>
 
                
@@ -377,13 +495,378 @@
 
                 <p><strong>&para; 6.</strong> Natural transformations may also be examined from another, equally interesting perspective. If one considers that functors create pictures of their source category within a target category, each picture being denoted by the functor itself, then \(\mathrm{F}\) is a picture of \(\operatorname{Ob}(\mathscr{C})\) and \(\operatorname{Mor}(\mathscr{C})\) in \(\mathscr{D}\), and \(\mathrm{G}\) is likewise a picture of \(\operatorname{Ob}(\mathscr{C})\) and \(\operatorname{Mor}(\mathscr{C})\) in \(\mathscr{D}\). A natural transformation may then be regarded as a collection of translations between such pictures, where the maps \(\eta_a, \eta_b, \eta_c, \dots\) as defined above act as the translators, rendering the corresponding collection of commutative diagrams. This idea is formally expressed in the following diagram, known as the naturality prism:</p>
 
+  <div style="text-align: center; margin: 20px 0; height: 346px;">
+    <iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsOSxbMCwwLCJhIl0sWzIsMCwiXFxvcGVyYXRvcm5hbWV7Rn1hIl0sWzQsMCwiXFxvcGVyYXRvcm5hbWV7R31hIl0sWzEsMSwiYiJdLFszLDEsIlxcb3BlcmF0b3JuYW1le0Z9YiJdLFs1LDEsIlxcb3BlcmF0b3JuYW1le0d9YiJdLFswLDIsImMiXSxbMiwyLCJcXG9wZXJhdG9ybmFtZXtGfWMiXSxbNCwyLCJcXG9wZXJhdG9ybmFtZXtHfWMiXSxbMCw2LCJoIl0sWzAsMywiZiJdLFsxLDcsIkZoIl0sWzEsNCwiXFxvcGVyYXRvcm5hbWV7Rn1mIl0sWzEsMiwiXFxldGFfYSJdLFsyLDgsIlxcb3BlcmF0b3JuYW1le0d9aCJdLFsyLDUsIlxcb3BlcmF0b3JuYW1le0d9ZiJdLFs0LDUsIlxcZXRhX2IiLDAseyJsYWJlbF9wb3NpdGlvbiI6MjB9XSxbNiwzLCJnIiwyXSxbNyw0LCJcXG9wZXJhdG9ybmFtZXtGfWciLDJdLFs3LDgsIlxcZXRhX2MiLDJdLFs4LDUsIlxcb3BlcmF0b3JuYW1le0d9ZyIsMl1d&embed&theme=dark&scale=-0.5" width="816" height="432" style="border-radius: 8px; border: none; transform: scale(0.8); transform-origin: top center;"></iframe>
+</div>
+
+                <!-- === Advanced Categorical Examples === -->
+            <div class="latex-env">
+                <span class="env-title">Example 10 (Determinant).</span> 
+                Let \(M_{n \times n} (K)\) be the set of all \(n \times n\) matrices with entries in the commutative ring \(K\), \(K^*\) the group of units of \(K\) and consider the map \(\operatorname{det}_K: M_{n \times n}(K) \rightarrow K\), that is, the determinant of such matrices. Thus, \(M \in M_{n \times n}(K)\) is non-singular if \(\operatorname{det}_K M \in K^*\) and \(\operatorname{det}_K\) is a morphism \(\operatorname{GL}_n K \xrightarrow{\operatorname{det}_K} K^* \in \operatorname{Mor}(\mathbf{Grp})\). Because the determinant is defined by the same formula for all rings \(K\), then each morphism \(f: K \rightarrow K'\) of commutative rings leads to the following commutative diagram:
+
+                <div style="display: flex; justify-content: center; padding: 50px 0;">
+                    <div style="filter: invert(1) brightness(1.2); mix-blend-mode: screen; transform: scale(1.4); transform-origin: center center;">
+                        <script type="text/tikz">
+                            \begin{tikzcd}[row sep=4em, column sep=5em]
+                            \operatorname{GL}_n K \arrow[r, "\operatorname{det}_K"] \arrow[d, "\operatorname{GL}_nf"] & K^* \arrow[d, "f^*"'] \\
+                            \operatorname{GL}_n K' \arrow[r, "\operatorname{det}_{K'}"] & \operatorname{GL}_nK'^*
+                            \end{tikzcd}
+                        </script>
+                    </div>
+                </div>
+
+                thus entailing that the map \(\operatorname{det}: \operatorname{GL}_n \rightarrow ( \quad )^*\) is a natural transformation between two functors \(\mathbf{CRng} \rightarrow \mathbf{Grp}\), that is, between functors from the category of commutative rings to the category of groups.
+            </div>
+
+            <div class="latex-env">
+                <span class="env-title">Example 11 (Morphisms between (pre-)sheafs).</span> 
+                A pre-sheaf is the contravariant functor \(\mathscr{F}: \operatorname{Open}^\text{op}(X) \rightarrow \mathbf{Sets}\), where \(\operatorname{Open}(X)\) is the category of topological spaces \(X\). On \(U \in \operatorname{Ob}(\operatorname{Open}^\text{op}(X))\) it acts assigning a collection of global sections of \(\mathscr{F}\) over \(U\), that we denote by \(\mathscr{F}U\), and to every inclusion map \(i \in \operatorname{Mor}_{\operatorname{Open}(X)}(U,V)\), it assigns a restriction map \(\mathscr{F}(U \hookrightarrow V): \mathscr{F}U \rightarrow \mathscr{F}V\), \(t \mapsto t|_U\), that satisfy:
+                <ul>
+                    <li>\(\mathscr{F}(U \hookrightarrow U) = \operatorname{id}_{\mathscr{F}U}\)</li>
+                    <li>If \(W \subseteq V \subseteq U\), then \[ \mathscr{F}(W \hookrightarrow U) = \mathscr{F}(W \hookrightarrow V) \circ \mathscr{F}(V \hookrightarrow U) \]</li>
+                </ul>
+                Let \(\{U_i\}_{i \in I}\) be an open cover for some arbitrary \(U\). A sheaf is a pre-sheaf satisfying two additional conditions:
+                <ul>
+                    <li>(Locality): If \(s,t \in \mathscr{F}U\) agrees on some \(U_i \in \{U_i\}_{i \in I}\), then \(s = t\) globally;</li>
+                    <li>(Gluing): Suppose we have sections \(s_i \in \mathscr{F}U_i\) such that \(s_i|_{U_i \cap U_j} = s_j|_{U_i \cap U_j}\), for all \(i,j \in I\). Then, there exists a unique global section \(s \in \mathscr{F}U\) such that \(s|_{U_i} = s_i\), for all \(i \in I\).</li>
+                </ul>
+                Diagrammatically, one have:
+                \[ \mathscr{F}U \longrightarrow \prod_i \mathscr{F}U_i \rightrightarrows \prod_{i,j} \mathscr{F}(U_i \cap U_j) \]
+                Such objects themselves form a category. A category of this kind is usually referred to as a <em>functor category</em>, denoted by \(\mathbf{Sh}\), whose morphisms are natural transformations:
+               <div style="display: flex; justify-content: center; padding: 50px 0;">
+                    <div style="filter: invert(1) brightness(1.2); mix-blend-mode: screen; transform: scale(1.2); transform-origin: center center;">
+                        <script type="text/tikz">
+                            \begin{tikzcd}[row sep=5em, column sep=4em]
+                            \mathcal{F}(U) \arrow[r, "\varphi_U"] \arrow[d, "\mathcal{F}(U\hookrightarrow V)"'] &
+                            \mathcal{G}(U) \arrow[d, "\mathcal{G}(U\hookrightarrow V)"] \\
+                            \mathcal{F}(V) \arrow[r, "\varphi_V"'] &
+                            \mathcal{G}(V)
+                            \end{tikzcd}
+                        </script>
+                    </div>
+                </div>
+            </div> 
+               <!-- === Equivalence and Formalisms === -->
+
+            <p><strong>&para; 7.</strong> One can use natural transformations --- or, more precisely, natural isomorphisms --- to formulate the notion of equivalence of categories. This can be understood as a categorical analogue of homotopy equivalence: functors need not be strict inverses, but only inverses up to natural isomorphism. In this perspective, the terminal category \(\mathbb{I}\), consisting of a single object and its identity morphism, plays the role of a point, while natural transformations provide a categorical analogue of homotopies [Riehl, 2016].</p>
+
+            <div class="latex-env" id="def-equivalence">
+                <span class="env-title">Definition 6 (Equivalence of Categories).</span> 
+                Consider functors \(\mathscr{C}\xrightarrow{\mathrm{F}}\mathscr{D}\) and \(\mathscr{D}\xrightarrow{\mathrm{G}}\mathscr{C}\). An <em>equivalence of categories</em> consists of \(\mathrm{F}\) and \(\mathrm{G}\), together with natural isomorphisms
+                \[ \eta:\operatorname{id}_{\mathscr{C}}\cong \mathrm{G}\circ\mathrm{F}, \qquad \tau:\mathrm{F}\circ\mathrm{G}\cong\operatorname{id}_{\mathscr{D}}. \] 
+                Categories \(\mathscr{C}\) and \(\mathscr{D}\) are equivalent, written \(\mathscr{C} \cong \mathscr{D}\), if there exists an equivalence between them. A functor \(\mathrm{F}:\mathscr{C}\rightarrow\mathscr{D}\) is an <em>equivalence</em> if it is part of such an equivalence of categories.
+            </div>
+
+            <div class="latex-env">
+                <span class="env-title">Example 12 (Point and Partial Functions Sets).</span> 
+                The functors \(\mathbf{Set}_\partial \xrightarrow{(-)} \mathbf{Set}_{*}\) and \(\mathbf{Set}_{*} \xrightarrow{\mathrm{U}} \mathbf{Set}_\partial\), with \(U\circ (-)_+ \cong \operatorname{id}_{\mathbf{Set}_\partial}\) and \((-)_+ \circ U \cong \operatorname{id}_{\mathbf{Set}_{*}}\), define an equivalence of categories between the category of pointed sets and the category of sets and partial functions.
+            </div>
+
+            <p><strong>&para; 8.</strong> Moreover, given \(a, b \in \operatorname{Ob}(\mathscr{C})\), \(\mathscr{C}\) itself may be defined in terms of the sets \(\operatorname{Hom}_{\mathscr{C}}(a,b)\). Let us first consider a small category (as defined in Remark 1), comprising the following data:</p>
+
+            <ol type="i" style="margin-bottom: 20px;">
+                <li>A set of objects \(\operatorname{Ob}(\mathscr{S}) = \{a,b,c,\dots\}\);</li>
+                <li>A function which assigns to each ordered pair \(\langle a, b \rangle\) of objects a hom-set \(\operatorname{Hom}_{\mathscr{S}}(a,b)\);</li>
+                <li>For each ordered triple \(\langle a,b,c \rangle\), with \(a,b,c \in \operatorname{Ob}(\mathscr{S})\), the composition function \( \operatorname{Hom}_{\mathscr{S}}(b,c) \times \operatorname{Hom}_{\mathscr{S}}(a,b) \rightarrow \operatorname{Hom}_{\mathscr{S}}(a,c)\), given by \(\langle g,f\rangle \mapsto g \circ f\), for \(g \in \operatorname{Hom}_{\mathscr{S}}(b,c) \) and \(f \in \operatorname{Hom}_{\mathscr{S}}(a,b)\);</li>
+                <li>For each \(b \in \operatorname{Ob}(\mathscr{S})\), an element \(\operatorname{id}_b \in \operatorname{Hom}_{\mathscr{S}}(b,b)\), called the identity of \(b\);</li>
+                <li>If \(\langle a,b \rangle \neq \langle a', b' \rangle\), then \(\operatorname{Hom}_{\mathscr{S}}(a,b) \cap \operatorname{Hom}_{\mathscr{S}}(a',b') = \emptyset\).</li>
+            </ol>
+
+            <p>One can easily check that such definition is completely equivalent to Definition 3. Moreover, in such context, a functor \( \mathrm{F}: \mathscr{C} \rightarrow \mathscr{D}\) may be described as the usual object function \(\mathrm{F}\), together with a collection of functions \(\mathrm{F}_{c,c'}: \operatorname{Hom}_{\mathscr{C}}(c,c') \rightarrow \operatorname{Hom}_{\mathscr{D}}(\mathrm{F}c, \mathrm{F}c')\) such that \(\mathrm{F}_{c,c} \operatorname{id}_c = \operatorname{id}_{\mathrm{F}c}\) and such that every diagram</p>
+
+            <iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsNCxbMCwwLCJcXG9wZXJhdG9ybmFtZXtIb219X3tcXG1hdGhzY3J7Q319KGMnLGMnJykgXFx0aW1lcyBcXG9wZXJhdG9ybmFtZXtIb219X3tcXG1hdGhzY3J7Q319KGMsYycpIl0sWzEsMCwiXFxvcGVyYXRvcm5hbWV7SG9tfV97XFxtYXRoc2Nye0N9fShjLGMnJykiXSxbMCwxLCJcXG9wZXJhdG9ybmFtZXtIb219X3tcXG1hdGhzY3J7RH19KFxcbWF0aHJte0Z9YycsIFxcbWF0aHJte0Z9YycnKSJdLFsxLDEsIlxcb3BlcmF0b3JuYW1le0hvbX1fe1xcbWF0aHNjcntEfX0oXFxtYXRocm17Rn1jLCBcXG1hdGhybXtGfWMnJykiXSxbMCwxLCJmIFxcY2lyYyBnIl0sWzAsMiwiXFxtYXRocm17Rn1fe2MnLGMnJ30gXFx0aW1lcyBcXG1hdGhybXtGfV97YyxjJ30iLDJdLFsxLDMsIlxcbWF0aHJte0Z9X3tjLGMnJ30iXSxbMiwzLCJUZiBcXGNpcmMgVGciLDJdXQ==&embed&theme=dark&scale=-0.75" width="753" height="304" style="border-radius: 8px; border: none;"></iframe>
 
 
 
+            <p>commutes, given \(c \xrightarrow{g} c', c' \xrightarrow{f} c'' \in \operatorname{Mor}(\mathscr{C})\), and for all \( c,c',c'' \in \operatorname{Ob}(\mathscr{C})\). It must be no surprise that the concept of natural transformation may as well be described in such terms. More precisely, a natural transformation is described by the following commutative diagram:</p>
+
+   <iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsNCxbMCwwLCJjIl0sWzEsMCwiU3IiXSxbMCwxLCJjIl0sWzEsMSwiU2QiXSxbMCwxLCJ1Il0sWzAsMiwiIiwwLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMSwzLCJTZiciLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMiwzLCJmIl1d&embed&theme=dark&scale=-0.75" width="304" height="304" style="border-radius: 8px; border: none; display: block; margin: 0 auto;"></iframe>
 
 
+           <p><strong>&para; 9.</strong> One of the foundational concepts of category theory is that of duality. As established in Remark 2, this concept --- formally and axiomatically developed by Mac Lane [Mac Lane, 1998] --- naturally yields the notion of the opposite category, \(\mathscr{C}^{\mathrm{op}}\). Having delineated how duality reverses arrows and composition within a single category, the natural subsequent inquiry concerns its effect on functors. Consider a functor \(\mathrm{F}: \mathscr{C} \rightarrow \mathscr{D}\), which acts as \(c \mapsto \mathrm{F}c\) on each \(c \in \operatorname{Ob}(\mathscr{C})\) and as \(f \mapsto \mathrm{F}f\) on each \(f \in \operatorname{Mor}(\mathscr{C})\). A functor \(\mathrm{F}^\mathrm{op}: \mathscr{C}^\mathrm{op} \rightarrow \mathscr{D}^\mathrm{op}\) is defined as preserving the action on objects of \(\mathscr{C}\) and, as expected, acting on morphisms of \(\mathscr{C}^\mathrm{op}\) as \(f^\mathrm{op} \mapsto (\mathrm{F}f)^\mathrm{op}\). From this standpoint, one can characterize two kinds of functors:</p>
+
+            <ul>
+                <li>Consider a functor \(\mathrm{G}: \mathscr{C}^\mathrm{op} \rightarrow \mathscr{D}\) that assigns to each \(c \in \operatorname{Ob}( \mathscr{C}^\mathrm{op})\) a corresponding \(\mathrm{G}c \in \operatorname{Ob}(\mathscr{D})\), and to each arrow \(b \xrightarrow{f^\mathrm{op}} a \in \operatorname{Mor}(\mathscr{C}^\mathrm{op})\) a corresponding arrow \(\mathrm{G}b \xrightarrow{\mathrm{G}f^\mathrm{op}} \mathrm{G}a \in \operatorname{Mor}(\mathscr{D})\), with composite defined as \(\mathrm{G}(f^\mathrm{op} \circ g^\mathrm{op}) = \mathrm{G} f^\mathrm{op} \circ \mathrm{G} g^\mathrm{op}\), whenever \(f^\mathrm{op} \circ g^\mathrm{op}\) is defined. By describing \(\mathrm{G}\) in terms of \(\mathscr{C}\), one writes \(\overline{\mathrm{G}} f\) for \(\mathrm{G} f^\mathrm{op}\) and (implicitly) defines a "new" functor \[ \mathscr{C} \xrightarrow{\overline{\mathrm{G}}} \mathscr{D}, \] which maps arrows \(a \xrightarrow{f} b\) to arrows \(\overline{\mathrm{G}}b \xrightarrow{\overline{\mathrm{G}}f} \overline{\mathrm{G}}a\). Such a functor is called a <em>contravariant functor</em>;</li>
+                <li>A functor \(\mathrm{F}: \mathscr{C} \rightarrow \mathscr{D}\) as we originally defined it --- that is, one that does not invert arrows --- is called a <em>covariant functor</em>.</li>
+        </ul>
+
+            <p>
+                From here on, things become a little more exciting, as we shall be working with concepts of universality to arrive at the most important result of this section: the Yoneda lemma. We begin by defining the concept of a universal arrow:
+            </p>
+
+            <div class="latex-env" id="def-universal-arrow">
+                <span class="env-title">Definition (Universal Arrow).</span> 
+                If \(\mathrm{G}: \mathscr{D} \rightarrow \mathscr{C}\) is a functor and \(c \in \operatorname{Ob}(\mathscr{C})\), a universal arrow from \(c\) to \(\mathrm{G}\) is a pair \(\langle r, u \rangle\), where \(r \in \operatorname{Ob}(\mathscr{D})\) and \(c \xrightarrow{u} \mathrm{G}r \in \operatorname{Mor}(\mathscr{C})\), such that for every pair \(\langle d, f \rangle \), with \(d \in \operatorname{Ob}(\mathscr{D})\) and \(c \xrightarrow{f} \mathrm{G}d \in \operatorname{Mor}(\mathscr{C})\), there is a unique arrow \(r \xrightarrow{f'} d \in \operatorname{Ob}(\mathscr{D})\) with \(\mathrm{G}f' \circ u = f\). Pictorially this can be expressed as:
+
+            <div style="display: flex; justify-content: center; align-items: center; gap: 80px; padding: 50px 0; flex-wrap: wrap;">
+                <div style="filter: invert(1) brightness(1.2); mix-blend-mode: screen; transform: scale(1.4); transform-origin: center center;">
+                    <script type="text/tikz">
+                        \begin{tikzcd}[row sep=3em, column sep=5em]
+                          c \arrow[r, "u"] \arrow[d, equal] & \mathrm{G}r \arrow[d, dashed, "\mathrm{G}f'"] \\
+                          c \arrow[r, "f"] & \mathrm{G}d
+                        \end{tikzcd}
+                    </script>
+                </div>
+                <div style="filter: invert(1) brightness(1.2); mix-blend-mode: screen; transform: scale(1.4); transform-origin: center center;">
+                    <script type="text/tikz">
+                        \begin{tikzcd}
+                          r \arrow[d, dashed, "f'"] \\
+                          d
+                        \end{tikzcd}
+                    </script>
+                </div>
+            </div>
+
+                where, in other words, every arrow \(c \xrightarrow{f} \mathrm{G}d\) factors uniquely through the universal arrow \(u\).
+            </div>
+
+            <div class="latex-env" id="ex-bases">
+                <span class="env-title">Example (Bases of Vector Spaces).</span> 
+                Let \(\mathbf{Vct}_K\) denote the category in which 
+                \[\operatorname{Ob}(\mathbf{Vct}_K) = \{V \mid V \; \text{is a vector field over the fixed field } \; K\} \] 
+                and \(\operatorname{Mor}(\mathbf{Vct}_K) = \{\mathrm{T} \mid T: V \rightarrow W \; \text{is a linear transformation}, \; \text{for all} \;W, V \in \operatorname{Ob}(\mathbf{Vct}_K)\}\), and consider the forgetful functor \(\mathbf{Vct}_K \xrightarrow{\mathrm{U}} \mathbf{Set}\), that maps a vector space \(V\) to the set of its elements. For any set \(X \in \operatorname{Ob}(\mathbf{Set})\) there is an associated vector space \(V_X\) that consists of all formal \(K\)-linear combinations of the elements of \(X\) --- that is, \(X\) forms a basis for \(V_X\). There is a \(X \xrightarrow{j} U(V_X)\) such that, for any other vector space \(W \in \operatorname{Ob}(\mathbf{Vec}_K)\), any \(V_X \xrightarrow{f}  U(W)\) can be extended to a unique linear transformation \(V_X \xrightarrow{f'} W\) with \(Uf' \circ j = f\), meaning that \(j\) is a universal arrow from \(X\) to \(U\).
+            </div>
+
+            <div class="latex-env" id="ex-metric">
+                <span class="env-title">Example (Complete Metric Spaces).</span> 
+                Let \(\mathbf{Met}\) be the category whose objects are metric spaces, that is, \(\operatorname{Ob}(\mathbf{Met})=\{(X,d_X)\mid X\text{ is a set and }d_X:X\times X\xrightarrow{} \mathbb{R}_{\geq0}\text{ is a metric on }X\}\), and whose morphisms are non-expansive maps, \(\operatorname{Mor}_{(X,Y)}(\mathbf{Met})=\{f\mid f:X\xrightarrow{}Y,\ d_Y(f(x),f(x'))\leq d_X(x,x')\text{ for all }x,x'\in X\}\). The complete metric spaces, that is, those for which every Cauchy sequence \((x_n)_{n\in\mathbb{N}}\subseteq X\) converges to some \(x\in X\), form a full subcategory \(\mathbf{CMet}\subseteq\mathbf{Met}\). Let \(\mathbf{CMet}\xrightarrow{U} \mathbf{Met}\) be the inclusion functor. For every \(X\in\mathbf{Met}\), its completion consists of a complete metric space \(\overline{X}\) together with an isometric embedding \(X\xrightarrow{\eta_X}U(\overline{X})\) whose image is dense in \(U(\overline{X})\). Moreover, for every \(Y\in\mathbf{CMet}\) and every non-expansive map \(X\xrightarrow{f}U(Y)\), there exists a unique non-expansive map \(\overline{X}\xrightarrow{\overline{f}}Y\) such that \(f=U(\overline{f})\circ\eta_X\). Thus, \(X\xrightarrow{\eta_X}U(\overline{X})\) is a universal arrow from \(X\) to \(U\).
+            </div>
+
+            <p>
+                As should be expected at this point in the text, this concept, analogously to the natural transformation, admits a formulation in terms of hom-sets:
+            </p>
+
+            <div class="latex-env" id="prop-unihom">
+                <span class="env-title">Proposition (Universal Arrow and Hom-sets).</span> 
+                For a functor \(\mathscr{D} \xrightarrow{\mathrm{G}} \mathscr{C}\) a pair \(\langle r, c \xrightarrow{u} \mathrm{G}r \rangle\) is universal from \(c\) to \(\mathrm{G}\) \(\Leftrightarrow\) each mapping \((r \xrightarrow{f'} d) \mapsto (c \xrightarrow{\mathrm{G}f' \circ u} \mathrm{G}d)\) is a bijection of hom-sets, \(\operatorname{Hom}_{\mathscr{D}}(r,d) \cong \operatorname{Hom}_{\mathscr{C}} (c, \mathrm{G}d)\). Such bijection is natural in \(d \in \operatorname{Ob}(\mathscr{D})\). Conversely, given \(r\) and \(c\), any natural isomorphism \(\eta: \operatorname{Hom}_{\mathscr{D}}(r,d) \cong \operatorname{Hom}_{\mathscr{C}} (c, \mathrm{G}d)\) is determined by a unique arrow \(c \xrightarrow{u} \mathrm{G}r\) such that \(\langle r, u \rangle\) is universal from \(c\) to \(\mathrm{G}\).
+            </div>
+
+            <p>
+                <em>Proof.</em> The statement that \(\langle r, u \rangle\) is universal is precisely the condition that the mapping \(f' \mapsto \mathrm{G}f' \circ u\) is a bijection. This bijection is natural in \(d\); indeed, for any \(g: d \to d'\), one has \(\mathrm{G}(g \circ f') \circ u = \mathrm{G}g \circ (\mathrm{G}f' \circ u)\), which verifies the naturality requirement. 
+            </p>
+
+            <p>
+                Conversely, given \(r\) and \(c\), any natural isomorphism \(\varphi_d: \mathscr{D}(r,d) \cong \mathscr{C}(c, \mathrm{G}d)\) determines in this manner, via a unique arrow \(u: c \to \mathrm{G}r\) (obtained by taking the image of the identity \(\operatorname{id}_r \in \mathscr{D}(r,r)\) under \(\varphi_r\)), a universal arrow. To see this, consider the naturality square associated with any arrow \(f': r \to d\):
+            </p>
+
+<iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsNCxbMCwwLCJcXG9wZXJhdG9ybmFtZXtIb219X3tcXG1hdGhzY3J7RH19KHIscikiXSxbMSwwLCJcXG9wZXJhdG9ybmFtZXtIb219X3tcXG1hdGhzY3J7Q319KGMsIFxcbWF0aHJte0d9cikiXSxbMCwxLCJcXG9wZXJhdG9ybmFtZXtIb219X3tcXG1hdGhzY3J7RH19KHIsZCkiXSxbMSwxLCJcXG9wZXJhdG9ybmFtZXtIb219X3tcXG1hdGhzY3J7Q319KGMsIFxcbWF0aHJte0d9ZCkiXSxbMCwxLCJcXHZhcnBoaV9yIl0sWzAsMiwiXFxvcGVyYXRvcm5hbWV7SG9tfV97XFxtYXRoc2Nye0R9fShyLCBmJykiLDJdLFsxLDMsIlxcbWF0aHNjcntDfShjLCBcXG9wZXJhdG9ybmFtZXtIb219X3tcXG1hdGhzY3J7Q319KFxcbWF0aHJte0d9LGYnKSJdLFsyLDMsIlxcdmFycGhpX2QiLDJdXQ==&embed&theme=dark&scale=-0.75" width="511" height="304" style="border-radius: 8px; border: none; display: block; margin: 0 auto;"></iframe>
+
+            <p>
+                This diagram commutes because \(\varphi\) is natural. Tracing the element \(\operatorname{id}_r \in \mathscr{D}(r,r)\) around the square, the upper-right path yields \(\mathrm{G}f' \circ u\) (where \(u = \varphi_r(\operatorname{id}_r)\)), while the lower-left path yields \(\varphi_d(f')\). Since \(\varphi_d\) is a bijection, every arrow \(f: c \to \mathrm{G}d\) can be expressed uniquely in the form \(f = \mathrm{G}f' \circ u\) for a unique \(f' \in \mathscr{D}(r,d)\). This is precisely the universal property of \(\langle r, u \rangle\). &#9632;
+            </p>
+
+            <div class="latex-env" id="def-repfunctors">
+                <span class="env-title">Definition (Representable Functors).</span> 
+                Let the category \(\mathscr{D}\) have small hom-sets, that is, a locally small category. A representation of a functor \(\mathscr{D}\xrightarrow{\mathrm{F}} \mathbf{Set}\) is a pair \(\langle r, \psi \rangle\), where \(r \in \operatorname{Ob}(\mathscr{D})\) and 
+                \[ \psi: \operatorname{Hom}_{\mathscr{D}}(r, -) \cong \mathrm{F}\] 
+                is a natural isomorphism. The object \(r\) is called the representing object and the functor \(\mathrm{F}\) is said to be representable when such a representation exists.
+            </div>
+
+            <p>
+                In other words, a representable functor is, up to isomorphism, a covariant hom-functor \(\operatorname{Hom}_{\mathscr{D}}(r,-)\). One can relate such notion to that of universal arrows:
+            </p>
+
+            <div class="latex-env" id="prop-repuniversal">
+                <span class="env-title">Proposition (Representable Functors and Universal Arrows).</span> 
+                Let \( \{\star\}\) denote the one-point set and let \(\mathscr{D}\) be locally small. Given the functor \(\mathscr{D} \xrightarrow{\mathrm{F}} \mathbf{Set}\), if \(\langle r, \{\star\} \xrightarrow{u_\star} \mathrm{F}r \rangle\) is a universal arrow, then the function \((r \xrightarrow{f'} d) \xrightarrow{\psi} \mathrm{F}f' \circ u_\star \in \mathrm{F}d\) is a representation of \(\mathrm{F}\), for each \(d \in \operatorname{Ob}(\mathscr{D})\). Every representation of \(\mathrm{F}\) is obtained in this way, from exactly one such universal arrow.
+            </div>
+
+            <p>
+                <em>Proof.</em> For any set \(X \in \operatorname{Ob}(\mathbf{Set})\), a function \(\{\star\} \xrightarrow{f} X\) is completely determined by \(f(\star)\in X\). The correspondence \(f \mapsto f(\star)\) is a bijection \(\mathbf{Set}(\star, X) \rightarrow X\), natural in \(X\in \operatorname{Ob}(\mathbf{Set})\). Its composition with \(\mathrm{F}\) yields a natural isomorphism \(\mathbf{Set}(\star, \mathrm{F}-) \xrightarrow{\cong} \mathrm{F}\). This result, in consonance with the representation \(\psi\) of Definition (Representable Functors) yields 
+                \[ \mathbf{Set}(\star, \mathrm{F}-) \cong \mathrm{F} \cong \operatorname{Hom}_{\mathscr{D}}(r,-).\] 
+                Therefore, a representation of \(\mathrm{F}\) amounts to a natural isomorphism \( \mathbf{Set}(\star, \mathrm{F}-) \cong \operatorname{Hom}_{\mathscr{D}}(r,-)\). So, the desired result follows from Proposition (Universal Arrow and Hom-sets). &#9632;
+            </p>
+
+            <p>
+                In retrospect, the takeaway is that a universal arrow \(c \xrightarrow{u} \mathrm{F}r\) (for a functor \(\mathrm{F}: \mathscr{D} \to \mathscr{C}\)) is simply an isomorphism of hom-sets \(\operatorname{Hom}_{\mathscr{D}}(r,d) \cong \operatorname{Hom}_{\mathscr{C}}(c, \mathrm{F}d)\) (Proposition Universal Arrow and Hom-sets) and, therefore, it defines a representation of the functor \(\operatorname{Hom}_{\mathscr{C}}(c, \mathrm{F}-): \mathscr{D} \to \mathbf{Set}\). Equivalently, Proposition (Representable Functors and Universal Arrows) shows that representations can be understood concretely as universal arrows from a one-point set; while Definition (Representable Functors) makes it clear that a representation itself is fundamentally just a natural isomorphism of functors. Finally, generalizing this idea from universal elements to arbitrary elements allows us to properly introduce the famous Yoneda Lemma:
+            </p>
+
+            <div class="latex-env" id="lemma-yoneda">
+                <span class="env-title">Lemma (Yoneda Lemma).</span> 
+                Consider \(\mathscr{D} \xrightarrow{\mathrm{F}} \mathbf{Set}\) and \(r \in \operatorname{Ob}(\mathscr{D})\), where \(\mathscr{D}\) is locally small. Then, there is a bijection 
+                \[\operatorname{ev}_{\operatorname{id}}: \operatorname{Nat}(\operatorname{Hom}_{\mathscr{D}}(r, -), \mathrm{F}) \cong \operatorname{F}r\] 
+                which sends each natural transformation \(\operatorname{Hom}_{\mathscr{D}}(r,-) \xrightarrow{\eta} \mathrm{F}\) to \(\eta_r \circ \operatorname{id}_r\).
+            </div>
+
+            <p>
+                <em>Proof.</em> To establish the Yoneda Lemma, one must construct an inverse for \(\operatorname{ev}_{\operatorname{id}}\). To that end, fix an element \(\xi \in \mathrm{F}r\) and define the mapping \(\mathrm{F}r \xrightarrow{\eta} \operatorname{Hom}_{\mathscr{D}}(\operatorname{Hom}_{\mathscr{D}}(r,-), \mathrm{F})\) that induces a natural transformation \(\operatorname{Hom}_{\mathscr{D}}(r,-) \xrightarrow{\eta} \mathrm{F}\). For such a family to be natural, the following diagram must commute for any morphism \(r \xrightarrow{f} d\), where \(d \in \operatorname{Ob}(\mathscr{D})\):
+            </p>
+
+            <div style="display: flex; justify-content: center; align-items: center; gap: 80px; padding: 50px 0; flex-wrap: wrap;">
+                <div style="filter: invert(1) brightness(1.2); mix-blend-mode: screen; transform: scale(1.4); transform-origin: center center;">
+                    <script type="text/tikz">
+                        \begin{tikzcd}[row sep=3em, column sep=5em]
+                            \operatorname{Hom}_{\mathcal{D}}(r, r) \arrow[r, "\eta_r"] \arrow[d, "{f_*}"'] 
+                        & \mathrm{F}r \arrow[d, "{\mathrm{F}f}"] \\
+                        \operatorname{Hom}_{\mathcal{D}}(r, d) \arrow[r, "\eta_d"'] 
+                        & \mathrm{F}d
+                        \end{tikzcd}
+                    </script>
+                </div>
+                <div style="filter: invert(1) brightness(1.2); mix-blend-mode: screen; transform: scale(1.4); transform-origin: center center;">
+                    <script type="text/tikz">
+                        \begin{tikzcd}[row sep=3em]
+                        r \arrow[d, "f"'] \\
+                        d
+                        \end{tikzcd}
+                    </script>
+                </div>
+            </div>
+
+            <p>
+                From such a diagram, one observes that the image of \(\operatorname{id}_r \in \operatorname{Hom}_{\mathscr{D}}(r,r)\) under the lower-left composite is \(\eta_d(f \circ \operatorname{id}_r) = \eta_d(f)\). The image under the upper-right composite is \(\mathrm{F}f(\eta_r(\operatorname{id}_r))\), with all components evaluated at the fixed \(\xi\). For \(\eta\) to define an inverse to \(\operatorname{ev}_{\operatorname{id}}\), one must set \(\eta_r(\operatorname{id}_r) := \xi\). Naturality then strictly dictates the definition \(\eta_d(f) = \mathrm{F}f(\xi)\).
+            </p>
+
+            <p>
+                To verify that \(\eta\) is indeed natural, one must demonstrate that for a generic morphism \(d \xrightarrow{g} e\), where \(d, e \in \operatorname{Ob}(\mathscr{D})\), the following diagram commutes:
+            </p>
+
+            <div style="display: flex; justify-content: center; padding: 50px 0;">
+                <div style="filter: invert(1) brightness(1.2); mix-blend-mode: screen; transform: scale(1.4); transform-origin: center center;">
+                    <script type="text/tikz">
+                        \begin{tikzcd}[row sep=3em, column sep=5em]
+                        \operatorname{Hom}_{\mathcal{D}}(r, d) \arrow[r, "\eta_d"] \arrow[d, "{g_*}"'] 
+                        & \mathrm{F}d \arrow[d, "{\mathrm{F}g}"] \\
+                        \operatorname{Hom}_{\mathcal{D}}(r, e) \arrow[r, "\eta_e"'] 
+                        & \mathrm{F}e
+                        \end{tikzcd}
+                    </script>
+                </div>
+            </div>
+
+            <p>
+                The image of \(f \in \operatorname{Hom}_{\mathscr{D}}(r,d)\) via the lower-left composite is \(\eta_e(g \circ f) = \mathrm{F}(g \circ f)(\xi)\). The image via the upper-right composite is \(\mathrm{F}g(\eta_d(f)) = \mathrm{F}g(\mathrm{F}f(\xi))\). By virtue of the functoriality of \(\mathrm{F}\), \(\mathrm{F}(g \circ f) = \mathrm{F}g \circ \mathrm{F}f\), hence these elements are in agreement. Consequently, this explicitly defines the mapping \(\eta\).
+            </p>
+
+            <p>
+                By construction, one observes that \(\operatorname{ev}_{\operatorname{id}}(\eta) = \eta_r(\operatorname{id}_r) = \xi\), such that \(\eta\) serves as a right inverse to \(\operatorname{ev}_{\operatorname{id}}\). It remains to be demonstrated that \(\eta(\operatorname{ev}_{\operatorname{id}}(\alpha)) = \alpha\) for any natural transformation \(\operatorname{Hom}_{\mathscr{D}}(r,-) \xrightarrow{\alpha} \mathrm{F}\), which is to say, the natural transformation \(\eta\) generated by \(\alpha_r(\operatorname{id}_r)\) is indeed \(\alpha\). It is sufficient to establish that these natural transformations possess identical components, namely, that the component \(\eta_d\) matches \(\alpha_d\). Ergo, we must show that \(\eta_d(f) = \alpha_d(f)\) for every \(f \in \operatorname{Hom}_{\mathscr{D}}(r,d)\). By the naturality of \(\alpha\), the square
+            </p>
+
+            <div style="display: flex; justify-content: center; padding: 50px 0;">
+                <div style="filter: invert(1) brightness(1.2); mix-blend-mode: screen; transform: scale(1.4); transform-origin: center center;">
+                    <script type="text/tikz">
+                        \begin{tikzcd}[row sep=3em, column sep=5em]
+                            \operatorname{Hom}_{\mathcal{D}}(r,r) \arrow[r, "\alpha_r"] \arrow[d, "{f_*}"'] & \mathrm{F}r \arrow[d, "{\mathrm{F}f}"] \\
+                            \operatorname{Hom}_{\mathcal{D}}(r,d) \arrow[r, "\alpha_d"'] & \mathrm{F}d
+                        \end{tikzcd}
+                    </script>
+                </div>
+            </div>
+
+            <p>
+                commutes, whence we deduce that \(\mathrm{F}f(\alpha_r(\operatorname{id}_r)) = \alpha_d(f \circ \operatorname{id}_r) = \alpha_d(f)\). By definition, \(\eta_d(f) = \mathrm{F}f(\alpha_r(\operatorname{id}_r))\), so \(\eta_d(f) = \alpha_d(f)\). Thus, \(\eta_d = \alpha_d\), thereby proving that \(\eta\) functions equally as a left inverse to \(\operatorname{ev}_{\operatorname{id}}\). The explicit bijections \(\operatorname{ev}_{\operatorname{id}}\) and \(\eta\) definitively prove that the evaluation of a natural transformation at the identity of the representing object defines the posited isomorphism
+                \[ \operatorname{Hom}_{\mathscr{D}}(\operatorname{Hom}_{\mathscr{D}}(r,-), \mathrm{F}) \xrightarrow{\cong} \mathrm{F}r. \] 
+                To strictly complete the lemma, one must verify that this isomorphism is natural in both the functor \(\mathrm{F}\) and the object \(r\). Naturality in \(\mathrm{F}\) asserts that for any natural transformation \(\mathrm{F} \xrightarrow{\beta} \mathrm{G}\), the evaluation behaves functorially; that is, that the following diagram commutes:
+            </p>
+
+            <div style="display: flex; justify-content: center; padding: 50px 0;">
+                <div style="filter: invert(1) brightness(1.2); mix-blend-mode: screen; transform: scale(1.4); transform-origin: center center;">
+                    <script type="text/tikz">
+                        \begin{tikzcd}[row sep=3em, column sep=6em]
+                            \operatorname{Hom}_{\mathcal{D}}(\operatorname{Hom}_{\mathcal{D}}(r,-), \mathrm{F}) \arrow[r, "\operatorname{ev}_{\operatorname{id}}"] \arrow[d, "\beta \circ -"'] 
+                            & \mathrm{F}r \arrow[d, "\beta_r"] \\
+                            \operatorname{Hom}_{\mathcal{D}}(\operatorname{Hom}_{\mathcal{D}}(r,-), \mathrm{G}) \arrow[r, "\operatorname{ev}_{\operatorname{id}}"'] 
+                            & \mathrm{G}r
+                        \end{tikzcd}
+                    </script>
+                </div>
+            </div>
+
+            <p>
+                This is immediate, as \(\beta_r(\alpha_r(\operatorname{id}_r)) = (\beta \circ \alpha)_r(\operatorname{id}_r)\) strictly follows from the definition of vertical composition. Furthermore, naturality in \(r\) dictates that for any morphism \(s \xrightarrow{h} r\) in \(\mathscr{D}\), the respective induced mappings must similarly commute, as illustrated by the diagram:
+            </p>
+
+            <div style="display: flex; justify-content: center; padding: 50px 0;">
+                <div style="filter: invert(1) brightness(1.2); mix-blend-mode: screen; transform: scale(1.4); transform-origin: center center;">
+                    <script type="text/tikz">
+                        \begin{tikzcd}[row sep=3em, column sep=6em]
+                            \operatorname{Hom}_{\mathcal{D}}(\operatorname{Hom}_{\mathcal{D}}(s,-), \mathrm{F}) \arrow[r, "\operatorname{ev}_{\operatorname{id}}"] \arrow[d, "- \circ h^*"'] 
+                            & \mathrm{F}s \arrow[d, "\mathrm{F}h"] \\
+                            \operatorname{Hom}_{\mathcal{D}}(\operatorname{Hom}_{\mathcal{D}}(r,-), \mathrm{F}) \arrow[r, "\operatorname{ev}_{\operatorname{id}}"'] 
+                            & \mathrm{F}r
+                        \end{tikzcd}
+                    </script>
+                </div>
+            </div>
+
+            <p>
+                where \(h^*\) denotes the induced natural transformation \(\operatorname{Hom}_{\mathscr{D}}(r,-) \xrightarrow{} \operatorname{Hom}_{\mathscr{D}}(s,-)\) given by pre-composition. By evaluating the naturality square of an arbitrary natural transformation \(\alpha\) at \(h\), one yields \(\mathrm{F}h(\alpha_s(\operatorname{id}_s)) = \alpha_r(h \circ \operatorname{id}_s) = \alpha_r(h)\), which identically matches the evaluation of \(\alpha \circ h^*\) at \(\operatorname{id}_r\). Thus, the isomorphism is definitively verified as natural in both arguments. &#9632;
+            </p>
+
+            <p>
+                There is a addendum to the Yoneda Lemma that takes a form of a proposition in [Mac Lane, 1998], but to formally introduce it one need the notion of product of categories:
+            </p>
+
+            <div class="latex-env" id="def-product-category">
+                <span class="env-title">Definition (Product of Categories).</span> 
+                From two given categories \(\mathscr{B}\) and \(\mathscr{C}\), we construct a new category \(\mathscr{B} \times \mathscr{C}\), called the product of \(\mathscr{B}\) and \(\mathscr{C}\), as follows. An object of \(\mathscr{B} \times \mathscr{C}\) is a pair \(\langle b, c \rangle\), where \(b \in \operatorname{Ob}(\mathscr{B})\) and \(c \in \operatorname{Ob}(\mathscr{C})\). A morphism \(\langle b, c \rangle \xrightarrow{\langle f, g \rangle} \langle b', c' \rangle\) of \(\mathscr{B} \times \mathscr{C}\) is a pair \(\langle f, g \rangle\) consisting of morphisms \(b \xrightarrow{f} b'\) in \(\mathscr{B}\) and \(c \xrightarrow{g} c'\) in \(\mathscr{C}\). The composite of two such morphisms
+                \[
+                \langle b, c \rangle \xrightarrow{\langle f, g \rangle} \langle b', c' \rangle \xrightarrow{\langle f', g' \rangle} \langle b'', c'' \rangle
+                \]
+                is defined in terms of the composites in \(\mathscr{B}\) and \(\mathscr{C}\) by
+                \[
+                \langle f', g' \rangle \circ \langle f, g \rangle = \langle f' \circ f, g' \circ g \rangle.
+                \]
+                Functors \(\mathscr{B} \times \mathscr{C} \xrightarrow{P} \mathscr{B}\) and \(\mathscr{B} \times \mathscr{C} \xrightarrow{Q} \mathscr{C}\), called the projections of the product, are defined on objects and morphisms by \(P\langle f, g \rangle = f\) and \(Q\langle f, g \rangle = g\).  They have the following property: given any category \(\mathscr{D}\) and two functors \(\mathscr{D} \xrightarrow{R} \mathscr{B}\) and \(\mathscr{D} \xrightarrow{T} \mathscr{C}\), there is a unique functor \(\mathscr{D} \xrightarrow{F} \mathscr{B} \times \mathscr{C}\) such that \(P \circ F = R\) and \(Q \circ F = T\). Explicitly, these two conditions require that \(Fh\), for any morphism \(h\) in \(\mathscr{D}\), must be \(\langle Rh, Th \rangle\). Conversely, this value for \(Fh\) does make \(F\) a functor with the required properties. The construction of \(F\) may be visualized by the following commutative diagram of functors:
+
+                <div style="display: flex; justify-content: center; padding: 50px 0;">
+                    <div style="filter: invert(1) brightness(1.2); mix-blend-mode: screen; transform: scale(1.4); transform-origin: center center;">
+                        <script type="text/tikz">
+                            \begin{tikzcd}[row sep=3em, column sep=3em]
+                                & \mathcal{D} \arrow[dl, "R"'] \arrow[d, "F", dashed] \arrow[dr, "T"] & \\
+                                \mathcal{B} & \mathcal{B} \times \mathcal{C} \arrow[l, "P"] \arrow[r, "Q"'] & \mathcal{C}
+                            \end{tikzcd}
+                        </script>
+                    </div>
+                </div>
+            </div>
+
+            <p>
+                Alternatively, this functor \(\mathscr{B} \times \mathscr{C} \xrightarrow{U \times V} \mathscr{B}' \times \mathscr{C}'\) (induced by two functors \(\mathscr{B} \xrightarrow{U} \mathscr{B}'\) and \(\mathscr{C} \xrightarrow{V} \mathscr{C}'\)) may be described as the unique functor (as in the diagram above) which makes the following diagram commutative:
+            </p>
+
+            <div style="display: flex; justify-content: center; align-items: center; gap: 80px; padding: 50px 0; flex-wrap: wrap;">
+                <div style="filter: invert(1) brightness(1.2); mix-blend-mode: screen; transform: scale(1.4); transform-origin: center center;">
+                    <script type="text/tikz">
+                        \begin{tikzcd}[row sep=3em, column sep=4em]
+                            \mathcal{B} \times \mathcal{C} \arrow[r, "U \times V"] \arrow[d, "P"'] & \mathcal{B}' \times \mathcal{C}' \arrow[d, "P'"] \\
+                            \mathcal{B} \arrow[r, "U"'] & \mathcal{B}'
+                        \end{tikzcd}
+                    </script>
+                </div>
+                <div style="filter: invert(1) brightness(1.2); mix-blend-mode: screen; transform: scale(1.4); transform-origin: center center;">
+                    <script type="text/tikz">
+                        \begin{tikzcd}[row sep=3em, column sep=4em]
+                            \mathcal{B} \times \mathcal{C} \arrow[r, "U \times V"] \arrow[d, "Q"'] & \mathcal{B}' \times \mathcal{C}' \arrow[d, "Q'"] \\
+                            \mathcal{C} \arrow[r, "V"'] & \mathcal{C}'
+                        \end{tikzcd}
+                    </script>
+                </div>
+            </div>
+
+            <p>
+                Explicitly, it is defined on objects and morphisms as
+                \[ 
+                (U \times V)\langle b, c \rangle = \langle Ub, Vc \rangle \qquad (U \times V)\langle f, g \rangle = \langle Uf, Vg \rangle. 
+                \] 
+            </p>
+
+            <p>
+                The product \(\times\) is thus a pair of functions: to each pair \(\langle \mathscr{B}, \mathscr{C} \rangle\) of categories, a new category \(\mathscr{B} \times \mathscr{C}\); to each pair of functors \(\langle U, V \rangle\), a new functor \(U \times V\). Moreover, when the composites \(U' \circ U\) and \(V' \circ V\) are defined, one clearly has \((U' \times V') \circ (U \times V) = (U' \circ U) \times (V' \circ V)\). Hence the operation \(\times\) itself is a functor; more exactly, on restricting to small categories, it is a functor
+                \[
+                \times: \mathbf{Cat} \times \mathbf{Cat} \xrightarrow{} \mathbf{Cat}.
+                \]
+            </p>
+
+            <div class="latex-env" id="prop-addendum">
+                <span class="env-title">Proposition (Addendum to Yoneda Lemma).</span> 
+                Consider the functors \(\mathbf{Set}^{\mathscr{D}} \times \mathscr{D} \xrightarrow{\mathrm{F}, \mathrm{G}} \mathbf{Set}\). The bijection stated in the Yoneda Lemma is a natural isomorphism \(\operatorname{ev}_{\operatorname{id}}: \mathrm{G} \cong \mathrm{F}\).
+            </div>
+
+        
 
 
+        
             </div>
 
 
