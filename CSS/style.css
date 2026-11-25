@@ -84,6 +84,16 @@ body, html {
     line-height: 1.6;
 }
 
+/* Se estiveres a usar o MathJax versão 3 (o mais comum hoje) */
+mjx-container[display="true"] {
+    font-size: 1em !important;
+}
+
+/* Se estiveres a usar o MathJax versão 2 (versão antiga) */
+.MathJax_Display {
+    font-size: 1em !important;
+}
+
 /* Replicates the bolding of the environment title and optional argument */
 .env-title {
     font-weight: bold;
